@@ -1,0 +1,13 @@
+{
+  "dataset": "esc50",
+  "top_k": 5,
+  "top_m": 3,
+  "logit_scale": 100.0,
+  "relations": [
+    "belongs to class",
+    "has parent",
+    "perceived as",
+    "event composed of",
+    "has children"
+  ]
+}

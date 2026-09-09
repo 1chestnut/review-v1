@@ -1,0 +1,110 @@
+{
+  "01_ESC50": {
+    "rows": 2000,
+    "classes": 50,
+    "missing_audio": 0,
+    "empty_labels": 0,
+    "required_paths_exist": {
+      "CLAP_WEIGHTS_PATH": true,
+      "GPT2_LOCAL_PATH": true,
+      "ROBERTA_LOCAL_PATH": true,
+      "TRAIN_TRIPLES_PATH": true
+    },
+    "paths": {
+      "CLAP_WEIGHTS_PATH": "/data/zkx/zkx/iknow-audio/data/model/CLAP_weights_2023.pth",
+      "GPT2_LOCAL_PATH": "/data/zkx/zkx/iknow-audio/data/model/gpt2",
+      "ROBERTA_LOCAL_PATH": "/home/star/zkx/CLAP/model/roberta-base",
+      "TRAIN_TRIPLES_PATH": "/data/zkx/zkx/iknow-audio/KGE_models/001/TFVpYwo2_RotatE_False/AKG_train_triples.tsv"
+    }
+  },
+  "02_UrbanSound8K": {
+    "rows": 8732,
+    "classes": 10,
+    "missing_audio": 0,
+    "empty_labels": 0,
+    "required_paths_exist": {
+      "CLAP_WEIGHTS_PATH": true,
+      "GPT2_LOCAL_PATH": true,
+      "ROBERTA_LOCAL_PATH": true,
+      "TRAIN_TRIPLES_PATH": true
+    },
+    "paths": {
+      "CLAP_WEIGHTS_PATH": "/data/zkx/zkx/iknow-audio/data/model/CLAP_weights_2023.pth",
+      "GPT2_LOCAL_PATH": "/data/zkx/zkx/iknow-audio/data/model/gpt2",
+      "ROBERTA_LOCAL_PATH": "/home/star/zkx/CLAP/model/roberta-base",
+      "TRAIN_TRIPLES_PATH": "/data/zkx/zkx/iknow-audio/KGE_models/001/TFVpYwo2_RotatE_False/AKG_train_triples.tsv"
+    }
+  },
+  "03_FSD50K": {
+    "rows": 10231,
+    "classes": 200,
+    "missing_audio": 0,
+    "empty_labels": 0,
+    "required_paths_exist": {
+      "CLAP_WEIGHTS_PATH": true,
+      "GPT2_LOCAL_PATH": true,
+      "ROBERTA_LOCAL_PATH": true,
+      "TRAIN_TRIPLES_PATH": true
+    },
+    "paths": {
+      "CLAP_WEIGHTS_PATH": "/data/zkx/zkx/iknow-audio/data/model/CLAP_weights_2023.pth",
+      "GPT2_LOCAL_PATH": "/data/zkx/zkx/iknow-audio/data/model/gpt2",
+      "ROBERTA_LOCAL_PATH": "/home/star/zkx/CLAP/model/roberta-base",
+      "TRAIN_TRIPLES_PATH": "/data/zkx/zkx/iknow-audio/KGE_models/001/TFVpYwo2_RotatE_False/AKG_train_triples.tsv"
+    }
+  },
+  "04_DCASE17_T4": {
+    "rows": 419,
+    "classes": 17,
+    "missing_audio": 0,
+    "empty_labels": 0,
+    "required_paths_exist": {
+      "CLAP_WEIGHTS_PATH": true,
+      "GPT2_LOCAL_PATH": true,
+      "ROBERTA_LOCAL_PATH": true,
+      "TRAIN_TRIPLES_PATH": true
+    },
+    "paths": {
+      "CLAP_WEIGHTS_PATH": "/data/zkx/zkx/iknow-audio/data/model/CLAP_weights_2023.pth",
+      "GPT2_LOCAL_PATH": "/data/zkx/zkx/iknow-audio/data/model/gpt2",
+      "ROBERTA_LOCAL_PATH": "/home/star/zkx/CLAP/model/roberta-base",
+      "TRAIN_TRIPLES_PATH": "/data/zkx/zkx/iknow-audio/KGE_models/001/TFVpYwo2_RotatE_False/AKG_train_triples.tsv"
+    }
+  },
+  "05_AudioSet": {
+    "rows": 17233,
+    "classes": 527,
+    "missing_audio": 0,
+    "empty_labels": 0,
+    "required_paths_exist": {
+      "CLAP_WEIGHTS_PATH": true,
+      "GPT2_LOCAL_PATH": true,
+      "ROBERTA_LOCAL_PATH": true,
+      "TRAIN_TRIPLES_PATH": true
+    },
+    "paths": {
+      "CLAP_WEIGHTS_PATH": "/data/zkx/zkx/iknow-audio/data/model/CLAP_weights_2023.pth",
+      "GPT2_LOCAL_PATH": "/data/zkx/zkx/iknow-audio/data/model/gpt2",
+      "ROBERTA_LOCAL_PATH": "/home/star/zkx/CLAP/model/roberta-base",
+      "TRAIN_TRIPLES_PATH": "/data/zkx/zkx/iknow-audio/KGE_models/001/TFVpYwo2_RotatE_False/AKG_train_triples.tsv"
+    }
+  },
+  "06_TUT2017": {
+    "rows": 4680,
+    "classes": 15,
+    "missing_audio": 0,
+    "empty_labels": 0,
+    "required_paths_exist": {
+      "CLAP_WEIGHTS_PATH": true,
+      "GPT2_LOCAL_PATH": true,
+      "ROBERTA_LOCAL_PATH": true,
+      "TRAIN_TRIPLES_PATH": true
+    },
+    "paths": {
+      "CLAP_WEIGHTS_PATH": "/data/zkx/zkx/iknow-audio/data/model/CLAP_weights_2023.pth",
+      "GPT2_LOCAL_PATH": "/data/zkx/zkx/iknow-audio/data/model/gpt2",
+      "ROBERTA_LOCAL_PATH": "/home/star/zkx/CLAP/model/roberta-base",
+      "TRAIN_TRIPLES_PATH": "/data/zkx/zkx/iknow-audio/KGE_models/001/TFVpYwo2_RotatE_False/AKG_train_triples.tsv"
+    }
+  }
+}

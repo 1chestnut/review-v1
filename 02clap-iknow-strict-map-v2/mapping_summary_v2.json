@@ -1,0 +1,32 @@
+{
+  "audioset": {
+    "total_classes": 527,
+    "evidence_based_mapping": 423,
+    "unconfirmed": 104
+  },
+  "dcase17_t4": {
+    "total_classes": 17,
+    "evidence_based_mapping": 14,
+    "unconfirmed": 3
+  },
+  "esc50": {
+    "total_classes": 50,
+    "evidence_based_mapping": 47,
+    "unconfirmed": 3
+  },
+  "fsd50k": {
+    "total_classes": 200,
+    "evidence_based_mapping": 157,
+    "unconfirmed": 43
+  },
+  "tut2017": {
+    "total_classes": 15,
+    "evidence_based_mapping": 13,
+    "unconfirmed": 2
+  },
+  "urbansound8k": {
+    "total_classes": 10,
+    "evidence_based_mapping": 10,
+    "unconfirmed": 0
+  }
+}

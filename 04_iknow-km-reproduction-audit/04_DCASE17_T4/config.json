@@ -1,0 +1,14 @@
+{
+  "dataset": "dcase17_t4",
+  "top_k": 5,
+  "top_m": 3,
+  "logit_scale": 100.0,
+  "relations": [
+    "indicates",
+    "described by",
+    "used for",
+    "associated with environment",
+    "has parent",
+    "is instance of"
+  ]
+}

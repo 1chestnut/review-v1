@@ -1,0 +1,44 @@
+{
+  "01_ESC50": {
+    "classes": 50,
+    "mapped": 47,
+    "unmapped": 3,
+    "missing_mapping_rows": [],
+    "mapped_entities_absent_from_AKG": []
+  },
+  "02_UrbanSound8K": {
+    "classes": 10,
+    "mapped": 10,
+    "unmapped": 0,
+    "missing_mapping_rows": [],
+    "mapped_entities_absent_from_AKG": []
+  },
+  "03_FSD50K": {
+    "classes": 200,
+    "mapped": 157,
+    "unmapped": 43,
+    "missing_mapping_rows": [],
+    "mapped_entities_absent_from_AKG": []
+  },
+  "04_DCASE17_T4": {
+    "classes": 17,
+    "mapped": 14,
+    "unmapped": 3,
+    "missing_mapping_rows": [],
+    "mapped_entities_absent_from_AKG": []
+  },
+  "05_AudioSet": {
+    "classes": 527,
+    "mapped": 423,
+    "unmapped": 104,
+    "missing_mapping_rows": [],
+    "mapped_entities_absent_from_AKG": []
+  },
+  "06_TUT2017": {
+    "classes": 15,
+    "mapped": 13,
+    "unmapped": 2,
+    "missing_mapping_rows": [],
+    "mapped_entities_absent_from_AKG": []
+  }
+}

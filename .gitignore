@@ -1,0 +1,38 @@
+# Python runtime artifacts
+**/__pycache__/
+*.py[cod]
+
+# Runtime state and logs
+*.log
+*.pid
+**/run_status.json
+**/launch_status.json
+**/wait_status.json
+**/dynamic_scheduler_status.json
+**/deployment_audit.json
+
+# Generated caches and model tensors
+**/cache/
+*.pt
+*.pth
+*.pkl
+
+# Large per-sample/intermediate outputs; compact CSV tables remain tracked
+**/results/progress.json
+**/results/*results.json
+**/results/raw_results.json
+**/results/*samples*.json
+
+# Local/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Credentials and environment files
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
+id_ed25519*

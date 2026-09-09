@@ -1,0 +1,13 @@
+{
+  "dataset": "tut2017",
+  "top_k": 5,
+  "top_m": 3,
+  "logit_scale": 100.0,
+  "relations": [
+    "is variant of",
+    "has parent",
+    "scene contains",
+    "event composed of",
+    "described by"
+  ]
+}

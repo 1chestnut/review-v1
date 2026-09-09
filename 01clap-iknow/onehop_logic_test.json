@@ -1,0 +1,32 @@
+{
+  "01_ESC50": {
+    "synthetic_cases": 20,
+    "exact_scores_and_prompt_counts": true,
+    "scope": "same synthetic evidence; real audio rerun still required"
+  },
+  "02_UrbanSound8K": {
+    "synthetic_cases": 20,
+    "exact_scores_and_prompt_counts": true,
+    "scope": "same synthetic evidence; real audio rerun still required"
+  },
+  "03_FSD50K": {
+    "synthetic_cases": 20,
+    "exact_scores_and_prompt_counts": true,
+    "scope": "same synthetic evidence; real audio rerun still required"
+  },
+  "04_DCASE17_T4": {
+    "synthetic_cases": 20,
+    "exact_scores_and_prompt_counts": true,
+    "scope": "same synthetic evidence; real audio rerun still required"
+  },
+  "05_AudioSet": {
+    "synthetic_cases": 20,
+    "exact_scores_and_prompt_counts": true,
+    "scope": "same synthetic evidence; real audio rerun still required"
+  },
+  "06_TUT2017": {
+    "synthetic_cases": 20,
+    "exact_scores_and_prompt_counts": true,
+    "scope": "same synthetic evidence; real audio rerun still required"
+  }
+}
