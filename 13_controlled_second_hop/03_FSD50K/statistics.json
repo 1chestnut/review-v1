@@ -1,0 +1,22 @@
+{
+  "comparison": "D-2nd-Controlled minus D-1st",
+  "n_clips": 10231,
+  "bootstrap_replicates": 10000,
+  "seed": 42,
+  "delta_Hit@1_pp": -0.01954843123839312,
+  "delta_Hit@1_bootstrap95": [
+    -0.20525852800312774,
+    0.15638744990714495
+  ],
+  "delta_MRR_pp": -0.09034978857088134,
+  "delta_MRR_bootstrap95": [
+    -0.18880819166714974,
+    0.0049241930595170435
+  ],
+  "wrong_to_right": 42,
+  "right_to_wrong": 44,
+  "mcnemar_exact_two_sided_p": 0.9142116370824498,
+  "rank_improved": 83,
+  "rank_worsened": 163,
+  "rank_unchanged": 9985
+}

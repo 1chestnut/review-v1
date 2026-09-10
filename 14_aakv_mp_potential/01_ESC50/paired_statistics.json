@@ -1,0 +1,196 @@
+{
+  "comparisons": [
+    {
+      "comparison": "AAKV-M1-P5-Fallback-M1-P5",
+      "delta_Hit@1_pp": -0.05,
+      "Hit@1_bootstrap95": [
+        -0.25,
+        0.1
+      ],
+      "delta_MRR_pp": -0.03166666666666666,
+      "MRR_bootstrap95": [
+        -0.12583333333333332,
+        0.05583333333333334
+      ],
+      "wrong_to_right": 1,
+      "right_to_wrong": 2,
+      "mcnemar_p": 1.0,
+      "rank_improved": 2,
+      "rank_worsened": 4,
+      "holm_p": 1.0
+    },
+    {
+      "comparison": "AAKV-M1-P3-1st-P3",
+      "delta_Hit@1_pp": 0.0,
+      "Hit@1_bootstrap95": [
+        -0.15,
+        0.15
+      ],
+      "delta_MRR_pp": -0.02916666666666667,
+      "MRR_bootstrap95": [
+        -0.10833333333333334,
+        0.05
+      ],
+      "wrong_to_right": 1,
+      "right_to_wrong": 1,
+      "mcnemar_p": 1.0,
+      "rank_improved": 1,
+      "rank_worsened": 4,
+      "holm_p": 1.0
+    },
+    {
+      "comparison": "AAKV-M3-P3-1st-P3",
+      "delta_Hit@1_pp": -0.05,
+      "Hit@1_bootstrap95": [
+        -0.25,
+        0.1
+      ],
+      "delta_MRR_pp": -0.075,
+      "MRR_bootstrap95": [
+        -0.175,
+        0.016666666666666663
+      ],
+      "wrong_to_right": 1,
+      "right_to_wrong": 2,
+      "mcnemar_p": 1.0,
+      "rank_improved": 1,
+      "rank_worsened": 8,
+      "holm_p": 1.0
+    },
+    {
+      "comparison": "AAKV-M5-P3-1st-P3",
+      "delta_Hit@1_pp": -0.2,
+      "Hit@1_bootstrap95": [
+        -0.45,
+        0.0
+      ],
+      "delta_MRR_pp": -0.175,
+      "MRR_bootstrap95": [
+        -0.3084374999999999,
+        -0.05000000000000001
+      ],
+      "wrong_to_right": 1,
+      "right_to_wrong": 5,
+      "mcnemar_p": 0.21875,
+      "rank_improved": 1,
+      "rank_worsened": 14,
+      "holm_p": 1.0
+    },
+    {
+      "comparison": "AAKV-M1-P5-1st-P5",
+      "delta_Hit@1_pp": -0.1,
+      "Hit@1_bootstrap95": [
+        -0.3,
+        0.1
+      ],
+      "delta_MRR_pp": -0.0625,
+      "MRR_bootstrap95": [
+        -0.175,
+        0.025
+      ],
+      "wrong_to_right": 1,
+      "right_to_wrong": 3,
+      "mcnemar_p": 0.625,
+      "rank_improved": 1,
+      "rank_worsened": 4,
+      "holm_p": 1.0
+    },
+    {
+      "comparison": "AAKV-M3-P5-1st-P5",
+      "delta_Hit@1_pp": -0.1,
+      "Hit@1_bootstrap95": [
+        -0.35,
+        0.15
+      ],
+      "delta_MRR_pp": -0.08333333333333334,
+      "MRR_bootstrap95": [
+        -0.2125,
+        0.041666666666666664
+      ],
+      "wrong_to_right": 2,
+      "right_to_wrong": 4,
+      "mcnemar_p": 0.6875,
+      "rank_improved": 2,
+      "rank_worsened": 8,
+      "holm_p": 1.0
+    },
+    {
+      "comparison": "AAKV-M5-P5-1st-P5",
+      "delta_Hit@1_pp": -0.25,
+      "Hit@1_bootstrap95": [
+        -0.55,
+        0.05
+      ],
+      "delta_MRR_pp": -0.2,
+      "MRR_bootstrap95": [
+        -0.36666666666666675,
+        -0.045833333333333344
+      ],
+      "wrong_to_right": 2,
+      "right_to_wrong": 7,
+      "mcnemar_p": 0.1796875,
+      "rank_improved": 2,
+      "rank_worsened": 15,
+      "holm_p": 1.0
+    },
+    {
+      "comparison": "AAKV-M1-P10-1st-P10",
+      "delta_Hit@1_pp": -0.1,
+      "Hit@1_bootstrap95": [
+        -0.3,
+        0.1
+      ],
+      "delta_MRR_pp": -0.05,
+      "MRR_bootstrap95": [
+        -0.15833333333333335,
+        0.05
+      ],
+      "wrong_to_right": 1,
+      "right_to_wrong": 3,
+      "mcnemar_p": 0.625,
+      "rank_improved": 2,
+      "rank_worsened": 4,
+      "holm_p": 1.0
+    },
+    {
+      "comparison": "AAKV-M3-P10-1st-P10",
+      "delta_Hit@1_pp": -0.1,
+      "Hit@1_bootstrap95": [
+        -0.35,
+        0.15
+      ],
+      "delta_MRR_pp": -0.0625,
+      "MRR_bootstrap95": [
+        -0.19166666666666668,
+        0.05416666666666667
+      ],
+      "wrong_to_right": 2,
+      "right_to_wrong": 4,
+      "mcnemar_p": 0.6875,
+      "rank_improved": 3,
+      "rank_worsened": 7,
+      "holm_p": 1.0
+    },
+    {
+      "comparison": "AAKV-M5-P10-1st-P10",
+      "delta_Hit@1_pp": -0.2,
+      "Hit@1_bootstrap95": [
+        -0.5,
+        0.05
+      ],
+      "delta_MRR_pp": -0.14166666666666666,
+      "MRR_bootstrap95": [
+        -0.29583333333333334,
+        -1.4077627952248923e-17
+      ],
+      "wrong_to_right": 2,
+      "right_to_wrong": 6,
+      "mcnemar_p": 0.2890625,
+      "rank_improved": 3,
+      "rank_worsened": 12,
+      "holm_p": 1.0
+    }
+  ],
+  "bootstrap": 10000,
+  "seed": 42
+}

@@ -1,0 +1,29 @@
+{
+  "purpose": "exploratory test of controlled second-hop incremental value",
+  "frozen_task12_baseline": "D = AAKV + dynamic alpha + total Top-P=5",
+  "only_method_change": "add valid second-hop candidates to the same total Top-P pool",
+  "top_k": 5,
+  "top_m1": 3,
+  "top_m2": 1,
+  "top_p_total": 5,
+  "gamma": 0.85,
+  "gate": false,
+  "same_relations_both_hops": true,
+  "filters": [
+    "entity-ID validity",
+    "self-loop",
+    "return-to-origin",
+    "exact path duplicate",
+    "exact text duplicate"
+  ],
+  "second_hop_verbalizer": "Task10 deterministic verified universal fallback; no manual relation template",
+  "audio_cache": "/data/zkx/zkx/review1/12_shared-abcd-statistics/05_AudioSet/audio_cache",
+  "source_hashes": {
+    "runtime.py": "6b8d9de6086953cd0f906509b59b2c40c9333e935804862d41c36fd8130cae5e",
+    "config.json": "f16aaedd3b01160d4ea21dd2fc2617b6f0dba75bd67426ed0e9f242a7748111d",
+    "triples.json": "c837c9eab18a36f077513f221e5dc693fddf3634bd1809821f27c96f86adbfb5",
+    "aakv.json": "3aa76008c15aad2959e6a299fa378ae8f85cfc51a3ad8b0a83ff29e507e72b8f",
+    "mapping.json": "8bcc5e41b1b7fd77c071205bdee6b1c173e6233309661c8fe26c79f081b61175"
+  },
+  "important_limitation": "Exploratory fixed M2/gamma values, not a final validation-selected protocol."
+}

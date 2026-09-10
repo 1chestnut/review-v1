@@ -1,0 +1,9 @@
+{
+  "topk_class_queries": 43660,
+  "second_candidates_offered": 3743030,
+  "second_selected_top_p": 113572,
+  "classes_with_second_available": 43660,
+  "classes_with_second_selected": 32857,
+  "samples": 8732,
+  "samples_with_any_second_selected": 8730
+}

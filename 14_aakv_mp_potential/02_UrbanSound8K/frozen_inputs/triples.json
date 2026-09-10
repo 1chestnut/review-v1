@@ -1,0 +1,1998 @@
+{
+  "signature": {
+    "dataset": "urbansound8k",
+    "labels": [
+      "air conditioner",
+      "car horn",
+      "children playing",
+      "dog bark",
+      "drilling",
+      "engine idling",
+      "gun shot",
+      "jackhammer",
+      "siren",
+      "street music"
+    ],
+    "kg_classes": [
+      "air_conditioner",
+      "car_horn",
+      "children_playing",
+      "dog_bark",
+      "drilling",
+      "engine_idling",
+      "gun_shot",
+      "jackhammer",
+      "siren",
+      "street_music"
+    ],
+    "mapping_sha256": "8bcc5e41b1b7fd77c071205bdee6b1c173e6233309661c8fe26c79f081b61175",
+    "relations": [
+      "overlaps with",
+      "occurs in",
+      "associated with environment",
+      "localized in",
+      "used for",
+      "part of scene"
+    ],
+    "top_k": 5,
+    "top_m": 3,
+    "forms": [
+      "direct",
+      "raw_triple",
+      "template_v1"
+    ]
+  },
+  "audit": {
+    "mapped_classes": 10,
+    "unmapped_classes": 0,
+    "queries": 60,
+    "empty_queries": 0,
+    "candidate_tail_removed": 1,
+    "duplicate_tail_removed": 28,
+    "triples": 151
+  },
+  "classes": [
+    {
+      "ids": {
+        "direct": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33,
+          36,
+          39,
+          42,
+          45,
+          48
+        ],
+        "raw": [
+          1,
+          4,
+          7,
+          10,
+          13,
+          16,
+          19,
+          22,
+          25,
+          28,
+          31,
+          34,
+          37,
+          40,
+          43,
+          46,
+          49
+        ],
+        "template": [
+          2,
+          5,
+          8,
+          11,
+          14,
+          17,
+          20,
+          23,
+          26,
+          29,
+          32,
+          35,
+          38,
+          41,
+          44,
+          47,
+          50
+        ]
+      },
+      "triples": [
+        {
+          "head": "air conditioner",
+          "kg_entity": "air conditioner",
+          "relation": "overlaps with",
+          "tail": "door opening",
+          "direct": "air conditioner, door opening",
+          "raw": "air conditioner overlaps with door opening",
+          "template": "The sound of air conditioner often overlaps with door opening."
+        },
+        {
+          "head": "air conditioner",
+          "kg_entity": "air conditioner",
+          "relation": "overlaps with",
+          "tail": "knocking",
+          "direct": "air conditioner, knocking",
+          "raw": "air conditioner overlaps with knocking",
+          "template": "The sound of air conditioner often overlaps with knocking."
+        },
+        {
+          "head": "air conditioner",
+          "kg_entity": "air conditioner",
+          "relation": "overlaps with",
+          "tail": "ringing",
+          "direct": "air conditioner, ringing",
+          "raw": "air conditioner overlaps with ringing",
+          "template": "The sound of air conditioner often overlaps with ringing."
+        },
+        {
+          "head": "air conditioner",
+          "kg_entity": "air conditioner",
+          "relation": "occurs in",
+          "tail": "library",
+          "direct": "air conditioner, library",
+          "raw": "air conditioner occurs in library",
+          "template": "An air conditioner typically occurs in a library."
+        },
+        {
+          "head": "air conditioner",
+          "kg_entity": "air conditioner",
+          "relation": "occurs in",
+          "tail": "bathroom",
+          "direct": "air conditioner, bathroom",
+          "raw": "air conditioner occurs in bathroom",
+          "template": "An air conditioner typically occurs in a bathroom."
+        },
+        {
+          "head": "air conditioner",
+          "kg_entity": "air conditioner",
+          "relation": "occurs in",
+          "tail": "bus station",
+          "direct": "air conditioner, bus station",
+          "raw": "air conditioner occurs in bus station",
+          "template": "An air conditioner typically occurs in a bus station."
+        },
+        {
+          "head": "air conditioner",
+          "kg_entity": "air conditioner",
+          "relation": "associated with environment",
+          "tail": "office",
+          "direct": "air conditioner, office",
+          "raw": "air conditioner associated with environment office",
+          "template": "The sound of an air conditioner is heavily associated with an office environment."
+        },
+        {
+          "head": "air conditioner",
+          "kg_entity": "air conditioner",
+          "relation": "associated with environment",
+          "tail": "hotel",
+          "direct": "air conditioner, hotel",
+          "raw": "air conditioner associated with environment hotel",
+          "template": "The sound of an air conditioner is heavily associated with a hotel environment."
+        },
+        {
+          "head": "air conditioner",
+          "kg_entity": "air conditioner",
+          "relation": "associated with environment",
+          "tail": "home",
+          "direct": "air conditioner, home",
+          "raw": "air conditioner associated with environment home",
+          "template": "The sound of an air conditioner is heavily associated with a home environment."
+        },
+        {
+          "head": "air conditioner",
+          "kg_entity": "air conditioner",
+          "relation": "localized in",
+          "tail": "building",
+          "direct": "air conditioner, building",
+          "raw": "air conditioner localized in building",
+          "template": "An air conditioner is usually localized in a building."
+        },
+        {
+          "head": "air conditioner",
+          "kg_entity": "air conditioner",
+          "relation": "localized in",
+          "tail": "house",
+          "direct": "air conditioner, house",
+          "raw": "air conditioner localized in house",
+          "template": "An air conditioner is usually localized in a house."
+        },
+        {
+          "head": "air conditioner",
+          "kg_entity": "air conditioner",
+          "relation": "localized in",
+          "tail": "room",
+          "direct": "air conditioner, room",
+          "raw": "air conditioner localized in room",
+          "template": "An air conditioner is usually localized in a room."
+        },
+        {
+          "head": "air conditioner",
+          "kg_entity": "air conditioner",
+          "relation": "used for",
+          "tail": "sound of things",
+          "direct": "air conditioner, sound of things",
+          "raw": "air conditioner used for sound of things",
+          "template": "An air conditioner is generally used for sound of things."
+        },
+        {
+          "head": "air conditioner",
+          "kg_entity": "air conditioner",
+          "relation": "used for",
+          "tail": "vehicle",
+          "direct": "air conditioner, vehicle",
+          "raw": "air conditioner used for vehicle",
+          "template": "An air conditioner is generally used for vehicle."
+        },
+        {
+          "head": "air conditioner",
+          "kg_entity": "air conditioner",
+          "relation": "used for",
+          "tail": "indicating impatience",
+          "direct": "air conditioner, indicating impatience",
+          "raw": "air conditioner used for indicating impatience",
+          "template": "An air conditioner is generally used for indicating impatience."
+        },
+        {
+          "head": "air conditioner",
+          "kg_entity": "air conditioner",
+          "relation": "part of scene",
+          "tail": "kitchen",
+          "direct": "air conditioner, kitchen",
+          "raw": "air conditioner part of scene kitchen",
+          "template": "The sound of an air conditioner is a common part of a kitchen scene."
+        },
+        {
+          "head": "air conditioner",
+          "kg_entity": "air conditioner",
+          "relation": "part of scene",
+          "tail": "apartment",
+          "direct": "air conditioner, apartment",
+          "raw": "air conditioner part of scene apartment",
+          "template": "The sound of an air conditioner is a common part of an apartment scene."
+        }
+      ],
+      "mapped_entity": "air conditioner"
+    },
+    {
+      "ids": {
+        "direct": [
+          51,
+          54,
+          57,
+          60,
+          63,
+          66,
+          69,
+          72,
+          75,
+          78,
+          81,
+          84,
+          87,
+          90
+        ],
+        "raw": [
+          52,
+          55,
+          58,
+          61,
+          64,
+          67,
+          70,
+          73,
+          76,
+          79,
+          82,
+          85,
+          88,
+          91
+        ],
+        "template": [
+          53,
+          56,
+          59,
+          62,
+          65,
+          68,
+          71,
+          74,
+          77,
+          80,
+          83,
+          86,
+          89,
+          92
+        ]
+      },
+      "triples": [
+        {
+          "head": "car horn",
+          "kg_entity": "car horn",
+          "relation": "overlaps with",
+          "tail": "motorcycle",
+          "direct": "car horn, motorcycle",
+          "raw": "car horn overlaps with motorcycle",
+          "template": "The sound of car horn often overlaps with motorcycle."
+        },
+        {
+          "head": "car horn",
+          "kg_entity": "car horn",
+          "relation": "overlaps with",
+          "tail": "car",
+          "direct": "car horn, car",
+          "raw": "car horn overlaps with car",
+          "template": "The sound of car horn often overlaps with car."
+        },
+        {
+          "head": "car horn",
+          "kg_entity": "car horn",
+          "relation": "occurs in",
+          "tail": "car interior",
+          "direct": "car horn, car interior",
+          "raw": "car horn occurs in car interior",
+          "template": "A car horn typically occurs in a car interior."
+        },
+        {
+          "head": "car horn",
+          "kg_entity": "car horn",
+          "relation": "occurs in",
+          "tail": "street",
+          "direct": "car horn, street",
+          "raw": "car horn occurs in street",
+          "template": "A car horn typically occurs in a street."
+        },
+        {
+          "head": "car horn",
+          "kg_entity": "car horn",
+          "relation": "occurs in",
+          "tail": "city center",
+          "direct": "car horn, city center",
+          "raw": "car horn occurs in city center",
+          "template": "A car horn typically occurs in a city center."
+        },
+        {
+          "head": "car horn",
+          "kg_entity": "car horn",
+          "relation": "associated with environment",
+          "tail": "driveway",
+          "direct": "car horn, driveway",
+          "raw": "car horn associated with environment driveway",
+          "template": "The sound of a car horn is heavily associated with a driveway environment."
+        },
+        {
+          "head": "car horn",
+          "kg_entity": "car horn",
+          "relation": "associated with environment",
+          "tail": "trail",
+          "direct": "car horn, trail",
+          "raw": "car horn associated with environment trail",
+          "template": "The sound of a car horn is heavily associated with a trail environment."
+        },
+        {
+          "head": "car horn",
+          "kg_entity": "car horn",
+          "relation": "localized in",
+          "tail": "parking lot",
+          "direct": "car horn, parking lot",
+          "raw": "car horn localized in parking lot",
+          "template": "A car horn is usually localized in a parking lot."
+        },
+        {
+          "head": "car horn",
+          "kg_entity": "car horn",
+          "relation": "localized in",
+          "tail": "road",
+          "direct": "car horn, road",
+          "raw": "car horn localized in road",
+          "template": "A car horn is usually localized in a road."
+        },
+        {
+          "head": "car horn",
+          "kg_entity": "car horn",
+          "relation": "used for",
+          "tail": "alarm signal",
+          "direct": "car horn, alarm signal",
+          "raw": "car horn used for alarm signal",
+          "template": "A car horn is generally used for alarm signal."
+        },
+        {
+          "head": "car horn",
+          "kg_entity": "car horn",
+          "relation": "used for",
+          "tail": "road vehicle",
+          "direct": "car horn, road vehicle",
+          "raw": "car horn used for road vehicle",
+          "template": "A car horn is generally used for road vehicle."
+        },
+        {
+          "head": "car horn",
+          "kg_entity": "car horn",
+          "relation": "used for",
+          "tail": "sound of things",
+          "direct": "car horn, sound of things",
+          "raw": "car horn used for sound of things",
+          "template": "A car horn is generally used for sound of things."
+        },
+        {
+          "head": "car horn",
+          "kg_entity": "car horn",
+          "relation": "part of scene",
+          "tail": "traffic",
+          "direct": "car horn, traffic",
+          "raw": "car horn part of scene traffic",
+          "template": "The sound of a car horn is a common part of a traffic scene."
+        },
+        {
+          "head": "car horn",
+          "kg_entity": "car horn",
+          "relation": "part of scene",
+          "tail": "highway",
+          "direct": "car horn, highway",
+          "raw": "car horn part of scene highway",
+          "template": "The sound of a car horn is a common part of a highway scene."
+        }
+      ],
+      "mapped_entity": "car horn"
+    },
+    {
+      "ids": {
+        "direct": [
+          93,
+          96,
+          99,
+          102,
+          105,
+          108,
+          111,
+          114,
+          117,
+          120,
+          123,
+          126,
+          129,
+          132
+        ],
+        "raw": [
+          94,
+          97,
+          100,
+          103,
+          106,
+          109,
+          112,
+          115,
+          118,
+          121,
+          124,
+          127,
+          130,
+          133
+        ],
+        "template": [
+          95,
+          98,
+          101,
+          104,
+          107,
+          110,
+          113,
+          116,
+          119,
+          122,
+          125,
+          128,
+          131,
+          134
+        ]
+      },
+      "triples": [
+        {
+          "head": "children playing",
+          "kg_entity": "children playing",
+          "relation": "overlaps with",
+          "tail": "human non-speech sounds",
+          "direct": "children playing, human non-speech sounds",
+          "raw": "children playing overlaps with human non-speech sounds",
+          "template": "The sound of children playing often overlaps with human non-speech sounds."
+        },
+        {
+          "head": "children playing",
+          "kg_entity": "children playing",
+          "relation": "overlaps with",
+          "tail": "human voice",
+          "direct": "children playing, human voice",
+          "raw": "children playing overlaps with human voice",
+          "template": "The sound of children playing often overlaps with human voice."
+        },
+        {
+          "head": "children playing",
+          "kg_entity": "children playing",
+          "relation": "overlaps with",
+          "tail": "human sounds",
+          "direct": "children playing, human sounds",
+          "raw": "children playing overlaps with human sounds",
+          "template": "The sound of children playing often overlaps with human sounds."
+        },
+        {
+          "head": "children playing",
+          "kg_entity": "children playing",
+          "relation": "occurs in",
+          "tail": "kid game hall",
+          "direct": "children playing, kid game hall",
+          "raw": "children playing occurs in kid game hall",
+          "template": "A children playing typically occurs in a kid game hall."
+        },
+        {
+          "head": "children playing",
+          "kg_entity": "children playing",
+          "relation": "occurs in",
+          "tail": "beach",
+          "direct": "children playing, beach",
+          "raw": "children playing occurs in beach",
+          "template": "A children playing typically occurs in a beach."
+        },
+        {
+          "head": "children playing",
+          "kg_entity": "children playing",
+          "relation": "occurs in",
+          "tail": "home",
+          "direct": "children playing, home",
+          "raw": "children playing occurs in home",
+          "template": "A children playing typically occurs in a home."
+        },
+        {
+          "head": "children playing",
+          "kg_entity": "children playing",
+          "relation": "associated with environment",
+          "tail": "park",
+          "direct": "children playing, park",
+          "raw": "children playing associated with environment park",
+          "template": "The sound of a children playing is heavily associated with a park environment."
+        },
+        {
+          "head": "children playing",
+          "kg_entity": "children playing",
+          "relation": "associated with environment",
+          "tail": "conference room",
+          "direct": "children playing, conference room",
+          "raw": "children playing associated with environment conference room",
+          "template": "The sound of a children playing is heavily associated with a conference room environment."
+        },
+        {
+          "head": "children playing",
+          "kg_entity": "children playing",
+          "relation": "associated with environment",
+          "tail": "grunting",
+          "direct": "children playing, grunting",
+          "raw": "children playing associated with environment grunting",
+          "template": "The sound of a children playing is heavily associated with a grunting environment."
+        },
+        {
+          "head": "children playing",
+          "kg_entity": "children playing",
+          "relation": "localized in",
+          "tail": "playground",
+          "direct": "children playing, playground",
+          "raw": "children playing localized in playground",
+          "template": "A children playing is usually localized in a playground."
+        },
+        {
+          "head": "children playing",
+          "kg_entity": "children playing",
+          "relation": "used for",
+          "tail": "warning",
+          "direct": "children playing, warning",
+          "raw": "children playing used for warning",
+          "template": "A children playing is generally used for warning."
+        },
+        {
+          "head": "children playing",
+          "kg_entity": "children playing",
+          "relation": "used for",
+          "tail": "alerting",
+          "direct": "children playing, alerting",
+          "raw": "children playing used for alerting",
+          "template": "A children playing is generally used for alerting."
+        },
+        {
+          "head": "children playing",
+          "kg_entity": "children playing",
+          "relation": "part of scene",
+          "tail": "footsteps on floor",
+          "direct": "children playing, footsteps on floor",
+          "raw": "children playing part of scene footsteps on floor",
+          "template": "The sound of a children playing is a common part of a footsteps on floor scene."
+        },
+        {
+          "head": "children playing",
+          "kg_entity": "children playing",
+          "relation": "part of scene",
+          "tail": "stadium",
+          "direct": "children playing, stadium",
+          "raw": "children playing part of scene stadium",
+          "template": "The sound of a children playing is a common part of a stadium scene."
+        }
+      ],
+      "mapped_entity": "children playing"
+    },
+    {
+      "ids": {
+        "direct": [
+          135,
+          138,
+          141,
+          144,
+          147,
+          150,
+          153,
+          156,
+          159,
+          162,
+          165
+        ],
+        "raw": [
+          136,
+          139,
+          142,
+          145,
+          148,
+          151,
+          154,
+          157,
+          160,
+          163,
+          166
+        ],
+        "template": [
+          137,
+          140,
+          143,
+          146,
+          149,
+          152,
+          155,
+          158,
+          161,
+          164,
+          167
+        ]
+      },
+      "triples": [
+        {
+          "head": "dog bark",
+          "kg_entity": "dog barking",
+          "relation": "overlaps with",
+          "tail": "bird",
+          "direct": "dog bark, bird",
+          "raw": "dog bark overlaps with bird",
+          "template": "The sound of dog bark often overlaps with bird."
+        },
+        {
+          "head": "dog bark",
+          "kg_entity": "dog barking",
+          "relation": "overlaps with",
+          "tail": "dog",
+          "direct": "dog bark, dog",
+          "raw": "dog bark overlaps with dog",
+          "template": "The sound of dog bark often overlaps with dog."
+        },
+        {
+          "head": "dog bark",
+          "kg_entity": "dog barking",
+          "relation": "overlaps with",
+          "tail": "barking",
+          "direct": "dog bark, barking",
+          "raw": "dog bark overlaps with barking",
+          "template": "The sound of dog bark often overlaps with barking."
+        },
+        {
+          "head": "dog bark",
+          "kg_entity": "dog barking",
+          "relation": "occurs in",
+          "tail": "park",
+          "direct": "dog bark, park",
+          "raw": "dog bark occurs in park",
+          "template": "A dog bark typically occurs in a park."
+        },
+        {
+          "head": "dog bark",
+          "kg_entity": "dog barking",
+          "relation": "occurs in",
+          "tail": "home",
+          "direct": "dog bark, home",
+          "raw": "dog bark occurs in home",
+          "template": "A dog bark typically occurs in a home."
+        },
+        {
+          "head": "dog bark",
+          "kg_entity": "dog barking",
+          "relation": "occurs in",
+          "tail": "forest",
+          "direct": "dog bark, forest",
+          "raw": "dog bark occurs in forest",
+          "template": "A dog bark typically occurs in a forest."
+        },
+        {
+          "head": "dog bark",
+          "kg_entity": "dog barking",
+          "relation": "associated with environment",
+          "tail": "horse snort",
+          "direct": "dog bark, horse snort",
+          "raw": "dog bark associated with environment horse snort",
+          "template": "The sound of a dog bark is heavily associated with a horse snort environment."
+        },
+        {
+          "head": "dog bark",
+          "kg_entity": "dog barking",
+          "relation": "localized in",
+          "tail": "cricket",
+          "direct": "dog bark, cricket",
+          "raw": "dog bark localized in cricket",
+          "template": "A dog bark is usually localized in a cricket."
+        },
+        {
+          "head": "dog bark",
+          "kg_entity": "dog barking",
+          "relation": "used for",
+          "tail": "animal",
+          "direct": "dog bark, animal",
+          "raw": "dog bark used for animal",
+          "template": "A dog bark is generally used for animal."
+        },
+        {
+          "head": "dog bark",
+          "kg_entity": "dog barking",
+          "relation": "used for",
+          "tail": "domestic animal",
+          "direct": "dog bark, domestic animal",
+          "raw": "dog bark used for domestic animal",
+          "template": "A dog bark is generally used for domestic animal."
+        },
+        {
+          "head": "dog bark",
+          "kg_entity": "dog barking",
+          "relation": "part of scene",
+          "tail": "hunting",
+          "direct": "dog bark, hunting",
+          "raw": "dog bark part of scene hunting",
+          "template": "The sound of a dog bark is a common part of a hunting scene."
+        }
+      ],
+      "mapped_entity": "dog barking"
+    },
+    {
+      "ids": {
+        "direct": [
+          168,
+          171,
+          174,
+          177,
+          180,
+          183,
+          186,
+          189,
+          192,
+          195,
+          198,
+          201,
+          204
+        ],
+        "raw": [
+          169,
+          172,
+          175,
+          178,
+          181,
+          184,
+          187,
+          190,
+          193,
+          196,
+          199,
+          202,
+          205
+        ],
+        "template": [
+          170,
+          173,
+          176,
+          179,
+          182,
+          185,
+          188,
+          191,
+          194,
+          197,
+          200,
+          203,
+          206
+        ]
+      },
+      "triples": [
+        {
+          "head": "drilling",
+          "kg_entity": "drilling",
+          "relation": "overlaps with",
+          "tail": "drilling machine noise",
+          "direct": "drilling, drilling machine noise",
+          "raw": "drilling overlaps with drilling machine noise",
+          "template": "The sound of drilling often overlaps with drilling machine noise."
+        },
+        {
+          "head": "drilling",
+          "kg_entity": "drilling",
+          "relation": "overlaps with",
+          "tail": "construction noise",
+          "direct": "drilling, construction noise",
+          "raw": "drilling overlaps with construction noise",
+          "template": "The sound of drilling often overlaps with construction noise."
+        },
+        {
+          "head": "drilling",
+          "kg_entity": "drilling",
+          "relation": "overlaps with",
+          "tail": "hammering",
+          "direct": "drilling, hammering",
+          "raw": "drilling overlaps with hammering",
+          "template": "The sound of drilling often overlaps with hammering."
+        },
+        {
+          "head": "drilling",
+          "kg_entity": "drilling",
+          "relation": "occurs in",
+          "tail": "oil rig",
+          "direct": "drilling, oil rig",
+          "raw": "drilling occurs in oil rig",
+          "template": "A drilling typically occurs in an oil rig."
+        },
+        {
+          "head": "drilling",
+          "kg_entity": "drilling",
+          "relation": "occurs in",
+          "tail": "construction site",
+          "direct": "drilling, construction site",
+          "raw": "drilling occurs in construction site",
+          "template": "A drilling typically occurs in a construction site."
+        },
+        {
+          "head": "drilling",
+          "kg_entity": "drilling",
+          "relation": "occurs in",
+          "tail": "workshop",
+          "direct": "drilling, workshop",
+          "raw": "drilling occurs in workshop",
+          "template": "A drilling typically occurs in a workshop."
+        },
+        {
+          "head": "drilling",
+          "kg_entity": "drilling",
+          "relation": "associated with environment",
+          "tail": "mining site",
+          "direct": "drilling, mining site",
+          "raw": "drilling associated with environment mining site",
+          "template": "The sound of a drilling is heavily associated with a mining site environment."
+        },
+        {
+          "head": "drilling",
+          "kg_entity": "drilling",
+          "relation": "localized in",
+          "tail": "geological exploration site",
+          "direct": "drilling, geological exploration site",
+          "raw": "drilling localized in geological exploration site",
+          "template": "A drilling is usually localized in a geological exploration site."
+        },
+        {
+          "head": "drilling",
+          "kg_entity": "drilling",
+          "relation": "used for",
+          "tail": "construction",
+          "direct": "drilling, construction",
+          "raw": "drilling used for construction",
+          "template": "A drilling is generally used for construction."
+        },
+        {
+          "head": "drilling",
+          "kg_entity": "drilling",
+          "relation": "used for",
+          "tail": "carpentry",
+          "direct": "drilling, carpentry",
+          "raw": "drilling used for carpentry",
+          "template": "A drilling is generally used for carpentry."
+        },
+        {
+          "head": "drilling",
+          "kg_entity": "drilling",
+          "relation": "used for",
+          "tail": "demolition",
+          "direct": "drilling, demolition",
+          "raw": "drilling used for demolition",
+          "template": "A drilling is generally used for demolition."
+        },
+        {
+          "head": "drilling",
+          "kg_entity": "drilling",
+          "relation": "part of scene",
+          "tail": "oil drilling",
+          "direct": "drilling, oil drilling",
+          "raw": "drilling part of scene oil drilling",
+          "template": "The sound of a drilling is a common part of an oil drilling scene."
+        },
+        {
+          "head": "drilling",
+          "kg_entity": "drilling",
+          "relation": "part of scene",
+          "tail": "oil production",
+          "direct": "drilling, oil production",
+          "raw": "drilling part of scene oil production",
+          "template": "The sound of a drilling is a common part of an oil production scene."
+        }
+      ],
+      "mapped_entity": "drilling"
+    },
+    {
+      "ids": {
+        "direct": [
+          207,
+          210,
+          213,
+          216,
+          219,
+          222,
+          225,
+          228,
+          231,
+          234,
+          237,
+          240,
+          243,
+          246,
+          249
+        ],
+        "raw": [
+          208,
+          211,
+          214,
+          217,
+          220,
+          223,
+          226,
+          229,
+          232,
+          235,
+          238,
+          241,
+          244,
+          247,
+          250
+        ],
+        "template": [
+          209,
+          212,
+          215,
+          218,
+          221,
+          224,
+          227,
+          230,
+          233,
+          236,
+          239,
+          242,
+          245,
+          248,
+          251
+        ]
+      },
+      "triples": [
+        {
+          "head": "engine idling",
+          "kg_entity": "engine idling",
+          "relation": "overlaps with",
+          "tail": "engine",
+          "direct": "engine idling, engine",
+          "raw": "engine idling overlaps with engine",
+          "template": "The sound of engine idling often overlaps with engine."
+        },
+        {
+          "head": "engine idling",
+          "kg_entity": "engine idling",
+          "relation": "overlaps with",
+          "tail": "motorcycle noise",
+          "direct": "engine idling, motorcycle noise",
+          "raw": "engine idling overlaps with motorcycle noise",
+          "template": "The sound of engine idling often overlaps with motorcycle noise."
+        },
+        {
+          "head": "engine idling",
+          "kg_entity": "engine idling",
+          "relation": "overlaps with",
+          "tail": "motorcycle",
+          "direct": "engine idling, motorcycle",
+          "raw": "engine idling overlaps with motorcycle",
+          "template": "The sound of engine idling often overlaps with motorcycle."
+        },
+        {
+          "head": "engine idling",
+          "kg_entity": "engine idling",
+          "relation": "occurs in",
+          "tail": "city center",
+          "direct": "engine idling, city center",
+          "raw": "engine idling occurs in city center",
+          "template": "An engine idling typically occurs in a city center."
+        },
+        {
+          "head": "engine idling",
+          "kg_entity": "engine idling",
+          "relation": "occurs in",
+          "tail": "residential area",
+          "direct": "engine idling, residential area",
+          "raw": "engine idling occurs in residential area",
+          "template": "An engine idling typically occurs in a residential area."
+        },
+        {
+          "head": "engine idling",
+          "kg_entity": "engine idling",
+          "relation": "occurs in",
+          "tail": "bus interior",
+          "direct": "engine idling, bus interior",
+          "raw": "engine idling occurs in bus interior",
+          "template": "An engine idling typically occurs in a bus interior."
+        },
+        {
+          "head": "engine idling",
+          "kg_entity": "engine idling",
+          "relation": "associated with environment",
+          "tail": "driveway",
+          "direct": "engine idling, driveway",
+          "raw": "engine idling associated with environment driveway",
+          "template": "The sound of an engine idling is heavily associated with a driveway environment."
+        },
+        {
+          "head": "engine idling",
+          "kg_entity": "engine idling",
+          "relation": "associated with environment",
+          "tail": "road",
+          "direct": "engine idling, road",
+          "raw": "engine idling associated with environment road",
+          "template": "The sound of an engine idling is heavily associated with a road environment."
+        },
+        {
+          "head": "engine idling",
+          "kg_entity": "engine idling",
+          "relation": "associated with environment",
+          "tail": "street",
+          "direct": "engine idling, street",
+          "raw": "engine idling associated with environment street",
+          "template": "The sound of an engine idling is heavily associated with a street environment."
+        },
+        {
+          "head": "engine idling",
+          "kg_entity": "engine idling",
+          "relation": "localized in",
+          "tail": "parking lot",
+          "direct": "engine idling, parking lot",
+          "raw": "engine idling localized in parking lot",
+          "template": "An engine idling is usually localized in a parking lot."
+        },
+        {
+          "head": "engine idling",
+          "kg_entity": "engine idling",
+          "relation": "localized in",
+          "tail": "garage",
+          "direct": "engine idling, garage",
+          "raw": "engine idling localized in garage",
+          "template": "An engine idling is usually localized in a garage."
+        },
+        {
+          "head": "engine idling",
+          "kg_entity": "engine idling",
+          "relation": "used for",
+          "tail": "car engine",
+          "direct": "engine idling, car engine",
+          "raw": "engine idling used for car engine",
+          "template": "An engine idling is generally used for car engine."
+        },
+        {
+          "head": "engine idling",
+          "kg_entity": "engine idling",
+          "relation": "used for",
+          "tail": "car",
+          "direct": "engine idling, car",
+          "raw": "engine idling used for car",
+          "template": "An engine idling is generally used for car."
+        },
+        {
+          "head": "engine idling",
+          "kg_entity": "engine idling",
+          "relation": "part of scene",
+          "tail": "highway",
+          "direct": "engine idling, highway",
+          "raw": "engine idling part of scene highway",
+          "template": "The sound of an engine idling is a common part of a highway scene."
+        },
+        {
+          "head": "engine idling",
+          "kg_entity": "engine idling",
+          "relation": "part of scene",
+          "tail": "car wash",
+          "direct": "engine idling, car wash",
+          "raw": "engine idling part of scene car wash",
+          "template": "The sound of an engine idling is a common part of a car wash scene."
+        }
+      ],
+      "mapped_entity": "engine idling"
+    },
+    {
+      "ids": {
+        "direct": [
+          252,
+          255,
+          258,
+          261,
+          264,
+          267,
+          270,
+          273,
+          276,
+          279,
+          282,
+          285,
+          288,
+          291,
+          294,
+          297,
+          300
+        ],
+        "raw": [
+          253,
+          256,
+          259,
+          262,
+          265,
+          268,
+          271,
+          274,
+          277,
+          280,
+          283,
+          286,
+          289,
+          292,
+          295,
+          298,
+          301
+        ],
+        "template": [
+          254,
+          257,
+          260,
+          263,
+          266,
+          269,
+          272,
+          275,
+          278,
+          281,
+          284,
+          287,
+          290,
+          293,
+          296,
+          299,
+          302
+        ]
+      },
+      "triples": [
+        {
+          "head": "gun shot",
+          "kg_entity": "gun shot",
+          "relation": "overlaps with",
+          "tail": "humming",
+          "direct": "gun shot, humming",
+          "raw": "gun shot overlaps with humming",
+          "template": "The sound of gun shot often overlaps with humming."
+        },
+        {
+          "head": "gun shot",
+          "kg_entity": "gun shot",
+          "relation": "overlaps with",
+          "tail": "soothing",
+          "direct": "gun shot, soothing",
+          "raw": "gun shot overlaps with soothing",
+          "template": "The sound of gun shot often overlaps with soothing."
+        },
+        {
+          "head": "gun shot",
+          "kg_entity": "gun shot",
+          "relation": "overlaps with",
+          "tail": "footsteps",
+          "direct": "gun shot, footsteps",
+          "raw": "gun shot overlaps with footsteps",
+          "template": "The sound of gun shot often overlaps with footsteps."
+        },
+        {
+          "head": "gun shot",
+          "kg_entity": "gun shot",
+          "relation": "occurs in",
+          "tail": "gong",
+          "direct": "gun shot, gong",
+          "raw": "gun shot occurs in gong",
+          "template": "A gun shot typically occurs in a gong."
+        },
+        {
+          "head": "gun shot",
+          "kg_entity": "gun shot",
+          "relation": "occurs in",
+          "tail": "throbbing",
+          "direct": "gun shot, throbbing",
+          "raw": "gun shot occurs in throbbing",
+          "template": "A gun shot typically occurs in a throbbing."
+        },
+        {
+          "head": "gun shot",
+          "kg_entity": "gun shot",
+          "relation": "associated with environment",
+          "tail": "music role",
+          "direct": "gun shot, music role",
+          "raw": "gun shot associated with environment music role",
+          "template": "The sound of a gun shot is heavily associated with a music role environment."
+        },
+        {
+          "head": "gun shot",
+          "kg_entity": "gun shot",
+          "relation": "associated with environment",
+          "tail": "percussion",
+          "direct": "gun shot, percussion",
+          "raw": "gun shot associated with environment percussion",
+          "template": "The sound of a gun shot is heavily associated with a percussion environment."
+        },
+        {
+          "head": "gun shot",
+          "kg_entity": "gun shot",
+          "relation": "associated with environment",
+          "tail": "bird",
+          "direct": "gun shot, bird",
+          "raw": "gun shot associated with environment bird",
+          "template": "The sound of a gun shot is heavily associated with a bird environment."
+        },
+        {
+          "head": "gun shot",
+          "kg_entity": "gun shot",
+          "relation": "localized in",
+          "tail": "field",
+          "direct": "gun shot, field",
+          "raw": "gun shot localized in field",
+          "template": "A gun shot is usually localized in a field."
+        },
+        {
+          "head": "gun shot",
+          "kg_entity": "gun shot",
+          "relation": "localized in",
+          "tail": "techno house",
+          "direct": "gun shot, techno house",
+          "raw": "gun shot localized in techno house",
+          "template": "A gun shot is usually localized in a techno house."
+        },
+        {
+          "head": "gun shot",
+          "kg_entity": "gun shot",
+          "relation": "localized in",
+          "tail": "human activities",
+          "direct": "gun shot, human activities",
+          "raw": "gun shot localized in human activities",
+          "template": "A gun shot is usually localized in a human activities."
+        },
+        {
+          "head": "gun shot",
+          "kg_entity": "gun shot",
+          "relation": "used for",
+          "tail": "footsteps on floor",
+          "direct": "gun shot, footsteps on floor",
+          "raw": "gun shot used for footsteps on floor",
+          "template": "A gun shot is generally used for footsteps on floor."
+        },
+        {
+          "head": "gun shot",
+          "kg_entity": "gun shot",
+          "relation": "used for",
+          "tail": "aircraft",
+          "direct": "gun shot, aircraft",
+          "raw": "gun shot used for aircraft",
+          "template": "A gun shot is generally used for aircraft."
+        },
+        {
+          "head": "gun shot",
+          "kg_entity": "gun shot",
+          "relation": "used for",
+          "tail": "singing",
+          "direct": "gun shot, singing",
+          "raw": "gun shot used for singing",
+          "template": "A gun shot is generally used for singing."
+        },
+        {
+          "head": "gun shot",
+          "kg_entity": "gun shot",
+          "relation": "part of scene",
+          "tail": "cowbell",
+          "direct": "gun shot, cowbell",
+          "raw": "gun shot part of scene cowbell",
+          "template": "The sound of a gun shot is a common part of a cowbell scene."
+        },
+        {
+          "head": "gun shot",
+          "kg_entity": "gun shot",
+          "relation": "part of scene",
+          "tail": "tambourine",
+          "direct": "gun shot, tambourine",
+          "raw": "gun shot part of scene tambourine",
+          "template": "The sound of a gun shot is a common part of a tambourine scene."
+        },
+        {
+          "head": "gun shot",
+          "kg_entity": "gun shot",
+          "relation": "part of scene",
+          "tail": "poultry",
+          "direct": "gun shot, poultry",
+          "raw": "gun shot part of scene poultry",
+          "template": "The sound of a gun shot is a common part of a poultry scene."
+        }
+      ],
+      "mapped_entity": "gun shot"
+    },
+    {
+      "ids": {
+        "direct": [
+          303,
+          306,
+          309,
+          312,
+          315,
+          318,
+          321,
+          324,
+          327,
+          330,
+          333,
+          336,
+          339,
+          342,
+          345
+        ],
+        "raw": [
+          304,
+          307,
+          310,
+          313,
+          316,
+          319,
+          322,
+          325,
+          328,
+          331,
+          334,
+          337,
+          340,
+          343,
+          346
+        ],
+        "template": [
+          305,
+          308,
+          311,
+          314,
+          317,
+          320,
+          323,
+          326,
+          329,
+          332,
+          335,
+          338,
+          341,
+          344,
+          347
+        ]
+      },
+      "triples": [
+        {
+          "head": "jackhammer",
+          "kg_entity": "jackhammer",
+          "relation": "overlaps with",
+          "tail": "construction noise",
+          "direct": "jackhammer, construction noise",
+          "raw": "jackhammer overlaps with construction noise",
+          "template": "The sound of jackhammer often overlaps with construction noise."
+        },
+        {
+          "head": "jackhammer",
+          "kg_entity": "jackhammer",
+          "relation": "overlaps with",
+          "tail": "hammering",
+          "direct": "jackhammer, hammering",
+          "raw": "jackhammer overlaps with hammering",
+          "template": "The sound of jackhammer often overlaps with hammering."
+        },
+        {
+          "head": "jackhammer",
+          "kg_entity": "jackhammer",
+          "relation": "overlaps with",
+          "tail": "demolition",
+          "direct": "jackhammer, demolition",
+          "raw": "jackhammer overlaps with demolition",
+          "template": "The sound of jackhammer often overlaps with demolition."
+        },
+        {
+          "head": "jackhammer",
+          "kg_entity": "jackhammer",
+          "relation": "occurs in",
+          "tail": "construction project",
+          "direct": "jackhammer, construction project",
+          "raw": "jackhammer occurs in construction project",
+          "template": "A jackhammer typically occurs in a construction project."
+        },
+        {
+          "head": "jackhammer",
+          "kg_entity": "jackhammer",
+          "relation": "occurs in",
+          "tail": "construction zone intersection point",
+          "direct": "jackhammer, construction zone intersection point",
+          "raw": "jackhammer occurs in construction zone intersection point",
+          "template": "A jackhammer typically occurs in a construction zone intersection point."
+        },
+        {
+          "head": "jackhammer",
+          "kg_entity": "jackhammer",
+          "relation": "occurs in",
+          "tail": "construction site",
+          "direct": "jackhammer, construction site",
+          "raw": "jackhammer occurs in construction site",
+          "template": "A jackhammer typically occurs in a construction site."
+        },
+        {
+          "head": "jackhammer",
+          "kg_entity": "jackhammer",
+          "relation": "associated with environment",
+          "tail": "construction zone",
+          "direct": "jackhammer, construction zone",
+          "raw": "jackhammer associated with environment construction zone",
+          "template": "The sound of a jackhammer is heavily associated with a construction zone environment."
+        },
+        {
+          "head": "jackhammer",
+          "kg_entity": "jackhammer",
+          "relation": "associated with environment",
+          "tail": "workshop",
+          "direct": "jackhammer, workshop",
+          "raw": "jackhammer associated with environment workshop",
+          "template": "The sound of a jackhammer is heavily associated with a workshop environment."
+        },
+        {
+          "head": "jackhammer",
+          "kg_entity": "jackhammer",
+          "relation": "localized in",
+          "tail": "building site",
+          "direct": "jackhammer, building site",
+          "raw": "jackhammer localized in building site",
+          "template": "A jackhammer is usually localized in a building site."
+        },
+        {
+          "head": "jackhammer",
+          "kg_entity": "jackhammer",
+          "relation": "localized in",
+          "tail": "industrial zone",
+          "direct": "jackhammer, industrial zone",
+          "raw": "jackhammer localized in industrial zone",
+          "template": "A jackhammer is usually localized in an industrial zone."
+        },
+        {
+          "head": "jackhammer",
+          "kg_entity": "jackhammer",
+          "relation": "used for",
+          "tail": "construction",
+          "direct": "jackhammer, construction",
+          "raw": "jackhammer used for construction",
+          "template": "A jackhammer is generally used for construction."
+        },
+        {
+          "head": "jackhammer",
+          "kg_entity": "jackhammer",
+          "relation": "used for",
+          "tail": "quarrying",
+          "direct": "jackhammer, quarrying",
+          "raw": "jackhammer used for quarrying",
+          "template": "A jackhammer is generally used for quarrying."
+        },
+        {
+          "head": "jackhammer",
+          "kg_entity": "jackhammer",
+          "relation": "part of scene",
+          "tail": "demolition site",
+          "direct": "jackhammer, demolition site",
+          "raw": "jackhammer part of scene demolition site",
+          "template": "The sound of a jackhammer is a common part of a demolition site scene."
+        },
+        {
+          "head": "jackhammer",
+          "kg_entity": "jackhammer",
+          "relation": "part of scene",
+          "tail": "quarry zone",
+          "direct": "jackhammer, quarry zone",
+          "raw": "jackhammer part of scene quarry zone",
+          "template": "The sound of a jackhammer is a common part of a quarry zone scene."
+        },
+        {
+          "head": "jackhammer",
+          "kg_entity": "jackhammer",
+          "relation": "part of scene",
+          "tail": "mining site",
+          "direct": "jackhammer, mining site",
+          "raw": "jackhammer part of scene mining site",
+          "template": "The sound of a jackhammer is a common part of a mining site scene."
+        }
+      ],
+      "mapped_entity": "jackhammer"
+    },
+    {
+      "ids": {
+        "direct": [
+          348,
+          351,
+          354,
+          357,
+          360,
+          363,
+          366,
+          369,
+          372,
+          375,
+          378,
+          381,
+          384,
+          387,
+          390,
+          393,
+          396
+        ],
+        "raw": [
+          349,
+          352,
+          355,
+          358,
+          361,
+          364,
+          367,
+          370,
+          373,
+          376,
+          379,
+          382,
+          385,
+          388,
+          391,
+          394,
+          397
+        ],
+        "template": [
+          350,
+          353,
+          356,
+          359,
+          362,
+          365,
+          368,
+          371,
+          374,
+          377,
+          380,
+          383,
+          386,
+          389,
+          392,
+          395,
+          398
+        ]
+      },
+      "triples": [
+        {
+          "head": "siren",
+          "kg_entity": "siren",
+          "relation": "overlaps with",
+          "tail": "doorbell",
+          "direct": "siren, doorbell",
+          "raw": "siren overlaps with doorbell",
+          "template": "The sound of siren often overlaps with doorbell."
+        },
+        {
+          "head": "siren",
+          "kg_entity": "siren",
+          "relation": "overlaps with",
+          "tail": "warning",
+          "direct": "siren, warning",
+          "raw": "siren overlaps with warning",
+          "template": "The sound of siren often overlaps with warning."
+        },
+        {
+          "head": "siren",
+          "kg_entity": "siren",
+          "relation": "overlaps with",
+          "tail": "change bell ringing",
+          "direct": "siren, change bell ringing",
+          "raw": "siren overlaps with change bell ringing",
+          "template": "The sound of siren often overlaps with change bell ringing."
+        },
+        {
+          "head": "siren",
+          "kg_entity": "siren",
+          "relation": "occurs in",
+          "tail": "woodpecker",
+          "direct": "siren, woodpecker",
+          "raw": "siren occurs in woodpecker",
+          "template": "A siren typically occurs in a woodpecker."
+        },
+        {
+          "head": "siren",
+          "kg_entity": "siren",
+          "relation": "occurs in",
+          "tail": "vehicle",
+          "direct": "siren, vehicle",
+          "raw": "siren occurs in vehicle",
+          "template": "A siren typically occurs in a vehicle."
+        },
+        {
+          "head": "siren",
+          "kg_entity": "siren",
+          "relation": "occurs in",
+          "tail": "fire",
+          "direct": "siren, fire",
+          "raw": "siren occurs in fire",
+          "template": "A siren typically occurs in a fire."
+        },
+        {
+          "head": "siren",
+          "kg_entity": "siren",
+          "relation": "associated with environment",
+          "tail": "source-ambiguous",
+          "direct": "siren, source-ambiguous",
+          "raw": "siren associated with environment source-ambiguous",
+          "template": "The sound of a siren is heavily associated with a source-ambiguous environment."
+        },
+        {
+          "head": "siren",
+          "kg_entity": "siren",
+          "relation": "associated with environment",
+          "tail": "car alarm",
+          "direct": "siren, car alarm",
+          "raw": "siren associated with environment car alarm",
+          "template": "The sound of a siren is heavily associated with a car alarm environment."
+        },
+        {
+          "head": "siren",
+          "kg_entity": "siren",
+          "relation": "associated with environment",
+          "tail": "noise",
+          "direct": "siren, noise",
+          "raw": "siren associated with environment noise",
+          "template": "The sound of a siren is heavily associated with a noise environment."
+        },
+        {
+          "head": "siren",
+          "kg_entity": "siren",
+          "relation": "localized in",
+          "tail": "footsteps on floor",
+          "direct": "siren, footsteps on floor",
+          "raw": "siren localized in footsteps on floor",
+          "template": "A siren is usually localized in a footsteps on floor."
+        },
+        {
+          "head": "siren",
+          "kg_entity": "siren",
+          "relation": "localized in",
+          "tail": "aircraft",
+          "direct": "siren, aircraft",
+          "raw": "siren localized in aircraft",
+          "template": "A siren is usually localized in an aircraft."
+        },
+        {
+          "head": "siren",
+          "kg_entity": "siren",
+          "relation": "localized in",
+          "tail": "source-ambiguous sounds",
+          "direct": "siren, source-ambiguous sounds",
+          "raw": "siren localized in source-ambiguous sounds",
+          "template": "A siren is usually localized in a source-ambiguous sounds."
+        },
+        {
+          "head": "siren",
+          "kg_entity": "siren",
+          "relation": "used for",
+          "tail": "ding-dong",
+          "direct": "siren, ding-dong",
+          "raw": "siren used for ding-dong",
+          "template": "A siren is generally used for ding-dong."
+        },
+        {
+          "head": "siren",
+          "kg_entity": "siren",
+          "relation": "used for",
+          "tail": "short",
+          "direct": "siren, short",
+          "raw": "siren used for short",
+          "template": "A siren is generally used for short."
+        },
+        {
+          "head": "siren",
+          "kg_entity": "siren",
+          "relation": "part of scene",
+          "tail": "things",
+          "direct": "siren, things",
+          "raw": "siren part of scene things",
+          "template": "The sound of a siren is a common part of a things scene."
+        },
+        {
+          "head": "siren",
+          "kg_entity": "siren",
+          "relation": "part of scene",
+          "tail": "sound of things",
+          "direct": "siren, sound of things",
+          "raw": "siren part of scene sound of things",
+          "template": "The sound of a siren is a common part of a sound of things scene."
+        },
+        {
+          "head": "siren",
+          "kg_entity": "siren",
+          "relation": "part of scene",
+          "tail": "home",
+          "direct": "siren, home",
+          "raw": "siren part of scene home",
+          "template": "The sound of a siren is a common part of a home scene."
+        }
+      ],
+      "mapped_entity": "siren"
+    },
+    {
+      "ids": {
+        "direct": [
+          399,
+          402,
+          405,
+          408,
+          411,
+          414,
+          417,
+          420,
+          423,
+          426,
+          429,
+          432,
+          435,
+          438,
+          441,
+          444,
+          447,
+          450
+        ],
+        "raw": [
+          400,
+          403,
+          406,
+          409,
+          412,
+          415,
+          418,
+          421,
+          424,
+          427,
+          430,
+          433,
+          436,
+          439,
+          442,
+          445,
+          448,
+          451
+        ],
+        "template": [
+          401,
+          404,
+          407,
+          410,
+          413,
+          416,
+          419,
+          422,
+          425,
+          428,
+          431,
+          434,
+          437,
+          440,
+          443,
+          446,
+          449,
+          452
+        ]
+      },
+      "triples": [
+        {
+          "head": "street music",
+          "kg_entity": "street music",
+          "relation": "overlaps with",
+          "tail": "engine knocking",
+          "direct": "street music, engine knocking",
+          "raw": "street music overlaps with engine knocking",
+          "template": "The sound of street music often overlaps with engine knocking."
+        },
+        {
+          "head": "street music",
+          "kg_entity": "street music",
+          "relation": "overlaps with",
+          "tail": "doorbell",
+          "direct": "street music, doorbell",
+          "raw": "street music overlaps with doorbell",
+          "template": "The sound of street music often overlaps with doorbell."
+        },
+        {
+          "head": "street music",
+          "kg_entity": "street music",
+          "relation": "overlaps with",
+          "tail": "chopping",
+          "direct": "street music, chopping",
+          "raw": "street music overlaps with chopping",
+          "template": "The sound of street music often overlaps with chopping."
+        },
+        {
+          "head": "street music",
+          "kg_entity": "street music",
+          "relation": "occurs in",
+          "tail": "display",
+          "direct": "street music, display",
+          "raw": "street music occurs in display",
+          "template": "A street music typically occurs in a display."
+        },
+        {
+          "head": "street music",
+          "kg_entity": "street music",
+          "relation": "occurs in",
+          "tail": "sine wave",
+          "direct": "street music, sine wave",
+          "raw": "street music occurs in sine wave",
+          "template": "A street music typically occurs in a sine wave."
+        },
+        {
+          "head": "street music",
+          "kg_entity": "street music",
+          "relation": "occurs in",
+          "tail": "onomatopoeia",
+          "direct": "street music, onomatopoeia",
+          "raw": "street music occurs in onomatopoeia",
+          "template": "A street music typically occurs in an onomatopoeia."
+        },
+        {
+          "head": "street music",
+          "kg_entity": "street music",
+          "relation": "associated with environment",
+          "tail": "background noise",
+          "direct": "street music, background noise",
+          "raw": "street music associated with environment background noise",
+          "template": "The sound of a street music is heavily associated with a background noise environment."
+        },
+        {
+          "head": "street music",
+          "kg_entity": "street music",
+          "relation": "associated with environment",
+          "tail": "channel environment and background",
+          "direct": "street music, channel environment and background",
+          "raw": "street music associated with environment channel environment and background",
+          "template": "The sound of a street music is heavily associated with a channel environment and background environment."
+        },
+        {
+          "head": "street music",
+          "kg_entity": "street music",
+          "relation": "associated with environment",
+          "tail": "computer keyboard",
+          "direct": "street music, computer keyboard",
+          "raw": "street music associated with environment computer keyboard",
+          "template": "The sound of a street music is heavily associated with a computer keyboard environment."
+        },
+        {
+          "head": "street music",
+          "kg_entity": "street music",
+          "relation": "localized in",
+          "tail": "military",
+          "direct": "street music, military",
+          "raw": "street music localized in military",
+          "template": "A street music is usually localized in a military."
+        },
+        {
+          "head": "street music",
+          "kg_entity": "street music",
+          "relation": "localized in",
+          "tail": "church bell ringing",
+          "direct": "street music, church bell ringing",
+          "raw": "street music localized in church bell ringing",
+          "template": "A street music is usually localized in a church bell ringing."
+        },
+        {
+          "head": "street music",
+          "kg_entity": "street music",
+          "relation": "localized in",
+          "tail": "elevator door opening",
+          "direct": "street music, elevator door opening",
+          "raw": "street music localized in elevator door opening",
+          "template": "A street music is usually localized in an elevator door opening."
+        },
+        {
+          "head": "street music",
+          "kg_entity": "street music",
+          "relation": "used for",
+          "tail": "woodpecker",
+          "direct": "street music, woodpecker",
+          "raw": "street music used for woodpecker",
+          "template": "A street music is generally used for woodpecker."
+        },
+        {
+          "head": "street music",
+          "kg_entity": "street music",
+          "relation": "used for",
+          "tail": "chime",
+          "direct": "street music, chime",
+          "raw": "street music used for chime",
+          "template": "A street music is generally used for chime."
+        },
+        {
+          "head": "street music",
+          "kg_entity": "street music",
+          "relation": "used for",
+          "tail": "gong",
+          "direct": "street music, gong",
+          "raw": "street music used for gong",
+          "template": "A street music is generally used for gong."
+        },
+        {
+          "head": "street music",
+          "kg_entity": "street music",
+          "relation": "part of scene",
+          "tail": "ukulele",
+          "direct": "street music, ukulele",
+          "raw": "street music part of scene ukulele",
+          "template": "The sound of a street music is a common part of an ukulele scene."
+        },
+        {
+          "head": "street music",
+          "kg_entity": "street music",
+          "relation": "part of scene",
+          "tail": "toll",
+          "direct": "street music, toll",
+          "raw": "street music part of scene toll",
+          "template": "The sound of a street music is a common part of a toll scene."
+        },
+        {
+          "head": "street music",
+          "kg_entity": "street music",
+          "relation": "part of scene",
+          "tail": "stone on metal",
+          "direct": "street music, stone on metal",
+          "raw": "street music part of scene stone on metal",
+          "template": "The sound of a street music is a common part of a stone on metal scene."
+        }
+      ],
+      "mapped_entity": "street music"
+    }
+  ]
+}

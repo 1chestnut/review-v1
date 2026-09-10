@@ -1,0 +1,4928 @@
+{
+  "audioset": {
+    "Speech": {
+      "entity": "speech",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Male speech, man speaking": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Female speech, woman speaking": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Child speech, kid speaking": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Conversation": {
+      "entity": "conversation",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Narration, monologue": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Babbling": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Speech synthesizer": {
+      "entity": "speech synthesizer",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Shout": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Bellow": {
+      "entity": "bellow",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Whoop": {
+      "entity": "whoop",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Yell": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Battle cry": {
+      "entity": "battle cry",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Children shouting": {
+      "entity": "children shouting",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Screaming": {
+      "entity": "screaming",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Whispering": {
+      "entity": "whispering",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Laughter": {
+      "entity": "laughter",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Baby laughter": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Giggle": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Snicker": {
+      "entity": "snicker",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Belly laugh": {
+      "entity": "belly laugh",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Chuckle, chortle": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Crying, sobbing": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Baby cry, infant cry": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Whimper": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Wail, moan": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Sigh": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Singing": {
+      "entity": "singing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Choir": {
+      "entity": "choir",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Yodeling": {
+      "entity": "yodeling",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Chant": {
+      "entity": "chant",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Mantra": {
+      "entity": "mantra",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Male singing": {
+      "entity": "male singing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Female singing": {
+      "entity": "female singing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Child singing": {
+      "entity": "child singing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Synthetic singing": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Rapping": {
+      "entity": "rapping",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Humming": {
+      "entity": "humming",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Groan": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Grunt": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Whistling": {
+      "entity": "whistling",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Breathing": {
+      "entity": "breathing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Wheeze": {
+      "entity": "wheeze",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Snoring": {
+      "entity": "snoring",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Gasp": {
+      "entity": "gasp",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Pant": {
+      "entity": "pant",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Snort": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Cough": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Throat clearing": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Sneeze": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Sniff": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Run": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Shuffle": {
+      "entity": "shuffle",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Walk, footsteps": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Chewing, mastication": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Biting": {
+      "entity": "biting",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Gargling": {
+      "entity": "gargling",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Stomach rumble": {
+      "entity": "stomach rumble",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Burping, eructation": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Hiccup": {
+      "entity": "hiccup",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Fart": {
+      "entity": "fart",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Hands": {
+      "entity": "hands",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Finger snapping": {
+      "entity": "finger snapping",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Clapping": {
+      "entity": "clapping",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Heart sounds, heartbeat": {
+      "entity": "heart sounds heartbeat",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Heart murmur": {
+      "entity": "heart murmur",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Cheering": {
+      "entity": "cheering",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Applause": {
+      "entity": "applause",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Chatter": {
+      "entity": "chatter",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Crowd": {
+      "entity": "crowd",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Hubbub, speech noise, speech babble": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Children playing": {
+      "entity": "children playing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Animal": {
+      "entity": "animal",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Domestic animals, pets": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Dog": {
+      "entity": "dog",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bark": {
+      "entity": "bark",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Yip": {
+      "entity": "yip",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Howl": {
+      "entity": "howl",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bow-wow": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Growling": {
+      "entity": "growling",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Whimper (dog)": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Cat": {
+      "entity": "cat",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Purr": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Meow": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Hiss": {
+      "entity": "hiss",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Caterwaul": {
+      "entity": "caterwaul",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Livestock, farm animals, working animals": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Horse": {
+      "entity": "horse",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Clip-clop": {
+      "entity": "clip-clop",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Neigh, whinny": {
+      "entity": "neigh whinny",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Cattle, bovinae": {
+      "entity": "cattle or bovinae",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Moo": {
+      "entity": "moo",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Cowbell": {
+      "entity": "cowbell",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Pig": {
+      "entity": "pig",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Oink": {
+      "entity": "oink",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Goat": {
+      "entity": "goat",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bleat": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Sheep": {
+      "entity": "sheep",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Fowl": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Chicken, rooster": {
+      "entity": "chicken or rooster",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Cluck": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Crowing, cock-a-doodle-doo": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Turkey": {
+      "entity": "turkey",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Gobble": {
+      "entity": "gobble",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Duck": {
+      "entity": "duck",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Quack": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Goose": {
+      "entity": "goose",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Honk": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Wild animals": {
+      "entity": "wild animal",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Roaring cats (lions, tigers)": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Roar": {
+      "entity": "roar",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bird": {
+      "entity": "bird",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bird vocalization, bird call, bird song": {
+      "entity": "bird vocalization call or song",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Chirp, tweet": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Squawk": {
+      "entity": "squawk",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Pigeon, dove": {
+      "entity": "pigeon dove",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Coo": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Crow": {
+      "entity": "crow",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Caw": {
+      "entity": "caw",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Owl": {
+      "entity": "owl",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Hoot": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Bird flight, flapping wings": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Canidae, dogs, wolves": {
+      "entity": "canidae dogs wolves",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Rodents, rats, mice": {
+      "entity": "rodents rats mice",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Mouse": {
+      "entity": "mouse",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Patter": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Insect": {
+      "entity": "insect",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Cricket": {
+      "entity": "cricket",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Mosquito": {
+      "entity": "mosquito",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Fly, housefly": {
+      "entity": "fly housefly",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Buzz": {
+      "entity": "buzz",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bee, wasp, etc.": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Frog": {
+      "entity": "frog",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Croak": {
+      "entity": "croak",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Snake": {
+      "entity": "snake",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Rattle": {
+      "entity": "rattle",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Whale vocalization": {
+      "entity": "whale vocalization",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Music": {
+      "entity": "music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Musical instrument": {
+      "entity": "musical instrument",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Plucked string instrument": {
+      "entity": "plucked string instrument",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Guitar": {
+      "entity": "guitar",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Electric guitar": {
+      "entity": "electric guitar",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bass guitar": {
+      "entity": "bass guitar",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Acoustic guitar": {
+      "entity": "acoustic guitar",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Steel guitar, slide guitar": {
+      "entity": "steel guitar or slide guitar",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Tapping (guitar technique)": {
+      "entity": "tapping",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Strum": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Banjo": {
+      "entity": "banjo",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Sitar": {
+      "entity": "sitar",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Mandolin": {
+      "entity": "mandolin",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Zither": {
+      "entity": "zither",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Ukulele": {
+      "entity": "ukulele",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Keyboard (musical)": {
+      "entity": "keyboard (musical)",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Piano": {
+      "entity": "piano",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Electric piano": {
+      "entity": "electric piano",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Organ": {
+      "entity": "organ",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Electronic organ": {
+      "entity": "electronic organ",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Hammond organ": {
+      "entity": "hammond organ",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Synthesizer": {
+      "entity": "synthesizer",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Sampler": {
+      "entity": "sampler",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Harpsichord": {
+      "entity": "harpsichord",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Percussion": {
+      "entity": "percussion",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Drum kit": {
+      "entity": "drum kit",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Drum machine": {
+      "entity": "drum machine",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Drum": {
+      "entity": "drum",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Snare drum": {
+      "entity": "snare drum",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Rimshot": {
+      "entity": "rimshot",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Drum roll": {
+      "entity": "drum roll",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bass drum": {
+      "entity": "bass drum",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Timpani": {
+      "entity": "timpani",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Tabla": {
+      "entity": "tabla",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Cymbal": {
+      "entity": "cymbal",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Hi-hat": {
+      "entity": "hi-hat",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Wood block": {
+      "entity": "wood block",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Tambourine": {
+      "entity": "tambourine",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Rattle (instrument)": {
+      "entity": "rattle (instrument)",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Maraca": {
+      "entity": "maraca",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Gong": {
+      "entity": "gong",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Tubular bells": {
+      "entity": "tubular bells",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Mallet percussion": {
+      "entity": "mallet percussion",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Marimba, xylophone": {
+      "entity": "marimba and xylophone",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Glockenspiel": {
+      "entity": "glockenspiel",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Vibraphone": {
+      "entity": "vibraphone",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Steelpan": {
+      "entity": "steelpan",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Orchestra": {
+      "entity": "orchestra",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Brass instrument": {
+      "entity": "brass instrument",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "French horn": {
+      "entity": "french horn",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Trumpet": {
+      "entity": "trumpet",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Trombone": {
+      "entity": "trombone",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bowed string instrument": {
+      "entity": "bowed string instrument",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "String section": {
+      "entity": "string section",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Violin, fiddle": {
+      "entity": "violin fiddle",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Pizzicato": {
+      "entity": "pizzicato",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Cello": {
+      "entity": "cello",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Double bass": {
+      "entity": "double bass",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Wind instrument, woodwind instrument": {
+      "entity": "wind or woodwind instrument",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Flute": {
+      "entity": "flute",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Saxophone": {
+      "entity": "saxophone",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Clarinet": {
+      "entity": "clarinet",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Harp": {
+      "entity": "harp",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bell": {
+      "entity": "bell",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Church bell": {
+      "entity": "church bell",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Jingle bell": {
+      "entity": "jingle bell",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bicycle bell": {
+      "entity": "bicycle bell",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Tuning fork": {
+      "entity": "tuning fork",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Chime": {
+      "entity": "chime",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Wind chime": {
+      "entity": "wind chime",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Change ringing (campanology)": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Harmonica": {
+      "entity": "harmonica",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Accordion": {
+      "entity": "accordion",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bagpipes": {
+      "entity": "bagpipes",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Didgeridoo": {
+      "entity": "didgeridoo",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Shofar": {
+      "entity": "shofar",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Theremin": {
+      "entity": "theremin",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Singing bowl": {
+      "entity": "singing bowl",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Scratching (performance technique)": {
+      "entity": "scratching",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Pop music": {
+      "entity": "pop music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Hip hop music": {
+      "entity": "hip hop music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Beatboxing": {
+      "entity": "beatboxing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Rock music": {
+      "entity": "rock music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Heavy metal": {
+      "entity": "heavy metal",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Punk rock": {
+      "entity": "punk rock",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Grunge": {
+      "entity": "grunge",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Progressive rock": {
+      "entity": "progressive rock",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Rock and roll": {
+      "entity": "rock and roll",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Psychedelic rock": {
+      "entity": "psychedelic rock",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Rhythm and blues": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Soul music": {
+      "entity": "soul music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Reggae": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Country": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Swing music": {
+      "entity": "swing music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bluegrass": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Funk": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Folk music": {
+      "entity": "folk music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Middle Eastern music": {
+      "entity": "middle eastern music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Jazz": {
+      "entity": "jazz",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Disco": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Classical music": {
+      "entity": "classical music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Opera": {
+      "entity": "opera",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Electronic music": {
+      "entity": "electronic music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "House music": {
+      "entity": "house music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Techno": {
+      "entity": "techno",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Dubstep": {
+      "entity": "dubstep",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Drum and bass": {
+      "entity": "drum and bass",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Electronica": {
+      "entity": "electronica",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Electronic dance music": {
+      "entity": "electronic dance music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Ambient music": {
+      "entity": "ambient music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Trance music": {
+      "entity": "trance music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Music of Latin America": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Salsa music": {
+      "entity": "salsa music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Flamenco": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Blues": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Music for children": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "New-age music": {
+      "entity": "new-age music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Vocal music": {
+      "entity": "vocal music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "A capella": {
+      "entity": "a capella",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Music of Africa": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Afrobeat": {
+      "entity": "afrobeat",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Christian music": {
+      "entity": "christian music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Gospel music": {
+      "entity": "gospel music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Music of Asia": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Carnatic music": {
+      "entity": "carnatic music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Music of Bollywood": {
+      "entity": "music of bollywood",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Ska": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Traditional music": {
+      "entity": "traditional music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Independent music": {
+      "entity": "independent music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Song": {
+      "entity": "song",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Background music": {
+      "entity": "background music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Theme music": {
+      "entity": "theme music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Jingle (music)": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Soundtrack music": {
+      "entity": "soundtrack music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Lullaby": {
+      "entity": "lullaby",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Video game music": {
+      "entity": "video game music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Christmas music": {
+      "entity": "christmas music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Dance music": {
+      "entity": "dance music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Wedding music": {
+      "entity": "wedding music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Happy music": {
+      "entity": "happy music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Funny music": {
+      "entity": "funny music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Sad music": {
+      "entity": "sad music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Tender music": {
+      "entity": "tender music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Exciting music": {
+      "entity": "exciting music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Angry music": {
+      "entity": "angry music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Scary music": {
+      "entity": "scary music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Wind": {
+      "entity": "wind",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Rustling leaves": {
+      "entity": "rustling leaves",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Wind noise (microphone)": {
+      "entity": "wind noise (microphone)",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Thunderstorm": {
+      "entity": "thunderstorm",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Thunder": {
+      "entity": "thunder",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Water": {
+      "entity": "water",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Rain": {
+      "entity": "rain",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Raindrop": {
+      "entity": "raindrop",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Rain on surface": {
+      "entity": "rain on surface",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Stream": {
+      "entity": "stream",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Waterfall": {
+      "entity": "waterfall",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Ocean": {
+      "entity": "ocean",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Waves, surf": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Steam": {
+      "entity": "steam",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Gurgling": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Fire": {
+      "entity": "fire",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Crackle": {
+      "entity": "crackle",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Vehicle": {
+      "entity": "vehicle",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Boat, Water vehicle": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Sailboat, sailing ship": {
+      "entity": "sailboat sailing ship",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Rowboat, canoe, kayak": {
+      "entity": "rowboat canoe kayak",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Motorboat, speedboat": {
+      "entity": "motorboat speedboat",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Ship": {
+      "entity": "ship",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Motor vehicle (road)": {
+      "entity": "motor vehicle",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Car": {
+      "entity": "car",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Vehicle horn, car horn, honking": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Toot": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Car alarm": {
+      "entity": "car alarm",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Power windows, electric windows": {
+      "entity": "power windows electric windows",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Skidding": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Tire squeal": {
+      "entity": "tire squeal",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Car passing by": {
+      "entity": "car passing by",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Race car, auto racing": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Truck": {
+      "entity": "truck",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Air brake": {
+      "entity": "air brake",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Air horn, truck horn": {
+      "entity": "air horn or truck horn",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Reversing beeps": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Ice cream truck, ice cream van": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Bus": {
+      "entity": "bus",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Emergency vehicle": {
+      "entity": "emergency vehicle",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Police car (siren)": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Ambulance (siren)": {
+      "entity": "ambulance",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Fire engine, fire truck (siren)": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Motorcycle": {
+      "entity": "motorcycle",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Traffic noise, roadway noise": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Rail transport": {
+      "entity": "rail transport",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Train": {
+      "entity": "train",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Train whistle": {
+      "entity": "train whistle",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Train horn": {
+      "entity": "train horn",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Railroad car, train wagon": {
+      "entity": "railroad car or train wagon",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Train wheels squealing": {
+      "entity": "train wheels squealing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Subway, metro, underground": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Aircraft": {
+      "entity": "aircraft",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Aircraft engine": {
+      "entity": "aircraft engine",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Jet engine": {
+      "entity": "jet engine",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Propeller, airscrew": {
+      "entity": "propeller airscrew",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Helicopter": {
+      "entity": "helicopter",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Fixed-wing aircraft, airplane": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Bicycle": {
+      "entity": "bicycle",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Skateboard": {
+      "entity": "skateboard",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Engine": {
+      "entity": "engine",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Light engine (high frequency)": {
+      "entity": "light engine (high frequency)",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Dental drill, dentist's drill": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Lawn mower": {
+      "entity": "lawn mower",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Chainsaw": {
+      "entity": "chainsaw",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Medium engine (mid frequency)": {
+      "entity": "medium engine (mid frequency)",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Heavy engine (low frequency)": {
+      "entity": "heavy engine (low frequency)",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Engine knocking": {
+      "entity": "engine knocking",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Engine starting": {
+      "entity": "engine starting",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Idling": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Accelerating, revving, vroom": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Door": {
+      "entity": "door",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Doorbell": {
+      "entity": "doorbell",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Ding-dong": {
+      "entity": "ding-dong",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Sliding door": {
+      "entity": "sliding door",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Slam": {
+      "entity": "slam",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Knock": {
+      "entity": "knock",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Tap": {
+      "entity": "tap",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Squeak": {
+      "entity": "squeak",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Cupboard open or close": {
+      "entity": "cupboard open or close",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Drawer open or close": {
+      "entity": "drawer open or close",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Dishes, pots, and pans": {
+      "entity": "dishes or pots or pans",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Cutlery, silverware": {
+      "entity": "cutlery or silverware",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Chopping (food)": {
+      "entity": "chopping",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Frying (food)": {
+      "entity": "frying",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Microwave oven": {
+      "entity": "microwave oven",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Blender": {
+      "entity": "blender",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Water tap, faucet": {
+      "entity": "water tap or faucet",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Sink (filling or washing)": {
+      "entity": "sink (filling or washing)",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bathtub (filling or washing)": {
+      "entity": "bathtub (filling or washing)",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Hair dryer": {
+      "entity": "hair dryer",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Toilet flush": {
+      "entity": "toilet flush",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Toothbrush": {
+      "entity": "toothbrush",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Electric toothbrush": {
+      "entity": "electric toothbrush",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Vacuum cleaner": {
+      "entity": "vacuum cleaner",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Zipper (clothing)": {
+      "entity": "zipper (clothing)",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Keys jangling": {
+      "entity": "keys jangling",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Coin (dropping)": {
+      "entity": "coin",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Scissors": {
+      "entity": "scissors",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Electric shaver, electric razor": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Shuffling cards": {
+      "entity": "shuffling cards",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Typing": {
+      "entity": "typing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Typewriter": {
+      "entity": "typewriter",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Computer keyboard": {
+      "entity": "computer keyboard",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Writing": {
+      "entity": "writing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Alarm": {
+      "entity": "alarm",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Telephone": {
+      "entity": "telephone",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Telephone bell ringing": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Ringtone": {
+      "entity": "ringtone",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Telephone dialing, DTMF": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Dial tone": {
+      "entity": "dial tone",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Busy signal": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Alarm clock": {
+      "entity": "alarm clock",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Siren": {
+      "entity": "siren",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Civil defense siren": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Buzzer": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Smoke detector, smoke alarm": {
+      "entity": "smoke detector alarm",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Fire alarm": {
+      "entity": "fire alarm",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Foghorn": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Whistle": {
+      "entity": "whistle",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Steam whistle": {
+      "entity": "steam whistle",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Mechanisms": {
+      "entity": "mechanisms",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Ratchet, pawl": {
+      "entity": "ratchet or pawl",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Clock": {
+      "entity": "clock",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Tick": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Tick-tock": {
+      "entity": "tick-tock",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Gears": {
+      "entity": "gear",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Pulleys": {
+      "entity": "pulleys",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Sewing machine": {
+      "entity": "sewing machine",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Mechanical fan": {
+      "entity": "mechanical fan",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Air conditioning": {
+      "entity": "air conditioning",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Cash register": {
+      "entity": "cash register",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Printer": {
+      "entity": "printer",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Camera": {
+      "entity": "camera",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Single-lens reflex camera": {
+      "entity": "single-lens reflex camera",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Tools": {
+      "entity": "tools",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Hammer": {
+      "entity": "hammer",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Jackhammer": {
+      "entity": "jackhammer",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Sawing": {
+      "entity": "sawing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Filing (rasp)": {
+      "entity": "filing (rasp)",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Sanding": {
+      "entity": "sanding",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Power tool": {
+      "entity": "power tool",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Drill": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Explosion": {
+      "entity": "explosion",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Gunshot, gunfire": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Machine gun": {
+      "entity": "machine gun",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Fusillade": {
+      "entity": "fusillade",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Artillery fire": {
+      "entity": "artillery fire",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Cap gun": {
+      "entity": "cap gun",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Fireworks": {
+      "entity": "fireworks",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Firecracker": {
+      "entity": "firecracker",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Burst, pop": {
+      "entity": "burst or pop",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Eruption": {
+      "entity": "eruption",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Boom": {
+      "entity": "boom",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Wood": {
+      "entity": "wood",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Chop": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Splinter": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Crack": {
+      "entity": "crack",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Glass": {
+      "entity": "glass",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Chink, clink": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Shatter": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Liquid": {
+      "entity": "liquid",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Splash, splatter": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Slosh": {
+      "entity": "slosh",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Squish": {
+      "entity": "squish",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Drip": {
+      "entity": "drip-drip",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Pour": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Trickle, dribble": {
+      "entity": "trickle dribble",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Gush": {
+      "entity": "gush",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Fill (with liquid)": {
+      "entity": "fill (with liquid)",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Spray": {
+      "entity": "spray",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Pump (liquid)": {
+      "entity": "pump (liquid)",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Stir": {
+      "entity": "stir",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Boiling": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Sonar": {
+      "entity": "sonar",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Arrow": {
+      "entity": "arrow",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Whoosh, swoosh, swish": {
+      "entity": "whoosh swoosh swish",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Thump, thud": {
+      "entity": "thump or thud",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Thunk": {
+      "entity": "thunk",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Electronic tuner": {
+      "entity": "electronic tuner",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Effects unit": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Chorus effect": {
+      "entity": "chorus effect",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Basketball bounce": {
+      "entity": "basketball bounce",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bang": {
+      "entity": "bang",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Slap, smack": {
+      "entity": "slap or smack",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Whack, thwack": {
+      "entity": "whack or thwack",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Smash, crash": {
+      "entity": "smash or crash",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Breaking": {
+      "entity": "breaking",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bouncing": {
+      "entity": "bouncing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Whip": {
+      "entity": "whip",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Flap": {
+      "entity": "flap",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Scratch": {
+      "entity": "scratch",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Scrape": {
+      "entity": "scrape",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Rub": {
+      "entity": "rub",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Roll": {
+      "entity": "roll",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Crushing": {
+      "entity": "crushing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Crumpling, crinkling": {
+      "entity": "crumpling or crinkling",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Tearing": {
+      "entity": "tearing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Beep, bleep": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Ping": {
+      "entity": "ping",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Ding": {
+      "entity": "ding",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Clang": {
+      "entity": "clang",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Squeal": {
+      "entity": "squeal",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Creak": {
+      "entity": "creak",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Rustle": {
+      "entity": "rustle",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Whir": {
+      "entity": "whir",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Clatter": {
+      "entity": "clatter",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Sizzle": {
+      "entity": "sizzle",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Clicking": {
+      "entity": "clicking",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Clickety-clack": {
+      "entity": "clickety-clack",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Rumble": {
+      "entity": "rumble",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Plop": {
+      "entity": "plop",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Jingle, tinkle": {
+      "entity": "jingle tinkle",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Hum": {
+      "entity": "hum",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Zing": {
+      "entity": "zing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Boing": {
+      "entity": "boing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Crunch": {
+      "entity": "crunch",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Silence": {
+      "entity": "silence",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Sine wave": {
+      "entity": "sine wave",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Harmonic": {
+      "entity": "harmonic",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Chirp tone": {
+      "entity": "chirp tone",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Sound effect": {
+      "entity": "sound effect",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Pulse": {
+      "entity": "pulse",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Inside, small room": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Inside, large room or hall": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Inside, public space": {
+      "entity": "inside public space",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Outside, urban or manmade": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Outside, rural or natural": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Reverberation": {
+      "entity": "reverberation",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Echo": {
+      "entity": "echo",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Noise": {
+      "entity": "noise",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Environmental noise": {
+      "entity": "environmental noise",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Static": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Mains hum": {
+      "entity": "mains hum",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Distortion": {
+      "entity": "distortion",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Sidetone": {
+      "entity": "sidetone",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Cacophony": {
+      "entity": "cacophony",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "White noise": {
+      "entity": "white noise",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Pink noise": {
+      "entity": "pink noise",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Throbbing": {
+      "entity": "throbbing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Vibration": {
+      "entity": "vibration",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Television": {
+      "entity": "television",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Radio": {
+      "entity": "radio",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Field recording": {
+      "entity": "field recording",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    }
+  },
+  "dcase17_t4": {
+    "ambulance (siren)": {
+      "entity": "ambulance",
+      "decision": "accepted_legacy_alias",
+      "method": "historical_reproduction_map",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "bicycle": {
+      "entity": "bicycle",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "bus": {
+      "entity": "bus",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "car": {
+      "entity": "car",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "car alarm": {
+      "entity": "car alarm",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "car passing by": {
+      "entity": "car passing by",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "civil defense siren": {
+      "entity": "siren",
+      "decision": "accepted_legacy_alias",
+      "method": "historical_reproduction_map",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "fire engine, fire truck (siren)": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "motorcycle": {
+      "entity": "motorcycle",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "police car (siren)": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "reversing beeps": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "screaming": {
+      "entity": "screaming",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "skateboard": {
+      "entity": "skateboard",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "train": {
+      "entity": "train",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "train horn": {
+      "entity": "train horn",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "truck": {
+      "entity": "truck",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "air horn, truck horn": {
+      "entity": "air horn or truck horn",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    }
+  },
+  "esc50": {
+    "airplane": {
+      "entity": "airplane",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "breathing": {
+      "entity": "breathing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "brushing teeth": {
+      "entity": "brushing teeth",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "can opening": {
+      "entity": "can opening",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "car horn": {
+      "entity": "car horn",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "cat": {
+      "entity": "cat",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "chainsaw": {
+      "entity": "chainsaw",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "chirping birds": {
+      "entity": "chirping birds",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "church bells": {
+      "entity": "church bells",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "clapping": {
+      "entity": "clapping",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "clock alarm": {
+      "entity": "clock alarm",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "clock tick": {
+      "entity": "clock tick",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "coughing": {
+      "entity": "coughing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "cow": {
+      "entity": "cow",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "crackling fire": {
+      "entity": "crackling fire",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "crickets": {
+      "entity": "crickets",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "crow": {
+      "entity": "crow",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "crying baby": {
+      "entity": "baby crying",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "dog": {
+      "entity": "dog",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "door wood creaks": {
+      "entity": "door wood creak",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "door wood knock": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "drinking sipping": {
+      "entity": "drinking or sipping",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "engine": {
+      "entity": "engine",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "fireworks": {
+      "entity": "fireworks",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "footsteps": {
+      "entity": "footsteps",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "frog": {
+      "entity": "frog",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "glass breaking": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "hand saw": {
+      "entity": "hand saw",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "helicopter": {
+      "entity": "helicopter",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "hen": {
+      "entity": "hen",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "insects": {
+      "entity": "insects",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "keyboard typing": {
+      "entity": "keyboard typing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "laughing": {
+      "entity": "laughing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "mouse click": {
+      "entity": "mouse click",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "pig": {
+      "entity": "pig",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "pouring water": {
+      "entity": "pouring water",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "rain": {
+      "entity": "rain",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "rooster": {
+      "entity": "rooster",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "sea waves": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "sheep": {
+      "entity": "sheep",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "siren": {
+      "entity": "siren",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "sneezing": {
+      "entity": "sneezing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "snoring": {
+      "entity": "snoring",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "thunderstorm": {
+      "entity": "thunderstorm",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "toilet flush": {
+      "entity": "toilet flush",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "train": {
+      "entity": "train",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "vacuum cleaner": {
+      "entity": "vacuum cleaner",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "washing machine": {
+      "entity": "washing machine",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "water drops": {
+      "entity": "water drop",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "wind": {
+      "entity": "wind",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    }
+  },
+  "fsd50k": {
+    "Accelerating, revving, vroom": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Accordion": {
+      "entity": "accordion",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Acoustic guitar": {
+      "entity": "acoustic guitar",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Aircraft": {
+      "entity": "aircraft",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Alarm": {
+      "entity": "alarm",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Animal": {
+      "entity": "animal",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Applause": {
+      "entity": "applause",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bark": {
+      "entity": "bark",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bass drum": {
+      "entity": "bass drum",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bass guitar": {
+      "entity": "bass guitar",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bathtub (filling or washing)": {
+      "entity": "bathtub (filling or washing)",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bell": {
+      "entity": "bell",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bicycle": {
+      "entity": "bicycle",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bicycle bell": {
+      "entity": "bicycle bell",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bird": {
+      "entity": "bird",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bird vocalization, bird call, bird song": {
+      "entity": "bird vocalization call or song",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Boat, Water vehicle": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Boiling": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Boom": {
+      "entity": "boom",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Bowed string instrument": {
+      "entity": "bowed string instrument",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Brass instrument": {
+      "entity": "brass instrument",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Breathing": {
+      "entity": "breathing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Burping, eructation": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Bus": {
+      "entity": "bus",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Buzz": {
+      "entity": "buzz",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Camera": {
+      "entity": "camera",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Car": {
+      "entity": "car",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Car passing by": {
+      "entity": "car passing by",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Cat": {
+      "entity": "cat",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Chatter": {
+      "entity": "chatter",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Cheering": {
+      "entity": "cheering",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Chewing, mastication": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Chicken, rooster": {
+      "entity": "chicken or rooster",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Child speech, kid speaking": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Chime": {
+      "entity": "chime",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Chink, clink": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Chirp, tweet": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Chuckle, chortle": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Church bell": {
+      "entity": "church bell",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Clapping": {
+      "entity": "clapping",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Clock": {
+      "entity": "clock",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Coin (dropping)": {
+      "entity": "coin",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Computer keyboard": {
+      "entity": "computer keyboard",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Conversation": {
+      "entity": "conversation",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Cough": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Cowbell": {
+      "entity": "cowbell",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Crack": {
+      "entity": "crack",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Crackle": {
+      "entity": "crackle",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Crash cymbal": {
+      "entity": "crash cymbal",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Cricket": {
+      "entity": "cricket",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Crow": {
+      "entity": "crow",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Crowd": {
+      "entity": "crowd",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Crumpling, crinkling": {
+      "entity": "crumpling or crinkling",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Crushing": {
+      "entity": "crushing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Crying, sobbing": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Cupboard open or close": {
+      "entity": "cupboard open or close",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Cutlery, silverware": {
+      "entity": "cutlery or silverware",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Cymbal": {
+      "entity": "cymbal",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Dishes, pots, pans": {
+      "entity": "dishes or pots or pans",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Dog": {
+      "entity": "dog",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Domestic animals, pets": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Domestic sounds, home sounds": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Door": {
+      "entity": "door",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Doorbell": {
+      "entity": "doorbell",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Drawer open or close": {
+      "entity": "drawer open or close",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Drill": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Drip": {
+      "entity": "drip-drip",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Drum": {
+      "entity": "drum",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Drum kit": {
+      "entity": "drum kit",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Electric guitar": {
+      "entity": "electric guitar",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Engine": {
+      "entity": "engine",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Engine starting": {
+      "entity": "engine starting",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Explosion": {
+      "entity": "explosion",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Fart": {
+      "entity": "fart",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Female singing": {
+      "entity": "female singing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Female speech, woman speaking": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Fill (with liquid)": {
+      "entity": "fill (with liquid)",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Finger snapping": {
+      "entity": "finger snapping",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Fire": {
+      "entity": "fire",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Fireworks": {
+      "entity": "fireworks",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Fixed-wing aircraft, airplane": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Fowl": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Frog": {
+      "entity": "frog",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Frying (food)": {
+      "entity": "frying",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Gasp": {
+      "entity": "gasp",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Giggle": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Glass": {
+      "entity": "glass",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Glockenspiel": {
+      "entity": "glockenspiel",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Gong": {
+      "entity": "gong",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Growling": {
+      "entity": "growling",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Guitar": {
+      "entity": "guitar",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Gull, seagull": {
+      "entity": "gull seagull",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Gunshot, gunfire": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Gurgling": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Hammer": {
+      "entity": "hammer",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Hands": {
+      "entity": "hands",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Harmonica": {
+      "entity": "harmonica",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Harp": {
+      "entity": "harp",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Hi-hat": {
+      "entity": "hi-hat",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Hiss": {
+      "entity": "hiss",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Human group actions": {
+      "entity": "human group actions",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Human voice": {
+      "entity": "human voice",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Idling": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Insect": {
+      "entity": "insect",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Keyboard (musical)": {
+      "entity": "keyboard (musical)",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Keys jangling": {
+      "entity": "keys jangling",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Knock": {
+      "entity": "knock",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Laughter": {
+      "entity": "laughter",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Liquid": {
+      "entity": "liquid",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Livestock, farm animals, working animals": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Male singing": {
+      "entity": "male singing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Male speech, man speaking": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Mallet percussion": {
+      "entity": "mallet percussion",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Marimba, xylophone": {
+      "entity": "marimba and xylophone",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Mechanical fan": {
+      "entity": "mechanical fan",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Mechanisms": {
+      "entity": "mechanisms",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Meow": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Microwave oven": {
+      "entity": "microwave oven",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Motor vehicle (road)": {
+      "entity": "motor vehicle",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Motorcycle": {
+      "entity": "motorcycle",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Music": {
+      "entity": "music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Musical instrument": {
+      "entity": "musical instrument",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Ocean": {
+      "entity": "ocean",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Organ": {
+      "entity": "organ",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Packing tape, duct tape": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Percussion": {
+      "entity": "percussion",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Piano": {
+      "entity": "piano",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Plucked string instrument": {
+      "entity": "plucked string instrument",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Pour": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Power tool": {
+      "entity": "power tool",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Printer": {
+      "entity": "printer",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Purr": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Race car, auto racing": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Rail transport": {
+      "entity": "rail transport",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Rain": {
+      "entity": "rain",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Raindrop": {
+      "entity": "raindrop",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Ratchet, pawl": {
+      "entity": "ratchet or pawl",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Rattle": {
+      "entity": "rattle",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Rattle (instrument)": {
+      "entity": "rattle (instrument)",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Respiratory sounds": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Ringtone": {
+      "entity": "ringtone",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Run": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Sawing": {
+      "entity": "sawing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Scissors": {
+      "entity": "scissors",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Scratching (performance technique)": {
+      "entity": "scratching",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Screaming": {
+      "entity": "screaming",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Screech": {
+      "entity": "screech",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Shatter": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Shout": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Sigh": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Singing": {
+      "entity": "singing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Sink (filling or washing)": {
+      "entity": "sink (filling or washing)",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Siren": {
+      "entity": "siren",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Skateboard": {
+      "entity": "skateboard",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Slam": {
+      "entity": "slam",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Sliding door": {
+      "entity": "sliding door",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Snare drum": {
+      "entity": "snare drum",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Sneeze": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Speech": {
+      "entity": "speech",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Speech synthesizer": {
+      "entity": "speech synthesizer",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Splash, splatter": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Squeak": {
+      "entity": "squeak",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Stream": {
+      "entity": "stream",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Strum": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Subway, metro, underground": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Tabla": {
+      "entity": "tabla",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Tambourine": {
+      "entity": "tambourine",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Tap": {
+      "entity": "tap",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Tearing": {
+      "entity": "tearing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Telephone": {
+      "entity": "telephone",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Thump, thud": {
+      "entity": "thump or thud",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Thunder": {
+      "entity": "thunder",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Thunderstorm": {
+      "entity": "thunderstorm",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Tick": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Tick-tock": {
+      "entity": "tick-tock",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Toilet flush": {
+      "entity": "toilet flush",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Tools": {
+      "entity": "tools",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Traffic noise, roadway noise": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Train": {
+      "entity": "train",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Trickle, dribble": {
+      "entity": "trickle dribble",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Truck": {
+      "entity": "truck",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Trumpet": {
+      "entity": "trumpet",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Typewriter": {
+      "entity": "typewriter",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Typing": {
+      "entity": "typing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Vehicle": {
+      "entity": "vehicle",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Vehicle horn, car horn, honking": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Walk, footsteps": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Water": {
+      "entity": "water",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Water tap, faucet": {
+      "entity": "water tap or faucet",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Waves, surf": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Whispering": {
+      "entity": "whispering",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Whoosh, swoosh, swish": {
+      "entity": "whoosh swoosh swish",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Wild animals": {
+      "entity": "wild animal",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Wind": {
+      "entity": "wind",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Wind chime": {
+      "entity": "wind chime",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Wind instrument, woodwind instrument": {
+      "entity": "wind or woodwind instrument",
+      "decision": "accepted",
+      "method": "unique_token_signature",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Wood": {
+      "entity": "wood",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Writing": {
+      "entity": "writing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "Yell": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "Zipper (clothing)": {
+      "entity": "zipper (clothing)",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    }
+  },
+  "tut2017": {
+    "beach": {
+      "entity": "beach",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "bus": {
+      "entity": "bus",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "cafe or restaurant": {
+      "entity": "cafe or restaurant",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "car": {
+      "entity": "car",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "city center": {
+      "entity": "city center",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "forest path": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    },
+    "grocery store": {
+      "entity": "grocery store",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "home": {
+      "entity": "home",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "library": {
+      "entity": "library",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "metro station": {
+      "entity": "metro station",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "office": {
+      "entity": "office",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "park": {
+      "entity": "park",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "residential area": {
+      "entity": "residential area",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "train": {
+      "entity": "train",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "tram": {
+      "entity": null,
+      "decision": "unmapped",
+      "method": "unresolved",
+      "fallback_behavior": "no_KG_expansion_keep_CLAP_score"
+    }
+  },
+  "urbansound8k": {
+    "air conditioner": {
+      "entity": "air conditioner",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "car horn": {
+      "entity": "car horn",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "children playing": {
+      "entity": "children playing",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "dog bark": {
+      "entity": "dog barking",
+      "decision": "accepted_legacy_alias",
+      "method": "historical_reproduction_map",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "drilling": {
+      "entity": "drilling",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "engine idling": {
+      "entity": "engine idling",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "gun shot": {
+      "entity": "gun shot",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "jackhammer": {
+      "entity": "jackhammer",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "siren": {
+      "entity": "siren",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    },
+    "street music": {
+      "entity": "street music",
+      "decision": "accepted",
+      "method": "exact_normalized",
+      "fallback_behavior": "use_mapped_AKG_entity"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "dataset": "fsd50k",
+  "top_k": 5,
+  "top_m": 3,
+  "logit_scale": 100.0,
+  "relations": [
+    "has parent",
+    "is sound of",
+    "transcribed as",
+    "overlaps with"
+  ],
+  "task06_cache": "/data/zkx/zkx/review1/06_onehop-text-verbalization-audit/03_FSD50K/cache"
+}

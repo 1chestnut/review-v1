@@ -1,0 +1,55 @@
+{
+  "purpose": "Task14A second-edge AAKV text-only comparison and Task14B M2/P potential grid",
+  "frozen": {
+    "K": 5,
+    "M1": 3,
+    "gamma": 0.85,
+    "gate": false,
+    "relations": [
+      "overlaps with",
+      "occurs in",
+      "associated with environment",
+      "localized in",
+      "used for",
+      "part of scene"
+    ],
+    "audio_cache": "/data/zkx/zkx/review1/12_shared-abcd-statistics/02_UrbanSound8K/audio_cache"
+  },
+  "varied": {
+    "M2": [
+      1,
+      3,
+      5
+    ],
+    "P_total": [
+      3,
+      5,
+      10
+    ]
+  },
+  "methods": [
+    "1st-P3",
+    "1st-P5",
+    "1st-P10",
+    "Fallback-M1-P5",
+    "AAKV-M1-P3",
+    "AAKV-M3-P3",
+    "AAKV-M5-P3",
+    "AAKV-M1-P5",
+    "AAKV-M3-P5",
+    "AAKV-M5-P5",
+    "AAKV-M1-P10",
+    "AAKV-M3-P10",
+    "AAKV-M5-P10"
+  ],
+  "source_hashes": {
+    "runtime.py": "0343c2a557ecf3e0c7621d04b60c95c9135f724d2d9a2f4573fced418c4383ef",
+    "config.json": "6c5296447a0db1f584d47490e816309481ea0a671014a54f2eb1c24d01083452",
+    "triples.json": "3a2edc3d13f8a455d0ed7eb931d7c25387c45852f32c84b16cd0e68d66514b65",
+    "aakv_first.json": "0ad3a595b78c2cfd20f6ae585d3ec36196ea00fd15e85ff629808b9a0e63f7e2",
+    "mapping.json": "8bcc5e41b1b7fd77c071205bdee6b1c173e6233309661c8fe26c79f081b61175"
+  },
+  "Task14A": "Fallback-M1-P5 versus AAKV-M1-P5; only second-hop wording changes",
+  "Task14B": "AAKV grid; every second-hop method compared with matched 1st-P baseline",
+  "status": "exploratory; no test-set winner may be declared as final hyperparameter"
+}

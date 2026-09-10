@@ -1,0 +1,72 @@
+{
+  "1st-P3": {
+    "samples": 17233,
+    "samples_h2_selected": 0
+  },
+  "1st-P5": {
+    "samples": 17233,
+    "samples_h2_selected": 0
+  },
+  "1st-P10": {
+    "samples": 17233,
+    "samples_h2_selected": 0
+  },
+  "Fallback-M1-P5": {
+    "samples": 17233,
+    "samples_h2_selected": 16889
+  },
+  "AAKV-M1-P3": {
+    "h2_offered": 1100791,
+    "h2_selected": 49436,
+    "samples": 17233,
+    "samples_h2_selected": 15083
+  },
+  "AAKV-M3-P3": {
+    "h2_offered": 3594856,
+    "h2_selected": 73162,
+    "samples": 17233,
+    "samples_h2_selected": 16170
+  },
+  "AAKV-M5-P3": {
+    "h2_offered": 6174233,
+    "h2_selected": 86408,
+    "samples": 17233,
+    "samples_h2_selected": 16523
+  },
+  "AAKV-M1-P5": {
+    "h2_offered": 1100791,
+    "h2_selected": 121095,
+    "samples": 17233,
+    "samples_h2_selected": 16904
+  },
+  "AAKV-M3-P5": {
+    "h2_offered": 3594856,
+    "h2_selected": 159378,
+    "samples": 17233,
+    "samples_h2_selected": 17052
+  },
+  "AAKV-M5-P5": {
+    "h2_offered": 6174233,
+    "h2_selected": 177879,
+    "samples": 17233,
+    "samples_h2_selected": 17102
+  },
+  "AAKV-M1-P10": {
+    "h2_offered": 1100791,
+    "h2_selected": 361426,
+    "samples": 17233,
+    "samples_h2_selected": 17171
+  },
+  "AAKV-M3-P10": {
+    "h2_offered": 3594856,
+    "h2_selected": 432749,
+    "samples": 17233,
+    "samples_h2_selected": 17171
+  },
+  "AAKV-M5-P10": {
+    "h2_offered": 6174233,
+    "h2_selected": 457413,
+    "samples": 17233,
+    "samples_h2_selected": 17171
+  }
+}

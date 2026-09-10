@@ -1,0 +1,18 @@
+{
+  "analysis_only": true,
+  "metrics": {
+    "Hit@1": 86.77278973889143,
+    "Hit@3": 97.43472285845168,
+    "Hit@5": 98.64864864864865,
+    "MRR": 92.18560267289081
+  },
+  "chosen_method_counts": {
+    "1st-P3": 8591,
+    "AAKV-M3-P3": 37,
+    "AAKV-M5-P3": 46,
+    "AAKV-M1-P3": 16,
+    "1st-P5": 2,
+    "Fallback-M1-P5": 39,
+    "1st-P10": 1
+  }
+}

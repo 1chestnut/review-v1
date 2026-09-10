@@ -1,0 +1,15 @@
+{
+  "dataset": "urbansound8k",
+  "top_k": 5,
+  "top_m": 3,
+  "logit_scale": 100.0,
+  "relations": [
+    "overlaps with",
+    "occurs in",
+    "associated with environment",
+    "localized in",
+    "used for",
+    "part of scene"
+  ],
+  "task06_cache": "/data/zkx/zkx/review1/06_onehop-text-verbalization-audit/02_UrbanSound8K/cache"
+}

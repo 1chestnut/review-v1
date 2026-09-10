@@ -1,0 +1,250 @@
+{
+  "AAKV-M1-P5-Fallback-M1-P5": {
+    "selected_kge_rank": {
+      "1": 73239
+    },
+    "selected_relation": {
+      "transcribed as": 16873,
+      "has parent": 21439,
+      "overlaps with": 8577,
+      "is sound of": 26350
+    },
+    "relation_on_improved_samples": {
+      "has parent": 264,
+      "is sound of": 295,
+      "transcribed as": 144,
+      "overlaps with": 97
+    },
+    "relation_on_worsened_samples": {
+      "is sound of": 118,
+      "overlaps with": 46,
+      "has parent": 127,
+      "transcribed as": 103
+    }
+  },
+  "AAKV-M1-P3-1st-P3": {
+    "selected_kge_rank": {
+      "1": 32298
+    },
+    "selected_relation": {
+      "transcribed as": 6614,
+      "has parent": 10004,
+      "is sound of": 12209,
+      "overlaps with": 3471
+    },
+    "relation_on_improved_samples": {
+      "transcribed as": 51,
+      "has parent": 63,
+      "overlaps with": 17,
+      "is sound of": 76
+    },
+    "relation_on_worsened_samples": {
+      "is sound of": 147,
+      "has parent": 172,
+      "overlaps with": 58,
+      "transcribed as": 128
+    }
+  },
+  "AAKV-M3-P3-1st-P3": {
+    "selected_kge_rank": {
+      "2": 14563,
+      "1": 14731,
+      "3": 16881
+    },
+    "selected_relation": {
+      "is sound of": 14965,
+      "transcribed as": 11386,
+      "has parent": 15126,
+      "overlaps with": 4698
+    },
+    "relation_on_improved_samples": {
+      "has parent": 196,
+      "is sound of": 234,
+      "overlaps with": 54,
+      "transcribed as": 109
+    },
+    "relation_on_worsened_samples": {
+      "is sound of": 339,
+      "has parent": 460,
+      "overlaps with": 105,
+      "transcribed as": 305
+    }
+  },
+  "AAKV-M5-P3-1st-P3": {
+    "selected_kge_rank": {
+      "2": 9979,
+      "4": 10684,
+      "5": 9624,
+      "1": 10070,
+      "3": 11663
+    },
+    "selected_relation": {
+      "is sound of": 16522,
+      "transcribed as": 13518,
+      "has parent": 16354,
+      "overlaps with": 5626
+    },
+    "relation_on_improved_samples": {
+      "has parent": 245,
+      "is sound of": 294,
+      "overlaps with": 93,
+      "transcribed as": 179
+    },
+    "relation_on_worsened_samples": {
+      "is sound of": 553,
+      "has parent": 586,
+      "transcribed as": 449,
+      "overlaps with": 174
+    }
+  },
+  "AAKV-M1-P5-1st-P5": {
+    "selected_kge_rank": {
+      "1": 73239
+    },
+    "selected_relation": {
+      "transcribed as": 16873,
+      "has parent": 21439,
+      "overlaps with": 8577,
+      "is sound of": 26350
+    },
+    "relation_on_improved_samples": {
+      "has parent": 190,
+      "is sound of": 211,
+      "transcribed as": 171,
+      "overlaps with": 79
+    },
+    "relation_on_worsened_samples": {
+      "transcribed as": 303,
+      "is sound of": 347,
+      "has parent": 345,
+      "overlaps with": 137
+    }
+  },
+  "AAKV-M3-P5-1st-P5": {
+    "selected_kge_rank": {
+      "2": 30471,
+      "1": 31526,
+      "3": 34860
+    },
+    "selected_relation": {
+      "overlaps with": 9726,
+      "is sound of": 30370,
+      "transcribed as": 24033,
+      "has parent": 32728
+    },
+    "relation_on_improved_samples": {
+      "has parent": 461,
+      "is sound of": 459,
+      "transcribed as": 330,
+      "overlaps with": 133
+    },
+    "relation_on_worsened_samples": {
+      "overlaps with": 238,
+      "transcribed as": 662,
+      "is sound of": 678,
+      "has parent": 853
+    }
+  },
+  "AAKV-M5-P5-1st-P5": {
+    "selected_kge_rank": {
+      "4": 21631,
+      "2": 20224,
+      "1": 21355,
+      "5": 19614,
+      "3": 23199
+    },
+    "selected_relation": {
+      "is sound of": 32974,
+      "transcribed as": 27234,
+      "has parent": 34562,
+      "overlaps with": 11253
+    },
+    "relation_on_improved_samples": {
+      "has parent": 537,
+      "is sound of": 556,
+      "transcribed as": 449,
+      "overlaps with": 194
+    },
+    "relation_on_worsened_samples": {
+      "is sound of": 1019,
+      "transcribed as": 913,
+      "has parent": 1224,
+      "overlaps with": 331
+    }
+  },
+  "AAKV-M1-P10-1st-P10": {
+    "selected_kge_rank": {
+      "1": 199913
+    },
+    "selected_relation": {
+      "transcribed as": 52898,
+      "has parent": 53339,
+      "is sound of": 59729,
+      "overlaps with": 33947
+    },
+    "relation_on_improved_samples": {
+      "transcribed as": 727,
+      "has parent": 697,
+      "is sound of": 809,
+      "overlaps with": 450
+    },
+    "relation_on_worsened_samples": {
+      "transcribed as": 851,
+      "has parent": 828,
+      "is sound of": 918,
+      "overlaps with": 548
+    }
+  },
+  "AAKV-M3-P10-1st-P10": {
+    "selected_kge_rank": {
+      "2": 81214,
+      "1": 82986,
+      "3": 90409
+    },
+    "selected_relation": {
+      "overlaps with": 30840,
+      "transcribed as": 65308,
+      "is sound of": 74600,
+      "has parent": 83861
+    },
+    "relation_on_improved_samples": {
+      "transcribed as": 1270,
+      "has parent": 1528,
+      "is sound of": 1419,
+      "overlaps with": 554
+    },
+    "relation_on_worsened_samples": {
+      "overlaps with": 741,
+      "has parent": 2081,
+      "transcribed as": 1804,
+      "is sound of": 1780
+    }
+  },
+  "AAKV-M5-P10-1st-P10": {
+    "selected_kge_rank": {
+      "4": 56196,
+      "5": 51216,
+      "2": 51688,
+      "1": 53504,
+      "3": 57527
+    },
+    "selected_relation": {
+      "is sound of": 79887,
+      "transcribed as": 70372,
+      "overlaps with": 30616,
+      "has parent": 89256
+    },
+    "relation_on_improved_samples": {
+      "transcribed as": 1509,
+      "has parent": 1735,
+      "overlaps with": 625,
+      "is sound of": 1615
+    },
+    "relation_on_worsened_samples": {
+      "is sound of": 2478,
+      "has parent": 2858,
+      "overlaps with": 885,
+      "transcribed as": 2301
+    }
+  }
+}

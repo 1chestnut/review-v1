@@ -1,0 +1,62 @@
+[
+  {
+    "dataset": "01_ESC50",
+    "best_real_gate": "Accept-Entropy",
+    "best_Hit@1": 93.65,
+    "best_MRR": 95.63549431018471,
+    "delta_Hit@1": -0.04999999999999716,
+    "delta_MRR": -0.024999999999991473,
+    "accept_rate": 0.0585,
+    "oracle_delta_MRR": 0.025000000000005684
+  },
+  {
+    "dataset": "02_UrbanSound8K",
+    "best_real_gate": "Accept-Entropy",
+    "best_Hit@1": 86.03985341273477,
+    "best_MRR": 91.65823208196089,
+    "delta_Hit@1": -0.011452130096202495,
+    "delta_MRR": -0.017369063979231214,
+    "accept_rate": 0.03607420980302336,
+    "oracle_delta_MRR": 0.11585738280655278
+  },
+  {
+    "dataset": "03_FSD50K",
+    "best_real_gate": "Accept-Margin",
+    "best_Hit@1": 62.84820643143387,
+    "best_MRR": 73.59809873858498,
+    "delta_Hit@1": 0.07819372495357158,
+    "delta_MRR": 0.03467907216318622,
+    "accept_rate": 0.31316586843905775,
+    "oracle_delta_MRR": 0.22148647625141393
+  },
+  {
+    "dataset": "04_DCASE17_T4",
+    "best_real_gate": "Accept-RiskAware",
+    "best_Hit@1": 63.24582338902148,
+    "best_MRR": 75.2381925949945,
+    "delta_Hit@1": 0.0,
+    "delta_MRR": -0.11933174224344612,
+    "accept_rate": 0.06443914081145585,
+    "oracle_delta_MRR": 0.3579952267303099
+  },
+  {
+    "dataset": "05_AudioSet",
+    "best_real_gate": "2nd-Full",
+    "best_Hit@1": 29.954157720652237,
+    "best_MRR": 42.07479990388157,
+    "delta_Hit@1": 0.03481692102361933,
+    "delta_MRR": 0.020752364891428954,
+    "accept_rate": 1.0,
+    "oracle_delta_MRR": 0.31687020171462876
+  },
+  {
+    "dataset": "06_TUT2017",
+    "best_real_gate": "Accept-Margin",
+    "best_Hit@1": 49.465811965811966,
+    "best_MRR": 66.75792103195948,
+    "delta_Hit@1": -0.17094017094017033,
+    "delta_MRR": -0.0819088319088479,
+    "accept_rate": 0.14465811965811967,
+    "oracle_delta_MRR": 0.04380341880342087
+  }
+]

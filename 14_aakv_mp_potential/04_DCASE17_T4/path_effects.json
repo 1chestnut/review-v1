@@ -1,0 +1,309 @@
+{
+  "AAKV-M1-P5-Fallback-M1-P5": {
+    "selected_kge_rank": {
+      "1": 2404
+    },
+    "selected_relation": {
+      "used for": 407,
+      "indicates": 220,
+      "associated with environment": 470,
+      "described by": 347,
+      "is instance of": 763,
+      "has parent": 197
+    },
+    "relation_on_improved_samples": {
+      "has parent": 3,
+      "used for": 8,
+      "associated with environment": 10,
+      "indicates": 3,
+      "described by": 2,
+      "is instance of": 9
+    },
+    "relation_on_worsened_samples": {
+      "used for": 8,
+      "is instance of": 14,
+      "has parent": 2,
+      "indicates": 4,
+      "associated with environment": 18,
+      "described by": 7
+    }
+  },
+  "AAKV-M1-P3-1st-P3": {
+    "selected_kge_rank": {
+      "1": 1372
+    },
+    "selected_relation": {
+      "used for": 225,
+      "indicates": 106,
+      "associated with environment": 293,
+      "described by": 161,
+      "is instance of": 478,
+      "has parent": 109
+    },
+    "relation_on_improved_samples": {
+      "associated with environment": 8,
+      "has parent": 6,
+      "is instance of": 8,
+      "described by": 11,
+      "indicates": 1
+    },
+    "relation_on_worsened_samples": {
+      "indicates": 6,
+      "associated with environment": 34,
+      "is instance of": 28,
+      "described by": 8,
+      "used for": 13,
+      "has parent": 5
+    }
+  },
+  "AAKV-M3-P3-1st-P3": {
+    "selected_kge_rank": {
+      "2": 645,
+      "1": 523,
+      "3": 1125
+    },
+    "selected_relation": {
+      "indicates": 222,
+      "used for": 219,
+      "is instance of": 897,
+      "associated with environment": 331,
+      "has parent": 238,
+      "described by": 386
+    },
+    "relation_on_improved_samples": {
+      "indicates": 9,
+      "used for": 7,
+      "associated with environment": 16,
+      "is instance of": 32,
+      "described by": 18,
+      "has parent": 10
+    },
+    "relation_on_worsened_samples": {
+      "associated with environment": 31,
+      "has parent": 15,
+      "indicates": 14,
+      "described by": 25,
+      "is instance of": 68,
+      "used for": 31
+    }
+  },
+  "AAKV-M5-P3-1st-P3": {
+    "selected_kge_rank": {
+      "4": 466,
+      "2": 411,
+      "5": 431,
+      "3": 845,
+      "1": 365
+    },
+    "selected_relation": {
+      "used for": 218,
+      "indicates": 257,
+      "associated with environment": 363,
+      "is instance of": 1038,
+      "has parent": 228,
+      "described by": 414
+    },
+    "relation_on_improved_samples": {
+      "indicates": 9,
+      "used for": 6,
+      "associated with environment": 16,
+      "is instance of": 35,
+      "described by": 17,
+      "has parent": 11
+    },
+    "relation_on_worsened_samples": {
+      "described by": 43,
+      "is instance of": 86,
+      "indicates": 12,
+      "has parent": 8,
+      "used for": 27,
+      "associated with environment": 28
+    }
+  },
+  "AAKV-M1-P5-1st-P5": {
+    "selected_kge_rank": {
+      "1": 2404
+    },
+    "selected_relation": {
+      "used for": 407,
+      "indicates": 220,
+      "associated with environment": 470,
+      "described by": 347,
+      "is instance of": 763,
+      "has parent": 197
+    },
+    "relation_on_improved_samples": {
+      "described by": 11,
+      "has parent": 5,
+      "is instance of": 14,
+      "associated with environment": 13,
+      "used for": 5,
+      "indicates": 4
+    },
+    "relation_on_worsened_samples": {
+      "indicates": 9,
+      "used for": 22,
+      "associated with environment": 41,
+      "is instance of": 40,
+      "described by": 25,
+      "has parent": 11
+    }
+  },
+  "AAKV-M3-P5-1st-P5": {
+    "selected_kge_rank": {
+      "2": 1235,
+      "1": 925,
+      "3": 1813
+    },
+    "selected_relation": {
+      "indicates": 422,
+      "used for": 416,
+      "associated with environment": 570,
+      "is instance of": 1502,
+      "described by": 610,
+      "has parent": 453
+    },
+    "relation_on_improved_samples": {
+      "associated with environment": 30,
+      "described by": 26,
+      "is instance of": 58,
+      "used for": 6,
+      "has parent": 22,
+      "indicates": 15
+    },
+    "relation_on_worsened_samples": {
+      "associated with environment": 49,
+      "has parent": 32,
+      "described by": 44,
+      "indicates": 22,
+      "is instance of": 104,
+      "used for": 58
+    }
+  },
+  "AAKV-M5-P5-1st-P5": {
+    "selected_kge_rank": {
+      "4": 897,
+      "2": 771,
+      "5": 787,
+      "3": 1302,
+      "1": 624
+    },
+    "selected_relation": {
+      "used for": 430,
+      "indicates": 497,
+      "associated with environment": 625,
+      "is instance of": 1775,
+      "described by": 629,
+      "has parent": 425
+    },
+    "relation_on_improved_samples": {
+      "associated with environment": 28,
+      "is instance of": 64,
+      "described by": 23,
+      "has parent": 21,
+      "indicates": 21,
+      "used for": 9
+    },
+    "relation_on_worsened_samples": {
+      "described by": 61,
+      "associated with environment": 42,
+      "has parent": 19,
+      "is instance of": 129,
+      "indicates": 26,
+      "used for": 50
+    }
+  },
+  "AAKV-M1-P10-1st-P10": {
+    "selected_kge_rank": {
+      "1": 5872
+    },
+    "selected_relation": {
+      "used for": 898,
+      "indicates": 666,
+      "described by": 946,
+      "associated with environment": 1076,
+      "is instance of": 1798,
+      "has parent": 488
+    },
+    "relation_on_improved_samples": {
+      "described by": 18,
+      "has parent": 15,
+      "indicates": 9,
+      "is instance of": 34,
+      "associated with environment": 23,
+      "used for": 10
+    },
+    "relation_on_worsened_samples": {
+      "used for": 39,
+      "is instance of": 87,
+      "described by": 59,
+      "associated with environment": 59,
+      "has parent": 23,
+      "indicates": 18
+    }
+  },
+  "AAKV-M3-P10-1st-P10": {
+    "selected_kge_rank": {
+      "2": 2828,
+      "1": 2106,
+      "3": 3925
+    },
+    "selected_relation": {
+      "indicates": 1073,
+      "used for": 1123,
+      "associated with environment": 1240,
+      "is instance of": 3105,
+      "described by": 1235,
+      "has parent": 1083
+    },
+    "relation_on_improved_samples": {
+      "associated with environment": 61,
+      "described by": 43,
+      "is instance of": 100,
+      "used for": 28,
+      "has parent": 48,
+      "indicates": 28
+    },
+    "relation_on_worsened_samples": {
+      "associated with environment": 91,
+      "has parent": 81,
+      "described by": 78,
+      "indicates": 58,
+      "is instance of": 224,
+      "used for": 94
+    }
+  },
+  "AAKV-M5-P10-1st-P10": {
+    "selected_kge_rank": {
+      "4": 2145,
+      "2": 1765,
+      "5": 1984,
+      "1": 1352,
+      "3": 2580
+    },
+    "selected_relation": {
+      "used for": 1150,
+      "indicates": 1195,
+      "associated with environment": 1300,
+      "is instance of": 3815,
+      "described by": 1297,
+      "has parent": 1069
+    },
+    "relation_on_improved_samples": {
+      "associated with environment": 58,
+      "is instance of": 121,
+      "described by": 39,
+      "indicates": 35,
+      "has parent": 56,
+      "used for": 23
+    },
+    "relation_on_worsened_samples": {
+      "described by": 120,
+      "associated with environment": 90,
+      "has parent": 64,
+      "is instance of": 247,
+      "indicates": 61,
+      "used for": 97
+    }
+  }
+}

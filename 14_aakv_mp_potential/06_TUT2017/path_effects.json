@@ -1,0 +1,280 @@
+{
+  "AAKV-M1-P5-Fallback-M1-P5": {
+    "selected_kge_rank": {
+      "1": 19086
+    },
+    "selected_relation": {
+      "described by": 5324,
+      "is variant of": 3707,
+      "scene contains": 4402,
+      "event composed of": 3263,
+      "has parent": 2390
+    },
+    "relation_on_improved_samples": {
+      "is variant of": 13,
+      "scene contains": 16,
+      "described by": 22,
+      "event composed of": 10,
+      "has parent": 5
+    },
+    "relation_on_worsened_samples": {
+      "is variant of": 17,
+      "described by": 19,
+      "event composed of": 19,
+      "scene contains": 14,
+      "has parent": 9
+    }
+  },
+  "AAKV-M1-P3-1st-P3": {
+    "selected_kge_rank": {
+      "1": 8541
+    },
+    "selected_relation": {
+      "described by": 2618,
+      "event composed of": 1387,
+      "has parent": 1150,
+      "scene contains": 1707,
+      "is variant of": 1679
+    },
+    "relation_on_improved_samples": {
+      "scene contains": 1,
+      "described by": 6,
+      "is variant of": 6,
+      "has parent": 1,
+      "event composed of": 2
+    },
+    "relation_on_worsened_samples": {
+      "is variant of": 26,
+      "described by": 48,
+      "event composed of": 33,
+      "has parent": 5,
+      "scene contains": 22
+    }
+  },
+  "AAKV-M3-P3-1st-P3": {
+    "selected_kge_rank": {
+      "2": 5349,
+      "3": 5865,
+      "1": 3765
+    },
+    "selected_relation": {
+      "event composed of": 2384,
+      "has parent": 4365,
+      "described by": 4464,
+      "is variant of": 1908,
+      "scene contains": 1858
+    },
+    "relation_on_improved_samples": {
+      "event composed of": 20,
+      "has parent": 11,
+      "scene contains": 6,
+      "described by": 31,
+      "is variant of": 15
+    },
+    "relation_on_worsened_samples": {
+      "described by": 123,
+      "is variant of": 51,
+      "has parent": 73,
+      "scene contains": 93,
+      "event composed of": 60
+    }
+  },
+  "AAKV-M5-P3-1st-P3": {
+    "selected_kge_rank": {
+      "2": 3247,
+      "3": 4235,
+      "5": 3917,
+      "1": 2475,
+      "4": 4293
+    },
+    "selected_relation": {
+      "event composed of": 3217,
+      "has parent": 4990,
+      "described by": 5356,
+      "is variant of": 2607,
+      "scene contains": 1997
+    },
+    "relation_on_improved_samples": {
+      "event composed of": 39,
+      "has parent": 13,
+      "scene contains": 8,
+      "described by": 42,
+      "is variant of": 20
+    },
+    "relation_on_worsened_samples": {
+      "is variant of": 88,
+      "described by": 218,
+      "event composed of": 78,
+      "has parent": 147,
+      "scene contains": 133
+    }
+  },
+  "AAKV-M1-P5-1st-P5": {
+    "selected_kge_rank": {
+      "1": 19086
+    },
+    "selected_relation": {
+      "described by": 5324,
+      "is variant of": 3707,
+      "scene contains": 4402,
+      "event composed of": 3263,
+      "has parent": 2390
+    },
+    "relation_on_improved_samples": {
+      "event composed of": 6,
+      "scene contains": 4,
+      "described by": 13,
+      "has parent": 4,
+      "is variant of": 7
+    },
+    "relation_on_worsened_samples": {
+      "is variant of": 52,
+      "described by": 70,
+      "event composed of": 64,
+      "scene contains": 67,
+      "has parent": 22
+    }
+  },
+  "AAKV-M3-P5-1st-P5": {
+    "selected_kge_rank": {
+      "2": 11781,
+      "3": 12985,
+      "1": 8175
+    },
+    "selected_relation": {
+      "event composed of": 5296,
+      "has parent": 10100,
+      "described by": 8638,
+      "scene contains": 4637,
+      "is variant of": 4270
+    },
+    "relation_on_improved_samples": {
+      "scene contains": 17,
+      "event composed of": 50,
+      "has parent": 32,
+      "described by": 47,
+      "is variant of": 23
+    },
+    "relation_on_worsened_samples": {
+      "described by": 222,
+      "is variant of": 92,
+      "has parent": 154,
+      "scene contains": 194,
+      "event composed of": 135
+    }
+  },
+  "AAKV-M5-P5-1st-P5": {
+    "selected_kge_rank": {
+      "2": 7796,
+      "3": 8929,
+      "4": 8891,
+      "5": 7814,
+      "1": 5448
+    },
+    "selected_relation": {
+      "event composed of": 6260,
+      "has parent": 12026,
+      "described by": 10620,
+      "scene contains": 4823,
+      "is variant of": 5149
+    },
+    "relation_on_improved_samples": {
+      "event composed of": 80,
+      "has parent": 34,
+      "scene contains": 16,
+      "described by": 64,
+      "is variant of": 35
+    },
+    "relation_on_worsened_samples": {
+      "is variant of": 169,
+      "described by": 417,
+      "event composed of": 166,
+      "has parent": 289,
+      "scene contains": 267
+    }
+  },
+  "AAKV-M1-P10-1st-P10": {
+    "selected_kge_rank": {
+      "1": 68373
+    },
+    "selected_relation": {
+      "scene contains": 16288,
+      "described by": 19846,
+      "is variant of": 11815,
+      "event composed of": 11843,
+      "has parent": 8581
+    },
+    "relation_on_improved_samples": {
+      "is variant of": 117,
+      "described by": 165,
+      "scene contains": 105,
+      "event composed of": 107,
+      "has parent": 93
+    },
+    "relation_on_worsened_samples": {
+      "is variant of": 134,
+      "event composed of": 165,
+      "described by": 261,
+      "scene contains": 290,
+      "has parent": 102
+    }
+  },
+  "AAKV-M3-P10-1st-P10": {
+    "selected_kge_rank": {
+      "3": 41647,
+      "1": 24034,
+      "2": 34058
+    },
+    "selected_relation": {
+      "event composed of": 16046,
+      "scene contains": 16829,
+      "described by": 22565,
+      "has parent": 31116,
+      "is variant of": 13183
+    },
+    "relation_on_improved_samples": {
+      "described by": 215,
+      "is variant of": 146,
+      "event composed of": 219,
+      "has parent": 248,
+      "scene contains": 134
+    },
+    "relation_on_worsened_samples": {
+      "is variant of": 241,
+      "described by": 476,
+      "event composed of": 348,
+      "has parent": 481,
+      "scene contains": 527
+    }
+  },
+  "AAKV-M5-P10-1st-P10": {
+    "selected_kge_rank": {
+      "5": 21810,
+      "4": 25462,
+      "2": 21918,
+      "3": 26344,
+      "1": 15142
+    },
+    "selected_relation": {
+      "has parent": 36157,
+      "described by": 27767,
+      "event composed of": 16020,
+      "scene contains": 16207,
+      "is variant of": 14525
+    },
+    "relation_on_improved_samples": {
+      "event composed of": 220,
+      "scene contains": 124,
+      "has parent": 252,
+      "described by": 212,
+      "is variant of": 162
+    },
+    "relation_on_worsened_samples": {
+      "is variant of": 401,
+      "event composed of": 449,
+      "described by": 875,
+      "has parent": 848,
+      "scene contains": 773
+    }
+  }
+}

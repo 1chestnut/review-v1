@@ -1,0 +1,6 @@
+{
+  "task12_D_equals_1st_P5_ranks": true,
+  "nested_candidate_rule": "KGE rank <=1 subset <=3 subset <=5",
+  "gamma": 0.85,
+  "gate": false
+}

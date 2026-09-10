@@ -1,0 +1,8 @@
+{
+  "analysis_only": true,
+  "fixed_second_hop": "AAKV M2=1 P=5 gamma=0.85",
+  "no_new_inference": true,
+  "risk_rule": "accept iff second-hop entropy decreases, margin increases, and M2={1,3,5} Top-1 predictions agree",
+  "oracle": "accept iff fixed second hop improves true-label rank; post-hoc upper bound only",
+  "efficiency_warning": "post-retrieval acceptance rules do not save second-hop computation"
+}

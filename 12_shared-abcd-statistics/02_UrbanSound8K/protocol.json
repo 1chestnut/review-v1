@@ -1,0 +1,42 @@
+{
+  "hashes": {
+    "runtime.py": "0343c2a557ecf3e0c7621d04b60c95c9135f724d2d9a2f4573fced418c4383ef",
+    "config.json": "6c5296447a0db1f584d47490e816309481ea0a671014a54f2eb1c24d01083452",
+    "triples.json": "3a2edc3d13f8a455d0ed7eb931d7c25387c45852f32c84b16cd0e68d66514b65",
+    "aakv.json": "0ad3a595b78c2cfd20f6ae585d3ec36196ea00fd15e85ff629808b9a0e63f7e2",
+    "mapping.json": "8bcc5e41b1b7fd77c071205bdee6b1c173e6233309661c8fe26c79f081b61175"
+  },
+  "config": {
+    "dataset": "urbansound8k",
+    "top_k": 5,
+    "top_m": 3,
+    "logit_scale": 100.0,
+    "relations": [
+      "overlaps with",
+      "occurs in",
+      "associated with environment",
+      "localized in",
+      "used for",
+      "part of scene"
+    ]
+  },
+  "seed": 42,
+  "crop": "original CLAP random crop with stable path-derived per-sample seed",
+  "A": "Direct + joint NormLSE100, all evidence",
+  "B": "Direct + Top5 + dynamic alpha",
+  "C": "AAKV + joint NormLSE100, all evidence",
+  "D": "AAKV + Top5 + dynamic alpha",
+  "alpha": [
+    0.4,
+    0.8
+  ],
+  "eval": true,
+  "torch": "2.4.0+cu121",
+  "numpy": "1.26.4",
+  "AAKV_prompt": "You are a faithful knowledge-graph verbalizer for an audio-text matching model.\nConvert exactly one knowledge-graph triple into one short, natural English sentence about sound.\n\nRules:\n1. Begin the sentence with exactly: \"The sound of {head}\". Replace {head} with the supplied head text exactly.\n2. Use only information explicitly contained in the triple.\n3. Preserve the head entity, relation meaning, relation direction, and tail entity.\n4. Preserve the original wording of the head and tail. Do not pluralize, abbreviate, replace, or omit either entity.\n5. Do not add acoustic properties, causes, locations, purposes, examples, explanations, or external knowledge.\n6. Do not correct or reinterpret the factual content, even if it seems unusual.\n7. Add only grammatical function words such as articles, prepositions, and forms of \"be\".\n8. Silently verify that the sentence expresses exactly the supplied triple.\n9. Output only one final sentence, without reasoning, labels, headers, or quotation marks.",
+  "AAKV_audit": {
+    "accepted_first": 129,
+    "accepted_repair": 13,
+    "universal_fallback": 9
+  }
+}

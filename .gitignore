@@ -16,6 +16,19 @@
 *.pt
 *.pth
 *.pkl
+*.tar
+*.tgz
+*.tar.gz
+*_stage/
+task08_stage/
+*.npz
+**/samples.json
+**/manifest.json
+**/*generation*.json
+**/paths*.json
+**/results/*.json
+**/sample_diagnostic.csv
+19_three_factor_full_ablation/aakv*.json
 
 # Large per-sample/intermediate outputs; compact CSV tables remain tracked
 **/results/progress.json

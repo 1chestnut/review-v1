@@ -1,0 +1,270 @@
+{
+  "AAKV-M1-P5-Fallback-M1-P5": {
+    "selected_kge_rank": {
+      "1": 14609
+    },
+    "selected_relation": {
+      "perceived as": 3456,
+      "has parent": 2503,
+      "belongs to class": 4731,
+      "event composed of": 2842,
+      "has children": 1077
+    },
+    "relation_on_improved_samples": {
+      "perceived as": 4,
+      "belongs to class": 4,
+      "has parent": 3,
+      "event composed of": 1
+    },
+    "relation_on_worsened_samples": {
+      "belongs to class": 10,
+      "perceived as": 10,
+      "has parent": 5,
+      "event composed of": 3,
+      "has children": 1
+    }
+  },
+  "AAKV-M1-P3-1st-P3": {
+    "selected_kge_rank": {
+      "1": 8028
+    },
+    "selected_relation": {
+      "perceived as": 1862,
+      "has parent": 1379,
+      "belongs to class": 2652,
+      "has children": 599,
+      "event composed of": 1536
+    },
+    "relation_on_improved_samples": {
+      "perceived as": 2,
+      "event composed of": 1,
+      "belongs to class": 1
+    },
+    "relation_on_worsened_samples": {
+      "belongs to class": 6,
+      "perceived as": 9,
+      "event composed of": 1,
+      "has parent": 2
+    }
+  },
+  "AAKV-M3-P3-1st-P3": {
+    "selected_kge_rank": {
+      "3": 4643,
+      "2": 4481,
+      "1": 3599
+    },
+    "selected_relation": {
+      "perceived as": 2466,
+      "belongs to class": 4121,
+      "has parent": 2125,
+      "has children": 1309,
+      "event composed of": 2702
+    },
+    "relation_on_improved_samples": {
+      "belongs to class": 1,
+      "perceived as": 2,
+      "event composed of": 5
+    },
+    "relation_on_worsened_samples": {
+      "event composed of": 14,
+      "perceived as": 21,
+      "belongs to class": 16,
+      "has parent": 12,
+      "has children": 2
+    }
+  },
+  "AAKV-M5-P3-1st-P3": {
+    "selected_kge_rank": {
+      "5": 3823,
+      "3": 2663,
+      "4": 3356,
+      "1": 2257,
+      "2": 2801
+    },
+    "selected_relation": {
+      "event composed of": 2932,
+      "perceived as": 3010,
+      "belongs to class": 4780,
+      "has children": 1465,
+      "has parent": 2713
+    },
+    "relation_on_improved_samples": {
+      "belongs to class": 3,
+      "perceived as": 2,
+      "event composed of": 4,
+      "has children": 1
+    },
+    "relation_on_worsened_samples": {
+      "event composed of": 27,
+      "perceived as": 34,
+      "belongs to class": 27,
+      "has parent": 27,
+      "has children": 4
+    }
+  },
+  "AAKV-M1-P5-1st-P5": {
+    "selected_kge_rank": {
+      "1": 14609
+    },
+    "selected_relation": {
+      "perceived as": 3456,
+      "has parent": 2503,
+      "belongs to class": 4731,
+      "event composed of": 2842,
+      "has children": 1077
+    },
+    "relation_on_improved_samples": {
+      "perceived as": 5,
+      "event composed of": 3,
+      "belongs to class": 2
+    },
+    "relation_on_worsened_samples": {
+      "belongs to class": 14,
+      "perceived as": 10,
+      "has parent": 4,
+      "event composed of": 4,
+      "has children": 2
+    }
+  },
+  "AAKV-M3-P5-1st-P5": {
+    "selected_kge_rank": {
+      "3": 8493,
+      "1": 6459,
+      "2": 7809
+    },
+    "selected_relation": {
+      "perceived as": 4308,
+      "belongs to class": 7281,
+      "has parent": 4185,
+      "has children": 2187,
+      "event composed of": 4800
+    },
+    "relation_on_improved_samples": {
+      "belongs to class": 7,
+      "perceived as": 5,
+      "has parent": 6,
+      "event composed of": 10
+    },
+    "relation_on_worsened_samples": {
+      "event composed of": 24,
+      "perceived as": 32,
+      "has parent": 22,
+      "belongs to class": 25,
+      "has children": 3
+    }
+  },
+  "AAKV-M5-P5-1st-P5": {
+    "selected_kge_rank": {
+      "5": 6407,
+      "3": 5090,
+      "1": 4034,
+      "4": 5710,
+      "2": 4959
+    },
+    "selected_relation": {
+      "event composed of": 5163,
+      "perceived as": 4990,
+      "has parent": 5029,
+      "has children": 2413,
+      "belongs to class": 8605
+    },
+    "relation_on_improved_samples": {
+      "belongs to class": 10,
+      "perceived as": 5,
+      "has parent": 9,
+      "event composed of": 9,
+      "has children": 1
+    },
+    "relation_on_worsened_samples": {
+      "event composed of": 60,
+      "perceived as": 57,
+      "has parent": 48,
+      "belongs to class": 52,
+      "has children": 7
+    }
+  },
+  "AAKV-M1-P10-1st-P10": {
+    "selected_kge_rank": {
+      "1": 37098
+    },
+    "selected_relation": {
+      "perceived as": 8944,
+      "belongs to class": 11921,
+      "has parent": 6070,
+      "has children": 2862,
+      "event composed of": 7301
+    },
+    "relation_on_improved_samples": {
+      "perceived as": 16,
+      "belongs to class": 14,
+      "event composed of": 8,
+      "has children": 2,
+      "has parent": 3
+    },
+    "relation_on_worsened_samples": {
+      "belongs to class": 33,
+      "perceived as": 22,
+      "has parent": 14,
+      "event composed of": 13,
+      "has children": 9
+    }
+  },
+  "AAKV-M3-P10-1st-P10": {
+    "selected_kge_rank": {
+      "1": 15320,
+      "3": 20362,
+      "2": 17991
+    },
+    "selected_relation": {
+      "perceived as": 10227,
+      "has parent": 10906,
+      "has children": 4969,
+      "event composed of": 10996,
+      "belongs to class": 16575
+    },
+    "relation_on_improved_samples": {
+      "event composed of": 28,
+      "belongs to class": 17,
+      "perceived as": 22,
+      "has parent": 19,
+      "has children": 6
+    },
+    "relation_on_worsened_samples": {
+      "event composed of": 31,
+      "perceived as": 41,
+      "has parent": 61,
+      "has children": 15,
+      "belongs to class": 60
+    }
+  },
+  "AAKV-M5-P10-1st-P10": {
+    "selected_kge_rank": {
+      "5": 13733,
+      "1": 9600,
+      "3": 12398,
+      "4": 12683,
+      "2": 11310
+    },
+    "selected_relation": {
+      "perceived as": 11179,
+      "event composed of": 11646,
+      "has parent": 12535,
+      "has children": 5118,
+      "belongs to class": 19246
+    },
+    "relation_on_improved_samples": {
+      "event composed of": 33,
+      "belongs to class": 22,
+      "perceived as": 26,
+      "has children": 8,
+      "has parent": 14
+    },
+    "relation_on_worsened_samples": {
+      "event composed of": 99,
+      "perceived as": 77,
+      "has parent": 90,
+      "belongs to class": 100,
+      "has children": 14
+    }
+  }
+}

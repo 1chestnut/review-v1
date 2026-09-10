@@ -1,0 +1,29 @@
+{
+  "purpose": "Separate cardinality normalization, Top-P, two-stage fusion and dynamic alpha",
+  "frozen": {
+    "source": "Task12",
+    "text": "AAKV",
+    "TopK": 5,
+    "P": 5,
+    "kappa": 100.0,
+    "relations_K_M_audio_text_and_samples": "unchanged"
+  },
+  "methods": [
+    "CLAP",
+    "JointRaw-All",
+    "JointNorm-All",
+    "JointNorm-Top5",
+    "TwoStage-a0.3",
+    "TwoStage-a0.5",
+    "TwoStage-a0.7",
+    "TwoStage-Dynamic"
+  ],
+  "formulas": {
+    "JointRaw-All": "LSE([base,evidence_all])",
+    "JointNorm-All": "LSE([base,evidence_all])-log(n+1)/kappa",
+    "JointNorm-Top5": "same joint normalized aggregation after retaining top-5 knowledge evidence",
+    "TwoStage": "NormLSE(top-5 knowledge) followed by alpha*base+(1-alpha)*knowledge",
+    "Dynamic-alpha": "clip(0.4+0.4*max_base,0.4,0.8)"
+  },
+  "consistency": "TwoStage-Dynamic ranks exactly equal Task12 D"
+}

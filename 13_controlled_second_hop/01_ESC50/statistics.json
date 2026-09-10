@@ -1,0 +1,22 @@
+{
+  "comparison": "D-2nd-Controlled minus D-1st",
+  "n_clips": 2000,
+  "bootstrap_replicates": 10000,
+  "seed": 42,
+  "delta_Hit@1_pp": -0.05,
+  "delta_Hit@1_bootstrap95": [
+    -0.25,
+    0.1
+  ],
+  "delta_MRR_pp": -0.030833333333333334,
+  "delta_MRR_bootstrap95": [
+    -0.1225,
+    0.0525
+  ],
+  "wrong_to_right": 1,
+  "right_to_wrong": 2,
+  "mcnemar_exact_two_sided_p": 1.0,
+  "rank_improved": 2,
+  "rank_worsened": 3,
+  "rank_unchanged": 1995
+}

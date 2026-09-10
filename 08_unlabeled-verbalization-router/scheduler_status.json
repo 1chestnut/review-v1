@@ -1,0 +1,23 @@
+{
+  "task06": {
+    "01_ESC50": "completed",
+    "02_UrbanSound8K": "completed",
+    "03_FSD50K": "completed",
+    "04_DCASE17_T4": "completed",
+    "05_AudioSet": "completed",
+    "06_TUT2017": "completed"
+  },
+  "task08": {
+    "01_ESC50": "completed",
+    "02_UrbanSound8K": "completed",
+    "03_FSD50K": "completed",
+    "04_DCASE17_T4": "completed",
+    "05_AudioSet": "running",
+    "06_TUT2017": "completed"
+  },
+  "busy_gpus": [
+    0,
+    2
+  ],
+  "checked_at": "2026-09-09 12:21:47"
+}

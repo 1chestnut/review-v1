@@ -1,0 +1,218 @@
+{
+  "cutpoints": [
+    0.029459267854690552,
+    0.06994306047757466
+  ],
+  "rows": [
+    {
+      "comparison": "AAKV-M1-P5-Fallback-M1-P5",
+      "stratum": "low",
+      "n": 1560,
+      "delta_Hit@1_pp": -0.1282051282051282,
+      "delta_MRR_pp": -0.01602564102564101
+    },
+    {
+      "comparison": "AAKV-M1-P5-Fallback-M1-P5",
+      "stratum": "medium",
+      "n": 1560,
+      "delta_Hit@1_pp": 0.0641025641025641,
+      "delta_MRR_pp": 0.02029914529914529
+    },
+    {
+      "comparison": "AAKV-M1-P5-Fallback-M1-P5",
+      "stratum": "high",
+      "n": 1560,
+      "delta_Hit@1_pp": 0.0,
+      "delta_MRR_pp": 0.0021367521367521365
+    },
+    {
+      "comparison": "AAKV-M1-P3-1st-P3",
+      "stratum": "low",
+      "n": 1560,
+      "delta_Hit@1_pp": -0.38461538461538464,
+      "delta_MRR_pp": -0.25961538461538464
+    },
+    {
+      "comparison": "AAKV-M1-P3-1st-P3",
+      "stratum": "medium",
+      "n": 1560,
+      "delta_Hit@1_pp": -0.38461538461538464,
+      "delta_MRR_pp": -0.233974358974359
+    },
+    {
+      "comparison": "AAKV-M1-P3-1st-P3",
+      "stratum": "high",
+      "n": 1560,
+      "delta_Hit@1_pp": 0.0,
+      "delta_MRR_pp": -0.019230769230769232
+    },
+    {
+      "comparison": "AAKV-M3-P3-1st-P3",
+      "stratum": "low",
+      "n": 1560,
+      "delta_Hit@1_pp": -0.38461538461538464,
+      "delta_MRR_pp": -0.3376068376068376
+    },
+    {
+      "comparison": "AAKV-M3-P3-1st-P3",
+      "stratum": "medium",
+      "n": 1560,
+      "delta_Hit@1_pp": -0.38461538461538464,
+      "delta_MRR_pp": -0.3044871794871795
+    },
+    {
+      "comparison": "AAKV-M3-P3-1st-P3",
+      "stratum": "high",
+      "n": 1560,
+      "delta_Hit@1_pp": 0.0,
+      "delta_MRR_pp": -0.05128205128205128
+    },
+    {
+      "comparison": "AAKV-M5-P3-1st-P3",
+      "stratum": "low",
+      "n": 1560,
+      "delta_Hit@1_pp": -0.5128205128205128,
+      "delta_MRR_pp": -0.46474358974358965
+    },
+    {
+      "comparison": "AAKV-M5-P3-1st-P3",
+      "stratum": "medium",
+      "n": 1560,
+      "delta_Hit@1_pp": -0.576923076923077,
+      "delta_MRR_pp": -0.4401709401709402
+    },
+    {
+      "comparison": "AAKV-M5-P3-1st-P3",
+      "stratum": "high",
+      "n": 1560,
+      "delta_Hit@1_pp": -0.0641025641025641,
+      "delta_MRR_pp": -0.10790598290598288
+    },
+    {
+      "comparison": "AAKV-M1-P5-1st-P5",
+      "stratum": "low",
+      "n": 1560,
+      "delta_Hit@1_pp": -0.38461538461538464,
+      "delta_MRR_pp": -0.2681623931623932
+    },
+    {
+      "comparison": "AAKV-M1-P5-1st-P5",
+      "stratum": "medium",
+      "n": 1560,
+      "delta_Hit@1_pp": -0.38461538461538464,
+      "delta_MRR_pp": -0.2371794871794872
+    },
+    {
+      "comparison": "AAKV-M1-P5-1st-P5",
+      "stratum": "high",
+      "n": 1560,
+      "delta_Hit@1_pp": -0.0641025641025641,
+      "delta_MRR_pp": -0.05128205128205128
+    },
+    {
+      "comparison": "AAKV-M3-P5-1st-P5",
+      "stratum": "low",
+      "n": 1560,
+      "delta_Hit@1_pp": -0.38461538461538464,
+      "delta_MRR_pp": -0.3568376068376069
+    },
+    {
+      "comparison": "AAKV-M3-P5-1st-P5",
+      "stratum": "medium",
+      "n": 1560,
+      "delta_Hit@1_pp": -0.3205128205128205,
+      "delta_MRR_pp": -0.26175213675213677
+    },
+    {
+      "comparison": "AAKV-M3-P5-1st-P5",
+      "stratum": "high",
+      "n": 1560,
+      "delta_Hit@1_pp": -0.0641025641025641,
+      "delta_MRR_pp": -0.09188034188034186
+    },
+    {
+      "comparison": "AAKV-M5-P5-1st-P5",
+      "stratum": "low",
+      "n": 1560,
+      "delta_Hit@1_pp": -0.576923076923077,
+      "delta_MRR_pp": -0.5138888888888888
+    },
+    {
+      "comparison": "AAKV-M5-P5-1st-P5",
+      "stratum": "medium",
+      "n": 1560,
+      "delta_Hit@1_pp": -0.641025641025641,
+      "delta_MRR_pp": -0.4722222222222222
+    },
+    {
+      "comparison": "AAKV-M5-P5-1st-P5",
+      "stratum": "high",
+      "n": 1560,
+      "delta_Hit@1_pp": -0.0641025641025641,
+      "delta_MRR_pp": -0.1217948717948718
+    },
+    {
+      "comparison": "AAKV-M1-P10-1st-P10",
+      "stratum": "low",
+      "n": 1560,
+      "delta_Hit@1_pp": -0.38461538461538464,
+      "delta_MRR_pp": -0.20619658119658116
+    },
+    {
+      "comparison": "AAKV-M1-P10-1st-P10",
+      "stratum": "medium",
+      "n": 1560,
+      "delta_Hit@1_pp": -0.2564102564102564,
+      "delta_MRR_pp": -0.08974358974358973
+    },
+    {
+      "comparison": "AAKV-M1-P10-1st-P10",
+      "stratum": "high",
+      "n": 1560,
+      "delta_Hit@1_pp": 0.0,
+      "delta_MRR_pp": -0.017094017094017096
+    },
+    {
+      "comparison": "AAKV-M3-P10-1st-P10",
+      "stratum": "low",
+      "n": 1560,
+      "delta_Hit@1_pp": -0.3205128205128205,
+      "delta_MRR_pp": -0.25
+    },
+    {
+      "comparison": "AAKV-M3-P10-1st-P10",
+      "stratum": "medium",
+      "n": 1560,
+      "delta_Hit@1_pp": -0.3205128205128205,
+      "delta_MRR_pp": -0.18162393162393162
+    },
+    {
+      "comparison": "AAKV-M3-P10-1st-P10",
+      "stratum": "high",
+      "n": 1560,
+      "delta_Hit@1_pp": 0.0,
+      "delta_MRR_pp": -0.04914529914529913
+    },
+    {
+      "comparison": "AAKV-M5-P10-1st-P10",
+      "stratum": "low",
+      "n": 1560,
+      "delta_Hit@1_pp": -0.5128205128205128,
+      "delta_MRR_pp": -0.44978632478632474
+    },
+    {
+      "comparison": "AAKV-M5-P10-1st-P10",
+      "stratum": "medium",
+      "n": 1560,
+      "delta_Hit@1_pp": -0.641025641025641,
+      "delta_MRR_pp": -0.41132478632478636
+    },
+    {
+      "comparison": "AAKV-M5-P10-1st-P10",
+      "stratum": "high",
+      "n": 1560,
+      "delta_Hit@1_pp": 0.0,
+      "delta_MRR_pp": -0.07692307692307693
+    }
+  ]
+}

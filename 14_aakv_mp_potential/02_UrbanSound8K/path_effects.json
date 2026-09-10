@@ -1,0 +1,310 @@
+{
+  "AAKV-M1-P5-Fallback-M1-P5": {
+    "selected_kge_rank": {
+      "1": 111378
+    },
+    "selected_relation": {
+      "used for": 15998,
+      "occurs in": 19690,
+      "part of scene": 29371,
+      "associated with environment": 21293,
+      "localized in": 12076,
+      "overlaps with": 12950
+    },
+    "relation_on_improved_samples": {
+      "part of scene": 203,
+      "occurs in": 132,
+      "used for": 90,
+      "overlaps with": 118,
+      "localized in": 102,
+      "associated with environment": 195
+    },
+    "relation_on_worsened_samples": {
+      "localized in": 91,
+      "part of scene": 179,
+      "used for": 92,
+      "overlaps with": 127,
+      "occurs in": 152,
+      "associated with environment": 158
+    }
+  },
+  "AAKV-M1-P3-1st-P3": {
+    "selected_kge_rank": {
+      "1": 65332
+    },
+    "selected_relation": {
+      "used for": 8784,
+      "part of scene": 17316,
+      "associated with environment": 12550,
+      "localized in": 6679,
+      "overlaps with": 7823,
+      "occurs in": 12180
+    },
+    "relation_on_improved_samples": {
+      "occurs in": 79,
+      "localized in": 51,
+      "part of scene": 94,
+      "overlaps with": 47,
+      "associated with environment": 127,
+      "used for": 19
+    },
+    "relation_on_worsened_samples": {
+      "localized in": 120,
+      "part of scene": 160,
+      "associated with environment": 144,
+      "used for": 90,
+      "overlaps with": 143,
+      "occurs in": 147
+    }
+  },
+  "AAKV-M3-P3-1st-P3": {
+    "selected_kge_rank": {
+      "3": 32686,
+      "2": 24487,
+      "1": 24819
+    },
+    "selected_relation": {
+      "used for": 11508,
+      "part of scene": 22331,
+      "overlaps with": 10558,
+      "associated with environment": 15369,
+      "occurs in": 13944,
+      "localized in": 8282
+    },
+    "relation_on_improved_samples": {
+      "part of scene": 251,
+      "localized in": 101,
+      "associated with environment": 129,
+      "occurs in": 152,
+      "overlaps with": 112,
+      "used for": 94
+    },
+    "relation_on_worsened_samples": {
+      "associated with environment": 215,
+      "part of scene": 419,
+      "occurs in": 280,
+      "overlaps with": 231,
+      "localized in": 179,
+      "used for": 184
+    }
+  },
+  "AAKV-M5-P3-1st-P3": {
+    "selected_kge_rank": {
+      "3": 20709,
+      "5": 19219,
+      "4": 17583,
+      "1": 15704,
+      "2": 14982
+    },
+    "selected_relation": {
+      "used for": 15313,
+      "associated with environment": 16083,
+      "part of scene": 20836,
+      "overlaps with": 11966,
+      "occurs in": 16802,
+      "localized in": 7197
+    },
+    "relation_on_improved_samples": {
+      "part of scene": 311,
+      "localized in": 136,
+      "occurs in": 366,
+      "associated with environment": 201,
+      "overlaps with": 180,
+      "used for": 162
+    },
+    "relation_on_worsened_samples": {
+      "part of scene": 486,
+      "localized in": 174,
+      "associated with environment": 269,
+      "occurs in": 379,
+      "overlaps with": 320,
+      "used for": 223
+    }
+  },
+  "AAKV-M1-P5-1st-P5": {
+    "selected_kge_rank": {
+      "1": 111378
+    },
+    "selected_relation": {
+      "used for": 15998,
+      "occurs in": 19690,
+      "part of scene": 29371,
+      "associated with environment": 21293,
+      "localized in": 12076,
+      "overlaps with": 12950
+    },
+    "relation_on_improved_samples": {
+      "occurs in": 125,
+      "localized in": 89,
+      "overlaps with": 86,
+      "associated with environment": 219,
+      "part of scene": 175,
+      "used for": 48
+    },
+    "relation_on_worsened_samples": {
+      "localized in": 206,
+      "used for": 174,
+      "part of scene": 272,
+      "associated with environment": 264,
+      "overlaps with": 231,
+      "occurs in": 238
+    }
+  },
+  "AAKV-M3-P5-1st-P5": {
+    "selected_kge_rank": {
+      "3": 54661,
+      "2": 42545,
+      "1": 42525
+    },
+    "selected_relation": {
+      "used for": 20955,
+      "part of scene": 36917,
+      "associated with environment": 25815,
+      "overlaps with": 17112,
+      "occurs in": 24349,
+      "localized in": 14583
+    },
+    "relation_on_improved_samples": {
+      "part of scene": 409,
+      "localized in": 171,
+      "associated with environment": 233,
+      "occurs in": 254,
+      "used for": 170,
+      "overlaps with": 192
+    },
+    "relation_on_worsened_samples": {
+      "part of scene": 638,
+      "associated with environment": 416,
+      "occurs in": 483,
+      "overlaps with": 400,
+      "localized in": 322,
+      "used for": 325
+    }
+  },
+  "AAKV-M5-P5-1st-P5": {
+    "selected_kge_rank": {
+      "3": 34908,
+      "5": 31689,
+      "4": 29997,
+      "2": 26576,
+      "1": 26597
+    },
+    "selected_relation": {
+      "used for": 25498,
+      "associated with environment": 26678,
+      "part of scene": 35551,
+      "overlaps with": 20103,
+      "occurs in": 28447,
+      "localized in": 13490
+    },
+    "relation_on_improved_samples": {
+      "part of scene": 537,
+      "localized in": 278,
+      "occurs in": 601,
+      "associated with environment": 360,
+      "used for": 276,
+      "overlaps with": 293
+    },
+    "relation_on_worsened_samples": {
+      "part of scene": 752,
+      "localized in": 340,
+      "associated with environment": 441,
+      "overlaps with": 537,
+      "occurs in": 608,
+      "used for": 390
+    }
+  },
+  "AAKV-M1-P10-1st-P10": {
+    "selected_kge_rank": {
+      "1": 236336
+    },
+    "selected_relation": {
+      "part of scene": 60708,
+      "overlaps with": 27497,
+      "used for": 35196,
+      "occurs in": 41049,
+      "associated with environment": 44354,
+      "localized in": 27532
+    },
+    "relation_on_improved_samples": {
+      "occurs in": 273,
+      "localized in": 178,
+      "overlaps with": 173,
+      "associated with environment": 459,
+      "part of scene": 358,
+      "used for": 148
+    },
+    "relation_on_worsened_samples": {
+      "localized in": 436,
+      "used for": 372,
+      "part of scene": 599,
+      "associated with environment": 566,
+      "overlaps with": 428,
+      "occurs in": 531
+    }
+  },
+  "AAKV-M3-P10-1st-P10": {
+    "selected_kge_rank": {
+      "1": 92111,
+      "3": 111891,
+      "2": 91219
+    },
+    "selected_relation": {
+      "part of scene": 74182,
+      "used for": 48664,
+      "overlaps with": 34731,
+      "associated with environment": 52567,
+      "occurs in": 53609,
+      "localized in": 31468
+    },
+    "relation_on_improved_samples": {
+      "part of scene": 781,
+      "localized in": 360,
+      "associated with environment": 567,
+      "used for": 370,
+      "occurs in": 500,
+      "overlaps with": 379
+    },
+    "relation_on_worsened_samples": {
+      "part of scene": 1209,
+      "associated with environment": 858,
+      "used for": 717,
+      "occurs in": 1005,
+      "overlaps with": 851,
+      "localized in": 672
+    }
+  },
+  "AAKV-M5-P10-1st-P10": {
+    "selected_kge_rank": {
+      "5": 64151,
+      "1": 57586,
+      "3": 72527,
+      "4": 63190,
+      "2": 57505
+    },
+    "selected_relation": {
+      "used for": 56347,
+      "part of scene": 74581,
+      "associated with environment": 54513,
+      "occurs in": 58189,
+      "overlaps with": 41358,
+      "localized in": 29971
+    },
+    "relation_on_improved_samples": {
+      "part of scene": 1049,
+      "localized in": 600,
+      "occurs in": 1127,
+      "associated with environment": 896,
+      "used for": 569,
+      "overlaps with": 612
+    },
+    "relation_on_worsened_samples": {
+      "part of scene": 1490,
+      "associated with environment": 991,
+      "used for": 880,
+      "occurs in": 1192,
+      "overlaps with": 1122,
+      "localized in": 740
+    }
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "dataset": "01_ESC50",
+    "n": 2000,
+    "any_benefit": 2,
+    "fixed_benefit": 1,
+    "fixed_harm": 4,
+    "top1_conflict": 110
+  },
+  {
+    "dataset": "02_UrbanSound8K",
+    "n": 8732,
+    "any_benefit": 133,
+    "fixed_benefit": 50,
+    "fixed_harm": 89,
+    "top1_conflict": 633
+  },
+  {
+    "dataset": "03_FSD50K",
+    "n": 10231,
+    "any_benefit": 153,
+    "fixed_benefit": 78,
+    "fixed_harm": 119,
+    "top1_conflict": 3018
+  },
+  {
+    "dataset": "04_DCASE17_T4",
+    "n": 419,
+    "any_benefit": 12,
+    "fixed_benefit": 5,
+    "fixed_harm": 14,
+    "top1_conflict": 117
+  },
+  {
+    "dataset": "05_AudioSet",
+    "n": 17233,
+    "any_benefit": 461,
+    "fixed_benefit": 239,
+    "fixed_harm": 405,
+    "top1_conflict": 6407
+  },
+  {
+    "dataset": "06_TUT2017",
+    "n": 4680,
+    "any_benefit": 19,
+    "fixed_benefit": 5,
+    "fixed_harm": 45,
+    "top1_conflict": 1446
+  }
+]

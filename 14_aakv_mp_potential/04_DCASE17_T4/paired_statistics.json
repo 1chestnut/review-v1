@@ -1,0 +1,196 @@
+{
+  "comparisons": [
+    {
+      "comparison": "AAKV-M1-P5-Fallback-M1-P5",
+      "delta_Hit@1_pp": -0.2386634844868735,
+      "Hit@1_bootstrap95": [
+        -1.1933174224343674,
+        0.477326968973747
+      ],
+      "delta_MRR_pp": -0.16308671439936356,
+      "MRR_bootstrap95": [
+        -0.6762132060461417,
+        0.27844073190135243
+      ],
+      "wrong_to_right": 1,
+      "right_to_wrong": 2,
+      "mcnemar_p": 1.0,
+      "rank_improved": 3,
+      "rank_worsened": 6,
+      "holm_p": 1.0
+    },
+    {
+      "comparison": "AAKV-M1-P3-1st-P3",
+      "delta_Hit@1_pp": -1.1933174224343674,
+      "Hit@1_bootstrap95": [
+        -2.6252983293556085,
+        0.0
+      ],
+      "delta_MRR_pp": -0.7955449482895782,
+      "MRR_bootstrap95": [
+        -1.6308671439936355,
+        -0.0397772474144789
+      ],
+      "wrong_to_right": 2,
+      "right_to_wrong": 7,
+      "mcnemar_p": 0.1796875,
+      "rank_improved": 5,
+      "rank_worsened": 13,
+      "holm_p": 1.0
+    },
+    {
+      "comparison": "AAKV-M3-P3-1st-P3",
+      "delta_Hit@1_pp": -0.2386634844868735,
+      "Hit@1_bootstrap95": [
+        -1.909307875894988,
+        1.1933174224343674
+      ],
+      "delta_MRR_pp": -0.5171042163882258,
+      "MRR_bootstrap95": [
+        -1.4439140811455846,
+        0.365950676213206
+      ],
+      "wrong_to_right": 5,
+      "right_to_wrong": 6,
+      "mcnemar_p": 1.0,
+      "rank_improved": 11,
+      "rank_worsened": 19,
+      "holm_p": 1.0
+    },
+    {
+      "comparison": "AAKV-M5-P3-1st-P3",
+      "delta_Hit@1_pp": -0.477326968973747,
+      "Hit@1_bootstrap95": [
+        -2.1479713603818618,
+        1.1933174224343674
+      ],
+      "delta_MRR_pp": -0.6364359586316626,
+      "MRR_bootstrap95": [
+        -1.5871121718377088,
+        0.29832935560859186
+      ],
+      "wrong_to_right": 5,
+      "right_to_wrong": 7,
+      "mcnemar_p": 0.7744140625,
+      "rank_improved": 11,
+      "rank_worsened": 20,
+      "holm_p": 1.0
+    },
+    {
+      "comparison": "AAKV-M1-P5-1st-P5",
+      "delta_Hit@1_pp": -1.1933174224343674,
+      "Hit@1_bootstrap95": [
+        -2.6252983293556085,
+        0.2386634844868735
+      ],
+      "delta_MRR_pp": -0.807478122513922,
+      "MRR_bootstrap95": [
+        -1.6428003182179791,
+        -0.0397772474144789
+      ],
+      "wrong_to_right": 2,
+      "right_to_wrong": 7,
+      "mcnemar_p": 0.1796875,
+      "rank_improved": 5,
+      "rank_worsened": 14,
+      "holm_p": 1.0
+    },
+    {
+      "comparison": "AAKV-M3-P5-1st-P5",
+      "delta_Hit@1_pp": -0.2386634844868735,
+      "Hit@1_bootstrap95": [
+        -1.909307875894988,
+        1.1933174224343674
+      ],
+      "delta_MRR_pp": -0.5409705648369133,
+      "MRR_bootstrap95": [
+        -1.463802704852824,
+        0.3540175019888624
+      ],
+      "wrong_to_right": 5,
+      "right_to_wrong": 6,
+      "mcnemar_p": 1.0,
+      "rank_improved": 11,
+      "rank_worsened": 20,
+      "holm_p": 1.0
+    },
+    {
+      "comparison": "AAKV-M5-P5-1st-P5",
+      "delta_Hit@1_pp": -0.2386634844868735,
+      "Hit@1_bootstrap95": [
+        -1.909307875894988,
+        1.431980906921241
+      ],
+      "delta_MRR_pp": -0.5210819411296738,
+      "MRR_bootstrap95": [
+        -1.4679793158313443,
+        0.3937947494033413
+      ],
+      "wrong_to_right": 5,
+      "right_to_wrong": 6,
+      "mcnemar_p": 1.0,
+      "rank_improved": 11,
+      "rank_worsened": 20,
+      "holm_p": 1.0
+    },
+    {
+      "comparison": "AAKV-M1-P10-1st-P10",
+      "delta_Hit@1_pp": -0.954653937947494,
+      "Hit@1_bootstrap95": [
+        -2.386634844868735,
+        0.2386634844868735
+      ],
+      "delta_MRR_pp": -0.6881463802704852,
+      "MRR_bootstrap95": [
+        -1.475735879077168,
+        0.0397772474144789
+      ],
+      "wrong_to_right": 2,
+      "right_to_wrong": 6,
+      "mcnemar_p": 0.2890625,
+      "rank_improved": 5,
+      "rank_worsened": 13,
+      "holm_p": 1.0
+    },
+    {
+      "comparison": "AAKV-M3-P10-1st-P10",
+      "delta_Hit@1_pp": -0.477326968973747,
+      "Hit@1_bootstrap95": [
+        -1.909307875894988,
+        0.954653937947494
+      ],
+      "delta_MRR_pp": -0.6603023070803501,
+      "MRR_bootstrap95": [
+        -1.5632458233890214,
+        0.17899761336515513
+      ],
+      "wrong_to_right": 4,
+      "right_to_wrong": 6,
+      "mcnemar_p": 0.75390625,
+      "rank_improved": 10,
+      "rank_worsened": 20,
+      "holm_p": 1.0
+    },
+    {
+      "comparison": "AAKV-M5-P10-1st-P10",
+      "delta_Hit@1_pp": -0.477326968973747,
+      "Hit@1_bootstrap95": [
+        -1.909307875894988,
+        0.954653937947494
+      ],
+      "delta_MRR_pp": -0.6404136833731106,
+      "MRR_bootstrap95": [
+        -1.555290373906126,
+        0.22673031026252988
+      ],
+      "wrong_to_right": 4,
+      "right_to_wrong": 6,
+      "mcnemar_p": 0.75390625,
+      "rank_improved": 10,
+      "rank_worsened": 20,
+      "holm_p": 1.0
+    }
+  ],
+  "bootstrap": 10000,
+  "seed": 42
+}

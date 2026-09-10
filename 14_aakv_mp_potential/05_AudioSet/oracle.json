@@ -1,0 +1,23 @@
+{
+  "analysis_only": true,
+  "metrics": {
+    "Hit@1": 31.23077815818488,
+    "Hit@3": 48.511576626240355,
+    "Hit@5": 55.26605930482214,
+    "MRR": 43.08457269904737
+  },
+  "chosen_method_counts": {
+    "1st-P3": 16539,
+    "Fallback-M1-P5": 182,
+    "1st-P5": 115,
+    "AAKV-M3-P3": 147,
+    "1st-P10": 59,
+    "AAKV-M1-P3": 44,
+    "AAKV-M5-P3": 69,
+    "AAKV-M1-P10": 65,
+    "AAKV-M3-P5": 4,
+    "AAKV-M5-P5": 1,
+    "AAKV-M3-P10": 3,
+    "AAKV-M1-P5": 5
+  }
+}

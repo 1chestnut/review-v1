@@ -1,0 +1,169 @@
+{
+  "bootstrap": 10000,
+  "seed": 42,
+  "paired_by_audio": true,
+  "rows": [
+    {
+      "comparison": "JointNorm-All - JointRaw-All",
+      "delta_Hit@1_pp": 0.0,
+      "Hit@1_CI95": [
+        -1.431980906921241,
+        1.431980906921241
+      ],
+      "delta_MRR_pp": 0.4972155926809865,
+      "MRR_CI95": [
+        -0.2545743834526651,
+        1.3007159904534606
+      ],
+      "wrong_to_right": 4,
+      "right_to_wrong": 4,
+      "mcnemar_p": 1.0,
+      "rank_improved": 20,
+      "rank_worsened": 9
+    },
+    {
+      "comparison": "JointNorm-Top5 - JointNorm-All",
+      "delta_Hit@1_pp": 0.0,
+      "Hit@1_CI95": [
+        -1.1933174224343674,
+        1.1933174224343674
+      ],
+      "delta_MRR_pp": -0.06762132060461418,
+      "MRR_CI95": [
+        -0.6762132060461417,
+        0.5290373906125696
+      ],
+      "wrong_to_right": 3,
+      "right_to_wrong": 3,
+      "mcnemar_p": 1.0,
+      "rank_improved": 6,
+      "rank_worsened": 7
+    },
+    {
+      "comparison": "TwoStage-a0.3 - JointNorm-Top5",
+      "delta_Hit@1_pp": 2.1479713603818618,
+      "Hit@1_CI95": [
+        -0.2386634844868735,
+        4.534606205250597
+      ],
+      "delta_MRR_pp": 1.6626889419252184,
+      "MRR_CI95": [
+        0.365950676213206,
+        2.9595266507557665
+      ],
+      "wrong_to_right": 18,
+      "right_to_wrong": 9,
+      "mcnemar_p": 0.12207812070846558,
+      "rank_improved": 41,
+      "rank_worsened": 16
+    },
+    {
+      "comparison": "TwoStage-a0.5 - JointNorm-Top5",
+      "delta_Hit@1_pp": 3.818615751789976,
+      "Hit@1_CI95": [
+        0.7159904534606205,
+        6.921241050119332
+      ],
+      "delta_MRR_pp": 2.649164677804296,
+      "MRR_CI95": [
+        0.914777247414479,
+        4.391408114558472
+      ],
+      "wrong_to_right": 32,
+      "right_to_wrong": 16,
+      "mcnemar_p": 0.029304946720529308,
+      "rank_improved": 62,
+      "rank_worsened": 28
+    },
+    {
+      "comparison": "TwoStage-a0.7 - JointNorm-Top5",
+      "delta_Hit@1_pp": 2.863961813842482,
+      "Hit@1_CI95": [
+        -0.7159904534606205,
+        6.443914081145585
+      ],
+      "delta_MRR_pp": 2.267303102625299,
+      "MRR_CI95": [
+        0.12321002386634859,
+        4.399363564041368
+      ],
+      "wrong_to_right": 37,
+      "right_to_wrong": 25,
+      "mcnemar_p": 0.16188140552559763,
+      "rank_improved": 72,
+      "rank_worsened": 39
+    },
+    {
+      "comparison": "TwoStage-Dynamic - JointNorm-Top5",
+      "delta_Hit@1_pp": 3.1026252983293556,
+      "Hit@1_CI95": [
+        0.0,
+        6.443914081145585
+      ],
+      "delta_MRR_pp": 2.199681782020684,
+      "MRR_CI95": [
+        0.42551710421638816,
+        4.021579156722353
+      ],
+      "wrong_to_right": 31,
+      "right_to_wrong": 18,
+      "mcnemar_p": 0.08543313315739454,
+      "rank_improved": 61,
+      "rank_worsened": 30
+    },
+    {
+      "comparison": "TwoStage-Dynamic - TwoStage-a0.3",
+      "delta_Hit@1_pp": 0.954653937947494,
+      "Hit@1_CI95": [
+        -1.431980906921241,
+        3.341288782816229
+      ],
+      "delta_MRR_pp": 0.5369928400954654,
+      "MRR_CI95": [
+        -0.7438345266507557,
+        1.7899761336515514
+      ],
+      "wrong_to_right": 15,
+      "right_to_wrong": 11,
+      "mcnemar_p": 0.557197093963623,
+      "rank_improved": 30,
+      "rank_worsened": 23
+    },
+    {
+      "comparison": "TwoStage-Dynamic - TwoStage-a0.5",
+      "delta_Hit@1_pp": -0.7159904534606205,
+      "Hit@1_CI95": [
+        -1.909307875894988,
+        0.2386634844868735
+      ],
+      "delta_MRR_pp": -0.4494828957836117,
+      "MRR_CI95": [
+        -1.0859188544152745,
+        0.09556483691328421
+      ],
+      "wrong_to_right": 1,
+      "right_to_wrong": 4,
+      "mcnemar_p": 0.375,
+      "rank_improved": 4,
+      "rank_worsened": 10
+    },
+    {
+      "comparison": "TwoStage-Dynamic - TwoStage-a0.7",
+      "delta_Hit@1_pp": 0.2386634844868735,
+      "Hit@1_CI95": [
+        -1.6706443914081146,
+        2.1479713603818618
+      ],
+      "delta_MRR_pp": -0.06762132060461422,
+      "MRR_CI95": [
+        -1.1377287191726333,
+        1.022374701670643
+      ],
+      "wrong_to_right": 9,
+      "right_to_wrong": 8,
+      "mcnemar_p": 1.0,
+      "rank_improved": 21,
+      "rank_worsened": 21
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "dataset": "audioset",
+  "top_k": 5,
+  "top_m": 3,
+  "logit_scale": 100.0,
+  "relations": [
+    "belongs to class",
+    "has parent",
+    "is a type of",
+    "has children"
+  ],
+  "task06_cache": "/data/zkx/zkx/review1/06_onehop-text-verbalization-audit/05_AudioSet/cache"
+}

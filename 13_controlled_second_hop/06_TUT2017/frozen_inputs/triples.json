@@ -1,0 +1,1848 @@
+{
+  "signature": {
+    "dataset": "tut2017",
+    "labels": [
+      "beach",
+      "bus",
+      "cafe or restaurant",
+      "car",
+      "city center",
+      "forest path",
+      "grocery store",
+      "home",
+      "library",
+      "metro station",
+      "office",
+      "park",
+      "residential area",
+      "train",
+      "tram"
+    ],
+    "kg_classes": [
+      "beach",
+      "bus",
+      "cafe/restaurant",
+      "car",
+      "city_center",
+      "forest_path",
+      "grocery_store",
+      "home",
+      "library",
+      "metro_station",
+      "office",
+      "park",
+      "residential_area",
+      "train",
+      "tram"
+    ],
+    "mapping_sha256": "8bcc5e41b1b7fd77c071205bdee6b1c173e6233309661c8fe26c79f081b61175",
+    "relations": [
+      "is variant of",
+      "has parent",
+      "scene contains",
+      "event composed of",
+      "described by"
+    ],
+    "top_k": 5,
+    "top_m": 3,
+    "forms": [
+      "direct",
+      "raw_triple",
+      "template_v1"
+    ]
+  },
+  "audit": {
+    "mapped_classes": 13,
+    "unmapped_classes": 2,
+    "queries": 65,
+    "empty_queries": 0,
+    "candidate_tail_removed": 44,
+    "duplicate_tail_removed": 18,
+    "triples": 133
+  },
+  "classes": [
+    {
+      "ids": {
+        "direct": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30
+        ],
+        "raw": [
+          1,
+          4,
+          7,
+          10,
+          13,
+          16,
+          19,
+          22,
+          25,
+          28,
+          31
+        ],
+        "template": [
+          2,
+          5,
+          8,
+          11,
+          14,
+          17,
+          20,
+          23,
+          26,
+          29,
+          32
+        ]
+      },
+      "triples": [
+        {
+          "head": "beach",
+          "kg_entity": "beach",
+          "relation": "is variant of",
+          "tail": "sound of things",
+          "direct": "beach, sound of things",
+          "raw": "beach is variant of sound of things",
+          "template": "The sound of beach is a variant of sound of things."
+        },
+        {
+          "head": "beach",
+          "kg_entity": "beach",
+          "relation": "is variant of",
+          "tail": "vehicle",
+          "direct": "beach, vehicle",
+          "raw": "beach is variant of vehicle",
+          "template": "The sound of beach is a variant of vehicle."
+        },
+        {
+          "head": "beach",
+          "kg_entity": "beach",
+          "relation": "has parent",
+          "tail": "forest",
+          "direct": "beach, forest",
+          "raw": "beach has parent forest",
+          "template": "The acoustic category of beach has a parent category of forest."
+        },
+        {
+          "head": "beach",
+          "kg_entity": "beach",
+          "relation": "scene contains",
+          "tail": "outside",
+          "direct": "beach, outside",
+          "raw": "beach scene contains outside",
+          "template": "A scene of beach commonly contains the sound of outside."
+        },
+        {
+          "head": "beach",
+          "kg_entity": "beach",
+          "relation": "scene contains",
+          "tail": "sea or ocean",
+          "direct": "beach, sea or ocean",
+          "raw": "beach scene contains sea or ocean",
+          "template": "A scene of beach commonly contains the sound of sea or ocean."
+        },
+        {
+          "head": "beach",
+          "kg_entity": "beach",
+          "relation": "event composed of",
+          "tail": "bird vocalization call or song",
+          "direct": "beach, bird vocalization call or song",
+          "raw": "beach event composed of bird vocalization call or song",
+          "template": "The sound of beach is characterized by bird vocalization call or song."
+        },
+        {
+          "head": "beach",
+          "kg_entity": "beach",
+          "relation": "event composed of",
+          "tail": "warbler chirping",
+          "direct": "beach, warbler chirping",
+          "raw": "beach event composed of warbler chirping",
+          "template": "The sound of beach is characterized by warbler chirping."
+        },
+        {
+          "head": "beach",
+          "kg_entity": "beach",
+          "relation": "event composed of",
+          "tail": "rumble",
+          "direct": "beach, rumble",
+          "raw": "beach event composed of rumble",
+          "template": "The sound of beach is characterized by rumble."
+        },
+        {
+          "head": "beach",
+          "kg_entity": "beach",
+          "relation": "described by",
+          "tail": "soothing",
+          "direct": "beach, soothing",
+          "raw": "beach described by soothing",
+          "template": "The sound of a beach can be described by soothing."
+        },
+        {
+          "head": "beach",
+          "kg_entity": "beach",
+          "relation": "described by",
+          "tail": "animal",
+          "direct": "beach, animal",
+          "raw": "beach described by animal",
+          "template": "The sound of a beach can be described by animal."
+        },
+        {
+          "head": "beach",
+          "kg_entity": "beach",
+          "relation": "described by",
+          "tail": "wood thrush",
+          "direct": "beach, wood thrush",
+          "raw": "beach described by wood thrush",
+          "template": "The sound of a beach can be described by wood thrush."
+        }
+      ],
+      "mapped_entity": "beach"
+    },
+    {
+      "ids": {
+        "direct": [
+          33,
+          36,
+          39,
+          42,
+          45,
+          48,
+          51,
+          54,
+          57,
+          60,
+          63
+        ],
+        "raw": [
+          34,
+          37,
+          40,
+          43,
+          46,
+          49,
+          52,
+          55,
+          58,
+          61,
+          64
+        ],
+        "template": [
+          35,
+          38,
+          41,
+          44,
+          47,
+          50,
+          53,
+          56,
+          59,
+          62,
+          65
+        ]
+      },
+      "triples": [
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "is variant of",
+          "tail": "road vehicle",
+          "direct": "bus, road vehicle",
+          "raw": "bus is variant of road vehicle",
+          "template": "The sound of bus is a variant of road vehicle."
+        },
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "is variant of",
+          "tail": "vehicle",
+          "direct": "bus, vehicle",
+          "raw": "bus is variant of vehicle",
+          "template": "The sound of bus is a variant of vehicle."
+        },
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "has parent",
+          "tail": "large vehicle",
+          "direct": "bus, large vehicle",
+          "raw": "bus has parent large vehicle",
+          "template": "The acoustic category of bus has a parent category of large vehicle."
+        },
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "scene contains",
+          "tail": "engine revving",
+          "direct": "bus, engine revving",
+          "raw": "bus scene contains engine revving",
+          "template": "A scene of bus commonly contains the sound of engine revving."
+        },
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "scene contains",
+          "tail": "brakes screeching",
+          "direct": "bus, brakes screeching",
+          "raw": "bus scene contains brakes screeching",
+          "template": "A scene of bus commonly contains the sound of brakes screeching."
+        },
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "scene contains",
+          "tail": "screeching brakes",
+          "direct": "bus, screeching brakes",
+          "raw": "bus scene contains screeching brakes",
+          "template": "A scene of bus commonly contains the sound of screeching brakes."
+        },
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "event composed of",
+          "tail": "motorcycle",
+          "direct": "bus, motorcycle",
+          "raw": "bus event composed of motorcycle",
+          "template": "The sound of bus is characterized by motorcycle."
+        },
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "event composed of",
+          "tail": "tire screeching",
+          "direct": "bus, tire screeching",
+          "raw": "bus event composed of tire screeching",
+          "template": "The sound of bus is characterized by tire screeching."
+        },
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "described by",
+          "tail": "a vehicle used for public transportation in many cities and countries, often with multiple doors and seating",
+          "direct": "bus, a vehicle used for public transportation in many cities and countries, often with multiple doors and seating",
+          "raw": "bus described by a vehicle used for public transportation in many cities and countries, often with multiple doors and seating",
+          "template": "The sound of a bus can be described by a vehicle used for public transportation in many cities and countries, often with multiple doors and seating."
+        },
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "described by",
+          "tail": "a vehicle designed for carrying passengers on long-distance trips",
+          "direct": "bus, a vehicle designed for carrying passengers on long-distance trips",
+          "raw": "bus described by a vehicle designed for carrying passengers on long-distance trips",
+          "template": "The sound of a bus can be described by a vehicle designed for carrying passengers on long-distance trips."
+        },
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "described by",
+          "tail": "a vehicle used for public transportation in many cities and countries",
+          "direct": "bus, a vehicle used for public transportation in many cities and countries",
+          "raw": "bus described by a vehicle used for public transportation in many cities and countries",
+          "template": "The sound of a bus can be described by a vehicle used for public transportation in many cities and countries."
+        }
+      ],
+      "mapped_entity": "bus"
+    },
+    {
+      "ids": {
+        "direct": [
+          66,
+          69,
+          72,
+          75,
+          78,
+          81,
+          84,
+          87,
+          90,
+          93,
+          96,
+          99,
+          102,
+          105
+        ],
+        "raw": [
+          67,
+          70,
+          73,
+          76,
+          79,
+          82,
+          85,
+          88,
+          91,
+          94,
+          97,
+          100,
+          103,
+          106
+        ],
+        "template": [
+          68,
+          71,
+          74,
+          77,
+          80,
+          83,
+          86,
+          89,
+          92,
+          95,
+          98,
+          101,
+          104,
+          107
+        ]
+      },
+      "triples": [
+        {
+          "head": "cafe or restaurant",
+          "kg_entity": "cafe or restaurant",
+          "relation": "is variant of",
+          "tail": "bang",
+          "direct": "cafe or restaurant, bang",
+          "raw": "cafe or restaurant is variant of bang",
+          "template": "The sound of cafe or restaurant is a variant of bang."
+        },
+        {
+          "head": "cafe or restaurant",
+          "kg_entity": "cafe or restaurant",
+          "relation": "is variant of",
+          "tail": "cricket",
+          "direct": "cafe or restaurant, cricket",
+          "raw": "cafe or restaurant is variant of cricket",
+          "template": "The sound of cafe or restaurant is a variant of cricket."
+        },
+        {
+          "head": "cafe or restaurant",
+          "kg_entity": "cafe or restaurant",
+          "relation": "is variant of",
+          "tail": "fountain",
+          "direct": "cafe or restaurant, fountain",
+          "raw": "cafe or restaurant is variant of fountain",
+          "template": "The sound of cafe or restaurant is a variant of fountain."
+        },
+        {
+          "head": "cafe or restaurant",
+          "kg_entity": "cafe or restaurant",
+          "relation": "has parent",
+          "tail": "comedy show",
+          "direct": "cafe or restaurant, comedy show",
+          "raw": "cafe or restaurant has parent comedy show",
+          "template": "The acoustic category of cafe or restaurant has a parent category of comedy show."
+        },
+        {
+          "head": "cafe or restaurant",
+          "kg_entity": "cafe or restaurant",
+          "relation": "has parent",
+          "tail": "kitchen",
+          "direct": "cafe or restaurant, kitchen",
+          "raw": "cafe or restaurant has parent kitchen",
+          "template": "The acoustic category of cafe or restaurant has a parent category of kitchen."
+        },
+        {
+          "head": "cafe or restaurant",
+          "kg_entity": "cafe or restaurant",
+          "relation": "scene contains",
+          "tail": "door",
+          "direct": "cafe or restaurant, door",
+          "raw": "cafe or restaurant scene contains door",
+          "template": "A scene of cafe or restaurant commonly contains the sound of door."
+        },
+        {
+          "head": "cafe or restaurant",
+          "kg_entity": "cafe or restaurant",
+          "relation": "scene contains",
+          "tail": "door domestic",
+          "direct": "cafe or restaurant, door domestic",
+          "raw": "cafe or restaurant scene contains door domestic",
+          "template": "A scene of cafe or restaurant commonly contains the sound of door domestic."
+        },
+        {
+          "head": "cafe or restaurant",
+          "kg_entity": "cafe or restaurant",
+          "relation": "scene contains",
+          "tail": "vehicle",
+          "direct": "cafe or restaurant, vehicle",
+          "raw": "cafe or restaurant scene contains vehicle",
+          "template": "A scene of cafe or restaurant commonly contains the sound of vehicle."
+        },
+        {
+          "head": "cafe or restaurant",
+          "kg_entity": "cafe or restaurant",
+          "relation": "event composed of",
+          "tail": "alarming",
+          "direct": "cafe or restaurant, alarming",
+          "raw": "cafe or restaurant event composed of alarming",
+          "template": "The sound of cafe or restaurant is characterized by alarming."
+        },
+        {
+          "head": "cafe or restaurant",
+          "kg_entity": "cafe or restaurant",
+          "relation": "event composed of",
+          "tail": "alerting",
+          "direct": "cafe or restaurant, alerting",
+          "raw": "cafe or restaurant event composed of alerting",
+          "template": "The sound of cafe or restaurant is characterized by alerting."
+        },
+        {
+          "head": "cafe or restaurant",
+          "kg_entity": "cafe or restaurant",
+          "relation": "event composed of",
+          "tail": "laughter",
+          "direct": "cafe or restaurant, laughter",
+          "raw": "cafe or restaurant event composed of laughter",
+          "template": "The sound of cafe or restaurant is characterized by laughter."
+        },
+        {
+          "head": "cafe or restaurant",
+          "kg_entity": "cafe or restaurant",
+          "relation": "described by",
+          "tail": "hi-hat",
+          "direct": "cafe or restaurant, hi-hat",
+          "raw": "cafe or restaurant described by hi-hat",
+          "template": "The sound of a cafe or restaurant can be described by hi-hat."
+        },
+        {
+          "head": "cafe or restaurant",
+          "kg_entity": "cafe or restaurant",
+          "relation": "described by",
+          "tail": "thunder",
+          "direct": "cafe or restaurant, thunder",
+          "raw": "cafe or restaurant described by thunder",
+          "template": "The sound of a cafe or restaurant can be described by thunder."
+        },
+        {
+          "head": "cafe or restaurant",
+          "kg_entity": "cafe or restaurant",
+          "relation": "described by",
+          "tail": "train derailment",
+          "direct": "cafe or restaurant, train derailment",
+          "raw": "cafe or restaurant described by train derailment",
+          "template": "The sound of a cafe or restaurant can be described by train derailment."
+        }
+      ],
+      "mapped_entity": "cafe or restaurant"
+    },
+    {
+      "ids": {
+        "direct": [
+          108,
+          111,
+          114,
+          117,
+          120,
+          123,
+          126,
+          129,
+          132
+        ],
+        "raw": [
+          109,
+          112,
+          115,
+          118,
+          121,
+          124,
+          127,
+          130,
+          133
+        ],
+        "template": [
+          110,
+          113,
+          116,
+          119,
+          122,
+          125,
+          128,
+          131,
+          134
+        ]
+      },
+      "triples": [
+        {
+          "head": "car",
+          "kg_entity": "car",
+          "relation": "is variant of",
+          "tail": "engine",
+          "direct": "car, engine",
+          "raw": "car is variant of engine",
+          "template": "The sound of car is a variant of engine."
+        },
+        {
+          "head": "car",
+          "kg_entity": "car",
+          "relation": "is variant of",
+          "tail": "motorcycle",
+          "direct": "car, motorcycle",
+          "raw": "car is variant of motorcycle",
+          "template": "The sound of car is a variant of motorcycle."
+        },
+        {
+          "head": "car",
+          "kg_entity": "car",
+          "relation": "has parent",
+          "tail": "road vehicle",
+          "direct": "car, road vehicle",
+          "raw": "car has parent road vehicle",
+          "template": "The acoustic category of car has a parent category of road vehicle."
+        },
+        {
+          "head": "car",
+          "kg_entity": "car",
+          "relation": "has parent",
+          "tail": "vehicle",
+          "direct": "car, vehicle",
+          "raw": "car has parent vehicle",
+          "template": "The acoustic category of car has a parent category of vehicle."
+        },
+        {
+          "head": "car",
+          "kg_entity": "car",
+          "relation": "scene contains",
+          "tail": "brakes screeching",
+          "direct": "car, brakes screeching",
+          "raw": "car scene contains brakes screeching",
+          "template": "A scene of car commonly contains the sound of brakes screeching."
+        },
+        {
+          "head": "car",
+          "kg_entity": "car",
+          "relation": "event composed of",
+          "tail": "tire screeching",
+          "direct": "car, tire screeching",
+          "raw": "car event composed of tire screeching",
+          "template": "The sound of car is characterized by tire screeching."
+        },
+        {
+          "head": "car",
+          "kg_entity": "car",
+          "relation": "described by",
+          "tail": "a large vehicle used for transportation",
+          "direct": "car, a large vehicle used for transportation",
+          "raw": "car described by a large vehicle used for transportation",
+          "template": "The sound of a car can be described by a large vehicle used for transportation."
+        },
+        {
+          "head": "car",
+          "kg_entity": "car",
+          "relation": "described by",
+          "tail": "a two-wheeled vehicle with an engine",
+          "direct": "car, a two-wheeled vehicle with an engine",
+          "raw": "car described by a two-wheeled vehicle with an engine",
+          "template": "The sound of a car can be described by a two-wheeled vehicle with an engine."
+        },
+        {
+          "head": "car",
+          "kg_entity": "car",
+          "relation": "described by",
+          "tail": "a mechanical device designed for transportation",
+          "direct": "car, a mechanical device designed for transportation",
+          "raw": "car described by a mechanical device designed for transportation",
+          "template": "The sound of a car can be described by a mechanical device designed for transportation."
+        }
+      ],
+      "mapped_entity": "car"
+    },
+    {
+      "ids": {
+        "direct": [
+          135,
+          138,
+          141,
+          144,
+          147,
+          150
+        ],
+        "raw": [
+          136,
+          139,
+          142,
+          145,
+          148,
+          151
+        ],
+        "template": [
+          137,
+          140,
+          143,
+          146,
+          149,
+          152
+        ]
+      },
+      "triples": [
+        {
+          "head": "city center",
+          "kg_entity": "city center",
+          "relation": "is variant of",
+          "tail": "street",
+          "direct": "city center, street",
+          "raw": "city center is variant of street",
+          "template": "The sound of city center is a variant of street."
+        },
+        {
+          "head": "city center",
+          "kg_entity": "city center",
+          "relation": "is variant of",
+          "tail": "busy street",
+          "direct": "city center, busy street",
+          "raw": "city center is variant of busy street",
+          "template": "The sound of city center is a variant of busy street."
+        },
+        {
+          "head": "city center",
+          "kg_entity": "city center",
+          "relation": "has parent",
+          "tail": "quiet street",
+          "direct": "city center, quiet street",
+          "raw": "city center has parent quiet street",
+          "template": "The acoustic category of city center has a parent category of quiet street."
+        },
+        {
+          "head": "city center",
+          "kg_entity": "city center",
+          "relation": "scene contains",
+          "tail": "vehicle",
+          "direct": "city center, vehicle",
+          "raw": "city center scene contains vehicle",
+          "template": "A scene of city center commonly contains the sound of vehicle."
+        },
+        {
+          "head": "city center",
+          "kg_entity": "city center",
+          "relation": "scene contains",
+          "tail": "road vehicle",
+          "direct": "city center, road vehicle",
+          "raw": "city center scene contains road vehicle",
+          "template": "A scene of city center commonly contains the sound of road vehicle."
+        },
+        {
+          "head": "city center",
+          "kg_entity": "city center",
+          "relation": "described by",
+          "tail": "engine",
+          "direct": "city center, engine",
+          "raw": "city center described by engine",
+          "template": "The sound of a city center can be described by engine."
+        }
+      ],
+      "mapped_entity": "city center"
+    },
+    {
+      "ids": {
+        "direct": [],
+        "raw": [],
+        "template": []
+      },
+      "triples": [],
+      "mapped_entity": null
+    },
+    {
+      "ids": {
+        "direct": [
+          153,
+          156,
+          159,
+          162,
+          165,
+          168,
+          171,
+          174,
+          177,
+          180,
+          183,
+          186
+        ],
+        "raw": [
+          154,
+          157,
+          160,
+          163,
+          166,
+          169,
+          172,
+          175,
+          178,
+          181,
+          184,
+          187
+        ],
+        "template": [
+          155,
+          158,
+          161,
+          164,
+          167,
+          170,
+          173,
+          176,
+          179,
+          182,
+          185,
+          188
+        ]
+      },
+      "triples": [
+        {
+          "head": "grocery store",
+          "kg_entity": "grocery store",
+          "relation": "is variant of",
+          "tail": "cricket",
+          "direct": "grocery store, cricket",
+          "raw": "grocery store is variant of cricket",
+          "template": "The sound of grocery store is a variant of cricket."
+        },
+        {
+          "head": "grocery store",
+          "kg_entity": "grocery store",
+          "relation": "is variant of",
+          "tail": "urban transportation",
+          "direct": "grocery store, urban transportation",
+          "raw": "grocery store is variant of urban transportation",
+          "template": "The sound of grocery store is a variant of urban transportation."
+        },
+        {
+          "head": "grocery store",
+          "kg_entity": "grocery store",
+          "relation": "is variant of",
+          "tail": "bird",
+          "direct": "grocery store, bird",
+          "raw": "grocery store is variant of bird",
+          "template": "The sound of grocery store is a variant of bird."
+        },
+        {
+          "head": "grocery store",
+          "kg_entity": "grocery store",
+          "relation": "has parent",
+          "tail": "nearby residential areas",
+          "direct": "grocery store, nearby residential areas",
+          "raw": "grocery store has parent nearby residential areas",
+          "template": "The acoustic category of grocery store has a parent category of nearby residential areas."
+        },
+        {
+          "head": "grocery store",
+          "kg_entity": "grocery store",
+          "relation": "scene contains",
+          "tail": "airplane terminal",
+          "direct": "grocery store, airplane terminal",
+          "raw": "grocery store scene contains airplane terminal",
+          "template": "A scene of grocery store commonly contains the sound of airplane terminal."
+        },
+        {
+          "head": "grocery store",
+          "kg_entity": "grocery store",
+          "relation": "scene contains",
+          "tail": "chemical hazard",
+          "direct": "grocery store, chemical hazard",
+          "raw": "grocery store scene contains chemical hazard",
+          "template": "A scene of grocery store commonly contains the sound of chemical hazard."
+        },
+        {
+          "head": "grocery store",
+          "kg_entity": "grocery store",
+          "relation": "scene contains",
+          "tail": "knock",
+          "direct": "grocery store, knock",
+          "raw": "grocery store scene contains knock",
+          "template": "A scene of grocery store commonly contains the sound of knock."
+        },
+        {
+          "head": "grocery store",
+          "kg_entity": "grocery store",
+          "relation": "event composed of",
+          "tail": "piping",
+          "direct": "grocery store, piping",
+          "raw": "grocery store event composed of piping",
+          "template": "The sound of grocery store is characterized by piping."
+        },
+        {
+          "head": "grocery store",
+          "kg_entity": "grocery store",
+          "relation": "event composed of",
+          "tail": "short",
+          "direct": "grocery store, short",
+          "raw": "grocery store event composed of short",
+          "template": "The sound of grocery store is characterized by short."
+        },
+        {
+          "head": "grocery store",
+          "kg_entity": "grocery store",
+          "relation": "described by",
+          "tail": "jackhammer",
+          "direct": "grocery store, jackhammer",
+          "raw": "grocery store described by jackhammer",
+          "template": "The sound of a grocery store can be described by jackhammer."
+        },
+        {
+          "head": "grocery store",
+          "kg_entity": "grocery store",
+          "relation": "described by",
+          "tail": "tractor",
+          "direct": "grocery store, tractor",
+          "raw": "grocery store described by tractor",
+          "template": "The sound of a grocery store can be described by tractor."
+        },
+        {
+          "head": "grocery store",
+          "kg_entity": "grocery store",
+          "relation": "described by",
+          "tail": "waterfall thunderstorm thunderclap",
+          "direct": "grocery store, waterfall thunderstorm thunderclap",
+          "raw": "grocery store described by waterfall thunderstorm thunderclap",
+          "template": "The sound of a grocery store can be described by waterfall thunderstorm thunderclap."
+        }
+      ],
+      "mapped_entity": "grocery store"
+    },
+    {
+      "ids": {
+        "direct": [
+          189,
+          192,
+          195,
+          198,
+          201,
+          204,
+          207,
+          210,
+          213,
+          216,
+          219
+        ],
+        "raw": [
+          190,
+          193,
+          196,
+          199,
+          202,
+          205,
+          208,
+          211,
+          214,
+          217,
+          220
+        ],
+        "template": [
+          191,
+          194,
+          197,
+          200,
+          203,
+          206,
+          209,
+          212,
+          215,
+          218,
+          221
+        ]
+      },
+      "triples": [
+        {
+          "head": "home",
+          "kg_entity": "home",
+          "relation": "is variant of",
+          "tail": "bang",
+          "direct": "home, bang",
+          "raw": "home is variant of bang",
+          "template": "The sound of home is a variant of bang."
+        },
+        {
+          "head": "home",
+          "kg_entity": "home",
+          "relation": "is variant of",
+          "tail": "horse nicker",
+          "direct": "home, horse nicker",
+          "raw": "home is variant of horse nicker",
+          "template": "The sound of home is a variant of horse nicker."
+        },
+        {
+          "head": "home",
+          "kg_entity": "home",
+          "relation": "is variant of",
+          "tail": "sound of things",
+          "direct": "home, sound of things",
+          "raw": "home is variant of sound of things",
+          "template": "The sound of home is a variant of sound of things."
+        },
+        {
+          "head": "home",
+          "kg_entity": "home",
+          "relation": "has parent",
+          "tail": "digestive tract",
+          "direct": "home, digestive tract",
+          "raw": "home has parent digestive tract",
+          "template": "The acoustic category of home has a parent category of digestive tract."
+        },
+        {
+          "head": "home",
+          "kg_entity": "home",
+          "relation": "scene contains",
+          "tail": "dog pant",
+          "direct": "home, dog pant",
+          "raw": "home scene contains dog pant",
+          "template": "A scene of home commonly contains the sound of dog pant."
+        },
+        {
+          "head": "home",
+          "kg_entity": "home",
+          "relation": "scene contains",
+          "tail": "short",
+          "direct": "home, short",
+          "raw": "home scene contains short",
+          "template": "A scene of home commonly contains the sound of short."
+        },
+        {
+          "head": "home",
+          "kg_entity": "home",
+          "relation": "scene contains",
+          "tail": "dog",
+          "direct": "home, dog",
+          "raw": "home scene contains dog",
+          "template": "A scene of home commonly contains the sound of dog."
+        },
+        {
+          "head": "home",
+          "kg_entity": "home",
+          "relation": "event composed of",
+          "tail": "sea or ocean",
+          "direct": "home, sea or ocean",
+          "raw": "home event composed of sea or ocean",
+          "template": "The sound of home is characterized by sea or ocean."
+        },
+        {
+          "head": "home",
+          "kg_entity": "home",
+          "relation": "described by",
+          "tail": "animal",
+          "direct": "home, animal",
+          "raw": "home described by animal",
+          "template": "The sound of a home can be described by animal."
+        },
+        {
+          "head": "home",
+          "kg_entity": "home",
+          "relation": "described by",
+          "tail": "bird",
+          "direct": "home, bird",
+          "raw": "home described by bird",
+          "template": "The sound of a home can be described by bird."
+        },
+        {
+          "head": "home",
+          "kg_entity": "home",
+          "relation": "described by",
+          "tail": "singing",
+          "direct": "home, singing",
+          "raw": "home described by singing",
+          "template": "The sound of a home can be described by singing."
+        }
+      ],
+      "mapped_entity": "home"
+    },
+    {
+      "ids": {
+        "direct": [
+          222,
+          225,
+          228,
+          231,
+          234,
+          237,
+          240,
+          243,
+          246,
+          249
+        ],
+        "raw": [
+          223,
+          226,
+          229,
+          232,
+          235,
+          238,
+          241,
+          244,
+          247,
+          250
+        ],
+        "template": [
+          224,
+          227,
+          230,
+          233,
+          236,
+          239,
+          242,
+          245,
+          248,
+          251
+        ]
+      },
+      "triples": [
+        {
+          "head": "library",
+          "kg_entity": "library",
+          "relation": "is variant of",
+          "tail": "bang",
+          "direct": "library, bang",
+          "raw": "library is variant of bang",
+          "template": "The sound of library is a variant of bang."
+        },
+        {
+          "head": "library",
+          "kg_entity": "library",
+          "relation": "is variant of",
+          "tail": "firecracker",
+          "direct": "library, firecracker",
+          "raw": "library is variant of firecracker",
+          "template": "The sound of library is a variant of firecracker."
+        },
+        {
+          "head": "library",
+          "kg_entity": "library",
+          "relation": "is variant of",
+          "tail": "agricultural activity",
+          "direct": "library, agricultural activity",
+          "raw": "library is variant of agricultural activity",
+          "template": "The sound of library is a variant of agricultural activity."
+        },
+        {
+          "head": "library",
+          "kg_entity": "library",
+          "relation": "has parent",
+          "tail": "stadium",
+          "direct": "library, stadium",
+          "raw": "library has parent stadium",
+          "template": "The acoustic category of library has a parent category of stadium."
+        },
+        {
+          "head": "library",
+          "kg_entity": "library",
+          "relation": "scene contains",
+          "tail": "doorbell",
+          "direct": "library, doorbell",
+          "raw": "library scene contains doorbell",
+          "template": "A scene of library commonly contains the sound of doorbell."
+        },
+        {
+          "head": "library",
+          "kg_entity": "library",
+          "relation": "scene contains",
+          "tail": "door",
+          "direct": "library, door",
+          "raw": "library scene contains door",
+          "template": "A scene of library commonly contains the sound of door."
+        },
+        {
+          "head": "library",
+          "kg_entity": "library",
+          "relation": "scene contains",
+          "tail": "knock",
+          "direct": "library, knock",
+          "raw": "library scene contains knock",
+          "template": "A scene of library commonly contains the sound of knock."
+        },
+        {
+          "head": "library",
+          "kg_entity": "library",
+          "relation": "described by",
+          "tail": "underwater robot",
+          "direct": "library, underwater robot",
+          "raw": "library described by underwater robot",
+          "template": "The sound of a library can be described by underwater robot."
+        },
+        {
+          "head": "library",
+          "kg_entity": "library",
+          "relation": "described by",
+          "tail": "short",
+          "direct": "library, short",
+          "raw": "library described by short",
+          "template": "The sound of a library can be described by short."
+        },
+        {
+          "head": "library",
+          "kg_entity": "library",
+          "relation": "described by",
+          "tail": "urgent",
+          "direct": "library, urgent",
+          "raw": "library described by urgent",
+          "template": "The sound of a library can be described by urgent."
+        }
+      ],
+      "mapped_entity": "library"
+    },
+    {
+      "ids": {
+        "direct": [
+          252,
+          255,
+          258,
+          261,
+          264,
+          267,
+          270,
+          273,
+          276,
+          279
+        ],
+        "raw": [
+          253,
+          256,
+          259,
+          262,
+          265,
+          268,
+          271,
+          274,
+          277,
+          280
+        ],
+        "template": [
+          254,
+          257,
+          260,
+          263,
+          266,
+          269,
+          272,
+          275,
+          278,
+          281
+        ]
+      },
+      "triples": [
+        {
+          "head": "metro station",
+          "kg_entity": "metro station",
+          "relation": "is variant of",
+          "tail": "growling",
+          "direct": "metro station, growling",
+          "raw": "metro station is variant of growling",
+          "template": "The sound of metro station is a variant of growling."
+        },
+        {
+          "head": "metro station",
+          "kg_entity": "metro station",
+          "relation": "is variant of",
+          "tail": "bang",
+          "direct": "metro station, bang",
+          "raw": "metro station is variant of bang",
+          "template": "The sound of metro station is a variant of bang."
+        },
+        {
+          "head": "metro station",
+          "kg_entity": "metro station",
+          "relation": "is variant of",
+          "tail": "scratch",
+          "direct": "metro station, scratch",
+          "raw": "metro station is variant of scratch",
+          "template": "The sound of metro station is a variant of scratch."
+        },
+        {
+          "head": "metro station",
+          "kg_entity": "metro station",
+          "relation": "has parent",
+          "tail": "train station",
+          "direct": "metro station, train station",
+          "raw": "metro station has parent train station",
+          "template": "The acoustic category of metro station has a parent category of train station."
+        },
+        {
+          "head": "metro station",
+          "kg_entity": "metro station",
+          "relation": "has parent",
+          "tail": "airport",
+          "direct": "metro station, airport",
+          "raw": "metro station has parent airport",
+          "template": "The acoustic category of metro station has a parent category of airport."
+        },
+        {
+          "head": "metro station",
+          "kg_entity": "metro station",
+          "relation": "scene contains",
+          "tail": "button being pressed",
+          "direct": "metro station, button being pressed",
+          "raw": "metro station scene contains button being pressed",
+          "template": "A scene of metro station commonly contains the sound of button being pressed."
+        },
+        {
+          "head": "metro station",
+          "kg_entity": "metro station",
+          "relation": "scene contains",
+          "tail": "doorbell",
+          "direct": "metro station, doorbell",
+          "raw": "metro station scene contains doorbell",
+          "template": "A scene of metro station commonly contains the sound of doorbell."
+        },
+        {
+          "head": "metro station",
+          "kg_entity": "metro station",
+          "relation": "scene contains",
+          "tail": "striking bowling",
+          "direct": "metro station, striking bowling",
+          "raw": "metro station scene contains striking bowling",
+          "template": "A scene of metro station commonly contains the sound of striking bowling."
+        },
+        {
+          "head": "metro station",
+          "kg_entity": "metro station",
+          "relation": "described by",
+          "tail": "thunderclap",
+          "direct": "metro station, thunderclap",
+          "raw": "metro station described by thunderclap",
+          "template": "The sound of a metro station can be described by thunderclap."
+        },
+        {
+          "head": "metro station",
+          "kg_entity": "metro station",
+          "relation": "described by",
+          "tail": "flap",
+          "direct": "metro station, flap",
+          "raw": "metro station described by flap",
+          "template": "The sound of a metro station can be described by flap."
+        }
+      ],
+      "mapped_entity": "metro station"
+    },
+    {
+      "ids": {
+        "direct": [
+          282,
+          285,
+          288,
+          291,
+          294,
+          297,
+          300,
+          303,
+          306,
+          309,
+          312,
+          315
+        ],
+        "raw": [
+          283,
+          286,
+          289,
+          292,
+          295,
+          298,
+          301,
+          304,
+          307,
+          310,
+          313,
+          316
+        ],
+        "template": [
+          284,
+          287,
+          290,
+          293,
+          296,
+          299,
+          302,
+          305,
+          308,
+          311,
+          314,
+          317
+        ]
+      },
+      "triples": [
+        {
+          "head": "office",
+          "kg_entity": "office",
+          "relation": "is variant of",
+          "tail": "natural sounds",
+          "direct": "office, natural sounds",
+          "raw": "office is variant of natural sounds",
+          "template": "The sound of office is a variant of natural sounds."
+        },
+        {
+          "head": "office",
+          "kg_entity": "office",
+          "relation": "is variant of",
+          "tail": "screech",
+          "direct": "office, screech",
+          "raw": "office is variant of screech",
+          "template": "The sound of office is a variant of screech."
+        },
+        {
+          "head": "office",
+          "kg_entity": "office",
+          "relation": "is variant of",
+          "tail": "train station",
+          "direct": "office, train station",
+          "raw": "office is variant of train station",
+          "template": "The sound of office is a variant of train station."
+        },
+        {
+          "head": "office",
+          "kg_entity": "office",
+          "relation": "has parent",
+          "tail": "apartment",
+          "direct": "office, apartment",
+          "raw": "office has parent apartment",
+          "template": "The acoustic category of office has a parent category of apartment."
+        },
+        {
+          "head": "office",
+          "kg_entity": "office",
+          "relation": "has parent",
+          "tail": "house",
+          "direct": "office, house",
+          "raw": "office has parent house",
+          "template": "The acoustic category of office has a parent category of house."
+        },
+        {
+          "head": "office",
+          "kg_entity": "office",
+          "relation": "scene contains",
+          "tail": "doorbell",
+          "direct": "office, doorbell",
+          "raw": "office scene contains doorbell",
+          "template": "A scene of office commonly contains the sound of doorbell."
+        },
+        {
+          "head": "office",
+          "kg_entity": "office",
+          "relation": "scene contains",
+          "tail": "knock",
+          "direct": "office, knock",
+          "raw": "office scene contains knock",
+          "template": "A scene of office commonly contains the sound of knock."
+        },
+        {
+          "head": "office",
+          "kg_entity": "office",
+          "relation": "scene contains",
+          "tail": "elevator ding",
+          "direct": "office, elevator ding",
+          "raw": "office scene contains elevator ding",
+          "template": "A scene of office commonly contains the sound of elevator ding."
+        },
+        {
+          "head": "office",
+          "kg_entity": "office",
+          "relation": "event composed of",
+          "tail": "mountain",
+          "direct": "office, mountain",
+          "raw": "office event composed of mountain",
+          "template": "The sound of office is characterized by mountain."
+        },
+        {
+          "head": "office",
+          "kg_entity": "office",
+          "relation": "described by",
+          "tail": "thunderstorm",
+          "direct": "office, thunderstorm",
+          "raw": "office described by thunderstorm",
+          "template": "The sound of an office can be described by thunderstorm."
+        },
+        {
+          "head": "office",
+          "kg_entity": "office",
+          "relation": "described by",
+          "tail": "waves",
+          "direct": "office, waves",
+          "raw": "office described by waves",
+          "template": "The sound of an office can be described by waves."
+        },
+        {
+          "head": "office",
+          "kg_entity": "office",
+          "relation": "described by",
+          "tail": "flap",
+          "direct": "office, flap",
+          "raw": "office described by flap",
+          "template": "The sound of an office can be described by flap."
+        }
+      ],
+      "mapped_entity": "office"
+    },
+    {
+      "ids": {
+        "direct": [
+          318,
+          321,
+          324,
+          327,
+          330,
+          333,
+          336,
+          339,
+          342,
+          345,
+          348,
+          351
+        ],
+        "raw": [
+          319,
+          322,
+          325,
+          328,
+          331,
+          334,
+          337,
+          340,
+          343,
+          346,
+          349,
+          352
+        ],
+        "template": [
+          320,
+          323,
+          326,
+          329,
+          332,
+          335,
+          338,
+          341,
+          344,
+          347,
+          350,
+          353
+        ]
+      },
+      "triples": [
+        {
+          "head": "park",
+          "kg_entity": "park",
+          "relation": "is variant of",
+          "tail": "river",
+          "direct": "park, river",
+          "raw": "park is variant of river",
+          "template": "The sound of park is a variant of river."
+        },
+        {
+          "head": "park",
+          "kg_entity": "park",
+          "relation": "is variant of",
+          "tail": "animal",
+          "direct": "park, animal",
+          "raw": "park is variant of animal",
+          "template": "The sound of park is a variant of animal."
+        },
+        {
+          "head": "park",
+          "kg_entity": "park",
+          "relation": "has parent",
+          "tail": "outside",
+          "direct": "park, outside",
+          "raw": "park has parent outside",
+          "template": "The acoustic category of park has a parent category of outside."
+        },
+        {
+          "head": "park",
+          "kg_entity": "park",
+          "relation": "has parent",
+          "tail": "pedestrian street",
+          "direct": "park, pedestrian street",
+          "raw": "park has parent pedestrian street",
+          "template": "The acoustic category of park has a parent category of pedestrian street."
+        },
+        {
+          "head": "park",
+          "kg_entity": "park",
+          "relation": "scene contains",
+          "tail": "croaking",
+          "direct": "park, croaking",
+          "raw": "park scene contains croaking",
+          "template": "A scene of park commonly contains the sound of croaking."
+        },
+        {
+          "head": "park",
+          "kg_entity": "park",
+          "relation": "scene contains",
+          "tail": "crow caw",
+          "direct": "park, crow caw",
+          "raw": "park scene contains crow caw",
+          "template": "A scene of park commonly contains the sound of crow caw."
+        },
+        {
+          "head": "park",
+          "kg_entity": "park",
+          "relation": "scene contains",
+          "tail": "owl hoot",
+          "direct": "park, owl hoot",
+          "raw": "park scene contains owl hoot",
+          "template": "A scene of park commonly contains the sound of owl hoot."
+        },
+        {
+          "head": "park",
+          "kg_entity": "park",
+          "relation": "event composed of",
+          "tail": "chirping",
+          "direct": "park, chirping",
+          "raw": "park event composed of chirping",
+          "template": "The sound of park is characterized by chirping."
+        },
+        {
+          "head": "park",
+          "kg_entity": "park",
+          "relation": "event composed of",
+          "tail": "field",
+          "direct": "park, field",
+          "raw": "park event composed of field",
+          "template": "The sound of park is characterized by field."
+        },
+        {
+          "head": "park",
+          "kg_entity": "park",
+          "relation": "described by",
+          "tail": "tsunami",
+          "direct": "park, tsunami",
+          "raw": "park described by tsunami",
+          "template": "The sound of a park can be described by tsunami."
+        },
+        {
+          "head": "park",
+          "kg_entity": "park",
+          "relation": "described by",
+          "tail": "hammering",
+          "direct": "park, hammering",
+          "raw": "park described by hammering",
+          "template": "The sound of a park can be described by hammering."
+        },
+        {
+          "head": "park",
+          "kg_entity": "park",
+          "relation": "described by",
+          "tail": "bird",
+          "direct": "park, bird",
+          "raw": "park described by bird",
+          "template": "The sound of a park can be described by bird."
+        }
+      ],
+      "mapped_entity": "park"
+    },
+    {
+      "ids": {
+        "direct": [
+          354,
+          357,
+          360,
+          363,
+          366,
+          369
+        ],
+        "raw": [
+          355,
+          358,
+          361,
+          364,
+          367,
+          370
+        ],
+        "template": [
+          356,
+          359,
+          362,
+          365,
+          368,
+          371
+        ]
+      },
+      "triples": [
+        {
+          "head": "residential area",
+          "kg_entity": "residential area",
+          "relation": "is variant of",
+          "tail": "street",
+          "direct": "residential area, street",
+          "raw": "residential area is variant of street",
+          "template": "The sound of residential area is a variant of street."
+        },
+        {
+          "head": "residential area",
+          "kg_entity": "residential area",
+          "relation": "is variant of",
+          "tail": "public square",
+          "direct": "residential area, public square",
+          "raw": "residential area is variant of public square",
+          "template": "The sound of residential area is a variant of public square."
+        },
+        {
+          "head": "residential area",
+          "kg_entity": "residential area",
+          "relation": "has parent",
+          "tail": "quiet street",
+          "direct": "residential area, quiet street",
+          "raw": "residential area has parent quiet street",
+          "template": "The acoustic category of residential area has a parent category of quiet street."
+        },
+        {
+          "head": "residential area",
+          "kg_entity": "residential area",
+          "relation": "scene contains",
+          "tail": "truck",
+          "direct": "residential area, truck",
+          "raw": "residential area scene contains truck",
+          "template": "A scene of residential area commonly contains the sound of truck."
+        },
+        {
+          "head": "residential area",
+          "kg_entity": "residential area",
+          "relation": "described by",
+          "tail": "engine",
+          "direct": "residential area, engine",
+          "raw": "residential area described by engine",
+          "template": "The sound of a residential area can be described by engine."
+        },
+        {
+          "head": "residential area",
+          "kg_entity": "residential area",
+          "relation": "described by",
+          "tail": "vehicle",
+          "direct": "residential area, vehicle",
+          "raw": "residential area described by vehicle",
+          "template": "The sound of a residential area can be described by vehicle."
+        }
+      ],
+      "mapped_entity": "residential area"
+    },
+    {
+      "ids": {
+        "direct": [
+          372,
+          375,
+          378,
+          381,
+          384,
+          387,
+          390,
+          393,
+          396
+        ],
+        "raw": [
+          373,
+          376,
+          379,
+          382,
+          385,
+          388,
+          391,
+          394,
+          397
+        ],
+        "template": [
+          374,
+          377,
+          380,
+          383,
+          386,
+          389,
+          392,
+          395,
+          398
+        ]
+      },
+      "triples": [
+        {
+          "head": "train",
+          "kg_entity": "train",
+          "relation": "is variant of",
+          "tail": "locomotive",
+          "direct": "train, locomotive",
+          "raw": "train is variant of locomotive",
+          "template": "The sound of train is a variant of locomotive."
+        },
+        {
+          "head": "train",
+          "kg_entity": "train",
+          "relation": "is variant of",
+          "tail": "vehicle",
+          "direct": "train, vehicle",
+          "raw": "train is variant of vehicle",
+          "template": "The sound of train is a variant of vehicle."
+        },
+        {
+          "head": "train",
+          "kg_entity": "train",
+          "relation": "has parent",
+          "tail": "rail transport",
+          "direct": "train, rail transport",
+          "raw": "train has parent rail transport",
+          "template": "The acoustic category of train has a parent category of rail transport."
+        },
+        {
+          "head": "train",
+          "kg_entity": "train",
+          "relation": "scene contains",
+          "tail": "engine",
+          "direct": "train, engine",
+          "raw": "train scene contains engine",
+          "template": "A scene of train commonly contains the sound of engine."
+        },
+        {
+          "head": "train",
+          "kg_entity": "train",
+          "relation": "scene contains",
+          "tail": "car engine",
+          "direct": "train, car engine",
+          "raw": "train scene contains car engine",
+          "template": "A scene of train commonly contains the sound of car engine."
+        },
+        {
+          "head": "train",
+          "kg_entity": "train",
+          "relation": "event composed of",
+          "tail": "whistle",
+          "direct": "train, whistle",
+          "raw": "train event composed of whistle",
+          "template": "The sound of train is characterized by whistle."
+        },
+        {
+          "head": "train",
+          "kg_entity": "train",
+          "relation": "described by",
+          "tail": "a long, metallic sound made by a locomotive",
+          "direct": "train, a long, metallic sound made by a locomotive",
+          "raw": "train described by a long, metallic sound made by a locomotive",
+          "template": "The sound of a train can be described by a long, metallic sound made by a locomotive."
+        },
+        {
+          "head": "train",
+          "kg_entity": "train",
+          "relation": "described by",
+          "tail": "a large wooden panel used to enter or exit a room or building",
+          "direct": "train, a large wooden panel used to enter or exit a room or building",
+          "raw": "train described by a large wooden panel used to enter or exit a room or building",
+          "template": "The sound of a train can be described by a large wooden panel used to enter or exit a room or building."
+        },
+        {
+          "head": "train",
+          "kg_entity": "train",
+          "relation": "described by",
+          "tail": "car starting",
+          "direct": "train, car starting",
+          "raw": "train described by car starting",
+          "template": "The sound of a train can be described by car starting."
+        }
+      ],
+      "mapped_entity": "train"
+    },
+    {
+      "ids": {
+        "direct": [],
+        "raw": [],
+        "template": []
+      },
+      "triples": [],
+      "mapped_entity": null
+    }
+  ]
+}

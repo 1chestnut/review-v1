@@ -1,0 +1,2379 @@
+{
+  "signature": {
+    "dataset": "dcase17_t4",
+    "labels": [
+      "ambulance (siren)",
+      "bicycle",
+      "bus",
+      "car",
+      "car alarm",
+      "car passing by",
+      "civil defense siren",
+      "fire engine, fire truck (siren)",
+      "motorcycle",
+      "police car (siren)",
+      "reversing beeps",
+      "screaming",
+      "skateboard",
+      "train",
+      "train horn",
+      "truck",
+      "air horn, truck horn"
+    ],
+    "kg_classes": [
+      "ambulance (siren)",
+      "bicycle",
+      "bus",
+      "car",
+      "car alarm",
+      "car passing by",
+      "civil defense siren",
+      "fire engine, fire truck (siren)",
+      "motorcycle",
+      "police car (siren)",
+      "reversing beeps",
+      "screaming",
+      "skateboard",
+      "train",
+      "train horn",
+      "truck",
+      "air horn, truck horn"
+    ],
+    "mapping_sha256": "8bcc5e41b1b7fd77c071205bdee6b1c173e6233309661c8fe26c79f081b61175",
+    "relations": [
+      "indicates",
+      "described by",
+      "used for",
+      "associated with environment",
+      "has parent",
+      "is instance of"
+    ],
+    "top_k": 5,
+    "top_m": 3,
+    "forms": [
+      "direct",
+      "raw_triple",
+      "template_v1"
+    ]
+  },
+  "audit": {
+    "mapped_classes": 14,
+    "unmapped_classes": 3,
+    "queries": 84,
+    "empty_queries": 0,
+    "candidate_tail_removed": 32,
+    "duplicate_tail_removed": 45,
+    "triples": 175
+  },
+  "classes": [
+    {
+      "ids": {
+        "direct": [
+          0,
+          3,
+          6,
+          9,
+          12,
+          15,
+          18,
+          21,
+          24,
+          27,
+          30,
+          33,
+          36,
+          39,
+          42
+        ],
+        "raw": [
+          1,
+          4,
+          7,
+          10,
+          13,
+          16,
+          19,
+          22,
+          25,
+          28,
+          31,
+          34,
+          37,
+          40,
+          43
+        ],
+        "template": [
+          2,
+          5,
+          8,
+          11,
+          14,
+          17,
+          20,
+          23,
+          26,
+          29,
+          32,
+          35,
+          38,
+          41,
+          44
+        ]
+      },
+      "triples": [
+        {
+          "head": "ambulance (siren)",
+          "kg_entity": "ambulance",
+          "relation": "indicates",
+          "tail": "cowbell",
+          "direct": "ambulance (siren), cowbell",
+          "raw": "ambulance (siren) indicates cowbell",
+          "template": "The sound of an ambulance (siren) typically indicates cowbell."
+        },
+        {
+          "head": "ambulance (siren)",
+          "kg_entity": "ambulance",
+          "relation": "indicates",
+          "tail": "fire alarm",
+          "direct": "ambulance (siren), fire alarm",
+          "raw": "ambulance (siren) indicates fire alarm",
+          "template": "The sound of an ambulance (siren) typically indicates fire alarm."
+        },
+        {
+          "head": "ambulance (siren)",
+          "kg_entity": "ambulance",
+          "relation": "indicates",
+          "tail": "door slam",
+          "direct": "ambulance (siren), door slam",
+          "raw": "ambulance (siren) indicates door slam",
+          "template": "The sound of an ambulance (siren) typically indicates door slam."
+        },
+        {
+          "head": "ambulance (siren)",
+          "kg_entity": "ambulance",
+          "relation": "described by",
+          "tail": "music production studio",
+          "direct": "ambulance (siren), music production studio",
+          "raw": "ambulance (siren) described by music production studio",
+          "template": "The sound of an ambulance (siren) can be described by music production studio."
+        },
+        {
+          "head": "ambulance (siren)",
+          "kg_entity": "ambulance",
+          "relation": "described by",
+          "tail": "eruption",
+          "direct": "ambulance (siren), eruption",
+          "raw": "ambulance (siren) described by eruption",
+          "template": "The sound of an ambulance (siren) can be described by eruption."
+        },
+        {
+          "head": "ambulance (siren)",
+          "kg_entity": "ambulance",
+          "relation": "described by",
+          "tail": "high",
+          "direct": "ambulance (siren), high",
+          "raw": "ambulance (siren) described by high",
+          "template": "The sound of an ambulance (siren) can be described by high."
+        },
+        {
+          "head": "ambulance (siren)",
+          "kg_entity": "ambulance",
+          "relation": "used for",
+          "tail": "percussion",
+          "direct": "ambulance (siren), percussion",
+          "raw": "ambulance (siren) used for percussion",
+          "template": "An ambulance (siren) is generally used for percussion."
+        },
+        {
+          "head": "ambulance (siren)",
+          "kg_entity": "ambulance",
+          "relation": "used for",
+          "tail": "street music",
+          "direct": "ambulance (siren), street music",
+          "raw": "ambulance (siren) used for street music",
+          "template": "An ambulance (siren) is generally used for street music."
+        },
+        {
+          "head": "ambulance (siren)",
+          "kg_entity": "ambulance",
+          "relation": "used for",
+          "tail": "musical instrument",
+          "direct": "ambulance (siren), musical instrument",
+          "raw": "ambulance (siren) used for musical instrument",
+          "template": "An ambulance (siren) is generally used for musical instrument."
+        },
+        {
+          "head": "ambulance (siren)",
+          "kg_entity": "ambulance",
+          "relation": "associated with environment",
+          "tail": "airplane",
+          "direct": "ambulance (siren), airplane",
+          "raw": "ambulance (siren) associated with environment airplane",
+          "template": "The sound of an ambulance (siren) is heavily associated with an airplane environment."
+        },
+        {
+          "head": "ambulance (siren)",
+          "kg_entity": "ambulance",
+          "relation": "has parent",
+          "tail": "vibration",
+          "direct": "ambulance (siren), vibration",
+          "raw": "ambulance (siren) has parent vibration",
+          "template": "The acoustic category of ambulance (siren) has a parent category of vibration."
+        },
+        {
+          "head": "ambulance (siren)",
+          "kg_entity": "ambulance",
+          "relation": "has parent",
+          "tail": "ding-dong",
+          "direct": "ambulance (siren), ding-dong",
+          "raw": "ambulance (siren) has parent ding-dong",
+          "template": "The acoustic category of ambulance (siren) has a parent category of ding-dong."
+        },
+        {
+          "head": "ambulance (siren)",
+          "kg_entity": "ambulance",
+          "relation": "is instance of",
+          "tail": "grinding",
+          "direct": "ambulance (siren), grinding",
+          "raw": "ambulance (siren) is instance of grinding",
+          "template": "An ambulance (siren) is a specific instance of grinding."
+        },
+        {
+          "head": "ambulance (siren)",
+          "kg_entity": "ambulance",
+          "relation": "is instance of",
+          "tail": "chime",
+          "direct": "ambulance (siren), chime",
+          "raw": "ambulance (siren) is instance of chime",
+          "template": "An ambulance (siren) is a specific instance of chime."
+        },
+        {
+          "head": "ambulance (siren)",
+          "kg_entity": "ambulance",
+          "relation": "is instance of",
+          "tail": "voice call",
+          "direct": "ambulance (siren), voice call",
+          "raw": "ambulance (siren) is instance of voice call",
+          "template": "An ambulance (siren) is a specific instance of voice call."
+        }
+      ],
+      "mapped_entity": "ambulance"
+    },
+    {
+      "ids": {
+        "direct": [
+          45,
+          48,
+          51,
+          54,
+          57,
+          60,
+          63,
+          66,
+          69,
+          72,
+          75
+        ],
+        "raw": [
+          46,
+          49,
+          52,
+          55,
+          58,
+          61,
+          64,
+          67,
+          70,
+          73,
+          76
+        ],
+        "template": [
+          47,
+          50,
+          53,
+          56,
+          59,
+          62,
+          65,
+          68,
+          71,
+          74,
+          77
+        ]
+      },
+      "triples": [
+        {
+          "head": "bicycle",
+          "kg_entity": "bicycle",
+          "relation": "indicates",
+          "tail": "vehicle",
+          "direct": "bicycle, vehicle",
+          "raw": "bicycle indicates vehicle",
+          "template": "The sound of a bicycle typically indicates vehicle."
+        },
+        {
+          "head": "bicycle",
+          "kg_entity": "bicycle",
+          "relation": "indicates",
+          "tail": "road vehicle",
+          "direct": "bicycle, road vehicle",
+          "raw": "bicycle indicates road vehicle",
+          "template": "The sound of a bicycle typically indicates road vehicle."
+        },
+        {
+          "head": "bicycle",
+          "kg_entity": "bicycle",
+          "relation": "described by",
+          "tail": "a two-wheeled vehicle used for transportation",
+          "direct": "bicycle, a two-wheeled vehicle used for transportation",
+          "raw": "bicycle described by a two-wheeled vehicle used for transportation",
+          "template": "The sound of a bicycle can be described by a two-wheeled vehicle used for transportation."
+        },
+        {
+          "head": "bicycle",
+          "kg_entity": "bicycle",
+          "relation": "described by",
+          "tail": "ringing",
+          "direct": "bicycle, ringing",
+          "raw": "bicycle described by ringing",
+          "template": "The sound of a bicycle can be described by ringing."
+        },
+        {
+          "head": "bicycle",
+          "kg_entity": "bicycle",
+          "relation": "described by",
+          "tail": "toll",
+          "direct": "bicycle, toll",
+          "raw": "bicycle described by toll",
+          "template": "The sound of a bicycle can be described by toll."
+        },
+        {
+          "head": "bicycle",
+          "kg_entity": "bicycle",
+          "relation": "used for",
+          "tail": "things",
+          "direct": "bicycle, things",
+          "raw": "bicycle used for things",
+          "template": "A bicycle is generally used for things."
+        },
+        {
+          "head": "bicycle",
+          "kg_entity": "bicycle",
+          "relation": "used for",
+          "tail": "transportation",
+          "direct": "bicycle, transportation",
+          "raw": "bicycle used for transportation",
+          "template": "A bicycle is generally used for transportation."
+        },
+        {
+          "head": "bicycle",
+          "kg_entity": "bicycle",
+          "relation": "associated with environment",
+          "tail": "trail",
+          "direct": "bicycle, trail",
+          "raw": "bicycle associated with environment trail",
+          "template": "The sound of a bicycle is heavily associated with a trail environment."
+        },
+        {
+          "head": "bicycle",
+          "kg_entity": "bicycle",
+          "relation": "associated with environment",
+          "tail": "park",
+          "direct": "bicycle, park",
+          "raw": "bicycle associated with environment park",
+          "template": "The sound of a bicycle is heavily associated with a park environment."
+        },
+        {
+          "head": "bicycle",
+          "kg_entity": "bicycle",
+          "relation": "associated with environment",
+          "tail": "road",
+          "direct": "bicycle, road",
+          "raw": "bicycle associated with environment road",
+          "template": "The sound of a bicycle is heavily associated with a road environment."
+        },
+        {
+          "head": "bicycle",
+          "kg_entity": "bicycle",
+          "relation": "has parent",
+          "tail": "non-motorized land vehicle",
+          "direct": "bicycle, non-motorized land vehicle",
+          "raw": "bicycle has parent non-motorized land vehicle",
+          "template": "The acoustic category of bicycle has a parent category of non-motorized land vehicle."
+        }
+      ],
+      "mapped_entity": "bicycle"
+    },
+    {
+      "ids": {
+        "direct": [
+          78,
+          81,
+          84,
+          87,
+          90,
+          93,
+          96,
+          99,
+          102,
+          105,
+          108,
+          111,
+          114,
+          117
+        ],
+        "raw": [
+          79,
+          82,
+          85,
+          88,
+          91,
+          94,
+          97,
+          100,
+          103,
+          106,
+          109,
+          112,
+          115,
+          118
+        ],
+        "template": [
+          80,
+          83,
+          86,
+          89,
+          92,
+          95,
+          98,
+          101,
+          104,
+          107,
+          110,
+          113,
+          116,
+          119
+        ]
+      },
+      "triples": [
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "indicates",
+          "tail": "road vehicle",
+          "direct": "bus, road vehicle",
+          "raw": "bus indicates road vehicle",
+          "template": "The sound of a bus typically indicates road vehicle."
+        },
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "indicates",
+          "tail": "door slam",
+          "direct": "bus, door slam",
+          "raw": "bus indicates door slam",
+          "template": "The sound of a bus typically indicates door slam."
+        },
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "indicates",
+          "tail": "engine",
+          "direct": "bus, engine",
+          "raw": "bus indicates engine",
+          "template": "The sound of a bus typically indicates engine."
+        },
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "described by",
+          "tail": "a vehicle used for public transportation in many cities and countries, often with multiple doors and seating",
+          "direct": "bus, a vehicle used for public transportation in many cities and countries, often with multiple doors and seating",
+          "raw": "bus described by a vehicle used for public transportation in many cities and countries, often with multiple doors and seating",
+          "template": "The sound of a bus can be described by a vehicle used for public transportation in many cities and countries, often with multiple doors and seating."
+        },
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "described by",
+          "tail": "a vehicle designed for carrying passengers on long-distance trips",
+          "direct": "bus, a vehicle designed for carrying passengers on long-distance trips",
+          "raw": "bus described by a vehicle designed for carrying passengers on long-distance trips",
+          "template": "The sound of a bus can be described by a vehicle designed for carrying passengers on long-distance trips."
+        },
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "described by",
+          "tail": "a vehicle used for public transportation in many cities and countries",
+          "direct": "bus, a vehicle used for public transportation in many cities and countries",
+          "raw": "bus described by a vehicle used for public transportation in many cities and countries",
+          "template": "The sound of a bus can be described by a vehicle used for public transportation in many cities and countries."
+        },
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "used for",
+          "tail": "firefighting",
+          "direct": "bus, firefighting",
+          "raw": "bus used for firefighting",
+          "template": "A bus is generally used for firefighting."
+        },
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "used for",
+          "tail": "vehicle",
+          "direct": "bus, vehicle",
+          "raw": "bus used for vehicle",
+          "template": "A bus is generally used for vehicle."
+        },
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "associated with environment",
+          "tail": "airport",
+          "direct": "bus, airport",
+          "raw": "bus associated with environment airport",
+          "template": "The sound of a bus is heavily associated with an airport environment."
+        },
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "associated with environment",
+          "tail": "train station",
+          "direct": "bus, train station",
+          "raw": "bus associated with environment train station",
+          "template": "The sound of a bus is heavily associated with a train station environment."
+        },
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "associated with environment",
+          "tail": "street",
+          "direct": "bus, street",
+          "raw": "bus associated with environment street",
+          "template": "The sound of a bus is heavily associated with a street environment."
+        },
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "has parent",
+          "tail": "large vehicle",
+          "direct": "bus, large vehicle",
+          "raw": "bus has parent large vehicle",
+          "template": "The acoustic category of bus has a parent category of large vehicle."
+        },
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "is instance of",
+          "tail": "urban transportation",
+          "direct": "bus, urban transportation",
+          "raw": "bus is instance of urban transportation",
+          "template": "A bus is a specific instance of urban transportation."
+        },
+        {
+          "head": "bus",
+          "kg_entity": "bus",
+          "relation": "is instance of",
+          "tail": "motorized vehicle",
+          "direct": "bus, motorized vehicle",
+          "raw": "bus is instance of motorized vehicle",
+          "template": "A bus is a specific instance of motorized vehicle."
+        }
+      ],
+      "mapped_entity": "bus"
+    },
+    {
+      "ids": {
+        "direct": [
+          120,
+          123,
+          126,
+          129,
+          132,
+          135,
+          138,
+          141,
+          144,
+          147
+        ],
+        "raw": [
+          121,
+          124,
+          127,
+          130,
+          133,
+          136,
+          139,
+          142,
+          145,
+          148
+        ],
+        "template": [
+          122,
+          125,
+          128,
+          131,
+          134,
+          137,
+          140,
+          143,
+          146,
+          149
+        ]
+      },
+      "triples": [
+        {
+          "head": "car",
+          "kg_entity": "car",
+          "relation": "indicates",
+          "tail": "engine",
+          "direct": "car, engine",
+          "raw": "car indicates engine",
+          "template": "The sound of a car typically indicates engine."
+        },
+        {
+          "head": "car",
+          "kg_entity": "car",
+          "relation": "indicates",
+          "tail": "vehicle",
+          "direct": "car, vehicle",
+          "raw": "car indicates vehicle",
+          "template": "The sound of a car typically indicates vehicle."
+        },
+        {
+          "head": "car",
+          "kg_entity": "car",
+          "relation": "described by",
+          "tail": "a large vehicle used for transportation",
+          "direct": "car, a large vehicle used for transportation",
+          "raw": "car described by a large vehicle used for transportation",
+          "template": "The sound of a car can be described by a large vehicle used for transportation."
+        },
+        {
+          "head": "car",
+          "kg_entity": "car",
+          "relation": "described by",
+          "tail": "a two-wheeled vehicle with an engine",
+          "direct": "car, a two-wheeled vehicle with an engine",
+          "raw": "car described by a two-wheeled vehicle with an engine",
+          "template": "The sound of a car can be described by a two-wheeled vehicle with an engine."
+        },
+        {
+          "head": "car",
+          "kg_entity": "car",
+          "relation": "described by",
+          "tail": "a mechanical device designed for transportation",
+          "direct": "car, a mechanical device designed for transportation",
+          "raw": "car described by a mechanical device designed for transportation",
+          "template": "The sound of a car can be described by a mechanical device designed for transportation."
+        },
+        {
+          "head": "car",
+          "kg_entity": "car",
+          "relation": "used for",
+          "tail": "transportation",
+          "direct": "car, transportation",
+          "raw": "car used for transportation",
+          "template": "A car is generally used for transportation."
+        },
+        {
+          "head": "car",
+          "kg_entity": "car",
+          "relation": "used for",
+          "tail": "road vehicle",
+          "direct": "car, road vehicle",
+          "raw": "car used for road vehicle",
+          "template": "A car is generally used for road vehicle."
+        },
+        {
+          "head": "car",
+          "kg_entity": "car",
+          "relation": "associated with environment",
+          "tail": "driveway",
+          "direct": "car, driveway",
+          "raw": "car associated with environment driveway",
+          "template": "The sound of a car is heavily associated with a driveway environment."
+        },
+        {
+          "head": "car",
+          "kg_entity": "car",
+          "relation": "associated with environment",
+          "tail": "road",
+          "direct": "car, road",
+          "raw": "car associated with environment road",
+          "template": "The sound of a car is heavily associated with a road environment."
+        },
+        {
+          "head": "car",
+          "kg_entity": "car",
+          "relation": "associated with environment",
+          "tail": "parking lot",
+          "direct": "car, parking lot",
+          "raw": "car associated with environment parking lot",
+          "template": "The sound of a car is heavily associated with a parking lot environment."
+        }
+      ],
+      "mapped_entity": "car"
+    },
+    {
+      "ids": {
+        "direct": [
+          150,
+          153,
+          156,
+          159,
+          162,
+          165,
+          168,
+          171,
+          174,
+          177,
+          180
+        ],
+        "raw": [
+          151,
+          154,
+          157,
+          160,
+          163,
+          166,
+          169,
+          172,
+          175,
+          178,
+          181
+        ],
+        "template": [
+          152,
+          155,
+          158,
+          161,
+          164,
+          167,
+          170,
+          173,
+          176,
+          179,
+          182
+        ]
+      },
+      "triples": [
+        {
+          "head": "car alarm",
+          "kg_entity": "car alarm",
+          "relation": "indicates",
+          "tail": "tires",
+          "direct": "car alarm, tires",
+          "raw": "car alarm indicates tires",
+          "template": "The sound of a car alarm typically indicates tires."
+        },
+        {
+          "head": "car alarm",
+          "kg_entity": "car alarm",
+          "relation": "indicates",
+          "tail": "short",
+          "direct": "car alarm, short",
+          "raw": "car alarm indicates short",
+          "template": "The sound of a car alarm typically indicates short."
+        },
+        {
+          "head": "car alarm",
+          "kg_entity": "car alarm",
+          "relation": "indicates",
+          "tail": "doorbell",
+          "direct": "car alarm, doorbell",
+          "raw": "car alarm indicates doorbell",
+          "template": "The sound of a car alarm typically indicates doorbell."
+        },
+        {
+          "head": "car alarm",
+          "kg_entity": "car alarm",
+          "relation": "described by",
+          "tail": "camera",
+          "direct": "car alarm, camera",
+          "raw": "car alarm described by camera",
+          "template": "The sound of a car alarm can be described by camera."
+        },
+        {
+          "head": "car alarm",
+          "kg_entity": "car alarm",
+          "relation": "described by",
+          "tail": "background noise",
+          "direct": "car alarm, background noise",
+          "raw": "car alarm described by background noise",
+          "template": "The sound of a car alarm can be described by background noise."
+        },
+        {
+          "head": "car alarm",
+          "kg_entity": "car alarm",
+          "relation": "described by",
+          "tail": "recording",
+          "direct": "car alarm, recording",
+          "raw": "car alarm described by recording",
+          "template": "The sound of a car alarm can be described by recording."
+        },
+        {
+          "head": "car alarm",
+          "kg_entity": "car alarm",
+          "relation": "used for",
+          "tail": "engine",
+          "direct": "car alarm, engine",
+          "raw": "car alarm used for engine",
+          "template": "A car alarm is generally used for engine."
+        },
+        {
+          "head": "car alarm",
+          "kg_entity": "car alarm",
+          "relation": "used for",
+          "tail": "sound of things",
+          "direct": "car alarm, sound of things",
+          "raw": "car alarm used for sound of things",
+          "template": "A car alarm is generally used for sound of things."
+        },
+        {
+          "head": "car alarm",
+          "kg_entity": "car alarm",
+          "relation": "associated with environment",
+          "tail": "car engine",
+          "direct": "car alarm, car engine",
+          "raw": "car alarm associated with environment car engine",
+          "template": "The sound of a car alarm is heavily associated with a car engine environment."
+        },
+        {
+          "head": "car alarm",
+          "kg_entity": "car alarm",
+          "relation": "associated with environment",
+          "tail": "vehicle",
+          "direct": "car alarm, vehicle",
+          "raw": "car alarm associated with environment vehicle",
+          "template": "The sound of a car alarm is heavily associated with a vehicle environment."
+        },
+        {
+          "head": "car alarm",
+          "kg_entity": "car alarm",
+          "relation": "associated with environment",
+          "tail": "sidetone",
+          "direct": "car alarm, sidetone",
+          "raw": "car alarm associated with environment sidetone",
+          "template": "The sound of a car alarm is heavily associated with a sidetone environment."
+        }
+      ],
+      "mapped_entity": "car alarm"
+    },
+    {
+      "ids": {
+        "direct": [
+          183,
+          186,
+          189,
+          192,
+          195,
+          198,
+          201,
+          204,
+          207,
+          210
+        ],
+        "raw": [
+          184,
+          187,
+          190,
+          193,
+          196,
+          199,
+          202,
+          205,
+          208,
+          211
+        ],
+        "template": [
+          185,
+          188,
+          191,
+          194,
+          197,
+          200,
+          203,
+          206,
+          209,
+          212
+        ]
+      },
+      "triples": [
+        {
+          "head": "car passing by",
+          "kg_entity": "car passing by",
+          "relation": "indicates",
+          "tail": "engine",
+          "direct": "car passing by, engine",
+          "raw": "car passing by indicates engine",
+          "template": "The sound of a car passing by typically indicates engine."
+        },
+        {
+          "head": "car passing by",
+          "kg_entity": "car passing by",
+          "relation": "described by",
+          "tail": "a large vehicle used for transportation",
+          "direct": "car passing by, a large vehicle used for transportation",
+          "raw": "car passing by described by a large vehicle used for transportation",
+          "template": "The sound of a car passing by can be described by a large vehicle used for transportation."
+        },
+        {
+          "head": "car passing by",
+          "kg_entity": "car passing by",
+          "relation": "described by",
+          "tail": "vehicle",
+          "direct": "car passing by, vehicle",
+          "raw": "car passing by described by vehicle",
+          "template": "The sound of a car passing by can be described by vehicle."
+        },
+        {
+          "head": "car passing by",
+          "kg_entity": "car passing by",
+          "relation": "used for",
+          "tail": "car engine",
+          "direct": "car passing by, car engine",
+          "raw": "car passing by used for car engine",
+          "template": "A car passing by is generally used for car engine."
+        },
+        {
+          "head": "car passing by",
+          "kg_entity": "car passing by",
+          "relation": "associated with environment",
+          "tail": "street",
+          "direct": "car passing by, street",
+          "raw": "car passing by associated with environment street",
+          "template": "The sound of a car passing by is heavily associated with a street environment."
+        },
+        {
+          "head": "car passing by",
+          "kg_entity": "car passing by",
+          "relation": "associated with environment",
+          "tail": "road",
+          "direct": "car passing by, road",
+          "raw": "car passing by associated with environment road",
+          "template": "The sound of a car passing by is heavily associated with a road environment."
+        },
+        {
+          "head": "car passing by",
+          "kg_entity": "car passing by",
+          "relation": "associated with environment",
+          "tail": "busy street",
+          "direct": "car passing by, busy street",
+          "raw": "car passing by associated with environment busy street",
+          "template": "The sound of a car passing by is heavily associated with a busy street environment."
+        },
+        {
+          "head": "car passing by",
+          "kg_entity": "car passing by",
+          "relation": "has parent",
+          "tail": "vehicle passing by",
+          "direct": "car passing by, vehicle passing by",
+          "raw": "car passing by has parent vehicle passing by",
+          "template": "The acoustic category of car passing by has a parent category of vehicle passing by."
+        },
+        {
+          "head": "car passing by",
+          "kg_entity": "car passing by",
+          "relation": "has parent",
+          "tail": "road vehicle",
+          "direct": "car passing by, road vehicle",
+          "raw": "car passing by has parent road vehicle",
+          "template": "The acoustic category of car passing by has a parent category of road vehicle."
+        },
+        {
+          "head": "car passing by",
+          "kg_entity": "car passing by",
+          "relation": "is instance of",
+          "tail": "ice cream truck",
+          "direct": "car passing by, ice cream truck",
+          "raw": "car passing by is instance of ice cream truck",
+          "template": "A car passing by is a specific instance of ice cream truck."
+        }
+      ],
+      "mapped_entity": "car passing by"
+    },
+    {
+      "ids": {
+        "direct": [
+          213,
+          216,
+          219,
+          222,
+          225,
+          228,
+          231,
+          234,
+          237,
+          240,
+          243,
+          246,
+          249,
+          252
+        ],
+        "raw": [
+          214,
+          217,
+          220,
+          223,
+          226,
+          229,
+          232,
+          235,
+          238,
+          241,
+          244,
+          247,
+          250,
+          253
+        ],
+        "template": [
+          215,
+          218,
+          221,
+          224,
+          227,
+          230,
+          233,
+          236,
+          239,
+          242,
+          245,
+          248,
+          251,
+          254
+        ]
+      },
+      "triples": [
+        {
+          "head": "civil defense siren",
+          "kg_entity": "siren",
+          "relation": "indicates",
+          "tail": "ding-dong",
+          "direct": "civil defense siren, ding-dong",
+          "raw": "civil defense siren indicates ding-dong",
+          "template": "The sound of a civil defense siren typically indicates ding-dong."
+        },
+        {
+          "head": "civil defense siren",
+          "kg_entity": "siren",
+          "relation": "indicates",
+          "tail": "doorbell",
+          "direct": "civil defense siren, doorbell",
+          "raw": "civil defense siren indicates doorbell",
+          "template": "The sound of a civil defense siren typically indicates doorbell."
+        },
+        {
+          "head": "civil defense siren",
+          "kg_entity": "siren",
+          "relation": "indicates",
+          "tail": "ringing",
+          "direct": "civil defense siren, ringing",
+          "raw": "civil defense siren indicates ringing",
+          "template": "The sound of a civil defense siren typically indicates ringing."
+        },
+        {
+          "head": "civil defense siren",
+          "kg_entity": "siren",
+          "relation": "described by",
+          "tail": "fire alarm",
+          "direct": "civil defense siren, fire alarm",
+          "raw": "civil defense siren described by fire alarm",
+          "template": "The sound of a civil defense siren can be described by fire alarm."
+        },
+        {
+          "head": "civil defense siren",
+          "kg_entity": "siren",
+          "relation": "described by",
+          "tail": "electronica",
+          "direct": "civil defense siren, electronica",
+          "raw": "civil defense siren described by electronica",
+          "template": "The sound of a civil defense siren can be described by electronica."
+        },
+        {
+          "head": "civil defense siren",
+          "kg_entity": "siren",
+          "relation": "described by",
+          "tail": "tuning fork",
+          "direct": "civil defense siren, tuning fork",
+          "raw": "civil defense siren described by tuning fork",
+          "template": "The sound of a civil defense siren can be described by tuning fork."
+        },
+        {
+          "head": "civil defense siren",
+          "kg_entity": "siren",
+          "relation": "used for",
+          "tail": "short",
+          "direct": "civil defense siren, short",
+          "raw": "civil defense siren used for short",
+          "template": "A civil defense siren is generally used for short."
+        },
+        {
+          "head": "civil defense siren",
+          "kg_entity": "siren",
+          "relation": "associated with environment",
+          "tail": "source-ambiguous",
+          "direct": "civil defense siren, source-ambiguous",
+          "raw": "civil defense siren associated with environment source-ambiguous",
+          "template": "The sound of a civil defense siren is heavily associated with a source-ambiguous environment."
+        },
+        {
+          "head": "civil defense siren",
+          "kg_entity": "siren",
+          "relation": "associated with environment",
+          "tail": "noise",
+          "direct": "civil defense siren, noise",
+          "raw": "civil defense siren associated with environment noise",
+          "template": "The sound of a civil defense siren is heavily associated with a noise environment."
+        },
+        {
+          "head": "civil defense siren",
+          "kg_entity": "siren",
+          "relation": "has parent",
+          "tail": "siren",
+          "direct": "civil defense siren, siren",
+          "raw": "civil defense siren has parent siren",
+          "template": "The acoustic category of civil defense siren has a parent category of siren."
+        },
+        {
+          "head": "civil defense siren",
+          "kg_entity": "siren",
+          "relation": "has parent",
+          "tail": "rush hour traffic",
+          "direct": "civil defense siren, rush hour traffic",
+          "raw": "civil defense siren has parent rush hour traffic",
+          "template": "The acoustic category of civil defense siren has a parent category of rush hour traffic."
+        },
+        {
+          "head": "civil defense siren",
+          "kg_entity": "siren",
+          "relation": "has parent",
+          "tail": "ding",
+          "direct": "civil defense siren, ding",
+          "raw": "civil defense siren has parent ding",
+          "template": "The acoustic category of civil defense siren has a parent category of ding."
+        },
+        {
+          "head": "civil defense siren",
+          "kg_entity": "siren",
+          "relation": "is instance of",
+          "tail": "warning",
+          "direct": "civil defense siren, warning",
+          "raw": "civil defense siren is instance of warning",
+          "template": "A civil defense siren is a specific instance of warning."
+        },
+        {
+          "head": "civil defense siren",
+          "kg_entity": "siren",
+          "relation": "is instance of",
+          "tail": "bugle",
+          "direct": "civil defense siren, bugle",
+          "raw": "civil defense siren is instance of bugle",
+          "template": "A civil defense siren is a specific instance of bugle."
+        }
+      ],
+      "mapped_entity": "siren"
+    },
+    {
+      "ids": {
+        "direct": [],
+        "raw": [],
+        "template": []
+      },
+      "triples": [],
+      "mapped_entity": null
+    },
+    {
+      "ids": {
+        "direct": [
+          255,
+          258,
+          261,
+          264,
+          267,
+          270,
+          273,
+          276,
+          279,
+          282,
+          285
+        ],
+        "raw": [
+          256,
+          259,
+          262,
+          265,
+          268,
+          271,
+          274,
+          277,
+          280,
+          283,
+          286
+        ],
+        "template": [
+          257,
+          260,
+          263,
+          266,
+          269,
+          272,
+          275,
+          278,
+          281,
+          284,
+          287
+        ]
+      },
+      "triples": [
+        {
+          "head": "motorcycle",
+          "kg_entity": "motorcycle",
+          "relation": "indicates",
+          "tail": "engine",
+          "direct": "motorcycle, engine",
+          "raw": "motorcycle indicates engine",
+          "template": "The sound of a motorcycle typically indicates engine."
+        },
+        {
+          "head": "motorcycle",
+          "kg_entity": "motorcycle",
+          "relation": "indicates",
+          "tail": "road vehicle",
+          "direct": "motorcycle, road vehicle",
+          "raw": "motorcycle indicates road vehicle",
+          "template": "The sound of a motorcycle typically indicates road vehicle."
+        },
+        {
+          "head": "motorcycle",
+          "kg_entity": "motorcycle",
+          "relation": "described by",
+          "tail": "a two-wheeled vehicle with an engine",
+          "direct": "motorcycle, a two-wheeled vehicle with an engine",
+          "raw": "motorcycle described by a two-wheeled vehicle with an engine",
+          "template": "The sound of a motorcycle can be described by a two-wheeled vehicle with an engine."
+        },
+        {
+          "head": "motorcycle",
+          "kg_entity": "motorcycle",
+          "relation": "described by",
+          "tail": "a large vehicle used for transportation",
+          "direct": "motorcycle, a large vehicle used for transportation",
+          "raw": "motorcycle described by a large vehicle used for transportation",
+          "template": "The sound of a motorcycle can be described by a large vehicle used for transportation."
+        },
+        {
+          "head": "motorcycle",
+          "kg_entity": "motorcycle",
+          "relation": "described by",
+          "tail": "a mechanical device designed for transportation",
+          "direct": "motorcycle, a mechanical device designed for transportation",
+          "raw": "motorcycle described by a mechanical device designed for transportation",
+          "template": "The sound of a motorcycle can be described by a mechanical device designed for transportation."
+        },
+        {
+          "head": "motorcycle",
+          "kg_entity": "motorcycle",
+          "relation": "used for",
+          "tail": "racing",
+          "direct": "motorcycle, racing",
+          "raw": "motorcycle used for racing",
+          "template": "A motorcycle is generally used for racing."
+        },
+        {
+          "head": "motorcycle",
+          "kg_entity": "motorcycle",
+          "relation": "used for",
+          "tail": "transportation",
+          "direct": "motorcycle, transportation",
+          "raw": "motorcycle used for transportation",
+          "template": "A motorcycle is generally used for transportation."
+        },
+        {
+          "head": "motorcycle",
+          "kg_entity": "motorcycle",
+          "relation": "used for",
+          "tail": "vehicle",
+          "direct": "motorcycle, vehicle",
+          "raw": "motorcycle used for vehicle",
+          "template": "A motorcycle is generally used for vehicle."
+        },
+        {
+          "head": "motorcycle",
+          "kg_entity": "motorcycle",
+          "relation": "associated with environment",
+          "tail": "road",
+          "direct": "motorcycle, road",
+          "raw": "motorcycle associated with environment road",
+          "template": "The sound of a motorcycle is heavily associated with a road environment."
+        },
+        {
+          "head": "motorcycle",
+          "kg_entity": "motorcycle",
+          "relation": "associated with environment",
+          "tail": "parking lot",
+          "direct": "motorcycle, parking lot",
+          "raw": "motorcycle associated with environment parking lot",
+          "template": "The sound of a motorcycle is heavily associated with a parking lot environment."
+        },
+        {
+          "head": "motorcycle",
+          "kg_entity": "motorcycle",
+          "relation": "associated with environment",
+          "tail": "driveway",
+          "direct": "motorcycle, driveway",
+          "raw": "motorcycle associated with environment driveway",
+          "template": "The sound of a motorcycle is heavily associated with a driveway environment."
+        }
+      ],
+      "mapped_entity": "motorcycle"
+    },
+    {
+      "ids": {
+        "direct": [],
+        "raw": [],
+        "template": []
+      },
+      "triples": [],
+      "mapped_entity": null
+    },
+    {
+      "ids": {
+        "direct": [],
+        "raw": [],
+        "template": []
+      },
+      "triples": [],
+      "mapped_entity": null
+    },
+    {
+      "ids": {
+        "direct": [
+          288,
+          291,
+          294,
+          297,
+          300,
+          303,
+          306,
+          309,
+          312,
+          315,
+          318,
+          321,
+          324
+        ],
+        "raw": [
+          289,
+          292,
+          295,
+          298,
+          301,
+          304,
+          307,
+          310,
+          313,
+          316,
+          319,
+          322,
+          325
+        ],
+        "template": [
+          290,
+          293,
+          296,
+          299,
+          302,
+          305,
+          308,
+          311,
+          314,
+          317,
+          320,
+          323,
+          326
+        ]
+      },
+      "triples": [
+        {
+          "head": "screaming",
+          "kg_entity": "screaming",
+          "relation": "indicates",
+          "tail": "human sounds",
+          "direct": "screaming, human sounds",
+          "raw": "screaming indicates human sounds",
+          "template": "The sound of a screaming typically indicates human sounds."
+        },
+        {
+          "head": "screaming",
+          "kg_entity": "screaming",
+          "relation": "indicates",
+          "tail": "a sound that is produced by a device or machine",
+          "direct": "screaming, a sound that is produced by a device or machine",
+          "raw": "screaming indicates a sound that is produced by a device or machine",
+          "template": "The sound of a screaming typically indicates a sound that is produced by a device or machine."
+        },
+        {
+          "head": "screaming",
+          "kg_entity": "screaming",
+          "relation": "indicates",
+          "tail": "singing",
+          "direct": "screaming, singing",
+          "raw": "screaming indicates singing",
+          "template": "The sound of a screaming typically indicates singing."
+        },
+        {
+          "head": "screaming",
+          "kg_entity": "screaming",
+          "relation": "described by",
+          "tail": "distress",
+          "direct": "screaming, distress",
+          "raw": "screaming described by distress",
+          "template": "The sound of a screaming can be described by distress."
+        },
+        {
+          "head": "screaming",
+          "kg_entity": "screaming",
+          "relation": "described by",
+          "tail": "a high-pitched sound made by an infant",
+          "direct": "screaming, a high-pitched sound made by an infant",
+          "raw": "screaming described by a high-pitched sound made by an infant",
+          "template": "The sound of a screaming can be described by a high-pitched sound made by an infant."
+        },
+        {
+          "head": "screaming",
+          "kg_entity": "screaming",
+          "relation": "described by",
+          "tail": "a loud, high-pitched vocalization made by a person",
+          "direct": "screaming, a loud, high-pitched vocalization made by a person",
+          "raw": "screaming described by a loud, high-pitched vocalization made by a person",
+          "template": "The sound of a screaming can be described by a loud, high-pitched vocalization made by a person."
+        },
+        {
+          "head": "screaming",
+          "kg_entity": "screaming",
+          "relation": "used for",
+          "tail": "human non-speech sounds",
+          "direct": "screaming, human non-speech sounds",
+          "raw": "screaming used for human non-speech sounds",
+          "template": "A screaming is generally used for human non-speech sounds."
+        },
+        {
+          "head": "screaming",
+          "kg_entity": "screaming",
+          "relation": "used for",
+          "tail": "coughing",
+          "direct": "screaming, coughing",
+          "raw": "screaming used for coughing",
+          "template": "A screaming is generally used for coughing."
+        },
+        {
+          "head": "screaming",
+          "kg_entity": "screaming",
+          "relation": "associated with environment",
+          "tail": "stadium",
+          "direct": "screaming, stadium",
+          "raw": "screaming associated with environment stadium",
+          "template": "The sound of a screaming is heavily associated with a stadium environment."
+        },
+        {
+          "head": "screaming",
+          "kg_entity": "screaming",
+          "relation": "associated with environment",
+          "tail": "movie theater",
+          "direct": "screaming, movie theater",
+          "raw": "screaming associated with environment movie theater",
+          "template": "The sound of a screaming is heavily associated with a movie theater environment."
+        },
+        {
+          "head": "screaming",
+          "kg_entity": "screaming",
+          "relation": "associated with environment",
+          "tail": "theater",
+          "direct": "screaming, theater",
+          "raw": "screaming associated with environment theater",
+          "template": "The sound of a screaming is heavily associated with a theater environment."
+        },
+        {
+          "head": "screaming",
+          "kg_entity": "screaming",
+          "relation": "has parent",
+          "tail": "human voice",
+          "direct": "screaming, human voice",
+          "raw": "screaming has parent human voice",
+          "template": "The acoustic category of screaming has a parent category of human voice."
+        },
+        {
+          "head": "screaming",
+          "kg_entity": "screaming",
+          "relation": "is instance of",
+          "tail": "applause",
+          "direct": "screaming, applause",
+          "raw": "screaming is instance of applause",
+          "template": "A screaming is a specific instance of applause."
+        }
+      ],
+      "mapped_entity": "screaming"
+    },
+    {
+      "ids": {
+        "direct": [
+          327,
+          330,
+          333,
+          336,
+          339,
+          342,
+          345,
+          348,
+          351,
+          354,
+          357,
+          360
+        ],
+        "raw": [
+          328,
+          331,
+          334,
+          337,
+          340,
+          343,
+          346,
+          349,
+          352,
+          355,
+          358,
+          361
+        ],
+        "template": [
+          329,
+          332,
+          335,
+          338,
+          341,
+          344,
+          347,
+          350,
+          353,
+          356,
+          359,
+          362
+        ]
+      },
+      "triples": [
+        {
+          "head": "skateboard",
+          "kg_entity": "skateboard",
+          "relation": "indicates",
+          "tail": "vehicle",
+          "direct": "skateboard, vehicle",
+          "raw": "skateboard indicates vehicle",
+          "template": "The sound of a skateboard typically indicates vehicle."
+        },
+        {
+          "head": "skateboard",
+          "kg_entity": "skateboard",
+          "relation": "indicates",
+          "tail": "engine",
+          "direct": "skateboard, engine",
+          "raw": "skateboard indicates engine",
+          "template": "The sound of a skateboard typically indicates engine."
+        },
+        {
+          "head": "skateboard",
+          "kg_entity": "skateboard",
+          "relation": "indicates",
+          "tail": "road vehicle",
+          "direct": "skateboard, road vehicle",
+          "raw": "skateboard indicates road vehicle",
+          "template": "The sound of a skateboard typically indicates road vehicle."
+        },
+        {
+          "head": "skateboard",
+          "kg_entity": "skateboard",
+          "relation": "described by",
+          "tail": "a board with wheels used for sliding down ramps or rails",
+          "direct": "skateboard, a board with wheels used for sliding down ramps or rails",
+          "raw": "skateboard described by a board with wheels used for sliding down ramps or rails",
+          "template": "The sound of a skateboard can be described by a board with wheels used for sliding down ramps or rails."
+        },
+        {
+          "head": "skateboard",
+          "kg_entity": "skateboard",
+          "relation": "described by",
+          "tail": "a two-wheeled vehicle used for transportation",
+          "direct": "skateboard, a two-wheeled vehicle used for transportation",
+          "raw": "skateboard described by a two-wheeled vehicle used for transportation",
+          "template": "The sound of a skateboard can be described by a two-wheeled vehicle used for transportation."
+        },
+        {
+          "head": "skateboard",
+          "kg_entity": "skateboard",
+          "relation": "described by",
+          "tail": "a vehicle designed for carrying passengers on long-distance trips",
+          "direct": "skateboard, a vehicle designed for carrying passengers on long-distance trips",
+          "raw": "skateboard described by a vehicle designed for carrying passengers on long-distance trips",
+          "template": "The sound of a skateboard can be described by a vehicle designed for carrying passengers on long-distance trips."
+        },
+        {
+          "head": "skateboard",
+          "kg_entity": "skateboard",
+          "relation": "used for",
+          "tail": "sound of things",
+          "direct": "skateboard, sound of things",
+          "raw": "skateboard used for sound of things",
+          "template": "A skateboard is generally used for sound of things."
+        },
+        {
+          "head": "skateboard",
+          "kg_entity": "skateboard",
+          "relation": "associated with environment",
+          "tail": "park",
+          "direct": "skateboard, park",
+          "raw": "skateboard associated with environment park",
+          "template": "The sound of a skateboard is heavily associated with a park environment."
+        },
+        {
+          "head": "skateboard",
+          "kg_entity": "skateboard",
+          "relation": "associated with environment",
+          "tail": "trail",
+          "direct": "skateboard, trail",
+          "raw": "skateboard associated with environment trail",
+          "template": "The sound of a skateboard is heavily associated with a trail environment."
+        },
+        {
+          "head": "skateboard",
+          "kg_entity": "skateboard",
+          "relation": "associated with environment",
+          "tail": "street",
+          "direct": "skateboard, street",
+          "raw": "skateboard associated with environment street",
+          "template": "The sound of a skateboard is heavily associated with a street environment."
+        },
+        {
+          "head": "skateboard",
+          "kg_entity": "skateboard",
+          "relation": "has parent",
+          "tail": "non-motorized land vehicle",
+          "direct": "skateboard, non-motorized land vehicle",
+          "raw": "skateboard has parent non-motorized land vehicle",
+          "template": "The acoustic category of skateboard has a parent category of non-motorized land vehicle."
+        },
+        {
+          "head": "skateboard",
+          "kg_entity": "skateboard",
+          "relation": "is instance of",
+          "tail": "footsteps",
+          "direct": "skateboard, footsteps",
+          "raw": "skateboard is instance of footsteps",
+          "template": "A skateboard is a specific instance of footsteps."
+        }
+      ],
+      "mapped_entity": "skateboard"
+    },
+    {
+      "ids": {
+        "direct": [
+          363,
+          366,
+          369,
+          372,
+          375,
+          378,
+          381,
+          384,
+          387,
+          390,
+          393,
+          396,
+          399,
+          402
+        ],
+        "raw": [
+          364,
+          367,
+          370,
+          373,
+          376,
+          379,
+          382,
+          385,
+          388,
+          391,
+          394,
+          397,
+          400,
+          403
+        ],
+        "template": [
+          365,
+          368,
+          371,
+          374,
+          377,
+          380,
+          383,
+          386,
+          389,
+          392,
+          395,
+          398,
+          401,
+          404
+        ]
+      },
+      "triples": [
+        {
+          "head": "train",
+          "kg_entity": "train",
+          "relation": "indicates",
+          "tail": "vehicle",
+          "direct": "train, vehicle",
+          "raw": "train indicates vehicle",
+          "template": "The sound of a train typically indicates vehicle."
+        },
+        {
+          "head": "train",
+          "kg_entity": "train",
+          "relation": "indicates",
+          "tail": "whistle",
+          "direct": "train, whistle",
+          "raw": "train indicates whistle",
+          "template": "The sound of a train typically indicates whistle."
+        },
+        {
+          "head": "train",
+          "kg_entity": "train",
+          "relation": "described by",
+          "tail": "a long, metallic sound made by a locomotive",
+          "direct": "train, a long, metallic sound made by a locomotive",
+          "raw": "train described by a long, metallic sound made by a locomotive",
+          "template": "The sound of a train can be described by a long, metallic sound made by a locomotive."
+        },
+        {
+          "head": "train",
+          "kg_entity": "train",
+          "relation": "described by",
+          "tail": "a large wooden panel used to enter or exit a room or building",
+          "direct": "train, a large wooden panel used to enter or exit a room or building",
+          "raw": "train described by a large wooden panel used to enter or exit a room or building",
+          "template": "The sound of a train can be described by a large wooden panel used to enter or exit a room or building."
+        },
+        {
+          "head": "train",
+          "kg_entity": "train",
+          "relation": "described by",
+          "tail": "car starting",
+          "direct": "train, car starting",
+          "raw": "train described by car starting",
+          "template": "The sound of a train can be described by car starting."
+        },
+        {
+          "head": "train",
+          "kg_entity": "train",
+          "relation": "used for",
+          "tail": "transportation",
+          "direct": "train, transportation",
+          "raw": "train used for transportation",
+          "template": "A train is generally used for transportation."
+        },
+        {
+          "head": "train",
+          "kg_entity": "train",
+          "relation": "used for",
+          "tail": "things",
+          "direct": "train, things",
+          "raw": "train used for things",
+          "template": "A train is generally used for things."
+        },
+        {
+          "head": "train",
+          "kg_entity": "train",
+          "relation": "associated with environment",
+          "tail": "tunnel entrance",
+          "direct": "train, tunnel entrance",
+          "raw": "train associated with environment tunnel entrance",
+          "template": "The sound of a train is heavily associated with a tunnel entrance environment."
+        },
+        {
+          "head": "train",
+          "kg_entity": "train",
+          "relation": "associated with environment",
+          "tail": "platform",
+          "direct": "train, platform",
+          "raw": "train associated with environment platform",
+          "template": "The sound of a train is heavily associated with a platform environment."
+        },
+        {
+          "head": "train",
+          "kg_entity": "train",
+          "relation": "associated with environment",
+          "tail": "tunnel",
+          "direct": "train, tunnel",
+          "raw": "train associated with environment tunnel",
+          "template": "The sound of a train is heavily associated with a tunnel environment."
+        },
+        {
+          "head": "train",
+          "kg_entity": "train",
+          "relation": "has parent",
+          "tail": "rail transport",
+          "direct": "train, rail transport",
+          "raw": "train has parent rail transport",
+          "template": "The acoustic category of train has a parent category of rail transport."
+        },
+        {
+          "head": "train",
+          "kg_entity": "train",
+          "relation": "is instance of",
+          "tail": "locomotive",
+          "direct": "train, locomotive",
+          "raw": "train is instance of locomotive",
+          "template": "A train is a specific instance of locomotive."
+        },
+        {
+          "head": "train",
+          "kg_entity": "train",
+          "relation": "is instance of",
+          "tail": "engine",
+          "direct": "train, engine",
+          "raw": "train is instance of engine",
+          "template": "A train is a specific instance of engine."
+        },
+        {
+          "head": "train",
+          "kg_entity": "train",
+          "relation": "is instance of",
+          "tail": "public transportation",
+          "direct": "train, public transportation",
+          "raw": "train is instance of public transportation",
+          "template": "A train is a specific instance of public transportation."
+        }
+      ],
+      "mapped_entity": "train"
+    },
+    {
+      "ids": {
+        "direct": [
+          405,
+          408,
+          411,
+          414,
+          417,
+          420,
+          423,
+          426,
+          429,
+          432,
+          435
+        ],
+        "raw": [
+          406,
+          409,
+          412,
+          415,
+          418,
+          421,
+          424,
+          427,
+          430,
+          433,
+          436
+        ],
+        "template": [
+          407,
+          410,
+          413,
+          416,
+          419,
+          422,
+          425,
+          428,
+          431,
+          434,
+          437
+        ]
+      },
+      "triples": [
+        {
+          "head": "train horn",
+          "kg_entity": "train horn",
+          "relation": "indicates",
+          "tail": "vehicle",
+          "direct": "train horn, vehicle",
+          "raw": "train horn indicates vehicle",
+          "template": "The sound of a train horn typically indicates vehicle."
+        },
+        {
+          "head": "train horn",
+          "kg_entity": "train horn",
+          "relation": "described by",
+          "tail": "a long, metallic sound made by a locomotive",
+          "direct": "train horn, a long, metallic sound made by a locomotive",
+          "raw": "train horn described by a long, metallic sound made by a locomotive",
+          "template": "The sound of a train horn can be described by a long, metallic sound made by a locomotive."
+        },
+        {
+          "head": "train horn",
+          "kg_entity": "train horn",
+          "relation": "described by",
+          "tail": "locomotive",
+          "direct": "train horn, locomotive",
+          "raw": "train horn described by locomotive",
+          "template": "The sound of a train horn can be described by locomotive."
+        },
+        {
+          "head": "train horn",
+          "kg_entity": "train horn",
+          "relation": "described by",
+          "tail": "cities",
+          "direct": "train horn, cities",
+          "raw": "train horn described by cities",
+          "template": "The sound of a train horn can be described by cities."
+        },
+        {
+          "head": "train horn",
+          "kg_entity": "train horn",
+          "relation": "used for",
+          "tail": "sound of things",
+          "direct": "train horn, sound of things",
+          "raw": "train horn used for sound of things",
+          "template": "A train horn is generally used for sound of things."
+        },
+        {
+          "head": "train horn",
+          "kg_entity": "train horn",
+          "relation": "used for",
+          "tail": "things",
+          "direct": "train horn, things",
+          "raw": "train horn used for things",
+          "template": "A train horn is generally used for things."
+        },
+        {
+          "head": "train horn",
+          "kg_entity": "train horn",
+          "relation": "associated with environment",
+          "tail": "office",
+          "direct": "train horn, office",
+          "raw": "train horn associated with environment office",
+          "template": "The sound of a train horn is heavily associated with an office environment."
+        },
+        {
+          "head": "train horn",
+          "kg_entity": "train horn",
+          "relation": "associated with environment",
+          "tail": "platform",
+          "direct": "train horn, platform",
+          "raw": "train horn associated with environment platform",
+          "template": "The sound of a train horn is heavily associated with a platform environment."
+        },
+        {
+          "head": "train horn",
+          "kg_entity": "train horn",
+          "relation": "associated with environment",
+          "tail": "airport",
+          "direct": "train horn, airport",
+          "raw": "train horn associated with environment airport",
+          "template": "The sound of a train horn is heavily associated with an airport environment."
+        },
+        {
+          "head": "train horn",
+          "kg_entity": "train horn",
+          "relation": "has parent",
+          "tail": "rail transport",
+          "direct": "train horn, rail transport",
+          "raw": "train horn has parent rail transport",
+          "template": "The acoustic category of train horn has a parent category of rail transport."
+        },
+        {
+          "head": "train horn",
+          "kg_entity": "train horn",
+          "relation": "is instance of",
+          "tail": "door",
+          "direct": "train horn, door",
+          "raw": "train horn is instance of door",
+          "template": "A train horn is a specific instance of door."
+        }
+      ],
+      "mapped_entity": "train horn"
+    },
+    {
+      "ids": {
+        "direct": [
+          438,
+          441,
+          444,
+          447,
+          450,
+          453,
+          456,
+          459,
+          462,
+          465,
+          468,
+          471
+        ],
+        "raw": [
+          439,
+          442,
+          445,
+          448,
+          451,
+          454,
+          457,
+          460,
+          463,
+          466,
+          469,
+          472
+        ],
+        "template": [
+          440,
+          443,
+          446,
+          449,
+          452,
+          455,
+          458,
+          461,
+          464,
+          467,
+          470,
+          473
+        ]
+      },
+      "triples": [
+        {
+          "head": "truck",
+          "kg_entity": "truck",
+          "relation": "indicates",
+          "tail": "engine",
+          "direct": "truck, engine",
+          "raw": "truck indicates engine",
+          "template": "The sound of a truck typically indicates engine."
+        },
+        {
+          "head": "truck",
+          "kg_entity": "truck",
+          "relation": "indicates",
+          "tail": "road vehicle",
+          "direct": "truck, road vehicle",
+          "raw": "truck indicates road vehicle",
+          "template": "The sound of a truck typically indicates road vehicle."
+        },
+        {
+          "head": "truck",
+          "kg_entity": "truck",
+          "relation": "indicates",
+          "tail": "sound of things",
+          "direct": "truck, sound of things",
+          "raw": "truck indicates sound of things",
+          "template": "The sound of a truck typically indicates sound of things."
+        },
+        {
+          "head": "truck",
+          "kg_entity": "truck",
+          "relation": "described by",
+          "tail": "a large vehicle used for transportation",
+          "direct": "truck, a large vehicle used for transportation",
+          "raw": "truck described by a large vehicle used for transportation",
+          "template": "The sound of a truck can be described by a large vehicle used for transportation."
+        },
+        {
+          "head": "truck",
+          "kg_entity": "truck",
+          "relation": "described by",
+          "tail": "a vehicle used for public transportation in many cities and countries, often with multiple doors and seating",
+          "direct": "truck, a vehicle used for public transportation in many cities and countries, often with multiple doors and seating",
+          "raw": "truck described by a vehicle used for public transportation in many cities and countries, often with multiple doors and seating",
+          "template": "The sound of a truck can be described by a vehicle used for public transportation in many cities and countries, often with multiple doors and seating."
+        },
+        {
+          "head": "truck",
+          "kg_entity": "truck",
+          "relation": "used for",
+          "tail": "construction",
+          "direct": "truck, construction",
+          "raw": "truck used for construction",
+          "template": "A truck is generally used for construction."
+        },
+        {
+          "head": "truck",
+          "kg_entity": "truck",
+          "relation": "used for",
+          "tail": "transportation",
+          "direct": "truck, transportation",
+          "raw": "truck used for transportation",
+          "template": "A truck is generally used for transportation."
+        },
+        {
+          "head": "truck",
+          "kg_entity": "truck",
+          "relation": "associated with environment",
+          "tail": "road",
+          "direct": "truck, road",
+          "raw": "truck associated with environment road",
+          "template": "The sound of a truck is heavily associated with a road environment."
+        },
+        {
+          "head": "truck",
+          "kg_entity": "truck",
+          "relation": "associated with environment",
+          "tail": "construction site",
+          "direct": "truck, construction site",
+          "raw": "truck associated with environment construction site",
+          "template": "The sound of a truck is heavily associated with a construction site environment."
+        },
+        {
+          "head": "truck",
+          "kg_entity": "truck",
+          "relation": "associated with environment",
+          "tail": "driveway",
+          "direct": "truck, driveway",
+          "raw": "truck associated with environment driveway",
+          "template": "The sound of a truck is heavily associated with a driveway environment."
+        },
+        {
+          "head": "truck",
+          "kg_entity": "truck",
+          "relation": "has parent",
+          "tail": "large vehicle",
+          "direct": "truck, large vehicle",
+          "raw": "truck has parent large vehicle",
+          "template": "The acoustic category of truck has a parent category of large vehicle."
+        },
+        {
+          "head": "truck",
+          "kg_entity": "truck",
+          "relation": "has parent",
+          "tail": "vehicle",
+          "direct": "truck, vehicle",
+          "raw": "truck has parent vehicle",
+          "template": "The acoustic category of truck has a parent category of vehicle."
+        }
+      ],
+      "mapped_entity": "truck"
+    },
+    {
+      "ids": {
+        "direct": [
+          474,
+          477,
+          480,
+          483,
+          486,
+          489,
+          492,
+          495,
+          498,
+          501,
+          504,
+          507,
+          510,
+          513,
+          516,
+          519,
+          522
+        ],
+        "raw": [
+          475,
+          478,
+          481,
+          484,
+          487,
+          490,
+          493,
+          496,
+          499,
+          502,
+          505,
+          508,
+          511,
+          514,
+          517,
+          520,
+          523
+        ],
+        "template": [
+          476,
+          479,
+          482,
+          485,
+          488,
+          491,
+          494,
+          497,
+          500,
+          503,
+          506,
+          509,
+          512,
+          515,
+          518,
+          521,
+          524
+        ]
+      },
+      "triples": [
+        {
+          "head": "air horn, truck horn",
+          "kg_entity": "air horn or truck horn",
+          "relation": "indicates",
+          "tail": "sound of things",
+          "direct": "air horn, truck horn, sound of things",
+          "raw": "air horn, truck horn indicates sound of things",
+          "template": "The sound of an air horn, truck horn typically indicates sound of things."
+        },
+        {
+          "head": "air horn, truck horn",
+          "kg_entity": "air horn or truck horn",
+          "relation": "indicates",
+          "tail": "things",
+          "direct": "air horn, truck horn, things",
+          "raw": "air horn, truck horn indicates things",
+          "template": "The sound of an air horn, truck horn typically indicates things."
+        },
+        {
+          "head": "air horn, truck horn",
+          "kg_entity": "air horn or truck horn",
+          "relation": "indicates",
+          "tail": "footsteps",
+          "direct": "air horn, truck horn, footsteps",
+          "raw": "air horn, truck horn indicates footsteps",
+          "template": "The sound of an air horn, truck horn typically indicates footsteps."
+        },
+        {
+          "head": "air horn, truck horn",
+          "kg_entity": "air horn or truck horn",
+          "relation": "described by",
+          "tail": "a loud, high-pitched vocalization made by a person",
+          "direct": "air horn, truck horn, a loud, high-pitched vocalization made by a person",
+          "raw": "air horn, truck horn described by a loud, high-pitched vocalization made by a person",
+          "template": "The sound of an air horn, truck horn can be described by a loud, high-pitched vocalization made by a person."
+        },
+        {
+          "head": "air horn, truck horn",
+          "kg_entity": "air horn or truck horn",
+          "relation": "described by",
+          "tail": "a large vehicle used for transportation",
+          "direct": "air horn, truck horn, a large vehicle used for transportation",
+          "raw": "air horn, truck horn described by a large vehicle used for transportation",
+          "template": "The sound of an air horn, truck horn can be described by a large vehicle used for transportation."
+        },
+        {
+          "head": "air horn, truck horn",
+          "kg_entity": "air horn or truck horn",
+          "relation": "described by",
+          "tail": "a large wooden panel used to enter or exit a room or building",
+          "direct": "air horn, truck horn, a large wooden panel used to enter or exit a room or building",
+          "raw": "air horn, truck horn described by a large wooden panel used to enter or exit a room or building",
+          "template": "The sound of an air horn, truck horn can be described by a large wooden panel used to enter or exit a room or building."
+        },
+        {
+          "head": "air horn, truck horn",
+          "kg_entity": "air horn or truck horn",
+          "relation": "used for",
+          "tail": "warning",
+          "direct": "air horn, truck horn, warning",
+          "raw": "air horn, truck horn used for warning",
+          "template": "An air horn, truck horn is generally used for warning."
+        },
+        {
+          "head": "air horn, truck horn",
+          "kg_entity": "air horn or truck horn",
+          "relation": "used for",
+          "tail": "construction",
+          "direct": "air horn, truck horn, construction",
+          "raw": "air horn, truck horn used for construction",
+          "template": "An air horn, truck horn is generally used for construction."
+        },
+        {
+          "head": "air horn, truck horn",
+          "kg_entity": "air horn or truck horn",
+          "relation": "used for",
+          "tail": "demolition",
+          "direct": "air horn, truck horn, demolition",
+          "raw": "air horn, truck horn used for demolition",
+          "template": "An air horn, truck horn is generally used for demolition."
+        },
+        {
+          "head": "air horn, truck horn",
+          "kg_entity": "air horn or truck horn",
+          "relation": "associated with environment",
+          "tail": "park",
+          "direct": "air horn, truck horn, park",
+          "raw": "air horn, truck horn associated with environment park",
+          "template": "The sound of an air horn, truck horn is heavily associated with a park environment."
+        },
+        {
+          "head": "air horn, truck horn",
+          "kg_entity": "air horn or truck horn",
+          "relation": "associated with environment",
+          "tail": "street",
+          "direct": "air horn, truck horn, street",
+          "raw": "air horn, truck horn associated with environment street",
+          "template": "The sound of an air horn, truck horn is heavily associated with a street environment."
+        },
+        {
+          "head": "air horn, truck horn",
+          "kg_entity": "air horn or truck horn",
+          "relation": "associated with environment",
+          "tail": "construction site",
+          "direct": "air horn, truck horn, construction site",
+          "raw": "air horn, truck horn associated with environment construction site",
+          "template": "The sound of an air horn, truck horn is heavily associated with a construction site environment."
+        },
+        {
+          "head": "air horn, truck horn",
+          "kg_entity": "air horn or truck horn",
+          "relation": "has parent",
+          "tail": "alarm signal",
+          "direct": "air horn, truck horn, alarm signal",
+          "raw": "air horn, truck horn has parent alarm signal",
+          "template": "The acoustic category of air horn, truck horn has a parent category of alarm signal."
+        },
+        {
+          "head": "air horn, truck horn",
+          "kg_entity": "air horn or truck horn",
+          "relation": "has parent",
+          "tail": "road vehicle",
+          "direct": "air horn, truck horn, road vehicle",
+          "raw": "air horn, truck horn has parent road vehicle",
+          "template": "The acoustic category of air horn, truck horn has a parent category of road vehicle."
+        },
+        {
+          "head": "air horn, truck horn",
+          "kg_entity": "air horn or truck horn",
+          "relation": "has parent",
+          "tail": "siren ringing",
+          "direct": "air horn, truck horn, siren ringing",
+          "raw": "air horn, truck horn has parent siren ringing",
+          "template": "The acoustic category of air horn, truck horn has a parent category of siren ringing."
+        },
+        {
+          "head": "air horn, truck horn",
+          "kg_entity": "air horn or truck horn",
+          "relation": "is instance of",
+          "tail": "urban transportation",
+          "direct": "air horn, truck horn, urban transportation",
+          "raw": "air horn, truck horn is instance of urban transportation",
+          "template": "An air horn, truck horn is a specific instance of urban transportation."
+        },
+        {
+          "head": "air horn, truck horn",
+          "kg_entity": "air horn or truck horn",
+          "relation": "is instance of",
+          "tail": "construction noise",
+          "direct": "air horn, truck horn, construction noise",
+          "raw": "air horn, truck horn is instance of construction noise",
+          "template": "An air horn, truck horn is a specific instance of construction noise."
+        }
+      ],
+      "mapped_entity": "air horn or truck horn"
+    }
+  ]
+}

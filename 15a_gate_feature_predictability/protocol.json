@@ -1,0 +1,21 @@
+{
+  "analysis_only": true,
+  "no_new_CLAP_or_KG_inference": true,
+  "softmax_scale": 100,
+  "primary_target": "any of AAKV M2={1,3,5}, P=5 improves true-label rank over 1st-P5",
+  "fixed_target": "AAKV-M1-P5 improves/worsens true-label rank over 1st-P5",
+  "features_available_before_second_hop": [
+    "neg_base_margin",
+    "neg_first_margin",
+    "base_entropy",
+    "first_entropy",
+    "top1_conflict",
+    "js_divergence",
+    "neg_evidence_support",
+    "evidence_variance",
+    "distribution_l1_change",
+    "top1_score_change_abs"
+  ],
+  "warning": "Ground truth defines analysis labels only. No test-set threshold or model may be reused as a final gate.",
+  "lodo": "train on five datasets, evaluate feature transfer on one held-out dataset; diagnostic only"
+}

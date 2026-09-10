@@ -1,0 +1,169 @@
+{
+  "bootstrap": 10000,
+  "seed": 42,
+  "paired_by_audio": true,
+  "rows": [
+    {
+      "comparison": "JointNorm-All - JointRaw-All",
+      "delta_Hit@1_pp": 0.133464863923867,
+      "Hit@1_CI95": [
+        -0.029014100853014566,
+        0.3017466488713515
+      ],
+      "delta_MRR_pp": 0.1427964901464338,
+      "MRR_CI95": [
+        0.053485661666931854,
+        0.23437139606211257
+      ],
+      "wrong_to_right": 119,
+      "right_to_wrong": 96,
+      "mcnemar_p": 0.13332587820581743,
+      "rank_improved": 462,
+      "rank_worsened": 259
+    },
+    {
+      "comparison": "JointNorm-Top5 - JointNorm-All",
+      "delta_Hit@1_pp": -0.05802820170602913,
+      "Hit@1_CI95": [
+        -0.16247896477688156,
+        0.04061974119422039
+      ],
+      "delta_MRR_pp": -0.031229932436919038,
+      "MRR_CI95": [
+        -0.08404954990720673,
+        0.020627485469648727
+      ],
+      "wrong_to_right": 34,
+      "right_to_wrong": 44,
+      "mcnemar_p": 0.3081682319436807,
+      "rank_improved": 85,
+      "rank_worsened": 90
+    },
+    {
+      "comparison": "TwoStage-a0.3 - JointNorm-Top5",
+      "delta_Hit@1_pp": 1.131549933267568,
+      "Hit@1_CI95": [
+        0.8298032843962165,
+        1.4332965821389194
+      ],
+      "delta_MRR_pp": 0.7327103992703423,
+      "MRR_CI95": [
+        0.5665995297361778,
+        0.8972079146691817
+      ],
+      "wrong_to_right": 449,
+      "right_to_wrong": 254,
+      "mcnemar_p": 1.7885933332831805e-13,
+      "rank_improved": 1228,
+      "rank_worsened": 540
+    },
+    {
+      "comparison": "TwoStage-a0.5 - JointNorm-Top5",
+      "delta_Hit@1_pp": 1.3578599199210817,
+      "Hit@1_CI95": [
+        0.9400568676376719,
+        1.7524516915220798
+      ],
+      "delta_MRR_pp": 0.9207123602944155,
+      "MRR_CI95": [
+        0.6929725722121837,
+        1.1403047105530308
+      ],
+      "wrong_to_right": 745,
+      "right_to_wrong": 511,
+      "mcnemar_p": 4.306602807654728e-11,
+      "rank_improved": 1603,
+      "rank_worsened": 1006
+    },
+    {
+      "comparison": "TwoStage-a0.7 - JointNorm-Top5",
+      "delta_Hit@1_pp": 1.4390994023095225,
+      "Hit@1_CI95": [
+        0.934254047467069,
+        1.938141936981373
+      ],
+      "delta_MRR_pp": 1.0078176143904958,
+      "MRR_CI95": [
+        0.715375518373013,
+        1.2952626372930107
+      ],
+      "wrong_to_right": 1089,
+      "right_to_wrong": 841,
+      "mcnemar_p": 1.8038638790107887e-08,
+      "rank_improved": 1983,
+      "rank_worsened": 1515
+    },
+    {
+      "comparison": "TwoStage-Dynamic - JointNorm-Top5",
+      "delta_Hit@1_pp": 1.3230429988974641,
+      "Hit@1_CI95": [
+        0.9052399466140544,
+        1.735043231010271
+      ],
+      "delta_MRR_pp": 0.9271696723896554,
+      "MRR_CI95": [
+        0.6995327278164436,
+        1.1536481878737517
+      ],
+      "wrong_to_right": 789,
+      "right_to_wrong": 561,
+      "mcnemar_p": 5.922506995869525e-10,
+      "rank_improved": 1668,
+      "rank_worsened": 1059
+    },
+    {
+      "comparison": "TwoStage-Dynamic - TwoStage-a0.3",
+      "delta_Hit@1_pp": 0.19149306562989613,
+      "Hit@1_CI95": [
+        -0.11025358324145534,
+        0.4932397145012476
+      ],
+      "delta_MRR_pp": 0.1944592731193131,
+      "MRR_CI95": [
+        0.02668108835154646,
+        0.35780692655664975
+      ],
+      "wrong_to_right": 364,
+      "right_to_wrong": 331,
+      "mcnemar_p": 0.22478672397257826,
+      "rank_improved": 830,
+      "rank_worsened": 848
+    },
+    {
+      "comparison": "TwoStage-Dynamic - TwoStage-a0.5",
+      "delta_Hit@1_pp": -0.03481692102361748,
+      "Hit@1_CI95": [
+        -0.16247896477688156,
+        0.09864794290024952
+      ],
+      "delta_MRR_pp": 0.006457312095239853,
+      "MRR_CI95": [
+        -0.06027116632468546,
+        0.07426150500678282
+      ],
+      "wrong_to_right": 61,
+      "right_to_wrong": 67,
+      "mcnemar_p": 0.6587012845406401,
+      "rank_improved": 170,
+      "rank_worsened": 144
+    },
+    {
+      "comparison": "TwoStage-Dynamic - TwoStage-a0.7",
+      "delta_Hit@1_pp": -0.11605640341205826,
+      "Hit@1_CI95": [
+        -0.40039459177160097,
+        0.16828178494748447
+      ],
+      "delta_MRR_pp": -0.08064794200084056,
+      "MRR_CI95": [
+        -0.237980242031842,
+        0.07448305806888937
+      ],
+      "wrong_to_right": 311,
+      "right_to_wrong": 331,
+      "mcnemar_p": 0.45335868571069693,
+      "rank_improved": 889,
+      "rank_worsened": 795
+    }
+  ]
+}

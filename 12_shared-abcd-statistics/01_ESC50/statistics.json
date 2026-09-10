@@ -1,0 +1,131 @@
+{
+  "n_clips": 2000,
+  "replicates": 10000,
+  "seed": 42,
+  "unit": "audio clip; assumes independent clips; source-recording clustering not assessed",
+  "conditional_on": "frozen CLAP, KG, generated texts and one deterministic crop per clip",
+  "contrasts": [
+    {
+      "comparison": "D-A",
+      "gain_count": 63,
+      "loss_count": 24,
+      "mcnemar_p": 3.4799669459257334e-05,
+      "Hit@1": {
+        "difference_pp": 1.95,
+        "paired_bootstrap95": [
+          1.05,
+          2.85
+        ]
+      },
+      "MRR": {
+        "difference_pp": 1.0883333333333334,
+        "paired_bootstrap95": [
+          0.6007916666666666,
+          1.585020833333333
+        ]
+      },
+      "holm_p_within_dataset": 7.309371648879981e-05
+    },
+    {
+      "comparison": "B-A",
+      "gain_count": 49,
+      "loss_count": 15,
+      "mcnemar_p": 2.436457216293327e-05,
+      "Hit@1": {
+        "difference_pp": 1.7,
+        "paired_bootstrap95": [
+          0.95,
+          2.5
+        ]
+      },
+      "MRR": {
+        "difference_pp": 0.89,
+        "paired_bootstrap95": [
+          0.4824791666666667,
+          1.295833333333333
+        ]
+      },
+      "holm_p_within_dataset": 7.309371648879981e-05
+    },
+    {
+      "comparison": "C-A",
+      "gain_count": 51,
+      "loss_count": 113,
+      "mcnemar_p": 1.4455361416996038e-06,
+      "Hit@1": {
+        "difference_pp": -3.1,
+        "paired_bootstrap95": [
+          -4.4,
+          -1.85
+        ]
+      },
+      "MRR": {
+        "difference_pp": -1.9375,
+        "paired_bootstrap95": [
+          -2.6691874999999996,
+          -1.2200000000000004
+        ]
+      },
+      "holm_p_within_dataset": 5.782144566798415e-06
+    },
+    {
+      "comparison": "D-B",
+      "gain_count": 29,
+      "loss_count": 24,
+      "mcnemar_p": 0.5831321542611763,
+      "Hit@1": {
+        "difference_pp": 0.25,
+        "paired_bootstrap95": [
+          -0.45,
+          0.95
+        ]
+      },
+      "MRR": {
+        "difference_pp": 0.19833333333333336,
+        "paired_bootstrap95": [
+          -0.18249999999999997,
+          0.5866666666666667
+        ]
+      },
+      "holm_p_within_dataset": 0.5831321542611763
+    },
+    {
+      "comparison": "D-C",
+      "gain_count": 114,
+      "loss_count": 13,
+      "mcnemar_p": 2.517461353960417e-21,
+      "Hit@1": {
+        "difference_pp": 5.05,
+        "paired_bootstrap95": [
+          4.0,
+          6.15
+        ]
+      },
+      "MRR": {
+        "difference_pp": 3.0258333333333334,
+        "paired_bootstrap95": [
+          2.4241458333333328,
+          3.6575000000000006
+        ]
+      },
+      "holm_p_within_dataset": 1.2587306769802086e-20
+    },
+    {
+      "comparison": "D-B-C+A",
+      "Hit@1": {
+        "difference_pp": 3.35,
+        "paired_bootstrap95": [
+          2.2,
+          4.55
+        ]
+      },
+      "MRR": {
+        "difference_pp": 2.1358333333333333,
+        "paired_bootstrap95": [
+          1.4908333333333335,
+          2.8108333333333335
+        ]
+      }
+    }
+  ]
+}

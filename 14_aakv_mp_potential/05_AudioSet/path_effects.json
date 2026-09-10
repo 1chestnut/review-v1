@@ -1,0 +1,250 @@
+{
+  "AAKV-M1-P5-Fallback-M1-P5": {
+    "selected_kge_rank": {
+      "1": 121095
+    },
+    "selected_relation": {
+      "has parent": 27795,
+      "has children": 15748,
+      "belongs to class": 46875,
+      "is a type of": 30677
+    },
+    "relation_on_improved_samples": {
+      "has parent": 249,
+      "belongs to class": 527,
+      "has children": 140,
+      "is a type of": 333
+    },
+    "relation_on_worsened_samples": {
+      "is a type of": 506,
+      "belongs to class": 693,
+      "has parent": 414,
+      "has children": 190
+    }
+  },
+  "AAKV-M1-P3-1st-P3": {
+    "selected_kge_rank": {
+      "1": 49436
+    },
+    "selected_relation": {
+      "has parent": 10114,
+      "is a type of": 13726,
+      "belongs to class": 19671,
+      "has children": 5925
+    },
+    "relation_on_improved_samples": {
+      "belongs to class": 522,
+      "has parent": 199,
+      "is a type of": 266,
+      "has children": 54
+    },
+    "relation_on_worsened_samples": {
+      "is a type of": 523,
+      "belongs to class": 679,
+      "has children": 222,
+      "has parent": 383
+    }
+  },
+  "AAKV-M3-P3-1st-P3": {
+    "selected_kge_rank": {
+      "1": 21625,
+      "3": 27139,
+      "2": 24398
+    },
+    "selected_relation": {
+      "has parent": 11974,
+      "belongs to class": 23408,
+      "is a type of": 27136,
+      "has children": 10644
+    },
+    "relation_on_improved_samples": {
+      "belongs to class": 784,
+      "is a type of": 884,
+      "has children": 151,
+      "has parent": 380
+    },
+    "relation_on_worsened_samples": {
+      "is a type of": 1458,
+      "belongs to class": 1062,
+      "has children": 422,
+      "has parent": 573
+    }
+  },
+  "AAKV-M5-P3-1st-P3": {
+    "selected_kge_rank": {
+      "4": 17668,
+      "1": 13960,
+      "3": 17981,
+      "2": 16050,
+      "5": 20749
+    },
+    "selected_relation": {
+      "has parent": 12741,
+      "belongs to class": 27505,
+      "is a type of": 33115,
+      "has children": 13047
+    },
+    "relation_on_improved_samples": {
+      "belongs to class": 1025,
+      "is a type of": 1193,
+      "has children": 215,
+      "has parent": 466
+    },
+    "relation_on_worsened_samples": {
+      "is a type of": 2247,
+      "belongs to class": 1581,
+      "has children": 629,
+      "has parent": 785
+    }
+  },
+  "AAKV-M1-P5-1st-P5": {
+    "selected_kge_rank": {
+      "1": 121095
+    },
+    "selected_relation": {
+      "has parent": 27795,
+      "has children": 15748,
+      "belongs to class": 46875,
+      "is a type of": 30677
+    },
+    "relation_on_improved_samples": {
+      "belongs to class": 1065,
+      "has parent": 503,
+      "is a type of": 587,
+      "has children": 201
+    },
+    "relation_on_worsened_samples": {
+      "belongs to class": 1515,
+      "is a type of": 1057,
+      "has parent": 981,
+      "has children": 520
+    }
+  },
+  "AAKV-M3-P5-1st-P5": {
+    "selected_kge_rank": {
+      "3": 56977,
+      "1": 49075,
+      "2": 53326
+    },
+    "selected_relation": {
+      "has children": 24307,
+      "has parent": 29215,
+      "is a type of": 51150,
+      "belongs to class": 54706
+    },
+    "relation_on_improved_samples": {
+      "belongs to class": 1644,
+      "has parent": 856,
+      "has children": 393,
+      "is a type of": 1512
+    },
+    "relation_on_worsened_samples": {
+      "belongs to class": 2400,
+      "is a type of": 2559,
+      "has children": 907,
+      "has parent": 1294
+    }
+  },
+  "AAKV-M5-P5-1st-P5": {
+    "selected_kge_rank": {
+      "3": 36375,
+      "1": 30805,
+      "4": 35746,
+      "2": 34016,
+      "5": 40937
+    },
+    "selected_relation": {
+      "has children": 27932,
+      "has parent": 29560,
+      "belongs to class": 60234,
+      "is a type of": 60153
+    },
+    "relation_on_improved_samples": {
+      "belongs to class": 1954,
+      "has children": 525,
+      "is a type of": 2041,
+      "has parent": 953
+    },
+    "relation_on_worsened_samples": {
+      "is a type of": 3897,
+      "belongs to class": 3343,
+      "has parent": 1689,
+      "has children": 1365
+    }
+  },
+  "AAKV-M1-P10-1st-P10": {
+    "selected_kge_rank": {
+      "1": 361426
+    },
+    "selected_relation": {
+      "has parent": 89741,
+      "has children": 55321,
+      "is a type of": 90372,
+      "belongs to class": 125992
+    },
+    "relation_on_improved_samples": {
+      "belongs to class": 2754,
+      "has parent": 1820,
+      "is a type of": 1995,
+      "has children": 1038
+    },
+    "relation_on_worsened_samples": {
+      "has parent": 2792,
+      "has children": 1697,
+      "is a type of": 2818,
+      "belongs to class": 3756
+    }
+  },
+  "AAKV-M3-P10-1st-P10": {
+    "selected_kge_rank": {
+      "3": 152247,
+      "1": 135803,
+      "2": 144699
+    },
+    "selected_relation": {
+      "has children": 71959,
+      "has parent": 94195,
+      "belongs to class": 148899,
+      "is a type of": 117696
+    },
+    "relation_on_improved_samples": {
+      "belongs to class": 4440,
+      "has parent": 2752,
+      "has children": 1547,
+      "is a type of": 3597
+    },
+    "relation_on_worsened_samples": {
+      "has children": 2818,
+      "has parent": 3850,
+      "belongs to class": 6320,
+      "is a type of": 5202
+    }
+  },
+  "AAKV-M5-P10-1st-P10": {
+    "selected_kge_rank": {
+      "3": 92833,
+      "1": 84283,
+      "4": 91597,
+      "2": 89542,
+      "5": 99158
+    },
+    "selected_relation": {
+      "has children": 76394,
+      "has parent": 90732,
+      "belongs to class": 160689,
+      "is a type of": 129598
+    },
+    "relation_on_improved_samples": {
+      "belongs to class": 5112,
+      "has children": 1721,
+      "has parent": 2854,
+      "is a type of": 4332
+    },
+    "relation_on_worsened_samples": {
+      "has children": 3794,
+      "has parent": 4840,
+      "is a type of": 7697,
+      "belongs to class": 8784
+    }
+  }
+}

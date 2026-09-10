@@ -1,0 +1,23 @@
+{
+  "purpose": "Isolate second-hop textual organization",
+  "frozen": {
+    "source": "Task14",
+    "K": 5,
+    "M1": 3,
+    "M2": 1,
+    "P_total": 5,
+    "gamma": 0.85,
+    "gate": false,
+    "aggregation": "Task14 unchanged"
+  },
+  "varied_only": "second-hop textual organization",
+  "methods": [
+    "D-1st",
+    "Flat-HalfEdge",
+    "FullPath-Chained",
+    "FullPath-TwoSentence",
+    "Endpoint"
+  ],
+  "important": "Flat-HalfEdge is Task14 AAKV-M1-P5 exactly; no duplicate flat method was invented.",
+  "runtime_sha256": "ba4beed27b4ec8de54c96e9a73f4033546fee4cc33dfd3374d3ca8df46e52797"
+}
