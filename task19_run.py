@@ -85,7 +85,7 @@ def main(ds):
   rows.append({'sample_index':i,'audio_path':ap,'true_indices':[int(x) for x in s['true_indices']],'seed':sample_seed,'topk':top,'selected_relation':rel,'ranks':rr})
   all_scores.append(torch.stack([vectors[m] for m in METHODS]).cpu().numpy())
   if (i+1)%50==0:atom(out/'progress.json',{'completed':False,'done':i+1,'total':len(samples)})
- met={m:metrics(ranks[m]) for m in METHODS};np.savez_compressed(out/'predictions.npz',scores=np.asarray(all_scores),ranks=np.asarray([[x[m] for m in METHODS] for x in rows]),methods=METHODS)
+ met={m:metrics(ranks[m]) for m in METHODS};np.savez_compressed(out/'predictions.npz',scores=np.asarray(all_scores),ranks=np.asarray([[x['ranks'][m] for m in METHODS] for x in rows]),methods=METHODS)
  atom(out/'samples.json',rows);atom(out/'metrics.json',met);atom(out/'protocol.json',{'hop':1,'K':5,'M':3,'P':5,'R':1,'alpha':.5,'kappa':100,'dynamic_alpha':False,'second_hop':False,'selector':'Task18C Consensus-Margin-Top1 frozen per sample','branch_isolation':True,'methods':METHODS})
  lines=['method,Hit@1,Hit@3,Hit@5,MRR']+[f"{m},{met[m]['Hit@1']:.8f},{met[m]['Hit@3']:.8f},{met[m]['Hit@5']:.8f},{met[m]['MRR']:.8f}" for m in METHODS];(out/'metrics.csv').write_text('\n'.join(lines)+'\n')
  atom(out/'progress.json',{'completed':True,'done':len(samples),'total':len(samples)});print(json.dumps(met,indent=2))
