@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Task19 independent 2^3 factorial ablation; one hop only."""
 import argparse, hashlib, importlib.util, json, math, os, random, time
+os.environ['CUBLAS_WORKSPACE_CONFIG']=':4096:8'
+os.environ['PYTHONHASHSEED']='42'
 from pathlib import Path
 from collections import Counter
 import numpy as np
