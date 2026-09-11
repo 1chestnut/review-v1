@@ -90,7 +90,7 @@ def main():
     aakv_embeddings=torch.cat(chunks)
 
     rank_lists={m:[] for m in ['CLAP']+METHODS}; rows=[]; selection_counts={m:Counter() for m in METHODS}
-    for index,sample in enumerate(tqdm(samples,desc='DCASE-validation',mininterval=10)):
+    for index,sample in enumerate(tqdm(samples,desc=f'{DATASET}-grid',mininterval=10)):
         sample_seed=int(hashlib.sha256(('42|'+sample['audio_path']).encode()).hexdigest()[:8],16); seed_all(sample_seed)
         audio=torch.load(SOURCE/'audio_cache'/f'{index:06d}.pt',map_location=device)
         base=(audio@label_embeddings.T).squeeze(0); top_classes=torch.argsort(base,descending=True)[:5].tolist()
@@ -136,7 +136,8 @@ def main():
     save(OUT/'metrics.json',result); save(OUT/'samples.json',rows)
     save(OUT/'selected_config.json',{'primary_metric':'MRR','tie_tolerance_pp':0.1,'best_MRR':best_mrr,
         'eligible_within_tolerance':eligible,'selected':selected,'selection_rule':'highest MRR; within 0.1 pp prefer Nr=1, then alpha closest to 0.5'})
-    save(OUT/'protocol.json',{'role':'development/validation only','dataset':'DCASE17-T4','n':len(samples),
+    save(OUT/'protocol.json',{'role':'development/validation only' if DATASET == '04_DCASE17_T4' else 'test-set diagnostic only',
+        'dataset':DATASET,'n':len(samples),
         'complete_method':'TFS (AAKV + hierarchical fusion + Consensus-Margin selector)','grid':{'alpha':ALPHAS,'Nr':N_RELATIONS},
         'fixed':{'hop':1,'K':5,'M':3,'TopP':'All/disabled','kappa':100,'seed':42,'AAKV':'frozen','relation_pool':'fixed 47 relations'},
         'ground_truth_use':'only aggregate validation metrics and configuration selection; never per-sample routing',
