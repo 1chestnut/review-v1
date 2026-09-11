@@ -20,7 +20,7 @@ Two clocks are reported: end-to-end latency from the audio path, and knowledge-s
 
 ## Fairness controls
 
-All methods run sequentially on the same isolated GPU, with the same 200 evenly spaced samples per dataset, identical sample order and immutable caches. Both batch sizes 1 and 32 are measured after a 20-sample warm-up. Every setting is repeated five times; method order is rotated; CUDA is synchronized; output-ranking hashes must agree across repeats.
+All methods for a given dataset run sequentially on the same isolated GPU, with the same 200 evenly spaced samples, identical sample order and immutable caches. Different datasets may run concurrently on three separate GPUs; the physical GPU identity is recorded and no cross-GPU latency comparison is used to claim a method advantage. Both batch sizes 1 and 32 are measured after a 20-sample warm-up. Every setting is repeated five times; method order is rotated; CUDA is synchronized; output-ranking hashes must agree across repeats.
 
 Task25 full-dataset metrics supply Hit@1/MRR. The timing subset is used only for profiling, never for headline accuracy.
 
