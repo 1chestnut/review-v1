@@ -1,0 +1,16 @@
+﻿method,alpha,Nr,Hit@1,Hit@3,Hit@5,MRR,selected,role
+TFS_alpha0.3_Nr1,0.3,1,63.96181384,83.53221957,91.40811456,75.18250445,false,eligible validation configuration
+TFS_alpha0.5_Nr1,0.5,1,62.76849642,84.48687351,91.88544153,74.55800166,false,eligible validation configuration
+TFS_alpha0.7_Nr1,0.7,1,63.24582339,84.96420048,91.16945107,75.15863810,false,eligible validation configuration
+TFS_alpha0.3_Nr3,0.3,3,63.96181384,84.72553699,90.69212411,75.48083380,false,eligible validation configuration
+TFS_alpha0.5_Nr3,0.5,3,62.76849642,86.15751790,90.69212411,75.24217032,false,eligible validation configuration
+TFS_alpha0.7_Nr3,0.7,3,63.24582339,84.96420048,90.69212411,75.60414327,false,eligible validation configuration
+TFS_alpha0.3_Nr5,0.3,5,63.96181384,84.48687351,90.69212411,75.68767549,true,eligible validation configuration
+TFS_alpha0.5_Nr5,0.5,5,62.76849642,85.68019093,90.69212411,75.25808122,false,eligible validation configuration
+TFS_alpha0.7_Nr5,0.7,5,63.24582339,84.72553699,90.69212411,75.57232147,false,eligible validation configuration
+TFS_alpha0.3_Nr10,0.3,10,63.96181384,84.96420048,90.69212411,75.60812100,false,eligible validation configuration
+TFS_alpha0.5_Nr10,0.5,10,62.76849642,85.44152745,90.69212411,75.05123953,false,eligible validation configuration
+TFS_alpha0.7_Nr10,0.7,10,63.24582339,85.20286396,90.69212411,75.63994279,false,eligible validation configuration
+TFS_alpha0.3_Nr47,0.3,47,62.76849642,84.24821002,90.69212411,75.04328408,false,all-relations control
+TFS_alpha0.5_Nr47,0.5,47,62.76849642,85.44152745,90.69212411,75.22228170,false,all-relations control
+TFS_alpha0.7_Nr47,0.7,47,63.72315036,84.72553699,90.69212411,75.61607645,false,all-relations control
