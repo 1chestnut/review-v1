@@ -1,0 +1,25 @@
+{
+  "hop": 1,
+  "K": 5,
+  "M": 3,
+  "P": 5,
+  "R": 1,
+  "alpha": 0.5,
+  "kappa": 100,
+  "dynamic_alpha": false,
+  "second_hop": false,
+  "selector": "Task18C Consensus-Margin-Top1 frozen per sample",
+  "branch_isolation": true,
+  "methods": [
+    "CLAP",
+    "Frozen-iKnow-05b",
+    "A_iKnow-TopP5-Control",
+    "B_Text-only",
+    "C_Fusion-only",
+    "D_Selector-only",
+    "E_Text+Fusion",
+    "F_Text+Selector",
+    "G_Fusion+Selector",
+    "H_Full"
+  ]
+}

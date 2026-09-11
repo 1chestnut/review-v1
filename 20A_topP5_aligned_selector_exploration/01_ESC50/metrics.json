@@ -1,0 +1,26 @@
+{
+  "CLAP": {
+    "Hit@1": 91.10000000000001,
+    "Hit@3": 96.75,
+    "Hit@5": 97.65,
+    "MRR": 94.10549431018471
+  },
+  "E_AAKV+Fusion-FrozenRelations": {
+    "Hit@1": 93.65,
+    "Hit@3": 97.15,
+    "Hit@5": 97.65,
+    "MRR": 95.63299431018471
+  },
+  "H-old_DirectSelected-AAKVScored": {
+    "Hit@1": 94.05,
+    "Hit@3": 97.1,
+    "Hit@5": 97.65,
+    "MRR": 95.7704943101847
+  },
+  "H-aligned_AAKVSelected-AAKVScored": {
+    "Hit@1": 94.25,
+    "Hit@3": 97.1,
+    "Hit@5": 97.7,
+    "MRR": 95.90549431018471
+  }
+}

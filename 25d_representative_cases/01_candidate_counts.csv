@@ -1,0 +1,6 @@
+﻿dataset,AAKV_only_rescue,Selector_only_rescue,TFS_combination_only_rescue,TFS_harm
+ESC-50,18,20,2,22
+UrbanSound8K,264,114,5,182
+FSD50K,591,193,11,517
+AudioSet,854,302,41,788
+TUT2017,442,212,47,284

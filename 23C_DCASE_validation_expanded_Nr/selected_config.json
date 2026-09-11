@@ -1,0 +1,14 @@
+{
+  "primary_metric": "MRR",
+  "tie_tolerance_pp": 0.1,
+  "best_MRR": 75.68767549077812,
+  "eligible_within_tolerance": [
+    "TFS_alpha0.7_Nr3",
+    "TFS_alpha0.3_Nr5",
+    "TFS_alpha0.3_Nr10",
+    "TFS_alpha0.7_Nr10",
+    "TFS_alpha0.7_Nr47"
+  ],
+  "selected": "TFS_alpha0.7_Nr3",
+  "selection_rule": "highest MRR; within 0.1 pp prefer Nr=1, then alpha closest to 0.5"
+}

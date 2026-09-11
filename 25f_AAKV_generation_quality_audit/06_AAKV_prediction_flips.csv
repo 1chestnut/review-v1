@@ -1,0 +1,16 @@
+﻿dataset,contrast,wrong_to_correct,correct_to_wrong,net_rescued,McNemar_exact_p
+ESC-50,AAKV under fixed relations: T vs I,51,113,-62,1.4455361416996038e-06
+ESC-50,AAKV after selection: TS vs S,26,46,-20,0.02446090732832437
+ESC-50,AAKV after fusion+selection: TFS vs FS,25,18,7,0.3603776529357674
+UrbanSound8K,AAKV under fixed relations: T vs I,376,408,-32,0.26822076000089906
+UrbanSound8K,AAKV after selection: TS vs S,375,277,98,0.00014158266300834502
+UrbanSound8K,AAKV after fusion+selection: TFS vs FS,280,154,126,1.5242358091254096e-09
+FSD50K,AAKV under fixed relations: T vs I,1013,833,180,3.055920215825126e-05
+FSD50K,AAKV after selection: TS vs S,988,569,419,1.598782356863838e-26
+FSD50K,AAKV after fusion+selection: TFS vs FS,875,476,399,1.051381516074572e-27
+AudioSet,AAKV under fixed relations: T vs I,1178,1275,-97,0.05256369518205489
+AudioSet,AAKV after selection: TS vs S,1048,831,217,6.091745725482058e-07
+AudioSet,AAKV after fusion+selection: TFS vs FS,952,732,220,9.091484504231877e-08
+TUT2017,AAKV under fixed relations: T vs I,708,441,267,3.209263199184933e-15
+TUT2017,AAKV after selection: TS vs S,751,448,303,1.8154337015859905e-18
+TUT2017,AAKV after fusion+selection: TFS vs FS,762,339,423,5.715543939078351e-38

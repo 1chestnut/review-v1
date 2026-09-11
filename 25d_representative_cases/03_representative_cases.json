@@ -1,0 +1,1447 @@
+[
+  {
+    "case_type": "AAKV_only_rescue",
+    "dataset": "AudioSet",
+    "dataset_id": "05_AudioSet",
+    "sample_index": 7695,
+    "audio_path": "/data/zkx/zkx/iknow-audio/data/audioset/eval_wavs/O_ps1uO85v0.wav",
+    "truth_indices": [
+      386,
+      384,
+      0,
+      7
+    ],
+    "truth_labels": [
+      "Computer keyboard",
+      "Typing",
+      "Speech",
+      "Speech synthesizer"
+    ],
+    "CLAP_prediction": "Buzz",
+    "iKnow_prediction": "Snake",
+    "module_prediction": "Typing",
+    "TFS_prediction": "Typing",
+    "selected_relations": [
+      "precedes",
+      "is variant of",
+      "event composed of",
+      "responds to",
+      "is instance of"
+    ],
+    "ranks": {
+      "CLAP": 5,
+      "I_iKnow": 17,
+      "T_AAKV": 1,
+      "F_Fusion": 13,
+      "S_Selector": 12,
+      "TF": 1,
+      "TS": 1,
+      "FS": 8,
+      "TFS_Final": 1
+    },
+    "priority": 0.9411764705882353,
+    "pred_indices": {
+      "CLAP": 130,
+      "I_iKnow": 134,
+      "T_AAKV": 384,
+      "F_Fusion": 134,
+      "S_Selector": 134,
+      "TF": 384,
+      "TS": 384,
+      "FS": 134,
+      "TFS_Final": 384
+    },
+    "evidence_details": {
+      "final_prediction": {
+        "class": "Typing",
+        "evidence": [
+          {
+            "relation": "precedes",
+            "tail": "door opening",
+            "direct_triple": "Typing, door opening",
+            "AAKV_text": "The sound of Typing precedes the sound of door opening.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "is variant of",
+            "tail": "woodpecker",
+            "direct_triple": "Typing, woodpecker",
+            "AAKV_text": "The sound of Typing is variant of woodpecker.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "event composed of",
+            "tail": "water droplets",
+            "direct_triple": "Typing, water droplets",
+            "AAKV_text": "The sound of Typing is composed of water droplets.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "responds to",
+            "tail": "car engine stopping",
+            "direct_triple": "Typing, car engine stopping",
+            "AAKV_text": "The sound of Typing responds to the sound of a car engine stopping.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "is instance of",
+            "tail": "things",
+            "direct_triple": "Typing, things",
+            "AAKV_text": "The sound of Typing is instance of things.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          }
+        ]
+      },
+      "ground_truth_reference": {
+        "class": "Computer keyboard",
+        "evidence": [
+          {
+            "relation": "precedes",
+            "tail": "street music",
+            "direct_triple": "Computer keyboard, street music",
+            "AAKV_text": "The sound of Computer keyboard precedes street music.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "is variant of",
+            "tail": "hammering",
+            "direct_triple": "Computer keyboard, hammering",
+            "AAKV_text": "The sound of Computer keyboard is variant of hammering.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "event composed of",
+            "tail": "a stringed musical instrument with a wooden body and metal strings",
+            "direct_triple": "Computer keyboard, a stringed musical instrument with a wooden body and metal strings",
+            "AAKV_text": "The sound of Computer keyboard is composed of a stringed musical instrument with a wooden body and metal strings.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "responds to",
+            "tail": "urban transportation",
+            "direct_triple": "Computer keyboard, urban transportation",
+            "AAKV_text": "The sound of Computer keyboard responds to urban transportation.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "case_type": "AAKV_only_rescue",
+    "dataset": "FSD50K",
+    "dataset_id": "03_FSD50K",
+    "sample_index": 2239,
+    "audio_path": "/data/zkx/zkx/iknow-audio/data/FSD50K-1/FSD50K.eval_audio/365560.wav",
+    "truth_indices": [
+      36,
+      14,
+      192,
+      5,
+      15
+    ],
+    "truth_labels": [
+      "Chirp, tweet",
+      "Bird",
+      "Wild animals",
+      "Animal",
+      "Bird vocalization, bird call, bird song"
+    ],
+    "CLAP_prediction": "Domestic animals, pets",
+    "iKnow_prediction": "Chicken, rooster",
+    "module_prediction": "Bird",
+    "TFS_prediction": "Bird",
+    "selected_relations": [
+      "has pitch",
+      "produced during",
+      "event composed of",
+      "emitted by",
+      "has children"
+    ],
+    "ranks": {
+      "CLAP": 5,
+      "I_iKnow": 6,
+      "T_AAKV": 1,
+      "F_Fusion": 6,
+      "S_Selector": 6,
+      "TF": 1,
+      "TS": 1,
+      "FS": 4,
+      "TFS_Final": 1
+    },
+    "priority": 0.8333333333333334,
+    "pred_indices": {
+      "CLAP": 60,
+      "I_iKnow": 32,
+      "T_AAKV": 14,
+      "F_Fusion": 60,
+      "S_Selector": 60,
+      "TF": 14,
+      "TS": 14,
+      "FS": 60,
+      "TFS_Final": 14
+    },
+    "evidence_details": {
+      "final_prediction": {
+        "class": "Bird",
+        "evidence": [
+          {
+            "relation": "has pitch",
+            "tail": "high",
+            "direct_triple": "Bird, high",
+            "AAKV_text": "The sound of Bird has the relation has pitch with high.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "produced during",
+            "tail": "nesting",
+            "direct_triple": "Bird, nesting",
+            "AAKV_text": "The sound of Bird produced during nesting.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "event composed of",
+            "tail": "chirping",
+            "direct_triple": "Bird, chirping",
+            "AAKV_text": "The sound of Bird is composed of chirping.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "emitted by",
+            "tail": "chirping",
+            "direct_triple": "Bird, chirping",
+            "AAKV_text": "The sound of Bird emitted by chirping.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "has children",
+            "tail": "penguins braying",
+            "direct_triple": "Bird, penguins braying",
+            "AAKV_text": "The sound of Bird has children penguins braying.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          }
+        ]
+      },
+      "ground_truth_reference": {
+        "class": "Chirp, tweet",
+        "evidence": []
+      }
+    }
+  },
+  {
+    "case_type": "AAKV_only_rescue",
+    "dataset": "TUT2017",
+    "dataset_id": "06_TUT2017",
+    "sample_index": 2885,
+    "audio_path": "/data/zkx/zkx/iknow-audio/data/TUT2017/development/TUT-acoustic-scenes-2017-development/audio/b004_130_140.wav",
+    "truth_indices": [
+      12
+    ],
+    "truth_labels": [
+      "residential area"
+    ],
+    "CLAP_prediction": "grocery store",
+    "iKnow_prediction": "grocery store",
+    "module_prediction": "residential area",
+    "TFS_prediction": "residential area",
+    "selected_relations": [
+      "emitted by",
+      "temporal component of",
+      "overlaps with",
+      "event composed of",
+      "is variant of"
+    ],
+    "ranks": {
+      "CLAP": 3,
+      "I_iKnow": 5,
+      "T_AAKV": 1,
+      "F_Fusion": 4,
+      "S_Selector": 4,
+      "TF": 1,
+      "TS": 1,
+      "FS": 3,
+      "TFS_Final": 1
+    },
+    "priority": 0.8,
+    "pred_indices": {
+      "CLAP": 6,
+      "I_iKnow": 6,
+      "T_AAKV": 12,
+      "F_Fusion": 6,
+      "S_Selector": 6,
+      "TF": 12,
+      "TS": 12,
+      "FS": 6,
+      "TFS_Final": 12
+    },
+    "evidence_details": {
+      "final_prediction": {
+        "class": "residential area",
+        "evidence": [
+          {
+            "relation": "emitted by",
+            "tail": "engine",
+            "direct_triple": "residential area, engine",
+            "AAKV_text": "The sound of residential area emitted by engine.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "temporal component of",
+            "tail": "street",
+            "direct_triple": "residential area, street",
+            "AAKV_text": "The sound of residential area is the temporal component of street.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "overlaps with",
+            "tail": "street",
+            "direct_triple": "residential area, street",
+            "AAKV_text": "The sound of residential area overlaps with street.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "event composed of",
+            "tail": "street",
+            "direct_triple": "residential area, street",
+            "AAKV_text": "The sound of residential area is composed of street.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "is variant of",
+            "tail": "street",
+            "direct_triple": "residential area, street",
+            "AAKV_text": "The sound of residential area is variant of street.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          }
+        ]
+      },
+      "ground_truth_reference": {
+        "class": "residential area",
+        "evidence": [
+          {
+            "relation": "emitted by",
+            "tail": "engine",
+            "direct_triple": "residential area, engine",
+            "AAKV_text": "The sound of residential area emitted by engine.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "temporal component of",
+            "tail": "street",
+            "direct_triple": "residential area, street",
+            "AAKV_text": "The sound of residential area is the temporal component of street.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "overlaps with",
+            "tail": "street",
+            "direct_triple": "residential area, street",
+            "AAKV_text": "The sound of residential area overlaps with street.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "event composed of",
+            "tail": "street",
+            "direct_triple": "residential area, street",
+            "AAKV_text": "The sound of residential area is composed of street.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "is variant of",
+            "tail": "street",
+            "direct_triple": "residential area, street",
+            "AAKV_text": "The sound of residential area is variant of street.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "case_type": "Selector_only_rescue",
+    "dataset": "AudioSet",
+    "dataset_id": "05_AudioSet",
+    "sample_index": 9901,
+    "audio_path": "/data/zkx/zkx/iknow-audio/data/audioset/eval_wavs/WgKO_IxUjr8.wav",
+    "truth_indices": [
+      195,
+      196
+    ],
+    "truth_labels": [
+      "Wind instrument, woodwind instrument",
+      "Flute"
+    ],
+    "CLAP_prediction": "Soundtrack music",
+    "iKnow_prediction": "Soundtrack music",
+    "module_prediction": "Flute",
+    "TFS_prediction": "Flute",
+    "selected_relations": [
+      "is instance of",
+      "emitted by",
+      "follows",
+      "is sound of",
+      "linked to visual"
+    ],
+    "ranks": {
+      "CLAP": 3,
+      "I_iKnow": 5,
+      "T_AAKV": 4,
+      "F_Fusion": 16,
+      "S_Selector": 1,
+      "TF": 4,
+      "TS": 1,
+      "FS": 1,
+      "TFS_Final": 1
+    },
+    "priority": 0.8,
+    "pred_indices": {
+      "CLAP": 270,
+      "I_iKnow": 270,
+      "T_AAKV": 262,
+      "F_Fusion": 270,
+      "S_Selector": 196,
+      "TF": 262,
+      "TS": 196,
+      "FS": 196,
+      "TFS_Final": 196
+    },
+    "evidence_details": {
+      "final_prediction": {
+        "class": "Flute",
+        "evidence": [
+          {
+            "relation": "is instance of",
+            "tail": "instrument",
+            "direct_triple": "Flute, instrument",
+            "AAKV_text": "The sound of Flute is instance of instrument.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "emitted by",
+            "tail": "band",
+            "direct_triple": "Flute, band",
+            "AAKV_text": "The sound of Flute is emitted by band.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "follows",
+            "tail": "jazz performer",
+            "direct_triple": "Flute, jazz performer",
+            "AAKV_text": "The sound of Flute follows jazz performer.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "is sound of",
+            "tail": "instrument",
+            "direct_triple": "Flute, instrument",
+            "AAKV_text": "The sound of Flute is instrument.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "linked to visual",
+            "tail": "music performance",
+            "direct_triple": "Flute, music performance",
+            "AAKV_text": "The sound of Flute is linked to visual music performance.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          }
+        ]
+      },
+      "ground_truth_reference": {
+        "class": "Wind instrument, woodwind instrument",
+        "evidence": [
+          {
+            "relation": "is instance of",
+            "tail": "instrument",
+            "direct_triple": "Wind instrument, woodwind instrument, instrument",
+            "AAKV_text": "The sound of Wind instrument is instance of instrument.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "emitted by",
+            "tail": "melody",
+            "direct_triple": "Wind instrument, woodwind instrument, melody",
+            "AAKV_text": "The sound of Wind instrument is emitted by melody.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "follows",
+            "tail": "jazz performance instrument",
+            "direct_triple": "Wind instrument, woodwind instrument, jazz performance instrument",
+            "AAKV_text": "The sound of Wind instrument follows jazz performance instrument.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "case_type": "Selector_only_rescue",
+    "dataset": "UrbanSound8K",
+    "dataset_id": "02_UrbanSound8K",
+    "sample_index": 4485,
+    "audio_path": "/data/zkx/zkx/iknow-audio/data/UrbanSound8K/UrbanSound8K/audio/fold6/184805-0-0-27.wav",
+    "truth_indices": [
+      0
+    ],
+    "truth_labels": [
+      "air conditioner"
+    ],
+    "CLAP_prediction": "air conditioner",
+    "iKnow_prediction": "dog bark",
+    "module_prediction": "air conditioner",
+    "TFS_prediction": "air conditioner",
+    "selected_relations": [
+      "emotionally associated with",
+      "requires attention",
+      "temporal component of",
+      "produces",
+      "performed by"
+    ],
+    "ranks": {
+      "CLAP": 1,
+      "I_iKnow": 5,
+      "T_AAKV": 5,
+      "F_Fusion": 5,
+      "S_Selector": 1,
+      "TF": 5,
+      "TS": 3,
+      "FS": 1,
+      "TFS_Final": 1
+    },
+    "priority": 0.8,
+    "pred_indices": {
+      "CLAP": 0,
+      "I_iKnow": 3,
+      "T_AAKV": 6,
+      "F_Fusion": 8,
+      "S_Selector": 0,
+      "TF": 6,
+      "TS": 3,
+      "FS": 0,
+      "TFS_Final": 0
+    },
+    "evidence_details": {
+      "final_prediction": {
+        "class": "air conditioner",
+        "evidence": [
+          {
+            "relation": "emotionally associated with",
+            "tail": "warbler chirping",
+            "direct_triple": "air conditioner, warbler chirping",
+            "AAKV_text": "The sound of air conditioner is emotionally associated with warbler chirping.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "requires attention",
+            "tail": "chime",
+            "direct_triple": "air conditioner, chime",
+            "AAKV_text": "The sound of air conditioner requires attention when a chime is heard.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "temporal component of",
+            "tail": "closing",
+            "direct_triple": "air conditioner, closing",
+            "AAKV_text": "The sound of air conditioner is the temporal component of closing.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "produces",
+            "tail": "ringing",
+            "direct_triple": "air conditioner, ringing",
+            "AAKV_text": "The sound of air conditioner produces ringing.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "performed by",
+            "tail": "father",
+            "direct_triple": "air conditioner, father",
+            "AAKV_text": "The sound of air conditioner performed by father.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          }
+        ]
+      },
+      "ground_truth_reference": {
+        "class": "air conditioner",
+        "evidence": [
+          {
+            "relation": "emotionally associated with",
+            "tail": "warbler chirping",
+            "direct_triple": "air conditioner, warbler chirping",
+            "AAKV_text": "The sound of air conditioner is emotionally associated with warbler chirping.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "requires attention",
+            "tail": "chime",
+            "direct_triple": "air conditioner, chime",
+            "AAKV_text": "The sound of air conditioner requires attention when a chime is heard.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "temporal component of",
+            "tail": "closing",
+            "direct_triple": "air conditioner, closing",
+            "AAKV_text": "The sound of air conditioner is the temporal component of closing.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "produces",
+            "tail": "ringing",
+            "direct_triple": "air conditioner, ringing",
+            "AAKV_text": "The sound of air conditioner produces ringing.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "performed by",
+            "tail": "father",
+            "direct_triple": "air conditioner, father",
+            "AAKV_text": "The sound of air conditioner performed by father.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "case_type": "Selector_only_rescue",
+    "dataset": "FSD50K",
+    "dataset_id": "03_FSD50K",
+    "sample_index": 1367,
+    "audio_path": "/data/zkx/zkx/iknow-audio/data/FSD50K-1/FSD50K.eval_audio/423217.wav",
+    "truth_indices": [
+      4
+    ],
+    "truth_labels": [
+      "Alarm"
+    ],
+    "CLAP_prediction": "Alarm",
+    "iKnow_prediction": "Brass instrument",
+    "module_prediction": "Alarm",
+    "TFS_prediction": "Alarm",
+    "selected_relations": [
+      "co-occurs with",
+      "overlaps with",
+      "described by",
+      "associated with environment",
+      "associated with event"
+    ],
+    "ranks": {
+      "CLAP": 1,
+      "I_iKnow": 4,
+      "T_AAKV": 3,
+      "F_Fusion": 3,
+      "S_Selector": 1,
+      "TF": 3,
+      "TS": 4,
+      "FS": 4,
+      "TFS_Final": 1
+    },
+    "priority": 0.75,
+    "pred_indices": {
+      "CLAP": 4,
+      "I_iKnow": 20,
+      "T_AAKV": 96,
+      "F_Fusion": 20,
+      "S_Selector": 4,
+      "TF": 96,
+      "TS": 96,
+      "FS": 96,
+      "TFS_Final": 4
+    },
+    "evidence_details": {
+      "final_prediction": {
+        "class": "Alarm",
+        "evidence": [
+          {
+            "relation": "co-occurs with",
+            "tail": "barking",
+            "direct_triple": "Alarm, barking",
+            "AAKV_text": "The sound of Alarm co-occurs with barking.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "overlaps with",
+            "tail": "high",
+            "direct_triple": "Alarm, high",
+            "AAKV_text": "The sound of Alarm overlaps with high.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "described by",
+            "tail": "electronic dance music production",
+            "direct_triple": "Alarm, electronic dance music production",
+            "AAKV_text": "The sound of Alarm is described by electronic dance music production.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "associated with environment",
+            "tail": "orchestra",
+            "direct_triple": "Alarm, orchestra",
+            "AAKV_text": "The sound of Alarm has the relation associated with environment with orchestra.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "associated with event",
+            "tail": "phone ringing",
+            "direct_triple": "Alarm, phone ringing",
+            "AAKV_text": "The sound of Alarm has the relation associated with event with phone ringing.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          }
+        ]
+      },
+      "ground_truth_reference": {
+        "class": "Alarm",
+        "evidence": [
+          {
+            "relation": "co-occurs with",
+            "tail": "barking",
+            "direct_triple": "Alarm, barking",
+            "AAKV_text": "The sound of Alarm co-occurs with barking.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "overlaps with",
+            "tail": "high",
+            "direct_triple": "Alarm, high",
+            "AAKV_text": "The sound of Alarm overlaps with high.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "described by",
+            "tail": "electronic dance music production",
+            "direct_triple": "Alarm, electronic dance music production",
+            "AAKV_text": "The sound of Alarm is described by electronic dance music production.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "associated with environment",
+            "tail": "orchestra",
+            "direct_triple": "Alarm, orchestra",
+            "AAKV_text": "The sound of Alarm has the relation associated with environment with orchestra.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "associated with event",
+            "tail": "phone ringing",
+            "direct_triple": "Alarm, phone ringing",
+            "AAKV_text": "The sound of Alarm has the relation associated with event with phone ringing.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "case_type": "TFS_combination_only_rescue",
+    "dataset": "AudioSet",
+    "dataset_id": "05_AudioSet",
+    "sample_index": 9359,
+    "audio_path": "/data/zkx/zkx/iknow-audio/data/audioset/eval_wavs/UoxHwOl2gN0.wav",
+    "truth_indices": [
+      235,
+      137
+    ],
+    "truth_labels": [
+      "Jazz",
+      "Music"
+    ],
+    "CLAP_prediction": "Wedding music",
+    "iKnow_prediction": "Salsa music",
+    "module_prediction": "Jazz",
+    "TFS_prediction": "Jazz",
+    "selected_relations": [
+      "warns about",
+      "emitted by",
+      "has parent",
+      "is instance of",
+      "overlaps with"
+    ],
+    "ranks": {
+      "CLAP": 5,
+      "I_iKnow": 6,
+      "T_AAKV": 3,
+      "F_Fusion": 6,
+      "S_Selector": 6,
+      "TF": 3,
+      "TS": 4,
+      "FS": 5,
+      "TFS_Final": 1
+    },
+    "priority": 0.8333333333333334,
+    "pred_indices": {
+      "CLAP": 275,
+      "I_iKnow": 249,
+      "T_AAKV": 184,
+      "F_Fusion": 249,
+      "S_Selector": 275,
+      "TF": 184,
+      "TS": 275,
+      "FS": 269,
+      "TFS_Final": 235
+    },
+    "evidence_details": {
+      "final_prediction": {
+        "class": "Jazz",
+        "evidence": [
+          {
+            "relation": "warns about",
+            "tail": "danger signal alert warning",
+            "direct_triple": "Jazz, danger signal alert warning",
+            "AAKV_text": "The sound of Jazz warns about danger signal alert warning.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "emitted by",
+            "tail": "melody",
+            "direct_triple": "Jazz, melody",
+            "AAKV_text": "The sound of Jazz is emitted by melody.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "has parent",
+            "tail": "cat meowing",
+            "direct_triple": "Jazz, cat meowing",
+            "AAKV_text": "The sound of Jazz has a parent which is cat meowing.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "is instance of",
+            "tail": "construction zone intersection",
+            "direct_triple": "Jazz, construction zone intersection",
+            "AAKV_text": "The sound of Jazz is instance of construction zone intersection.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "overlaps with",
+            "tail": "cashier counting money",
+            "direct_triple": "Jazz, cashier counting money",
+            "AAKV_text": "The sound of Jazz overlaps with cashier counting money.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          }
+        ]
+      },
+      "ground_truth_reference": {
+        "class": "Jazz",
+        "evidence": [
+          {
+            "relation": "warns about",
+            "tail": "danger signal alert warning",
+            "direct_triple": "Jazz, danger signal alert warning",
+            "AAKV_text": "The sound of Jazz warns about danger signal alert warning.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "emitted by",
+            "tail": "melody",
+            "direct_triple": "Jazz, melody",
+            "AAKV_text": "The sound of Jazz is emitted by melody.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "has parent",
+            "tail": "cat meowing",
+            "direct_triple": "Jazz, cat meowing",
+            "AAKV_text": "The sound of Jazz has a parent which is cat meowing.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "is instance of",
+            "tail": "construction zone intersection",
+            "direct_triple": "Jazz, construction zone intersection",
+            "AAKV_text": "The sound of Jazz is instance of construction zone intersection.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "overlaps with",
+            "tail": "cashier counting money",
+            "direct_triple": "Jazz, cashier counting money",
+            "AAKV_text": "The sound of Jazz overlaps with cashier counting money.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "case_type": "TFS_combination_only_rescue",
+    "dataset": "ESC-50",
+    "dataset_id": "01_ESC50",
+    "sample_index": 462,
+    "audio_path": "/data/zkx/zkx/iknow-audio/data/ESC-50/audio/2-109371-C-16.wav",
+    "truth_indices": [
+      49
+    ],
+    "truth_labels": [
+      "wind"
+    ],
+    "CLAP_prediction": "train",
+    "iKnow_prediction": "train",
+    "module_prediction": "wind",
+    "TFS_prediction": "wind",
+    "selected_relations": [
+      "warns about",
+      "has pitch",
+      "is a type of",
+      "is instance of",
+      "described by"
+    ],
+    "ranks": {
+      "CLAP": 2,
+      "I_iKnow": 5,
+      "T_AAKV": 2,
+      "F_Fusion": 3,
+      "S_Selector": 5,
+      "TF": 2,
+      "TS": 5,
+      "FS": 4,
+      "TFS_Final": 1
+    },
+    "priority": 0.8,
+    "pred_indices": {
+      "CLAP": 45,
+      "I_iKnow": 45,
+      "T_AAKV": 22,
+      "F_Fusion": 45,
+      "S_Selector": 45,
+      "TF": 22,
+      "TS": 22,
+      "FS": 45,
+      "TFS_Final": 49
+    },
+    "evidence_details": {
+      "final_prediction": {
+        "class": "wind",
+        "evidence": [
+          {
+            "relation": "warns about",
+            "tail": "parade noise",
+            "direct_triple": "wind, parade noise",
+            "AAKV_text": "The sound of wind warns about parade noise.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "has pitch",
+            "tail": "ding-dong",
+            "direct_triple": "wind, ding-dong",
+            "AAKV_text": "The sound of wind has the relation has pitch with ding-dong.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "is a type of",
+            "tail": "bird song",
+            "direct_triple": "wind, bird song",
+            "AAKV_text": "The sound of wind is a type of bird song.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "is instance of",
+            "tail": "ocean",
+            "direct_triple": "wind, ocean",
+            "AAKV_text": "The sound of wind is instance of ocean.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "described by",
+            "tail": "drilling",
+            "direct_triple": "wind, drilling",
+            "AAKV_text": "The sound of wind described by drilling.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          }
+        ]
+      },
+      "ground_truth_reference": {
+        "class": "wind",
+        "evidence": [
+          {
+            "relation": "warns about",
+            "tail": "parade noise",
+            "direct_triple": "wind, parade noise",
+            "AAKV_text": "The sound of wind warns about parade noise.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "has pitch",
+            "tail": "ding-dong",
+            "direct_triple": "wind, ding-dong",
+            "AAKV_text": "The sound of wind has the relation has pitch with ding-dong.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "is a type of",
+            "tail": "bird song",
+            "direct_triple": "wind, bird song",
+            "AAKV_text": "The sound of wind is a type of bird song.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "is instance of",
+            "tail": "ocean",
+            "direct_triple": "wind, ocean",
+            "AAKV_text": "The sound of wind is instance of ocean.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "described by",
+            "tail": "drilling",
+            "direct_triple": "wind, drilling",
+            "AAKV_text": "The sound of wind described by drilling.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "case_type": "TFS_combination_only_rescue",
+    "dataset": "FSD50K",
+    "dataset_id": "03_FSD50K",
+    "sample_index": 9525,
+    "audio_path": "/data/zkx/zkx/iknow-audio/data/FSD50K-1/FSD50K.eval_audio/263458.wav",
+    "truth_indices": [
+      3,
+      184
+    ],
+    "truth_labels": [
+      "Aircraft",
+      "Vehicle"
+    ],
+    "CLAP_prediction": "Fixed-wing aircraft, airplane",
+    "iKnow_prediction": "Fireworks",
+    "module_prediction": "Aircraft",
+    "TFS_prediction": "Aircraft",
+    "selected_relations": [
+      "invites action",
+      "localized in",
+      "responds to",
+      "entails event",
+      "described by"
+    ],
+    "ranks": {
+      "CLAP": 2,
+      "I_iKnow": 4,
+      "T_AAKV": 4,
+      "F_Fusion": 3,
+      "S_Selector": 3,
+      "TF": 4,
+      "TS": 2,
+      "FS": 3,
+      "TFS_Final": 1
+    },
+    "priority": 0.75,
+    "pred_indices": {
+      "CLAP": 80,
+      "I_iKnow": 79,
+      "T_AAKV": 27,
+      "F_Fusion": 79,
+      "S_Selector": 79,
+      "TF": 27,
+      "TS": 27,
+      "FS": 80,
+      "TFS_Final": 3
+    },
+    "evidence_details": {
+      "final_prediction": {
+        "class": "Aircraft",
+        "evidence": [
+          {
+            "relation": "invites action",
+            "tail": "environment",
+            "direct_triple": "Aircraft, environment",
+            "AAKV_text": "The sound of Aircraft invites action in the environment.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "localized in",
+            "tail": "airfield",
+            "direct_triple": "Aircraft, airfield",
+            "AAKV_text": "The sound of Aircraft localized in airfield.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "responds to",
+            "tail": "traffic congestion",
+            "direct_triple": "Aircraft, traffic congestion",
+            "AAKV_text": "The sound of Aircraft responds to traffic congestion.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "entails event",
+            "tail": "vehicle engine",
+            "direct_triple": "Aircraft, vehicle engine",
+            "AAKV_text": "The sound of Aircraft has the relation entails event with vehicle engine.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "described by",
+            "tail": "a type of aircraft used for transportation or military purposes",
+            "direct_triple": "Aircraft, a type of aircraft used for transportation or military purposes",
+            "AAKV_text": "The sound of Aircraft is described by a type of aircraft used for transportation or military purposes.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          }
+        ]
+      },
+      "ground_truth_reference": {
+        "class": "Aircraft",
+        "evidence": [
+          {
+            "relation": "invites action",
+            "tail": "environment",
+            "direct_triple": "Aircraft, environment",
+            "AAKV_text": "The sound of Aircraft invites action in the environment.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "localized in",
+            "tail": "airfield",
+            "direct_triple": "Aircraft, airfield",
+            "AAKV_text": "The sound of Aircraft localized in airfield.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "responds to",
+            "tail": "traffic congestion",
+            "direct_triple": "Aircraft, traffic congestion",
+            "AAKV_text": "The sound of Aircraft responds to traffic congestion.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "entails event",
+            "tail": "vehicle engine",
+            "direct_triple": "Aircraft, vehicle engine",
+            "AAKV_text": "The sound of Aircraft has the relation entails event with vehicle engine.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "described by",
+            "tail": "a type of aircraft used for transportation or military purposes",
+            "direct_triple": "Aircraft, a type of aircraft used for transportation or military purposes",
+            "AAKV_text": "The sound of Aircraft is described by a type of aircraft used for transportation or military purposes.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "case_type": "TFS_harm",
+    "dataset": "AudioSet",
+    "dataset_id": "05_AudioSet",
+    "sample_index": 12968,
+    "audio_path": "/data/zkx/zkx/iknow-audio/data/audioset/eval_wavs/hcc6AwKKgb4.wav",
+    "truth_indices": [
+      296,
+      84
+    ],
+    "truth_labels": [
+      "Steam",
+      "Hiss"
+    ],
+    "CLAP_prediction": "Air brake",
+    "iKnow_prediction": "Hiss",
+    "module_prediction": "Water tap, faucet",
+    "TFS_prediction": "Water tap, faucet",
+    "selected_relations": [
+      "affects",
+      "associated with environment",
+      "associated with event",
+      "belongs to class",
+      "can be heard in"
+    ],
+    "ranks": {
+      "CLAP": 4,
+      "I_iKnow": 1,
+      "T_AAKV": 7,
+      "F_Fusion": 2,
+      "S_Selector": 2,
+      "TF": 8,
+      "TS": 7,
+      "FS": 2,
+      "TFS_Final": 34
+    },
+    "priority": 0.9705882352941176,
+    "pred_indices": {
+      "CLAP": 317,
+      "I_iKnow": 84,
+      "T_AAKV": 317,
+      "F_Fusion": 453,
+      "S_Selector": 453,
+      "TF": 370,
+      "TS": 317,
+      "FS": 453,
+      "TFS_Final": 370
+    },
+    "evidence_details": {
+      "final_prediction": {
+        "class": "Water tap, faucet",
+        "evidence": [
+          {
+            "relation": "affects",
+            "tail": "dental hygiene",
+            "direct_triple": "Water tap, faucet, dental hygiene",
+            "AAKV_text": "The sound of Water tap affects dental hygiene.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "associated with environment",
+            "tail": "kitchen",
+            "direct_triple": "Water tap, faucet, kitchen",
+            "AAKV_text": "The sound of Water tap has the relation associated with environment with kitchen.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "associated with event",
+            "tail": "oral hygiene",
+            "direct_triple": "Water tap, faucet, oral hygiene",
+            "AAKV_text": "The sound of Water tap is associated with event oral hygiene.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "belongs to class",
+            "tail": "bathroom sounds",
+            "direct_triple": "Water tap, faucet, bathroom sounds",
+            "AAKV_text": "The sound of Water tap belongs to class bathroom sounds.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "can be heard in",
+            "tail": "kitchen",
+            "direct_triple": "Water tap, faucet, kitchen",
+            "AAKV_text": "The sound of Water tap can be heard in kitchen.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          }
+        ]
+      },
+      "ground_truth_reference": {
+        "class": "Steam",
+        "evidence": [
+          {
+            "relation": "affects",
+            "tail": "weather conditions",
+            "direct_triple": "Steam, weather conditions",
+            "AAKV_text": "The sound of Steam affects weather conditions.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "associated with environment",
+            "tail": "canyon",
+            "direct_triple": "Steam, canyon",
+            "AAKV_text": "The sound of Steam has the relation associated with environment with canyon.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "associated with event",
+            "tail": "tsunami warning",
+            "direct_triple": "Steam, tsunami warning",
+            "AAKV_text": "The sound of Steam is associated with event tsunami warning.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "belongs to class",
+            "tail": "natural sounds",
+            "direct_triple": "Steam, natural sounds",
+            "AAKV_text": "The sound of Steam belongs to the class of natural sounds.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "can be heard in",
+            "tail": "harbor",
+            "direct_triple": "Steam, harbor",
+            "AAKV_text": "The sound of Steam can be heard in harbor.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "case_type": "TFS_harm",
+    "dataset": "FSD50K",
+    "dataset_id": "03_FSD50K",
+    "sample_index": 7979,
+    "audio_path": "/data/zkx/zkx/iknow-audio/data/FSD50K-1/FSD50K.eval_audio/213292.wav",
+    "truth_indices": [
+      84,
+      21,
+      139
+    ],
+    "truth_labels": [
+      "Gasp",
+      "Breathing",
+      "Respiratory sounds"
+    ],
+    "CLAP_prediction": "Crying, sobbing",
+    "iKnow_prediction": "Breathing",
+    "module_prediction": "Crying, sobbing",
+    "TFS_prediction": "Crying, sobbing",
+    "selected_relations": [
+      "associated with environment",
+      "associated with event",
+      "can be heard in",
+      "caused by",
+      "generated by"
+    ],
+    "ranks": {
+      "CLAP": 5,
+      "I_iKnow": 1,
+      "T_AAKV": 3,
+      "F_Fusion": 2,
+      "S_Selector": 6,
+      "TF": 3,
+      "TS": 6,
+      "FS": 6,
+      "TFS_Final": 6
+    },
+    "priority": 0.8333333333333334,
+    "pred_indices": {
+      "CLAP": 54,
+      "I_iKnow": 21,
+      "T_AAKV": 145,
+      "F_Fusion": 54,
+      "S_Selector": 54,
+      "TF": 145,
+      "TS": 54,
+      "FS": 54,
+      "TFS_Final": 54
+    },
+    "evidence_details": {
+      "final_prediction": {
+        "class": "Crying, sobbing",
+        "evidence": []
+      },
+      "ground_truth_reference": {
+        "class": "Gasp",
+        "evidence": [
+          {
+            "relation": "associated with environment",
+            "tail": "home",
+            "direct_triple": "Gasp, home",
+            "AAKV_text": "The sound of Gasp has the relation associated with environment with home.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "associated with event",
+            "tail": "comedy festival",
+            "direct_triple": "Gasp, comedy festival",
+            "AAKV_text": "The sound of Gasp is associated with event comedy festival.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "can be heard in",
+            "tail": "hospital room",
+            "direct_triple": "Gasp, hospital room",
+            "AAKV_text": "The sound of Gasp can be heard in hospital room.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "caused by",
+            "tail": "humming",
+            "direct_triple": "Gasp, humming",
+            "AAKV_text": "The sound of Gasp is caused by humming.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "generated by",
+            "tail": "food",
+            "direct_triple": "Gasp, food",
+            "AAKV_text": "The sound of Gasp is generated by food.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "case_type": "TFS_harm",
+    "dataset": "TUT2017",
+    "dataset_id": "06_TUT2017",
+    "sample_index": 401,
+    "audio_path": "/data/zkx/zkx/iknow-audio/data/TUT2017/development/TUT-acoustic-scenes-2017-development/audio/a140_180_190.wav",
+    "truth_indices": [
+      1
+    ],
+    "truth_labels": [
+      "bus"
+    ],
+    "CLAP_prediction": "tram",
+    "iKnow_prediction": "bus",
+    "module_prediction": "tram",
+    "TFS_prediction": "tram",
+    "selected_relations": [
+      "temporal component of",
+      "has pitch",
+      "has children",
+      "event composed of",
+      "is a type of"
+    ],
+    "ranks": {
+      "CLAP": 5,
+      "I_iKnow": 1,
+      "T_AAKV": 3,
+      "F_Fusion": 2,
+      "S_Selector": 3,
+      "TF": 4,
+      "TS": 2,
+      "FS": 3,
+      "TFS_Final": 5
+    },
+    "priority": 0.8,
+    "pred_indices": {
+      "CLAP": 14,
+      "I_iKnow": 1,
+      "T_AAKV": 9,
+      "F_Fusion": 14,
+      "S_Selector": 14,
+      "TF": 9,
+      "TS": 13,
+      "FS": 14,
+      "TFS_Final": 14
+    },
+    "evidence_details": {
+      "final_prediction": {
+        "class": "tram",
+        "evidence": []
+      },
+      "ground_truth_reference": {
+        "class": "bus",
+        "evidence": [
+          {
+            "relation": "temporal component of",
+            "tail": "public transportation",
+            "direct_triple": "bus, public transportation",
+            "AAKV_text": "The sound of bus is the temporal component of public transportation.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "has pitch",
+            "tail": "musical instrument",
+            "direct_triple": "bus, musical instrument",
+            "AAKV_text": "The sound of bus has the relation has pitch with musical instrument.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "has children",
+            "tail": "bus engine",
+            "direct_triple": "bus, bus engine",
+            "AAKV_text": "The sound of bus has children bus engine.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "event composed of",
+            "tail": "brakes screeching",
+            "direct_triple": "bus, brakes screeching",
+            "AAKV_text": "The sound of bus event composed of brakes screeching.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          },
+          {
+            "relation": "is a type of",
+            "tail": "automobile",
+            "direct_triple": "bus, automobile",
+            "AAKV_text": "The sound of bus is a type of automobile.",
+            "choice": "Top-1 KGE tail within this selected relation"
+          }
+        ]
+      }
+    }
+  }
+]

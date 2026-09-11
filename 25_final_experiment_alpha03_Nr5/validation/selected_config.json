@@ -1,0 +1,21 @@
+{
+  "primary_metric": "Hit@1",
+  "secondary_metric": "MRR",
+  "eligible_Nr": [
+    1,
+    3,
+    5,
+    10
+  ],
+  "Nr47_role": "all-relations/no-selection control only",
+  "best_Hit@1": 63.961813842482094,
+  "Hit@1_tied_configs": [
+    "TFS_alpha0.3_Nr1",
+    "TFS_alpha0.3_Nr3",
+    "TFS_alpha0.3_Nr5",
+    "TFS_alpha0.3_Nr10"
+  ],
+  "best_MRR_within_Hit@1_ties": 75.68767549077812,
+  "selected": "TFS_alpha0.3_Nr5",
+  "selection_rule": "maximize Hit@1; exact ties maximize MRR; remaining ties prefer smaller Nr"
+}

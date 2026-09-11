@@ -1,0 +1,28 @@
+{
+  "completed_automatic_parts": true,
+  "manual_review_status": "180-row stratified sheet prepared; human semantic judgments intentionally left blank",
+  "AAKV_source": "/data/zkx/zkx/review1/10_hard-prefix-pilot",
+  "task25_source": "/data/zkx/zkx/review1/25_final_experiment_alpha03_Nr5/test",
+  "automatic_unit": "unique KG triple verbalization",
+  "manual_sample": {
+    "n_per_dataset": 30,
+    "total": 180,
+    "strata": "generation outcome x relation",
+    "label_free_sampling": true
+  },
+  "bootstrap": {
+    "paired": true,
+    "unit": "audio sample",
+    "repetitions": 10000,
+    "CI": "percentile 95%"
+  },
+  "prompt_hashes": {
+    "ESC-50": "e83e62ae2fb959d07a97928fda474f6d98be55a8a0f373361815e82666c8a334",
+    "UrbanSound8K": "e83e62ae2fb959d07a97928fda474f6d98be55a8a0f373361815e82666c8a334",
+    "FSD50K": "e83e62ae2fb959d07a97928fda474f6d98be55a8a0f373361815e82666c8a334",
+    "DCASE17-T4": "e83e62ae2fb959d07a97928fda474f6d98be55a8a0f373361815e82666c8a334",
+    "AudioSet": "e83e62ae2fb959d07a97928fda474f6d98be55a8a0f373361815e82666c8a334",
+    "TUT2017": "e83e62ae2fb959d07a97928fda474f6d98be55a8a0f373361815e82666c8a334"
+  },
+  "known_missing_control": "RawTriple + Fusion + Selector is not present in Task25; Direct + Fusion + Selector is FS and is present."
+}

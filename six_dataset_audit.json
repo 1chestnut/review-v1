@@ -1,0 +1,161 @@
+{
+  "01_ESC50": {
+    "samples": 2000,
+    "classes": 50,
+    "single_label_samples": 2000,
+    "multi_label_samples": 0,
+    "zero_mapped_label_samples": 0,
+    "audio_readable": 2000,
+    "audio_unreadable": 0,
+    "sample_rates": [
+      44100
+    ],
+    "duration_seconds": {
+      "min": 5.0,
+      "median": 5.0,
+      "mean": 5.0,
+      "max": 5.0,
+      "total_hours": 2.7777777777777777
+    },
+    "metadata_columns": [
+      "filename",
+      "fold",
+      "target",
+      "category",
+      "esc10",
+      "src_file",
+      "take"
+    ]
+  },
+  "02_UrbanSound8K": {
+    "samples": 8732,
+    "classes": 10,
+    "single_label_samples": 8732,
+    "multi_label_samples": 0,
+    "zero_mapped_label_samples": 0,
+    "audio_readable": 8732,
+    "audio_unreadable": 0,
+    "sample_rates": [
+      8000,
+      11024,
+      11025,
+      16000,
+      22050,
+      24000,
+      32000,
+      44100,
+      48000,
+      96000,
+      192000
+    ],
+    "duration_seconds": {
+      "min": 0.05,
+      "median": 4.0,
+      "mean": 3.6075218292463376,
+      "max": 4.036647314949202,
+      "total_hours": 8.750244614716388
+    },
+    "metadata_columns": [
+      "slice_file_name",
+      "fsID",
+      "start",
+      "end",
+      "salience",
+      "fold",
+      "classID",
+      "class"
+    ]
+  },
+  "03_FSD50K": {
+    "samples": 10231,
+    "classes": 200,
+    "single_label_samples": 1138,
+    "multi_label_samples": 9093,
+    "zero_mapped_label_samples": 0,
+    "audio_readable": 10231,
+    "audio_unreadable": 0,
+    "sample_rates": [
+      44100
+    ],
+    "duration_seconds": {
+      "min": 0.30002267573696145,
+      "median": 7.4655328798185945,
+      "mean": 9.798173531557087,
+      "max": 30.01469387755102,
+      "total_hours": 27.845864833711147
+    },
+    "metadata_columns": [
+      "fname",
+      "labels",
+      "mids"
+    ]
+  },
+  "04_DCASE17_T4": {
+    "samples": 419,
+    "classes": 17,
+    "single_label_samples": 320,
+    "multi_label_samples": 99,
+    "zero_mapped_label_samples": 0,
+    "audio_readable": 419,
+    "audio_unreadable": 0,
+    "sample_rates": [
+      44100,
+      48000
+    ],
+    "duration_seconds": {
+      "min": 2.0,
+      "median": 10.0,
+      "mean": 9.82985784369436,
+      "max": 10.000430839002268,
+      "total_hours": 1.1440862323633154
+    },
+    "metadata_columns": [
+      "audio_filename",
+      "paper_formatted_labels",
+      "original_labels"
+    ]
+  },
+  "05_AudioSet": {
+    "samples": 17233,
+    "classes": 527,
+    "single_label_samples": 4019,
+    "multi_label_samples": 13214,
+    "zero_mapped_label_samples": 0,
+    "audio_readable": 17233,
+    "audio_unreadable": 0,
+    "sample_rates": [
+      44100,
+      48000
+    ],
+    "duration_seconds": {
+      "min": 0.7935,
+      "median": 10.0,
+      "mean": 9.896337297458878,
+      "max": 10.000793650793652,
+      "total_hours": 47.3732168464191
+    },
+    "metadata_columns": [
+      "audio_file",
+      "labels"
+    ]
+  },
+  "06_TUT2017": {
+    "samples": 4680,
+    "classes": 15,
+    "single_label_samples": 4680,
+    "multi_label_samples": 0,
+    "zero_mapped_label_samples": 0,
+    "audio_readable": 4680,
+    "audio_unreadable": 0,
+    "sample_rates": [
+      44100
+    ],
+    "duration_seconds": {
+      "min": 10.000022675736961,
+      "median": 10.000022675736961,
+      "mean": 10.000022675736961,
+      "max": 10.000022675736961,
+      "total_hours": 13.000029478458979
+    }
+  }
+}

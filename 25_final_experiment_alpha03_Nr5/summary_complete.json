@@ -1,0 +1,12 @@
+{
+  "completed": true,
+  "datasets": [
+    "ESC-50",
+    "UrbanSound8K",
+    "FSD50K",
+    "AudioSet",
+    "TUT2017"
+  ],
+  "alpha": 0.3,
+  "Nr": 5
+}

@@ -1,0 +1,19 @@
+{
+  "source": "Task25 independently computed branches",
+  "development_set": "DCASE17-T4 (excluded)",
+  "test_sets": 5,
+  "primary_comparison": "Final-TFS - Frozen-iKnow",
+  "bootstrap": {
+    "paired": true,
+    "repetitions": 10000,
+    "unit": "audio sample",
+    "CI": "percentile 95%"
+  },
+  "McNemar": "exact two-sided on paired Hit@1 outcomes",
+  "multiplicity": {
+    "primary": "Holm across five datasets",
+    "module_contrasts": "Holm across all 30 exploratory tests"
+  },
+  "seed_rule": "deterministic hash of dataset and contrast",
+  "training_repeats": "not applicable: frozen deterministic inference; uncertainty is over test samples"
+}

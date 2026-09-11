@@ -1,0 +1,19 @@
+{
+  "package_root": "/data/zkx/zkx/review1/26_relation_selection_AAKV_control/final_experiment_package",
+  "tables": {
+    "01_main_table": "Final CLAP vs frozen iKnow vs complete AAKV+Fusion+Selector results.",
+    "02_ablation_table": "Independent 2^3 factorial ablation of AAKV, Fusion and Selector.",
+    "03_AAKV_table": "Text-verbalization controls in fixed-iKnow and complete-system contexts.",
+    "04_Selector_table": "Frozen, frequency, random and sample-adaptive relation selection.",
+    "05_parameter_table": "Development-set parameter selection and frozen test protocol."
+  },
+  "datasets": [
+    "01_ESC50",
+    "02_UrbanSound8K",
+    "03_FSD50K",
+    "05_AudioSet",
+    "06_TUT2017"
+  ],
+  "result_policy": "copied byte-for-byte from completed frozen runs; no metric was recomputed by hand",
+  "code_policy": "complete executed implementations copied locally; computational runners use packaged runtime code and declared immutable model/data artifacts"
+}

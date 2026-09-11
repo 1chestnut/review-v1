@@ -1,0 +1,13 @@
+{
+  "analysis": "post-hoc only",
+  "source": "Task25 frozen per-sample ranks and scores",
+  "ground_truth_use": "only categorization after inference; never method routing",
+  "strict_definitions": {
+    "AAKV_only_rescue": "T correct while iKnow, F-only and S-only are wrong",
+    "Selector_only_rescue": "S correct while iKnow, T-only and F-only are wrong",
+    "TFS_combination_only_rescue": "TFS correct while all seven incomplete branches are wrong",
+    "TFS_harm": "iKnow correct but TFS wrong"
+  },
+  "representative_selection": "largest reciprocal-rank improvement (or damage), prefer distinct datasets; maximum three per category",
+  "evidence_display": "Top-1 KGE-ranked tail per TFS-selected relation for final-predicted and first ground-truth class; it is not relabeled as the highest audio-similarity evidence"
+}

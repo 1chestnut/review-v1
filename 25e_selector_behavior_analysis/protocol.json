@@ -1,0 +1,16 @@
+{
+  "source": "Task25 frozen TFS_Final sample records",
+  "analysis_type": "post-hoc descriptive mechanism audit",
+  "reruns_model": false,
+  "uses_labels_for_selector": false,
+  "ground_truth_use": "only retrospective correctness and within-class summaries",
+  "does_not_select_parameters": true,
+  "definitions": {
+    "top1_relation": "first relation in the frozen Consensus-Margin ordering",
+    "consensus_votes": "number of candidate relation experts predicting the consensus class",
+    "normalized_entropy": "entropy of top-1 relation distribution divided by log(candidate relation count)",
+    "dominant_set_share": "largest frequency of an unordered selected-Nr relation set",
+    "Jaccard": "selected relation set versus frozen iKnow dataset relation set"
+  },
+  "caution": "Relation-conditioned effects are descriptive because five selected relations co-occur; they must not be interpreted causally."
+}
