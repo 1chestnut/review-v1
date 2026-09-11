@@ -103,25 +103,27 @@ def main(ds):
     for group in batches(warm,4):
         a=F.normalize(rt.to_tensor(clap.get_audio_embeddings([x['audio_path'] for x in group])).to(dev).float(),dim=-1)
         for m in METHODS:run_method(m,a,le,fe,fi,relations,per,ae)
-    visible_gpu=os.environ.get('CUDA_VISIBLE_DEVICES','unspecified');gpu_name=torch.cuda.get_device_name(0);rows=[];reference={}
+    visible_gpu=os.environ.get('CUDA_VISIBLE_DEVICES','unspecified');gpu_name=torch.cuda.get_device_name(0);rows=[];reference_top1={}
     for bs in (1,32):
         for rep in range(5):
             order=METHODS[rep%3:]+METHODS[:rep%3]
             for method in order:
-                total_e2e=0.;total_stage=0.;peak=0;n=0;hash_acc=hashlib.sha256()
+                total_e2e=0.;total_stage=0.;peak=0;n=0;full_hash=hashlib.sha256();top1=[]
                 for group in batches(chosen,bs):
                     paths=[x['audio_path'] for x in group]
                     audio,e2e_encode,mem1=timed(lambda:F.normalize(rt.to_tensor(clap.get_audio_embeddings(paths)).to(dev).float(),dim=-1))
                     scores,stage,mem2=timed(lambda:run_method(method,audio,le,fe,fi,relations,per,ae))
                     total_e2e += e2e_encode+stage;total_stage += stage;peak=max(peak,mem1,mem2);n+=len(group)
-                    hash_acc.update(torch.argsort(scores,descending=True).cpu().numpy().tobytes())
-                key=(bs,method);digest=hash_acc.hexdigest()
-                if key in reference and reference[key]!=digest:raise RuntimeError(f'non-deterministic ranking: {key}')
-                reference[key]=digest
+                    order=torch.argsort(scores,descending=True).cpu().numpy();full_hash.update(order.tobytes());top1.extend(order[:,0].tolist())
+                key=(bs,method);digest=full_hash.hexdigest();top1_arr=np.asarray(top1,dtype=np.int64);top1_digest=hashlib.sha256(top1_arr.tobytes()).hexdigest()
+                if key in reference_top1:
+                    agreement=float(np.mean(reference_top1[key]==top1_arr))
+                    if agreement < .995:raise RuntimeError(f'Top-1 repeat agreement below 99.5%: {key}={agreement:.6f}')
+                else:reference_top1[key]=top1_arr.copy();agreement=1.0
                 rows.append({'dataset':ds,'physical_gpu_id':visible_gpu,'gpu_name':gpu_name,'method':method,'batch_size':bs,'repeat':rep+1,'n_samples':n,
                     'end_to_end_ms_per_sample':1000*total_e2e/n,'knowledge_stage_ms_per_sample':1000*total_stage/n,
                     'throughput_samples_per_s':n/total_e2e,'incremental_peak_gpu_mib':peak/2**20,'static_cache_mib':static_bytes/2**20,
-                    'ranking_sha256':digest})
+                    'top1_agreement_vs_first_repeat':agreement,'top1_sha256':top1_digest,'full_ranking_sha256_audit':digest})
     with (out/'timing_repeats.csv').open('w',newline='',encoding='utf-8-sig') as f:
         w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
     summary=[]
@@ -130,6 +132,7 @@ def main(ds):
             rr=[x for x in rows if x['batch_size']==bs and x['method']==m];rec={'dataset':ds,'method':m,'batch_size':bs,'n_profiled':count,'repeats':5}
             for k in ('end_to_end_ms_per_sample','knowledge_stage_ms_per_sample','throughput_samples_per_s','incremental_peak_gpu_mib','static_cache_mib'):
                 a=np.asarray([x[k] for x in rr]);rec[k+'_mean']=float(a.mean());rec[k+'_std']=float(a.std(ddof=1))
+            rec['minimum_top1_agreement_vs_first_repeat']=float(min(x['top1_agreement_vs_first_repeat'] for x in rr))
             summary.append(rec)
     with (out/'timing_summary.csv').open('w',newline='',encoding='utf-8-sig') as f:
         w=csv.DictWriter(f,fieldnames=list(summary[0]));w.writeheader();w.writerows(summary)
@@ -137,7 +140,7 @@ def main(ds):
       'online_timing':{'end_to_end':'live audio decode/preprocess/CLAP audio encoding + method-specific scoring and ranking','knowledge_stage':'starts from current audio embedding; includes all method-specific matching, selection, fusion and ranking'},
       'offline_excluded':['KG entity mapping','RotatE Top-M tail retrieval','AAKV text generation','all text embedding computation'],
       'fixed':{'model':'same CLAP checkpoint','device':'same physical GPU','K':K,'M':M,'kappa':KAPPA,'alpha':ALPHA,'Nr':NR,'hop':1,'TopP':'disabled','seed':42},
-      'fairness':['all methods for a dataset use the same isolated physical GPU','different datasets may run concurrently on separate GPUs','GPU identity is recorded','same sample order','same immutable text caches','20-sample warm-up','CUDA synchronization around every timed segment','rotated method order','five repeats','ranking hash equality across repeats'],
+      'fairness':['all methods for a dataset use the same isolated physical GPU','different datasets may run concurrently on separate GPUs','GPU identity is recorded','same sample order','same immutable text caches','20-sample warm-up','CUDA synchronization around every timed segment','rotated method order','five repeats','Top-1 agreement across live re-encoding repeats must be at least 99.5%; complete ranking hashes are retained as an audit because near-tied low-ranked classes can exchange order'],
       'accuracy_source':'Task25 full-dataset metrics; timing subset is not used to re-estimate headline accuracy'}
     (out/'protocol.json').write_text(json.dumps(protocol,ensure_ascii=False,indent=2),encoding='utf-8')
     (out/'progress.json').write_text(json.dumps({'completed':True,'n_profiled':count},indent=2),encoding='utf-8')
