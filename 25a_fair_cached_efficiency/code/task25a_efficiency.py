@@ -111,6 +111,11 @@ def main(ds):
                 total_e2e=0.;total_stage=0.;peak=0;n=0;full_hash=hashlib.sha256();top1=[]
                 for group in batches(chosen,bs):
                     paths=[x['audio_path'] for x in group]
+                    # CLAP audio preprocessing can consume RNG state (e.g. crop/pad).
+                    # Reset from the immutable batch identity before every live encoding,
+                    # so rotated method order cannot change the audio representation.
+                    batch_seed=int(hashlib.sha256(('42|'+ '|'.join(paths)).encode()).hexdigest()[:8],16)
+                    seed_all(batch_seed)
                     audio,e2e_encode,mem1=timed(lambda:F.normalize(rt.to_tensor(clap.get_audio_embeddings(paths)).to(dev).float(),dim=-1))
                     scores,stage,mem2=timed(lambda:run_method(method,audio,le,fe,fi,relations,per,ae))
                     total_e2e += e2e_encode+stage;total_stage += stage;peak=max(peak,mem1,mem2);n+=len(group)
@@ -140,7 +145,7 @@ def main(ds):
       'online_timing':{'end_to_end':'live audio decode/preprocess/CLAP audio encoding + method-specific scoring and ranking','knowledge_stage':'starts from current audio embedding; includes all method-specific matching, selection, fusion and ranking'},
       'offline_excluded':['KG entity mapping','RotatE Top-M tail retrieval','AAKV text generation','all text embedding computation'],
       'fixed':{'model':'same CLAP checkpoint','device':'same physical GPU','K':K,'M':M,'kappa':KAPPA,'alpha':ALPHA,'Nr':NR,'hop':1,'TopP':'disabled','seed':42},
-      'fairness':['all methods for a dataset use the same isolated physical GPU','different datasets may run concurrently on separate GPUs','GPU identity is recorded','same sample order','same immutable text caches','20-sample warm-up','CUDA synchronization around every timed segment','rotated method order','five repeats','Top-1 agreement across live re-encoding repeats must be at least 99.5%; complete ranking hashes are retained as an audit because near-tied low-ranked classes can exchange order'],
+      'fairness':['all methods for a dataset use the same isolated physical GPU','different datasets may run concurrently on separate GPUs','GPU identity is recorded','same sample order','same immutable text caches','deterministic seed reset from each immutable audio-batch identity before live CLAP encoding','20-sample warm-up','CUDA synchronization around every timed segment','rotated method order','five repeats','Top-1 agreement across live re-encoding repeats must be at least 99.5%; complete ranking hashes are retained as an audit because near-tied low-ranked classes can exchange order'],
       'accuracy_source':'Task25 full-dataset metrics; timing subset is not used to re-estimate headline accuracy'}
     (out/'protocol.json').write_text(json.dumps(protocol,ensure_ascii=False,indent=2),encoding='utf-8')
     (out/'progress.json').write_text(json.dumps({'completed':True,'n_profiled':count},indent=2),encoding='utf-8')
