@@ -31,3 +31,8 @@ Future entries should record: date, approved section/claim, changed files, compi
 - Installed LaTeX Workshop for VS Code and configured the manuscript PDF viewer to open in the right editor group.
 - Configured a two-pass MiKTeX `pdflatex` build on save; tested that it produces both PDF and SyncTeX files.
 - Marked the experiments section with `main.tex` as its LaTeX root and made Nature-writing usage explicit in the project instructions.
+
+## 2026-09-16 — PDF shortcut collision
+
+- User reported that `Ctrl+Alt+V` invoked speech-to-text and failed because no microphone was available.
+- Enabled LaTeX Workshop's alternate `Ctrl+L`, `Alt+V` keymap and documented the Command Palette route; compilation settings and manuscript content are unchanged.

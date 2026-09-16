@@ -2,6 +2,7 @@
   "latex-workshop.latex.outDir": "%DIR%/build",
   "latex-workshop.view.pdf.viewer": "tab",
   "latex-workshop.view.pdf.tab.editorGroup": "right",
+  "latex-workshop.bind.altKeymap.enabled": true,
   "latex-workshop.latex.autoBuild.run": "onSave",
   "latex-workshop.latex.rootFile.doNotPrompt": true,
   "latex-workshop.latex.rootFile.useSubFile": false,
