@@ -1,6 +1,8 @@
 # Build instructions and verification
 
-The build has not yet been verified until a LaTeX distribution is installed and `pdflatex` succeeds.
+Verified on 2026-09-16: MiKTeX 25.12 was installed for the current Windows user; `pdflatex` completed twice with exit code 0 and produced `build/main.pdf` (1 page). The rendered page was visually inspected. The frontmatter spans the page; section headings occupy the left column, and the right column is empty because approved prose has not been added. The `final,5p,times,twocolumn` class option is active.
+
+The current `Author Name`, institution, title and empty abstract are placeholders, not submission-ready content. MiKTeX prints an update-check notice; this is not a LaTeX compilation error.
 
 From this directory, use either:
 
