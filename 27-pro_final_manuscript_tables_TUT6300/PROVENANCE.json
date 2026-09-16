@@ -1,0 +1,12 @@
+{
+  "Table1": "/data/zkx/zkx/review1/25_final_experiment_alpha03_Nr5/01_final_main_results.csv",
+  "Table2": "/data/zkx/zkx/review1/25_final_experiment_alpha03_Nr5/test",
+  "Table3_panelA": "/data/zkx/zkx/review1/11_iknow-formula-text-contribution",
+  "Table3_panelB": [
+    "/data/zkx/zkx/review1/25_final_experiment_alpha03_Nr5/test",
+    "/data/zkx/zkx/review1/25g_RawTriple_FS_control"
+  ],
+  "Table4": "/data/zkx/zkx/review1/26_relation_selection_AAKV_control",
+  "Table5_validation": "/data/zkx/zkx/review1/25_final_experiment_alpha03_Nr5/validation/DCASE_grid.csv",
+  "created_from_frozen_outputs": true
+}

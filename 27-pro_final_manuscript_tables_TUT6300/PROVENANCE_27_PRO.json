@@ -1,0 +1,16 @@
+{
+  "base_summary_preserved": "/data/zkx/zkx/review1/27_final_manuscript_tables",
+  "complete_TUT_source": "/data/zkx/zkx/review1/28_TUT2017_full6300_rerun",
+  "TUT2017_sample_count": 6300,
+  "updated_tables": [
+    "Table1",
+    "Table2",
+    "Table3 Panel B",
+    "Table4",
+    "Table6",
+    "Table7"
+  ],
+  "legacy_not_updated": [
+    "Table3 Panel A TUT2017 row"
+  ]
+}

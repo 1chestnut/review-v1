@@ -1,0 +1,13 @@
+﻿parameter,value,meaning,selection/provenance,test_status
+Development dataset,"DCASE17-T4, 419 available samples",Select method-level hyperparameters only,Declared development set; excluded from the five final test datasets,not reported as test result
+K,5,CLAP top candidate classes receiving KG enrichment,Inherited and frozen from the iKnow reproduction,fixed
+M,3,"RotatE tail entities retained per (head, relation)",Inherited and frozen from the iKnow reproduction,fixed
+kappa,100,Normalized log-sum-exp similarity scale,Aligned with the frozen CLAP/iKnow reproduction score scale,fixed
+alpha,0.3,Base CLAP weight; knowledge weight is 1-alpha,Selected once on DCASE development set by MRR,fixed on all five tests
+N_r,5,Relations retained by the sample-level selector,Selected jointly with alpha on DCASE development set,fixed on all five tests
+Candidate relation pool,47 RotatE relations,Relations available to the selector,Complete frozen KG relation vocabulary; not selected using test labels,fixed
+Top-P,All (disabled),No additional evidence-score pruning,Removed after controlled analysis showed no necessary contribution,fixed
+Hop,1,One-hop KG enrichment,Second-hop branch removed from the final method,fixed
+Knowledge text,AAKV,Constrained audio-aware KG verbalization,"Generated offline with fixed prompt, verification and recorded fallback protocol",frozen before inference
+Seed,42 + SHA256(audio path),Deterministic per-sample execution,Same sample seed for every compared branch,fixed
+Primary metrics,"Hit@1, Hit@3, Hit@5, MRR",Ranking evaluation; highest-ranked positive used for multi-label samples,One common evaluator for all methods,fixed
