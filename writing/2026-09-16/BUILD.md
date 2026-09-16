@@ -2,6 +2,8 @@
 
 Verified on 2026-09-16: MiKTeX 25.12 was installed for the current Windows user; `pdflatex` completed twice with exit code 0 and produced `build/main.pdf` (1 page). The rendered page was visually inspected. The frontmatter spans the page; section headings occupy the left column, and the right column is empty because approved prose has not been added. The `final,5p,times,twocolumn` class option is active.
 
+After moving the workspace to `C:/Users/zkx/Desktop/论文修改/写作/latex`, `pdflatex` was run again with exit code 0; the relocated template still builds.
+
 The current `Author Name`, institution, title and empty abstract are placeholders, not submission-ready content. MiKTeX prints an update-check notice; this is not a LaTeX compilation error.
 
 From this directory, use either:

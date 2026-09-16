@@ -45,6 +45,9 @@ def main():
             sftp.put(str(ROOT / relative), destination)
         sftp.close()
         run_remote(ssh, f"git -C {REMOTE_REPO} add -- '{REMOTE_SUBDIR}'")
+        # The server repository ignores .vscode globally; include the manuscript
+        # workspace's own editor settings explicitly.
+        run_remote(ssh, f"git -C {REMOTE_REPO} add -f -- '{REMOTE_SUBDIR}/.vscode/settings.json'")
         status = run_remote(ssh, f"git -C {REMOTE_REPO} status --short -- '{REMOTE_SUBDIR}'")
         print(status or "No changes to commit")
         if status:

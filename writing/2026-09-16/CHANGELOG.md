@@ -24,3 +24,4 @@ Future entries should record: date, approved section/claim, changed files, compi
 - Confirmed the author's Nature skill bundle includes the same `nature-writing/SKILL.md` already installed globally for Codex; added project guidance for VS Code/Codex editing.
 - Prepared a Chinese working draft, terminology ledger and claim-evidence map without altering the approved LaTeX section.
 - Flagged TUT2017's `development/meta.txt` source and the conflicting DCASE parameter-selection descriptions for author review before final prose.
+- Installed and verified the official VS Code Codex extension; confirmed the moved LaTeX source still compiles.

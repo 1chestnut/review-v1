@@ -1,0 +1,7 @@
+{
+  "latex-workshop.latex.outDir": "%DIR%/build",
+  "files.exclude": {
+    "**/build": true,
+    "**/__pycache__": true
+  }
+}
