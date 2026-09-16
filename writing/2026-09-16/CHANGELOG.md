@@ -71,3 +71,7 @@ Future entries should record: date, approved section/claim, changed files, compi
 - Found `main.tex` newer than `main.pdf`: its conclusion input had been changed to the nonexistent `sections/06_conclusion1111111111.tex`, causing builds to stop and leave the older PDF in place.
 - Restored only the conclusion input path to `sections/06_conclusion`; preserved the author's unrelated source change.
 - Recompiled twice with the editor's exact command. `main.pdf` is now newer than `main.tex`, and `main.log` records successful output without a LaTeX error.
+# 2026-09-16：调整总体结果至消融与统计分析的衔接顺序
+
+- Overall Results 末尾先引出整体消融、关系选择和知识语言化分析。
+- 将五个测试集上的成对 Bootstrap 95\% 置信区间结论移至 Statistical significance 小节，保持“先消融、后统计”的章节顺序。

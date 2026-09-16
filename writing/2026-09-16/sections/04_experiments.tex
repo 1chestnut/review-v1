@@ -57,7 +57,7 @@ AAKV采用Qwen2.5-7B-Instruct将知识三元组离线转换为声音相关文本
 
 相较于iKnow\textsuperscript{\dag}，本文方法在TUT2017上的提升幅度最大，Hit@1由44.14\%提高至56.87\%，MRR由64.04\%提高至70.73\%。在FSD50K上，Hit@1和MRR分别提高4.66和2.34个百分点。其余三个数据集也呈现一致的Hit@1和MRR增益，其中Hit@1提高2.09--2.50个百分点，MRR提高1.03--1.18个百分点。
 
-相比之下，各方法在Hit@3和Hit@5上的差异较小。本文方法在UrbanSound8K和TUT2017上取得最高的Hit@3，并在ESC-50和UrbanSound8K上取得并列最高的Hit@5；其余数据集上的Hit@3和Hit@5与iKnow\textsuperscript{\dag}接近。综合来看，本文方法的主要增益体现在首位分类结果和整体排序质量上。后续消融实验进一步分析各组成模块对上述增益的贡献。
+相比之下，各方法在Hit@3和Hit@5上的差异较小。本文方法在UrbanSound8K和TUT2017上取得最高的Hit@3，并在ESC-50和UrbanSound8K上取得并列最高的Hit@5；其余数据集上的Hit@3和Hit@5与iKnow\textsuperscript{\dag}接近。综合来看，本文方法的主要增益体现在首位分类结果和整体排序质量上。为进一步识别上述性能增益的来源，下一节从整体消融、关系选择和知识语言化三个方面分析各组成模块的贡献。
 
 \begin{table*}[t]
 \centering
@@ -122,5 +122,8 @@ MRR
 \subsubsection{Knowledge verbalization analysis}\label{sec:verbalization-analysis}
 \subsection{Further analysis}\label{sec:further-analysis}
 \subsubsection{Statistical significance}\label{sec:statistics}
+\begin{CJK*}{UTF8}{gbsn}
+成对Bootstrap结果表明，相较于iKnow\textsuperscript{\dag}，本文方法在五个数据集上的Hit@1和MRR增益的95\%置信区间均不包含0，表明观察到的性能增益在当前测试样本上具有统计可靠性。
+\end{CJK*}
 \subsubsection{Parameter sensitivity}\label{sec:parameters}
 \subsubsection{Case study}\label{sec:cases}
