@@ -118,6 +118,38 @@ MRR
 
 \subsection{Ablation and component analysis}\label{sec:ablation}
 \subsubsection{Overall ablation}\label{sec:overall-ablation}
+\begin{CJK*}{UTF8}{gbsn}
+
+为区分三个组成模块的独立作用及其组合效应，本文在相同的基础模型、知识图谱、候选类别和评估协议下进行了完整的$2^3$因子消融。表~\ref{tab:factorial-ablation}中，I表示iKnow\textsuperscript{\dag}复现基线，T、F和S分别表示AAKV、分层融合和样本级关系选择；其余方法表示相应模块的组合。表中报告五个测试数据集的宏平均结果，逐数据集结果见附录表【待补充编号】。
+
+\begin{table}[t]
+\centering
+\caption{三个组成模块的完整因子消融结果（五个测试数据集的宏平均，\%）。粗体表示各列最佳结果。}
+\label{tab:factorial-ablation}
+\setlength{\tabcolsep}{4.2pt}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lcccc}
+\toprule
+方法 & Hit@1 & Hit@3 & Hit@5 & MRR \\
+\midrule
+I   & 61.97 & 80.30 & 86.07 & 72.61 \\
+T   & 62.42 & 79.81 & 85.97 & 72.65 \\
+F   & 63.04 & \textbf{80.69} & \textbf{86.15} & 73.31 \\
+S   & 63.28 & 80.17 & 86.05 & 73.22 \\
+TF  & 64.44 & 80.64 & 85.96 & 73.98 \\
+TS  & 65.77 & 79.69 & 85.97 & 74.38 \\
+FS  & 63.63 & 80.07 & 86.05 & 73.31 \\
+TFS & \textbf{66.82} & 80.35 & 85.88 & \textbf{75.08} \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+单模块结果呈现出不同的增益模式。相较于I，F和S的宏平均Hit@1分别提高1.07和1.31个百分点，MRR分别提高0.70和0.62个百分点。T单独使用时，宏平均Hit@1仅提高0.45个百分点，MRR提高0.04个百分点；从逐数据集结果看，T在FSD50K和TUT2017上提高Hit@1，而在ESC-50、UrbanSound8K和AudioSet上低于I。因此，AAKV的单独增益并未在不同数据集上保持一致。
+
+组合结果进一步显示，模块效果取决于其协同配置。TS在所有双模块组合中取得最高的宏平均Hit@1和MRR，分别为65.77\%和74.38\%；完整的TFS进一步达到66.82\%和75.08\%，相较于I分别提高4.85和2.48个百分点。以双模块结果为参照，在FS中加入T、在TF中加入S以及在TS中加入F后，Hit@1分别提高3.19、2.38和1.05个百分点。与此同时，TFS并未取得最高的Hit@3和Hit@5；这两项指标的最高值均由F获得。该结果与总体实验一致，即完整方法的主要改善集中在首位命中率和整体排序位置，而非前五候选的覆盖率。
+
+\end{CJK*}
 \subsubsection{Relation selection analysis}\label{sec:relation-analysis}
 \subsubsection{Knowledge verbalization analysis}\label{sec:verbalization-analysis}
 \subsection{Further analysis}\label{sec:further-analysis}

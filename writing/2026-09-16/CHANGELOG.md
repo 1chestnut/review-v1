@@ -75,3 +75,8 @@ Future entries should record: date, approved section/claim, changed files, compi
 
 - Overall Results 末尾先引出整体消融、关系选择和知识语言化分析。
 - 将五个测试集上的成对 Bootstrap 95\% 置信区间结论移至 Statistical significance 小节，保持“先消融、后统计”的章节顺序。
+# 2026-09-16：撰写 Overall ablation 小节
+
+- 基于 27-pro 完整 TUT2017（6,300 条）结果加入三模块完整 $2^3$ 因子消融表。
+- 区分单模块效应、双模块组合和完整 TFS，明确完整方法主要改善 Hit@1 与 MRR，而非 Top-5 覆盖率。
+- 超参数网格不并入模块消融，保留至 Parameter sensitivity 小节；逐数据集完整消融表预留附录编号。
