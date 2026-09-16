@@ -6,6 +6,8 @@ The current `Author Name`, institution, title and empty abstract are placeholder
 
 From this directory, use either:
 
+The current PowerShell session has not refreshed its PATH after MiKTeX installation. If `pdflatex` is not recognized, invoke `C:\Users\zkx\AppData\Local\Programs\MiKTeX\miktex\bin\x64\pdflatex.exe` directly or open a new terminal. The verified command also used `--enable-installer` for missing packages.
+
 ```powershell
 latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build main.tex
 ```
