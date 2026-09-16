@@ -1,5 +1,9 @@
 # KBS manuscript workspace (2026-09-16)
 
+Current local path: `C:/Users/zkx/Desktop/论文修改/写作/latex`. The earlier `任务清单/写作9.16` location was moved here on 2026-09-16.
+
+Chinese experimental prose is drafted first in `drafts_zh/`. It is not yet imported into the English `elsarticle` source; approval and protocol checks come first.
+
 This is a double-column `elsarticle` writing workspace. The class option in `main.tex` is `final,5p,times,twocolumn`, which is listed in the user-provided Elsevier template. It is a writing/layout preview; the journal submission system may require a different submission layout.
 
 ## Files
