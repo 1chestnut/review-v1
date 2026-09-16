@@ -36,3 +36,9 @@ Future entries should record: date, approved section/claim, changed files, compi
 
 - User reported that `Ctrl+Alt+V` invoked speech-to-text and failed because no microphone was available.
 - Enabled LaTeX Workshop's alternate `Ctrl+L`, `Alt+V` keymap and documented the Command Palette route; compilation settings and manuscript content are unchanged.
+
+## 2026-09-16 — PDF beside source, manual build
+
+- Changed LaTeX Workshop output to the manuscript folder and disabled build-on-save at the author's request.
+- Verified two successful manual `pdflatex` passes; the current output is `main.pdf` beside `main.tex`.
+- Hidden auxiliary compilation files in VS Code's Explorer while keeping `main.pdf` visible.

@@ -10,5 +10,6 @@ build/
 *.toc
 *.pdf
 *.run.xml
+*.spl
 basic-miktex-*.exe
 __pycache__/
