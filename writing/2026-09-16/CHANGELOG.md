@@ -20,6 +20,7 @@ Future entries should record: date, approved section/claim, changed files, compi
 - Compiled `main.tex` twice with MiKTeX/pdfLaTeX and visually inspected the resulting two-page, two-column PDF; compilation completed without errors or undefined references.
 - Simplified the approved evaluation-metrics subsection by removing redundant formulas for the standard Hit@k and MRR metrics while retaining the multi-label evaluation rule and paired statistical protocol.
 - Added the approved Chinese Overall Results subsection and the complete five-dataset main table using only the `27-pro` results, including the 6,300-clip TUT2017 evaluation.
+- Transposed the main-results table to match the iKnow presentation: metrics in rows and dataset-grouped CLAP/iKnow/proposed-method columns.
 
 ## 2026-09-16 — Setup verification
 

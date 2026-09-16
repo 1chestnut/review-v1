@@ -63,37 +63,50 @@ AAKV采用Qwen2.5-7B-Instruct将知识三元组离线转换为声音相关文本
 \centering
 \caption{五个零样本音频分类数据集上的总体结果（\%）。所有指标均为数值越高越好，粗体表示同一数据集上的最佳结果。}
 \label{tab:main-results}
-\setlength{\tabcolsep}{8pt}
-\begin{tabular}{llcccc}
+\setlength{\tabcolsep}{3.5pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l*{15}{c}}
 \toprule
-数据集 & 方法 & Hit@1 & Hit@3 & Hit@5 & MRR \\
+\multirow{2}{*}{指标}
+& \multicolumn{3}{c}{ESC-50}
+& \multicolumn{3}{c}{UrbanSound8K}
+& \multicolumn{3}{c}{FSD50K}
+& \multicolumn{3}{c}{AudioSet}
+& \multicolumn{3}{c}{TUT2017} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}\cmidrule(lr){11-13}\cmidrule(lr){14-16}
+& CLAP & iKnow\textsuperscript{\dag} & 本文方法
+& CLAP & iKnow\textsuperscript{\dag} & 本文方法
+& CLAP & iKnow\textsuperscript{\dag} & 本文方法
+& CLAP & iKnow\textsuperscript{\dag} & 本文方法
+& CLAP & iKnow\textsuperscript{\dag} & 本文方法 \\
 \midrule
-\multirow{3}{*}{ESC-50}
- & CLAP & 91.10 & 96.75 & \textbf{97.65} & 94.11 \\
- & iKnow\textsuperscript{\dag} & 91.75 & \textbf{97.05} & \textbf{97.65} & 94.57 \\
- & 本文方法 & \textbf{94.25} & 96.80 & \textbf{97.65} & \textbf{95.75} \\
-\midrule
-\multirow{3}{*}{UrbanSound8K}
- & CLAP & 83.76 & 96.60 & \textbf{98.65} & 90.40 \\
- & iKnow\textsuperscript{\dag} & 84.88 & 96.77 & \textbf{98.65} & 91.08 \\
- & 本文方法 & \textbf{87.17} & \textbf{96.90} & \textbf{98.65} & \textbf{92.22} \\
-\midrule
-\multirow{3}{*}{FSD50K}
- & CLAP & 57.35 & 79.65 & 86.35 & 70.17 \\
- & iKnow\textsuperscript{\dag} & 59.84 & \textbf{80.73} & \textbf{86.51} & 71.80 \\
- & 本文方法 & \textbf{64.50} & 80.58 & 86.46 & \textbf{74.14} \\
-\midrule
-\multirow{3}{*}{AudioSet}
- & CLAP & 28.65 & 46.36 & 54.80 & 41.06 \\
- & iKnow\textsuperscript{\dag} & 29.22 & \textbf{47.04} & \textbf{54.87} & 41.54 \\
- & 本文方法 & \textbf{31.31} & 46.93 & 54.86 & \textbf{42.57} \\
-\midrule
-\multirow{3}{*}{TUT2017}
- & CLAP & 40.65 & 76.59 & 92.24 & 60.79 \\
- & iKnow\textsuperscript{\dag} & 44.14 & 79.89 & \textbf{92.68} & 64.04 \\
- & 本文方法 & \textbf{56.87} & \textbf{80.54} & 91.79 & \textbf{70.73} \\
+Hit@1
+& 91.10 & 91.75 & \textbf{94.25}
+& 83.76 & 84.88 & \textbf{87.17}
+& 57.35 & 59.84 & \textbf{64.50}
+& 28.65 & 29.22 & \textbf{31.31}
+& 40.65 & 44.14 & \textbf{56.87} \\
+Hit@3
+& 96.75 & \textbf{97.05} & 96.80
+& 96.60 & 96.77 & \textbf{96.90}
+& 79.65 & \textbf{80.73} & 80.58
+& 46.36 & \textbf{47.04} & 46.93
+& 76.59 & 79.89 & \textbf{80.54} \\
+Hit@5
+& \textbf{97.65} & \textbf{97.65} & \textbf{97.65}
+& \textbf{98.65} & \textbf{98.65} & \textbf{98.65}
+& 86.35 & \textbf{86.51} & 86.46
+& 54.80 & \textbf{54.87} & 54.86
+& 92.24 & \textbf{92.68} & 91.79 \\
+MRR
+& 94.11 & 94.57 & \textbf{95.75}
+& 90.40 & 91.08 & \textbf{92.22}
+& 70.17 & 71.80 & \textbf{74.14}
+& 41.06 & 41.54 & \textbf{42.57}
+& 60.79 & 64.04 & \textbf{70.73} \\
 \bottomrule
 \end{tabular}
+}
 
 \vspace{2pt}
 \begin{minipage}{0.88\textwidth}
