@@ -1,7 +1,68 @@
 % !TeX root = ../main.tex
 \section{Experiments}\label{sec:experiments}
 \subsection{Experimental setup}\label{sec:setup}
-% TODO: add approved dataset and protocol text.
+\begin{CJK*}{UTF8}{gbsn}
+
+\subsubsection{Datasets}\label{sec:datasets}
+
+本文在五个公开音频分类数据集上评估所提出的方法，包括ESC-50、UrbanSound8K、TUT Acoustic Scenes 2017（TUT2017）、FSD50K和AudioSet。ESC-50包含2,000条5秒音频，覆盖50个环境声音类别；UrbanSound8K包含8,732条不超过4秒的音频，覆盖10个城市声音类别；TUT2017包含6,300条10秒音频，覆盖15个声学场景类别；FSD50K采用官方evaluation划分中的10,231条音频，候选标签空间包含200个类别；AudioSet采用官方evaluation类别体系中的527个类别，以及当前可公开获取并能够正常解码的17,233条音频。ESC-50、UrbanSound8K和TUT2017为单标签数据集，FSD50K和AudioSet为多标签数据集。
+
+本文另外将DCASE17-T4指定为开发集，用于确定方法级超参数。该数据集包含419条当前可公开获取并正常解码的音频，覆盖17个声音事件类别。开发集标签仅用于选择融合权重和关系数量；参数确定后，在其余五个数据集上保持不变。所有评估数据集的真实标签均不参与模型训练、知识检索、文本生成或关系选择，仅用于计算最终评价指标。
+
+\subsubsection{Comparison methods}\label{sec:comparison-methods}
+
+本文比较以下三类方法：
+
+\begin{enumerate}
+    \item \textbf{CLAP}：直接利用预训练音频编码器和文本编码器计算输入音频与候选类别文本之间的相似度，不引入外部知识。
+    \item \textbf{iKnow\textsuperscript{\dag}}：本文根据Olvera等人提出的iKnow-audio方法进行复现。该方法利用在音频中心知识图谱（Audio-centric Knowledge Graph，AKG）上训练的RotatE模型，为CLAP预测的候选类别生成相关尾实体，并将知识证据与原始CLAP分数进行聚合。
+    \item \textbf{本文方法}：由音频对齐知识语言化（Audio-Aligned Knowledge Verbalization，AAKV）、分层知识融合和样本级关系选择三个模块组成。AAKV将知识三元组转换为与音频语义空间相适配的文本；分层知识融合在保留原始CLAP判断的基础上引入知识证据；样本级关系选择则根据当前音频的预测信息，从统一关系池中选择具有互补判别信息的关系。
+\end{enumerate}
+
+所有方法采用相同的音频输入、候选类别、类别--实体映射、CLAP模型、RotatE模型及评价程序。
+
+\noindent\textsuperscript{\dag}复现依据为Olvera等人提出的``iKnow-audio: Integrating Knowledge Graphs with Audio-Language Models''方法。
+
+\subsubsection{Implementation details}\label{sec:implementation-details}
+
+实验采用MS-CLAP 2023版本作为音频--文本基础模型，并使用预训练RotatE模型进行知识图谱尾实体预测。CLAP和RotatE的模型参数在全部实验中保持不变。候选类别标签统一转换为小写形式，并将下划线替换为空格，以减少额外提示工程带来的影响。
+
+为保证公平比较，本文在iKnow复现及所有后续实验中统一设置$K=5$、$M=3$和$\kappa=100$。具体而言，首先根据CLAP分数选取排名前$K$的候选类别，再为每个候选类别--关系组合保留排名前$M$的尾实体，并使用尺度为$\kappa$的归一化log-sum-exp聚合知识证据。本文方法在该统一配置上进行评估，以避免检索规模和聚合尺度差异对结果的影响。
+
+本文采用iKnow-audio构建的AKG及其47种关系类型作为统一候选关系池。对于每个候选类别，利用RotatE分别查询各候选关系，并预测相应的尾实体。本文将每种关系视为一个知识专家，根据当前音频下不同关系专家的预测一致性与分类间隔进行排序，最终保留$N_r$种关系参与知识增强。该过程仅使用输入音频、候选类别和外部知识，不访问真实标签。
+
+本文方法的融合权重$\alpha$和关系选择数量$N_r$在DCASE17-T4开发集上通过网格搜索确定：
+\begin{equation}
+\alpha\in\{0.3,0.5,0.7\},\qquad
+N_r\in\{1,3,5,10\}.
+\end{equation}
+参数选择依次以Hit@1、MRR和较小的关系数量作为判断依据，最终采用$\alpha=0.3$和$N_r=5$，并将其固定应用于其余五个数据集。
+
+AAKV采用Qwen2.5-7B-Instruct将知识三元组离线转换为声音相关文本。统一生成指令要求文本以声音语义为中心，并完整保留头实体、关系方向和尾实体。生成结果经过自动完整性和关系忠实性检查；首次检查失败时进行一次约束修复，修复后仍不满足要求时采用统一的确定性模板。所有知识文本均在音频推理前生成并缓存，生成过程不使用评估样本的真实标签。
+
+音频统一重采样至44.1~kHz并处理为7秒。不足7秒的音频通过循环重复补足，超过7秒的音频截取连续7秒片段。所有方法对同一条音频使用完全相同的输入片段。实验采用固定随机种子42，并在配备三张NVIDIA GeForce RTX 4090 D GPU的服务器上运行。软件环境包括Ubuntu 22.04、Python 3.10.19、PyTorch 2.4.0、CUDA 12.1、MS-CLAP 1.3.4、Transformers 4.57.6和PyKEEN 1.11.1。
+
+\subsubsection{Evaluation metrics}\label{sec:evaluation-metrics}
+
+本文采用Hit@$k$和平均倒数排名（mean reciprocal rank，MRR）作为评价指标，并报告Hit@1、Hit@3、Hit@5和MRR。设第$i$个样本的正标签集合为$\mathcal{Y}_i$，标签$y$在预测类别序列中的排名为$\operatorname{rank}_i(y)$。对于多标签数据集，所有真实标签均视为正标签，并以排名最高的正标签作为该样本的有效排名：
+\begin{equation}
+r_i=\min_{y\in\mathcal{Y}_i}\operatorname{rank}_i(y).
+\end{equation}
+
+Hit@$k$定义为：
+\begin{equation}
+\operatorname{Hit@}k=\frac{1}{N}\sum_{i=1}^{N}\mathbb{I}(r_i\leq k),
+\end{equation}
+其中，$N$表示评估样本数，$\mathbb{I}(\cdot)$为指示函数。Hit@$k$衡量至少一个真实标签出现在前$k$个候选类别中的样本比例。MRR定义为：
+\begin{equation}
+\operatorname{MRR}=\frac{1}{N}\sum_{i=1}^{N}\frac{1}{r_i},
+\end{equation}
+用于衡量真实标签在完整类别排序中的总体位置。Hit@$k$和MRR均为数值越高表示性能越好，本文以百分比形式报告全部指标。
+
+为评估方法改进的统计可靠性，本文基于逐样本预测结果采用成对Bootstrap计算性能差值的95\%置信区间，重复采样10,000次。对于Hit@1，进一步采用双侧精确McNemar检验比较方法之间的逐样本正确性差异，并使用Holm方法校正跨数据集的多重比较。
+
+\end{CJK*}
+
 \subsection{Overall results}\label{sec:overall-results}
 % TODO: add approved main table and analysis.
 \subsection{Ablation and component analysis}\label{sec:ablation}

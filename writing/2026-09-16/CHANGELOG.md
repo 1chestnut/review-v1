@@ -10,6 +10,15 @@
 
 Future entries should record: date, approved section/claim, changed files, compile result and Git commit.
 
+## 2026-09-16 — Approved Chinese experimental setup
+
+- Added the author-approved Chinese draft of the complete experimental setup: datasets, comparison methods, implementation details and evaluation metrics.
+- Standardized the manuscript labels to `iKnow\textsuperscript{\dag}` and Audio-Aligned Knowledge Verbalization (AAKV).
+- Documented that the 47-relation candidate pool comes from the AKG introduced by iKnow-audio, while the proposed method performs sample-level relation selection.
+- Recorded the shared retrieval settings, DCASE development protocol, audio preprocessing, software environment and paired statistical analysis.
+- Updated TUT2017 to the 6,300-clip development-plus-evaluation protocol; numerical result tables remain pending the Task 28 rerun.
+- Compiled `main.tex` twice with MiKTeX/pdfLaTeX and visually inspected the resulting two-page, two-column PDF; compilation completed without errors or undefined references.
+
 ## 2026-09-16 — Setup verification
 
 - Copied the author-supplied `elsarticle` source into `source-template/` without changing it.
@@ -47,3 +56,15 @@ Future entries should record: date, approved section/claim, changed files, compi
 
 - Enabled LaTeX Workshop's editor context menu, so right-clicking inside `main.tex` exposes its build command.
 - Confirmed the extension also contributes a build button to the LaTeX editor title bar; no shortcut is required.
+
+## 2026-09-16 — Right-click build diagnosis
+
+- Reproduced the editor's exact `pdflatex` command and found an accidental full-width semicolon before the first comment in `main.tex`; removed only that character, preserving other user edits.
+- Ran MiKTeX's update check without installing updates. The installation warning no longer appears.
+- Confirmed the same command now exits successfully and regenerates `main.pdf`.
+
+## 2026-09-16 — Source/PDF mismatch diagnosis
+
+- Found `main.tex` newer than `main.pdf`: its conclusion input had been changed to the nonexistent `sections/06_conclusion1111111111.tex`, causing builds to stop and leave the older PDF in place.
+- Restored only the conclusion input path to `sections/06_conclusion`; preserved the author's unrelated source change.
+- Recompiled twice with the editor's exact command. `main.pdf` is now newer than `main.tex`, and `main.log` records successful output without a LaTeX error.
