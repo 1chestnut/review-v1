@@ -25,3 +25,9 @@ Future entries should record: date, approved section/claim, changed files, compi
 - Prepared a Chinese working draft, terminology ledger and claim-evidence map without altering the approved LaTeX section.
 - Flagged TUT2017's `development/meta.txt` source and the conflicting DCASE parameter-selection descriptions for author review before final prose.
 - Installed and verified the official VS Code Codex extension; confirmed the moved LaTeX source still compiles.
+
+## 2026-09-16 — Side-by-side editor setup
+
+- Installed LaTeX Workshop for VS Code and configured the manuscript PDF viewer to open in the right editor group.
+- Configured a two-pass MiKTeX `pdflatex` build on save; tested that it produces both PDF and SyncTeX files.
+- Marked the experiments section with `main.tex` as its LaTeX root and made Nature-writing usage explicit in the project instructions.

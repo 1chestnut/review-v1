@@ -1,5 +1,30 @@
 {
   "latex-workshop.latex.outDir": "%DIR%/build",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.view.pdf.tab.editorGroup": "right",
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.rootFile.doNotPrompt": true,
+  "latex-workshop.latex.rootFile.useSubFile": false,
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "MiKTeX pdflatex twice",
+      "tools": ["miktex-pdflatex", "miktex-pdflatex"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "miktex-pdflatex",
+      "command": "C:/Users/zkx/AppData/Local/Programs/MiKTeX/miktex/bin/x64/pdflatex.exe",
+      "args": [
+        "--enable-installer",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-output-directory=%OUTDIR%",
+        "%DOC%"
+      ]
+    }
+  ],
   "files.exclude": {
     "**/build": true,
     "**/__pycache__": true
