@@ -44,20 +44,7 @@ AAKV采用Qwen2.5-7B-Instruct将知识三元组离线转换为声音相关文本
 
 \subsubsection{Evaluation metrics}\label{sec:evaluation-metrics}
 
-本文采用Hit@$k$和平均倒数排名（mean reciprocal rank，MRR）作为评价指标，并报告Hit@1、Hit@3、Hit@5和MRR。设第$i$个样本的正标签集合为$\mathcal{Y}_i$，标签$y$在预测类别序列中的排名为$\operatorname{rank}_i(y)$。对于多标签数据集，所有真实标签均视为正标签，并以排名最高的正标签作为该样本的有效排名：
-\begin{equation}
-r_i=\min_{y\in\mathcal{Y}_i}\operatorname{rank}_i(y).
-\end{equation}
-
-Hit@$k$定义为：
-\begin{equation}
-\operatorname{Hit@}k=\frac{1}{N}\sum_{i=1}^{N}\mathbb{I}(r_i\leq k),
-\end{equation}
-其中，$N$表示评估样本数，$\mathbb{I}(\cdot)$为指示函数。Hit@$k$衡量至少一个真实标签出现在前$k$个候选类别中的样本比例。MRR定义为：
-\begin{equation}
-\operatorname{MRR}=\frac{1}{N}\sum_{i=1}^{N}\frac{1}{r_i},
-\end{equation}
-用于衡量真实标签在完整类别排序中的总体位置。Hit@$k$和MRR均为数值越高表示性能越好，本文以百分比形式报告全部指标。
+本文采用Hit@$k$和平均倒数排名（mean reciprocal rank，MRR）作为评价指标。Hit@$k$衡量至少一个真实标签出现在前$k$个候选类别中的样本比例，本文报告Hit@1、Hit@3和Hit@5。MRR通过计算真实标签排名倒数的均值，衡量其在完整候选类别序列中的总体位置。对于多标签数据集，所有真实标签均视为正标签，并以其中排名最高的正标签确定该样本的倒数排名。所有指标均以百分比形式报告，且数值越高表示性能越好。
 
 为评估方法改进的统计可靠性，本文基于逐样本预测结果采用成对Bootstrap计算性能差值的95\%置信区间，重复采样10,000次。对于Hit@1，进一步采用双侧精确McNemar检验比较方法之间的逐样本正确性差异，并使用Holm方法校正跨数据集的多重比较。
 
