@@ -51,7 +51,58 @@ AAKV采用Qwen2.5-7B-Instruct将知识三元组离线转换为声音相关文本
 \end{CJK*}
 
 \subsection{Overall results}\label{sec:overall-results}
-% TODO: add approved main table and analysis.
+\begin{CJK*}{UTF8}{gbsn}
+
+表~\ref{tab:main-results}报告了CLAP、iKnow\textsuperscript{\dag}和本文方法在五个零样本音频分类数据集上的结果。本文方法在全部数据集上均取得了最高的Hit@1和MRR。与CLAP相比，Hit@1和MRR分别提高了2.65--16.22和1.51--9.93个百分点；与iKnow\textsuperscript{\dag}相比，两项指标分别提高了2.09--12.73和1.03--6.68个百分点。该性能优势同时出现在单标签和多标签数据集上。
+
+相较于iKnow\textsuperscript{\dag}，本文方法在TUT2017上的提升幅度最大，Hit@1由44.14\%提高至56.87\%，MRR由64.04\%提高至70.73\%。在FSD50K上，Hit@1和MRR分别提高4.66和2.34个百分点。其余三个数据集也呈现一致的Hit@1和MRR增益，其中Hit@1提高2.09--2.50个百分点，MRR提高1.03--1.18个百分点。
+
+相比之下，各方法在Hit@3和Hit@5上的差异较小。本文方法在UrbanSound8K和TUT2017上取得最高的Hit@3，并在ESC-50和UrbanSound8K上取得并列最高的Hit@5；其余数据集上的Hit@3和Hit@5与iKnow\textsuperscript{\dag}接近。综合来看，本文方法的主要增益体现在首位分类结果和整体排序质量上。后续消融实验进一步分析各组成模块对上述增益的贡献。
+
+\begin{table*}[t]
+\centering
+\caption{五个零样本音频分类数据集上的总体结果（\%）。所有指标均为数值越高越好，粗体表示同一数据集上的最佳结果。}
+\label{tab:main-results}
+\setlength{\tabcolsep}{8pt}
+\begin{tabular}{llcccc}
+\toprule
+数据集 & 方法 & Hit@1 & Hit@3 & Hit@5 & MRR \\
+\midrule
+\multirow{3}{*}{ESC-50}
+ & CLAP & 91.10 & 96.75 & \textbf{97.65} & 94.11 \\
+ & iKnow\textsuperscript{\dag} & 91.75 & \textbf{97.05} & \textbf{97.65} & 94.57 \\
+ & 本文方法 & \textbf{94.25} & 96.80 & \textbf{97.65} & \textbf{95.75} \\
+\midrule
+\multirow{3}{*}{UrbanSound8K}
+ & CLAP & 83.76 & 96.60 & \textbf{98.65} & 90.40 \\
+ & iKnow\textsuperscript{\dag} & 84.88 & 96.77 & \textbf{98.65} & 91.08 \\
+ & 本文方法 & \textbf{87.17} & \textbf{96.90} & \textbf{98.65} & \textbf{92.22} \\
+\midrule
+\multirow{3}{*}{FSD50K}
+ & CLAP & 57.35 & 79.65 & 86.35 & 70.17 \\
+ & iKnow\textsuperscript{\dag} & 59.84 & \textbf{80.73} & \textbf{86.51} & 71.80 \\
+ & 本文方法 & \textbf{64.50} & 80.58 & 86.46 & \textbf{74.14} \\
+\midrule
+\multirow{3}{*}{AudioSet}
+ & CLAP & 28.65 & 46.36 & 54.80 & 41.06 \\
+ & iKnow\textsuperscript{\dag} & 29.22 & \textbf{47.04} & \textbf{54.87} & 41.54 \\
+ & 本文方法 & \textbf{31.31} & 46.93 & 54.86 & \textbf{42.57} \\
+\midrule
+\multirow{3}{*}{TUT2017}
+ & CLAP & 40.65 & 76.59 & 92.24 & 60.79 \\
+ & iKnow\textsuperscript{\dag} & 44.14 & 79.89 & \textbf{92.68} & 64.04 \\
+ & 本文方法 & \textbf{56.87} & \textbf{80.54} & 91.79 & \textbf{70.73} \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+\begin{minipage}{0.88\textwidth}
+\footnotesize\textsuperscript{\dag}表示本文依据iKnow-audio的方法描述得到的复现结果。
+\end{minipage}
+\end{table*}
+
+\end{CJK*}
+
 \subsection{Ablation and component analysis}\label{sec:ablation}
 \subsubsection{Overall ablation}\label{sec:overall-ablation}
 \subsubsection{Relation selection analysis}\label{sec:relation-analysis}
