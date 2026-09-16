@@ -4,6 +4,7 @@
   "latex-workshop.view.pdf.tab.editorGroup": "right",
   "latex-workshop.bind.altKeymap.enabled": true,
   "latex-workshop.latex.autoBuild.run": "never",
+  "latex-workshop.showContextMenu": true,
   "latex-workshop.latex.rootFile.doNotPrompt": true,
   "latex-workshop.latex.rootFile.useSubFile": false,
   "latex-workshop.latex.recipes": [

@@ -42,3 +42,8 @@ Future entries should record: date, approved section/claim, changed files, compi
 - Changed LaTeX Workshop output to the manuscript folder and disabled build-on-save at the author's request.
 - Verified two successful manual `pdflatex` passes; the current output is `main.pdf` beside `main.tex`.
 - Hidden auxiliary compilation files in VS Code's Explorer while keeping `main.pdf` visible.
+
+## 2026-09-16 — Mouse-only compilation
+
+- Enabled LaTeX Workshop's editor context menu, so right-clicking inside `main.tex` exposes its build command.
+- Confirmed the extension also contributes a build button to the LaTeX editor title bar; no shortcut is required.

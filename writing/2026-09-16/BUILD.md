@@ -1,6 +1,6 @@
 # Build instructions and verification
 
-Current editor workflow: LaTeX Workshop writes `main.pdf` directly beside `main.tex`; automatic build is disabled. Manually run **LaTeX Workshop: Build LaTeX project** after each edit and open `main.pdf` from VS Code's Explorer. The earlier `build/main.pdf` mentioned below is a historical verification output, not the current output path.
+Current editor workflow: LaTeX Workshop writes `main.pdf` directly beside `main.tex`; automatic build is disabled. Right-click inside the `main.tex` editor and choose **Build LaTeX project** after each edit, then open `main.pdf` from VS Code's Explorer. The editor-title build button is also available. The earlier `build/main.pdf` mentioned below is a historical verification output, not the current output path.
 
 Verified on 2026-09-16: MiKTeX 25.12 was installed for the current Windows user; `pdflatex` completed twice with exit code 0 and produced `build/main.pdf` (1 page). The rendered page was visually inspected. The frontmatter spans the page; section headings occupy the left column, and the right column is empty because approved prose has not been added. The `final,5p,times,twocolumn` class option is active.
 
