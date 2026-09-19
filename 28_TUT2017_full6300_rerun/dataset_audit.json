@@ -1,0 +1,48 @@
+{
+  "total": 6300,
+  "split_counts": {
+    "development": 4680,
+    "evaluation": 1620
+  },
+  "n_classes": 15,
+  "classes": [
+    "beach",
+    "bus",
+    "cafe/restaurant",
+    "car",
+    "city_center",
+    "forest_path",
+    "grocery_store",
+    "home",
+    "library",
+    "metro_station",
+    "office",
+    "park",
+    "residential_area",
+    "train",
+    "tram"
+  ],
+  "label_counts": {
+    "beach": 420,
+    "bus": 420,
+    "cafe/restaurant": 420,
+    "car": 420,
+    "city_center": 420,
+    "forest_path": 420,
+    "grocery_store": 420,
+    "home": 420,
+    "library": 420,
+    "metro_station": 420,
+    "office": 420,
+    "park": 420,
+    "residential_area": 420,
+    "train": 420,
+    "tram": 420
+  },
+  "missing_audio": 0,
+  "duplicate_paths": 0,
+  "order": "development followed by evaluation",
+  "cache_files": 6300,
+  "reused_development_cache": 4680,
+  "new_evaluation_cache": 1620
+}
