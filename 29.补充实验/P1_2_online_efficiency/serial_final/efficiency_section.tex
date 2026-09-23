@@ -1,0 +1,53 @@
+\subsubsection{Efficiency analysis}\label{sec:efficiency}
+
+\begin{CJK*}{UTF8}{gbsn}
+
+为评估样本级关系选择带来的计算开销，本文比较CLAP、iKnow\textsuperscript{\dag}和SAKI的在线推理效率。所有方法在相同型号的GPU上使用相同的测试样本，分别以batch size为1和32进行测量；每个数据集固定抽取200条样本，预热20条后重复计时5次。AAKV文本生成、知识图谱尾实体检索以及知识文本特征缓存均属于离线预处理，不计入在线推理时间。表~\ref{tab:efficiency}报告五个测试集的等权平均结果。
+
+\end{CJK*}
+
+\begin{table*}[!t]
+
+\centering
+
+\caption{五个测试集上的在线推理效率。每个数据集固定抽取200条样本，预热20条并重复测量5次；相对开销以相同batch size下的CLAP延迟为基准。峰值显存包含模型和在线计算，离线缓存仅计预计算的文本特征及证据索引。}
+
+\label{tab:efficiency}
+
+\footnotesize
+
+\setlength{\tabcolsep}{5pt}
+
+\begin{tabular}{c l r r r r r}
+
+\toprule
+
+Batch size & Method & Latency (ms/sample) & Relative overhead & Throughput (samples/s) & Peak GPU memory (MiB) & Offline cache (MiB) \\
+
+\midrule
+
+1 & CLAP & 24.37 & 1.00$\times$ & 41.03 & 693.60 & 0.63 \\
+
+1 & iKnow\textsuperscript{\dag} & 25.16 & 1.03$\times$ & 39.74 & 700.30 & 6.74 \\
+
+1 & SAKI & 86.52 & 3.55$\times$ & 11.56 & 743.22 & 50.52 \\
+
+\midrule
+
+32 & CLAP & 10.56 & 1.00$\times$ & 94.70 & 1679.84 & 0.63 \\
+
+32 & iKnow\textsuperscript{\dag} & 11.84 & 1.12$\times$ & 84.47 & 1686.62 & 6.74 \\
+
+32 & SAKI & 72.11 & 6.83$\times$ & 13.87 & 1729.84 & 50.52 \\
+
+\bottomrule
+
+\end{tabular}
+
+\end{table*}
+
+\begin{CJK*}{UTF8}{gbsn}
+
+在batch size为1时，SAKI的平均单样本延迟为86.52 ms，是CLAP的3.55倍；batch size为32时，两者分别为72.11 ms和10.56 ms，相对开销增至6.83倍。SAKI的离线缓存规模高于两种对照方法，但其平均峰值GPU显存增量相对有限。该结果表明，在当前实现中，样本级关系评估与知识融合增加了在线计算，且尚未充分利用批处理提高吞吐量。
+
+\end{CJK*}

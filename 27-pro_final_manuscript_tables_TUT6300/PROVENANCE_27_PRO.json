@@ -12,5 +12,14 @@
   ],
   "legacy_not_updated": [
     "Table3 Panel A TUT2017 row"
-  ]
+  ],
+  "appendix_c_selector_behavior": {
+    "source": "/data/zkx/zkx/review1/P1_1_selector_behavior",
+    "summary_file": "AppendixC_selector_behavior_summary.csv",
+    "frequency_file": "AppendixC_relation_frequency.csv",
+    "TUT2017_source": "/data/zkx/zkx/review1/28_TUT2017_full6300_rerun/selector/06_TUT2017/samples.json",
+    "TUT2017_sample_count": 6300,
+    "relation_frequency_rows": 235,
+    "note": "Top-5 relation sets are unordered; Jaccard uses complete dataset-specific FrozenRq sets."
+  }
 }

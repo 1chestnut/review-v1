@@ -54,6 +54,18 @@ TUT2017 now combines the official development (4,680) and evaluation (1,620) par
 | AudioSet | 29.62/41.81 | 29.92/42.03 | 29.82/41.92 | 31.31/42.57 |
 | TUT2017 | 51.29/67.99 | 50.54/67.40 | 52.10/68.54 | 56.87/70.73 |
 
+## Appendix C. Sample-adaptive relation selection behavior
+
+| Dataset | #Samples | #Unique Top-5 sets | Dominant-set share (%) | Mean Jaccard vs FrozenRq |
+|---|---:|---:|---:|---:|
+| ESC-50 | 2,000 | 1,708 | 1.40 | 0.0405 |
+| UrbanSound8K | 8,732 | 5,461 | 1.53 | 0.0739 |
+| FSD50K | 10,231 | 9,066 | 1.51 | 0.0549 |
+| AudioSet | 17,233 | 15,671 | 1.50 | 0.0577 |
+| TUT2017 | **6,300** | 4,336 | 1.06 | 0.0636 |
+
+The unique-set and dominant-set statistics ignore relation order. Mean Jaccard uses each dataset's complete FrozenRq set (four to six relations); the selector always retains five. The corresponding 47-relation frequencies for all five datasets are in `AppendixC_relation_frequency.csv`. The TUT2017 row is from the final 6,300-clip Task 28 selector records, not Task 25e.
+
 ## TUT2017 old-to-new audit
 
 | Method | old Hit@1 | new Hit@1 | delta | old MRR | new MRR | delta |
