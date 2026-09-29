@@ -256,7 +256,7 @@ Raw triple
 
 整体消融结果表明，关系选择能够改善知识增强分类结果。本节进一步考察这种改善是否来自样本级关系适配，而非固定关系集合、静态关系频率或随机关系组合。除关系确定策略外，其余知识表示、融合方式及推理配置均保持一致。
 
-\methodrevision{FrozenRq 沿用 iKnow\textsuperscript{\dag} 受控复现中的数据集级固定关系集合，但与本表其余方法一样使用AAKV文本和分层融合，因此不是表~\ref{tab:main-results}中的iKnow\textsuperscript{\dag}方法。Frequency Top-5 根据离线知识缓存中各关系的类别--尾实体证据数量选择频率最高的五种关系；Random Top-5 对每条音频随机选择五种关系，并报告三个固定随机种子的平均结果；Sample-level Relation Selector 则根据当前音频下关系专家的预测共识与分类间隔选择五种关系。上述策略在推理过程中均不使用测试标签。}
+\methodrevision{Frequency Top-5根据离线知识缓存中各关系的类别--尾实体证据数量选择频率最高的五种关系；Random Top-5对每条音频随机选择五种关系，并报告三个固定随机种子的平均结果；Sample-level Relation Selector则根据当前音频下关系专家的预测共识与分类间隔选择五种关系。上述策略在推理过程中均不使用测试标签。}
 
 \methodrevision{如表~\ref{tab:relation-selection}所示，Sample-level Relation Selector在五个数据集上均取得最高的Hit@1和MRR。其五数据集等权平均Hit@1和MRR分别为66.81\%和75.08\%，相较FrozenRq分别提高2.37和1.10个百分点，相较Frequency Top-5分别提高2.56和1.26个百分点，相较Random Top-5分别提高2.06和0.95个百分点。在知识文本和融合规则固定的条件下，这一结果支持样本级关系选择相对于所比较的固定、高频和随机策略的优势。}
 
@@ -383,11 +383,11 @@ N_r\in\{1,3,5,10\}.
 
 \label{tab:case-study}
 
-\footnotesize
+\small
 
-\setlength{\tabcolsep}{2.4pt}
+\setlength{\tabcolsep}{2pt}
 
-\begin{tabular}{p{1.05cm}p{1.15cm}p{1.45cm}p{1.45cm}}
+\begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}llll@{}}
 
 \toprule
 
@@ -395,31 +395,31 @@ N_r\in\{1,3,5,10\}.
 
 \midrule
 
-错误$\rightarrow$正确
+\methodrevision{错误纠正}
 & wind & train (5) & wind (1) \\
 
-\multicolumn{4}{p{7.3cm}}
+\multicolumn{4}{@{}p{\columnwidth}@{}}
 {\textit{AAKV evidence: The sound of wind is instance of ocean.}} \\
 
 \addlinespace[2pt]
 
-排名改善
+\methodrevision{排名改善}
 & sea waves & crickets (3) & frog (2) \\
 
-\multicolumn{4}{p{7.3cm}}
+\multicolumn{4}{@{}p{\columnwidth}@{}}
 {\textit{AAKV evidence: The sound of frog is part of a wetland scene.}} \\
 
 \addlinespace[2pt]
 
-正确$\rightarrow$错误
+\methodrevision{预测退化}
 & washing machine & washing machine (1) & engine (4) \\
 
-\multicolumn{4}{p{7.3cm}}
+\multicolumn{4}{@{}p{\columnwidth}@{}}
 {\textit{AAKV evidence: The sound of engine is instance of motorcycle.}} \\
 
 \bottomrule
 
-\end{tabular}
+\end{tabular*}
 
 \end{table}
 
