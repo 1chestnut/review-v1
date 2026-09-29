@@ -1,2 +1,169 @@
+% !TeX root = ../main.tex
+\providecommand{\methodrevision}[1]{#1}
 \section{Method}\label{sec:method}
-% TODO: add the frozen one-hop AAKV, Fusion, and Selector method here.
+\begin{CJK*}{UTF8}{gbsn}
+
+本文面向无需目标数据训练的零样本音频分类，在保留CLAP原始跨模态判别能力的基础上，从音频中心知识图谱中为当前样本选择相关关系证据。图~\ref{fig:framework}给出了整体流程。离线阶段为每个“类别--关系”组合检索候选尾实体，Audio-Aligned Knowledge Verbalization（AAKV）将图三元组转换为受约束的声音描述，并缓存相应的CLAP文本表示。在线阶段首先依据CLAP分数确定待增强的候选类别，再将每种候选关系构建为一个关系专家，利用专家间的预测共识与分类间隔执行样本级关系选择。最后，分层融合模块先聚合知识证据，再与原始CLAP分数结合，得到全部候选类别的最终排序。整个推理过程不使用测试标签。
+
+
+\subsection{Problem formulation}\label{sec:problem-formulation}
+
+给定输入音频$x^a$和由$N$个类别构成的候选集合$\mathcal C=\{c_1,c_2,\ldots,c_N\}$，零样本音频分类的目标是在不利用目标数据集训练样本的条件下，为每个候选类别计算预测分数，并输出排序最高的类别：
+\begin{equation}
+\hat y=\arg\max_{c_i\in\mathcal C}s_{\mathrm{final}}(c_i\mid x^a),
+\label{eq:prediction}
+\end{equation}
+其中，$\hat y$为最终预测类别，$s_{\mathrm{final}}(c_i\mid x^a)$为类别$c_i$的\methodrevision{最终类别分数}。本文采用预训练的CLAP音频编码器$f_a(\cdot)$和文本编码器$f_t(\cdot)$。结构化知识由音频中心知识图谱$\mathcal G=(\mathcal E,\mathcal R,\mathcal T)$提供，其中$\mathcal E$、$\mathcal R$和$\mathcal T$分别为实体集、关系集和三元组集合。\methodrevision{下表汇总方法部分反复使用的主要记号。}
+
+\par\smallskip\noindent\begin{minipage}{\columnwidth}
+\methodrevision{%
+\centering
+\textbf{主要记号及其含义}\par\smallskip
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}p{0.37\columnwidth}p{0.55\columnwidth}@{}}
+\toprule
+记号 & 含义 \\
+\midrule
+$x^a,\mathcal C,c_i$ & 输入音频、候选类别集合及其中的类别 \\
+$\mathcal G,\mathcal E,\mathcal R$ & 知识图谱、实体集合及关系集合 \\
+$K,M,N_r$ & 初始候选类别数、每个类别--关系的尾实体上限、最终选择的关系数 \\
+$s_{\mathrm{base}},s_r,s_{\mathrm{final}}$ & 原始CLAP分数、单关系专家分数、最终类别分数 \\
+$\mathcal E_{i,r},\mathcal U_{i,r}$ & 类别--关系的有效尾实体及其证据分数序列 \\
+$\mathcal U_i^*$ & 所选关系合并去重后的证据分数序列 \\
+$A_{\lambda},\lambda$ & 知识证据聚合算子及其固定尺度 \\
+$\mathcal F,\alpha$ & 分层融合规则及原始CLAP分数的权重 \\
+\bottomrule
+\end{tabular}
+}
+\end{minipage}\par\smallskip
+
+\subsection{CLAP initial retrieval and graph evidence construction}\label{sec:initial-retrieval}
+
+给定输入音频$x^a$和类别文本$c_i$，将CLAP输出的音频表示和文本表示进行$L_2$归一化，分别记为$\mathbf e^a$和$\mathbf e_i^t$。\methodrevision{沿用CLAP的音频--文本相似度计算~\cite{elizalde2023clap}，}二者的基础跨模态分数为
+\begin{equation}
+s_{\mathrm{base}}(c_i\mid x^a)=(\mathbf e^a)^\top\mathbf e_i^t.
+\label{eq:base-score}
+\end{equation}
+按照$s_{\mathrm{base}}$对全部候选类别排序，得到接受知识增强的候选集合
+\begin{equation}
+\mathcal C_K(x^a)=\operatorname{TopK}_{c_i\in\mathcal C}s_{\mathrm{base}}(c_i\mid x^a).
+\label{eq:topk}
+\end{equation}
+其中，$K$为接受知识增强的初始候选类别数。知识增强仅作用于$\mathcal C_K$；其余类别保留基础分数，并共同参与最终排序。
+
+\methodrevision{类别$c_i$根据预先核验的类别--实体映射对应图谱头实体$h_i\in\mathcal E$；未能映射的类别不引入图知识。}遵循iKnow-audio的知识检索设置，本文使用预训练的RotatE知识图谱嵌入模型对候选三元组进行评分~\cite{olvera-etal-2025-iknow,sun2019rotate}。给定头实体$h_i$和关系$r\in\mathcal R$，$\phi_{\mathrm{KG}}(h_i,r,t)$表示候选三元组$(h_i,r,t)$的合理性分数。\methodrevision{RotatE采用$\phi_{\mathrm{KG}}(h_i,r,t)=-\|\mathbf h_i\circ\mathbf r-\mathbf t\|_2$，其中粗体符号为实体与关系的嵌入，$\circ$为逐元素乘法；分数越高，模型认为该三元组越合理。}本文据此对实体集$\mathcal E$中的候选尾实体排序，并保留排名最高的$M$个实体：
+\begin{equation}
+\widetilde{\mathcal E}_{i,r}^{M}=\operatorname{TopM}_{t\in\mathcal E}\phi_{\mathrm{KG}}(h_i,r,t).
+\label{eq:tail-retrieval}
+\end{equation}
+检索结果排除与候选类别同名的尾实体，并按照\methodrevision{小写化且去除首尾空白的尾实体字符串}去重；处理后的尾实体集合记为$\mathcal E_{i,r}$，且$|\mathcal E_{i,r}|\leq M$。本文预先对所有可映射类别与47种候选关系执行上述检索并缓存图证据；处理当前音频时，仅读取其初始Top-$K$类别对应的缓存内容。
+
+\subsection{Audio-aligned knowledge verbalization}\label{sec:aakv-method}
+
+\methodrevision{直接拼接类别名称与尾实体不能显式表达二者之间的关系，而原始三元组序列也未针对音频--文本匹配进行语言组织。为此，本文提出AAKV，将候选三元组$(h_i,r,t)$转换为文本证据$q_{irt}$。此处“音频对齐”指知识文本采用声音导向的表达形式，以供CLAP进行音频--文本匹配；生成过程不以当前输入音频为条件。生成指令要求文本以“The sound of”及输入的头实体文本开头，保留给定的关系方向和尾实体，不添加三元组之外的信息。本文使用Qwen2.5-7B-Instruct离线生成文本，采用贪心解码，并对输出进行规则检查；检查失败时尝试一次约束修复，仍失败则采用确定性模板。完整生成指令、检查条件和回退规则见附录~\ref{app:aakv-protocol}。}
+
+生成后依次检查固定声音前缀、头尾实体覆盖、关系词或预定义同义词覆盖，以及单句、长度和禁止扩写规则。首次检查失败时，模型根据失败原因执行一次约束修复；若修复结果仍未通过，则采用统一模板“\textit{The sound of $c_i$ has the relation $r$ with $t$.}”。
+该流程仅改变图证据的文本表达，不增加三元组之外的新知识。最终知识文本由同一CLAP文本编码器转换为归一化表示：
+\begin{equation}
+\mathbf z_{irt}=\frac{f_t(q_{irt})}{\|f_t(q_{irt})\|_2},\qquad u_{irt}(x^a)=(\mathbf e^a)^\top\mathbf z_{irt}.
+\label{eq:evidence-score}
+\end{equation}
+其中，$q_{irt}$为三元组$(c_i,r,t)$对应的AAKV知识文本，$\mathbf z_{irt}$为其归一化CLAP文本表示，$u_{irt}(x^a)$为该文本与输入音频的跨模态相似度。知识文本表示在推理前预先计算并缓存。
+
+\subsection{Sample-level relation selection}\label{sec:relation-selector-method}
+
+固定关系集合无法反映不同音频样本对知识关系的差异化需求。本文将每种候选关系对应的知识增强预测构建为一个关系专家，并依据专家间的预测共识与分类间隔确定关系优先级。
+
+\methodrevision{本文将知识证据聚合与类别分数融合分为两步。令$\mathcal U=(u_1,\ldots,u_n)$表示某类别对应的$n$条有效证据相似度，$u_j$为第$j$条证据的音频--文本相似度，$j=1,\ldots,n$。首先，式~\eqref{eq:normlse}将这些证据相似度聚合为一个知识分数。}
+\begin{equation}
+\methodrevision{A_{\lambda}(\mathcal U)=\frac{1}{\lambda}\log\left(\frac{1}{n}\sum_{j=1}^{n}\exp(\lambda u_j)\right),\qquad n>0.}
+\label{eq:normlse}
+\end{equation}
+\methodrevision{其中，$n$为有效证据条数，$1/n$用于避免证据条数增加造成聚合值的系统性累积，$\lambda>0$为固定尺度，控制高分证据对聚合结果的影响。随后，式~\eqref{eq:unified-fusion}将该知识分数与原始 CLAP 类别分数加权，得到类别分数。因而，式~\eqref{eq:normlse}只处理知识证据，式~\eqref{eq:unified-fusion}负责融合两类分数。}
+式~\eqref{eq:unified-fusion}给出本文使用的类别评分规则：
+\begin{equation}
+\mathcal F(c_i,\mathcal U\mid x^a)=
+\begin{cases}
+\alpha s_{\mathrm{base}}(c_i\mid x^a)+(1-\alpha)\methodrevision{A_{\lambda}}(\mathcal U),
+&\scriptstyle c_i\in\mathcal C_K,\ \mathcal U\neq\varnothing,\\
+s_{\mathrm{base}}(c_i\mid x^a),&\text{otherwise},
+\end{cases}
+\label{eq:unified-fusion}
+\end{equation}
+其中，$\mathcal U$为类别$c_i$对应的知识证据分数序列，\methodrevision{$\alpha\in[0,1]$为原始CLAP分数的权重，$1-\alpha$为知识聚合分数的权重。没有可用证据或未进入初始Top-$K$的类别沿用原始CLAP分数。}在关系选择阶段，对于候选关系$r$，仅取该关系为类别$c_i$提供的证据，记为$\mathcal U_{i,r}(x^a)=[u_{irt}(x^a)\mid t\in\mathcal E_{i,r}]$。\methodrevision{将这一关系专属证据集代入式~\eqref{eq:unified-fusion}，得到关系专家对类别$c_i$的分数：}
+\[
+\methodrevision{s_r(c_i\mid x^a)=\mathcal F(c_i,\mathcal U_{i,r}(x^a)\mid x^a).}
+\]
+\methodrevision{每个关系专家据此为全部候选类别排序，并输出一个Top-1类别。记该类别为$\hat y_r$，同时以最高分与次高分之差$\Delta_r$表示该专家首位预测的分类间隔：}
+\begin{equation}
+\hat y_r=\arg\max_{c_i\in\mathcal C}s_r(c_i\mid x^a),\qquad \Delta_r=s_r^{(1)}-s_r^{(2)},
+\label{eq:expert-margin}
+\end{equation}
+其中，$\hat y_r$为关系专家$r$的首位预测类别，$s_r^{(1)}$和$s_r^{(2)}$分别为该专家在全部候选类别上的最高和次高分数，$\Delta_r$为二者之差。\methodrevision{若关系$r$对当前Top-$K$类别均无有效证据，该专家沿用原始CLAP分数，仍参与后续投票。}
+
+不同关系专家可能产生不同的首位预测。为识别多个关系视角共同支持的候选类别，本文统计每个类别获得的Top-1票数：
+\begin{equation}
+V(c)=\sum_{r\in\mathcal R}\mathbb I(\hat y_r=c),
+\label{eq:voting}
+\end{equation}
+其中，$\mathbb I(\cdot)$为\methodrevision{条件成立时取1、否则取0的}指示函数，$V(c)$表示将类别$c$预测为Top-1的关系专家数量。\methodrevision{共识类别即Top-1票数最多的类别；若票数并列，先比较支持类别的关系专家间隔之和，仍并列时选择固定候选类别列表中索引较小者。}
+\begin{equation}
+c^{\mathrm{con}}=\arg\max_{c\in\mathcal C}^{\mathrm{lex}}\left(V(c),\sum_{r:\hat y_r=c}\Delta_r,-\operatorname{idx}(c)\right).
+\label{eq:consensus}
+\end{equation}
+其中，$c^{\mathrm{con}}$为当前音频的共识类别，$\operatorname{idx}(c)$为类别$c$在固定类别列表中的索引；$\arg\max^{\mathrm{lex}}$表示按元组从左到右依次比较。\methodrevision{确定共识类别后，按下式对关系排序并选取前$N_r$种：}
+\begin{equation}
+\methodrevision{\begin{aligned}
+\pi_r&=\left(\mathbb I(\hat y_r=c^{\mathrm{con}}),\Delta_r,-\operatorname{idx}(r)\right),\\
+\mathcal R^*(x^a)&=\operatorname{Top}_{N_r}^{\mathrm{lex}}(\mathcal R;\pi).
+\end{aligned}}
+\label{eq:relation-selection}
+\end{equation}
+\methodrevision{其中，$\pi_r$的三个分量依次表示关系$r$是否支持共识类别、其分类间隔及固定关系索引的反向值；按该元组降序排序即先排列共识支持组，再在组内按间隔降序排列，并以固定关系名称字典序打破并列。}该选择仅依赖模型预测，不读取真实标签；同一音频的全部Top-$K$候选类别共享所选关系。$N_r$在开发集上从$\{1,3,5,10\}$中确定，最终取$N_r=5$，并在所有测试集上保持不变。
+
+\subsection{Hierarchical evidence fusion}\label{sec:fusion-method}
+
+关系选择完成后，本文按照式~\eqref{eq:relation-selection}的优先级\methodrevision{，对每个初始Top-$K$类别依次}收集所选关系下的证据，并以规范化尾实体为键执行跨关系去重；当同一尾实体由多个关系产生时，仅保留优先级最高关系对应的AAKV文本。去重后的类别证据序列记为$\mathcal P_i(x^a)=[(r,t,q_{irt})]$，相应的证据分数序列为
+\begin{equation}
+\mathcal U_i^*(x^a)=\left[u_{irt}(x^a)\mid(r,t,q_{irt})\in\mathcal P_i(x^a)\right].
+\label{eq:selected-evidence}
+\end{equation}
+\methodrevision{每种所选关系为同一类别最多提供$M$条证据，因此去重前最多有$MN_r$条；式~\eqref{eq:selected-evidence}收集的是去重后全部有效证据的音频--文本相似度。部分关系可能没有有效尾实体，跨关系重复的尾实体也只计入一次。}
+
+\methodrevision{式~\eqref{eq:unified-fusion}在此再次使用，但输入证据已由单一关系专家的$\mathcal U_{i,r}(x^a)$换为所选关系合并去重后的$\mathcal U_i^*(x^a)$，由此得到最终类别分数$s_{\mathrm{final}}(c_i\mid x^a)=\mathcal F(c_i,\mathcal U_i^*(x^a)\mid x^a)$。}若类别未进入初始Top-$K$、没有有效实体映射或未获得可用证据，其最终分数保持为原始CLAP分数。最后，按照$s_{\mathrm{final}}$对全部类别排序，并由式~\eqref{eq:prediction}得到预测结果。
+
+算法~\ref{alg:relation-selection}汇总了从CLAP初始检索、关系专家预测到样本级关系选择和最终证据融合的完整推理过程。
+
+\begin{algorithm}[H]
+\caption{Inference with sample-level relation selection and hierarchical evidence fusion}
+\label{alg:relation-selection}
+\fontsize{7}{10}\selectfont
+\begin{algorithmic}[1]
+\Require Audio $x^a$; classes $\mathcal C$; relations $\mathcal R$; cached evidence $\{\mathcal E_{i,r},\mathbf z_{irt}\}$; $K,M,N_r,\alpha,\methodrevision{\lambda}$
+\Ensure Final class scores $\{s_{\mathrm{final}}(c_i\mid x^a)\}_{c_i\in\mathcal C}$
+\State Encode $x^a$ as $\mathbf e^a$, and compute $s_{\mathrm{base}}(c_i\mid x^a)$ by Eq.~\eqref{eq:base-score}
+\State Select $\mathcal C_K$ by Eq.~\eqref{eq:topk}
+\For{$r\in\mathcal R$}
+  \For{$c_i\in\mathcal C_K$}
+    \State Construct $\methodrevision{\mathcal U_{i,r}(x^a)}\gets[u_{irt}(x^a)\mid t\in\mathcal E_{i,r}]$ by Eq.~\eqref{eq:evidence-score}
+    \State Compute $s_r(c_i\mid x^a)\gets\mathcal F(c_i,\methodrevision{\mathcal U_{i,r}(x^a)}\mid x^a)$
+  \EndFor
+  \State Keep $s_r(c_i\mid x^a)\gets s_{\mathrm{base}}(c_i\mid x^a)$ for $c_i\notin\mathcal C_K$
+  \State Obtain $(\hat y_r,\Delta_r)$ by Eq.~\eqref{eq:expert-margin}
+\EndFor
+\State Compute $V(c)$ and determine $c^{\mathrm{con}}$ by Eqs.~\eqref{eq:voting}--\eqref{eq:consensus}
+\State Rank $\mathcal R$ by $\pi_r$ and retain $\mathcal R^*(x^a)$ using Eq.~\eqref{eq:relation-selection}
+\For{$c_i\in\mathcal C_K$}
+  \State Merge selected evidence in relation-priority order and remove duplicate tails
+  \State Construct $\mathcal U_i^*(x^a)$ by Eq.~\eqref{eq:selected-evidence}
+  \State Compute $s_{\mathrm{final}}(c_i\mid x^a)$ by Eq.~\methodrevision{\eqref{eq:unified-fusion}}
+\EndFor
+\State Keep $s_{\mathrm{final}}(c_i\mid x^a)\gets s_{\mathrm{base}}(c_i\mid x^a)$ for $c_i\notin\mathcal C_K$
+\State Rank $\mathcal C$ by $s_{\mathrm{final}}$ and \textbf{return} the final class scores
+\end{algorithmic}
+\end{algorithm}
+
+在本文实验中，$K=5$、$M=3$和$\methodrevision{\lambda}=100$采用统一配置；$\alpha$和$N_r$在开发集上选择，并在其余测试集上固定为$\alpha=0.3$和$N_r=5$。候选关系池包含47种关系。CLAP与RotatE的模型参数在全部实验中保持不变，不在目标音频数据上执行梯度更新。
+
+\end{CJK*}

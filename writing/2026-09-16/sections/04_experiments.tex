@@ -15,53 +15,15 @@
 
 \begin{enumerate}
     \item \textbf{CLAP}：直接利用预训练音频编码器和文本编码器计算输入音频与候选类别文本之间的相似度，不引入外部知识。
-    \item \textbf{iKnow\textsuperscript{\dag}}：本文根据Olvera等人提出的iKnow-audio方法进行复现。该方法利用在音频中心知识图谱（Audio-centric Knowledge Graph，AKG）上训练的RotatE模型，为CLAP预测的候选类别生成相关尾实体，并将知识证据与原始CLAP分数进行聚合。
+    \item \textbf{iKnow\textsuperscript{\dag}}：\methodrevision{依据 iKnow-audio 构建的受控复现基线，用于评估知识图谱增强相对于原始 CLAP 的作用。}
     \item \textbf{本文方法}：由音频对齐知识语言化（Audio-Aligned Knowledge Verbalization，AAKV）、分层知识融合和样本级关系选择三个模块组成。AAKV将知识三元组转换为与音频语义空间相适配的文本；分层知识融合在保留原始CLAP判断的基础上引入知识证据；样本级关系选择则根据当前音频的预测信息，从统一关系池中选择具有互补判别信息的关系。
 \end{enumerate}
 
-所有方法采用相同的音频输入、候选类别、类别--实体映射、CLAP模型、RotatE模型及评价程序。
+\methodrevision{iKnow-audio 未公开完整的人工筛选关系集合 $R_q$ 及能够唯一恢复其最终分类结果的推理配置。因此，iKnow\textsuperscript{\dag} 依据原文方法描述及公开的 AKG/KGE 资源构建，并在本文的统一条件下评估，而非对原作者系统的逐项复刻。具体复现协议及数据集差异见附录~\ref{app:reproduction}；本文内部比较使用相同的测试样本清单和评价程序。}
 
-\noindent\textsuperscript{\dag}复现依据为Olvera等人提出的``iKnow-audio: Integrating Knowledge Graphs with Audio-Language Models''方法。
-
-\subsubsection{Implementation details}\label{sec:implementation-details}
-
-实验采用MS-CLAP 2023版本作为音频--文本基础模型，并使用预训练RotatE模型进行知识图谱尾实体预测。CLAP和RotatE的模型参数在全部实验中保持不变。候选类别标签统一转换为小写形式，并将下划线替换为空格，以减少额外提示工程带来的影响。
-
-为保证公平比较，本文在iKnow复现及所有后续实验中统一设置$K=5$、$M=3$和$\kappa=100$。具体而言，首先根据CLAP分数选取排名前$K$的候选类别，再为每个候选类别--关系组合保留排名前$M$的尾实体，并使用尺度为$\kappa$的归一化log-sum-exp聚合知识证据。本文方法在该统一配置上进行评估，以避免检索规模和聚合尺度差异对结果的影响。
-
-本文采用iKnow-audio构建的AKG及其47种关系类型作为统一候选关系池。对于每个候选类别，利用RotatE分别查询各候选关系，并预测相应的尾实体。本文将每种关系视为一个知识专家，根据当前音频下不同关系专家的预测一致性与分类间隔进行排序，最终保留$N_r$种关系参与知识增强。该过程仅使用输入音频、候选类别和外部知识，不访问真实标签。
-
-本文方法的融合权重$\alpha$和关系选择数量$N_r$在DCASE17-T4开发集上通过网格搜索确定：
-\begin{equation}
-\alpha\in\{0.3,0.5,0.7\},\qquad
-N_r\in\{1,3,5,10\}.
-\end{equation}
-参数选择依次以Hit@1、MRR和较小的关系数量作为判断依据，最终采用$\alpha=0.3$和$N_r=5$，并将其固定应用于其余五个数据集。
-
-AAKV采用Qwen2.5-7B-Instruct将知识三元组离线转换为声音相关文本。统一生成指令要求文本以声音语义为中心，并完整保留头实体、关系方向和尾实体。生成结果经过自动完整性和关系忠实性检查；首次检查失败时进行一次约束修复，修复后仍不满足要求时采用统一的确定性模板。所有知识文本均在音频推理前生成并缓存，生成过程不使用评估样本的真实标签。
-
-音频统一重采样至44.1~kHz并处理为7秒。不足7秒的音频通过循环重复补足，超过7秒的音频截取连续7秒片段。所有方法对同一条音频使用完全相同的输入片段。实验采用固定随机种子42，并在配备三张NVIDIA GeForce RTX 4090 D GPU的服务器上运行。软件环境包括Ubuntu 22.04、Python 3.10.19、PyTorch 2.4.0、CUDA 12.1、MS-CLAP 1.3.4、Transformers 4.57.6和PyKEEN 1.11.1。
-
-\subsubsection{Evaluation metrics}\label{sec:evaluation-metrics}
-
-本文采用Hit@$k$和平均倒数排名（mean reciprocal rank，MRR）作为评价指标。Hit@$k$衡量至少一个真实标签出现在前$k$个候选类别中的样本比例，本文报告Hit@1、Hit@3和Hit@5。MRR通过计算真实标签排名倒数的均值，衡量其在完整候选类别序列中的总体位置。对于多标签数据集，所有真实标签均视为正标签，并以其中排名最高的正标签确定该样本的倒数排名。所有指标均以百分比形式报告，且数值越高表示性能越好。
-
-为评估方法改进的统计可靠性，本文基于逐样本预测结果采用成对Bootstrap计算性能差值的95\%置信区间，重复采样10,000次。对于Hit@1，进一步采用双侧精确McNemar检验比较方法之间的逐样本正确性差异，并使用Holm方法校正跨数据集的多重比较。
-
-\end{CJK*}
-
-\subsection{Overall results}\label{sec:overall-results}
-\begin{CJK*}{UTF8}{gbsn}
-
-表~\ref{tab:main-results}报告了CLAP、iKnow\textsuperscript{\dag}和本文方法在五个零样本音频分类数据集上的结果。本文方法在全部数据集上均取得了最高的Hit@1和MRR。与CLAP相比，Hit@1和MRR分别提高了2.65--16.22和1.51--9.93个百分点；与iKnow\textsuperscript{\dag}相比，两项指标分别提高了2.09--12.73和1.03--6.68个百分点。该性能优势同时出现在单标签和多标签数据集上。
-
-相较于iKnow\textsuperscript{\dag}，本文方法在TUT2017上的提升幅度最大，Hit@1由44.14\%提高至56.87\%，MRR由64.04\%提高至70.73\%。在FSD50K上，Hit@1和MRR分别提高4.66和2.34个百分点。其余三个数据集也呈现一致的Hit@1和MRR增益，其中Hit@1提高2.09--2.50个百分点，MRR提高1.03--1.18个百分点。
-
-相比之下，各方法在Hit@3和Hit@5上的差异较小。本文方法在UrbanSound8K和TUT2017上取得最高的Hit@3，并在ESC-50和UrbanSound8K上取得并列最高的Hit@5；其余数据集上的Hit@3和Hit@5与iKnow\textsuperscript{\dag}接近。综合来看，本文方法的主要增益体现在首位分类结果和整体排序质量上。为进一步识别上述性能增益的来源，下一节从整体消融、关系选择和知识语言化三个方面分析各组成模块的贡献。
-
-\begin{table*}[t]
+\begin{table*}[!t]
 \centering
-\caption{五个零样本音频分类数据集上的总体结果（\%）。所有指标均为数值越高越好，粗体表示同一数据集上的最佳结果。}
+\caption{五个零样本音频分类数据集上的总体结果（\%）。数值越高越好；粗体表示同一数据集和指标下的最佳结果。}
 \label{tab:main-results}
 \setlength{\tabcolsep}{3.5pt}
 \resizebox{\textwidth}{!}{%
@@ -83,26 +45,26 @@ AAKV采用Qwen2.5-7B-Instruct将知识三元组离线转换为声音相关文本
 Hit@1
 & 91.10 & 91.75 & \textbf{94.25}
 & 83.76 & 84.88 & \textbf{87.17}
-& 57.35 & 59.84 & \textbf{64.50}
-& 28.65 & 29.22 & \textbf{31.31}
+& 57.35 & 59.84 & \methodrevision{\textbf{64.46}}
+& 28.65 & 29.22 & \methodrevision{\textbf{31.29}}
 & 40.65 & 44.14 & \textbf{56.87} \\
 Hit@3
 & 96.75 & \textbf{97.05} & 96.80
 & 96.60 & 96.77 & \textbf{96.90}
-& 79.65 & \textbf{80.73} & 80.58
-& 46.36 & \textbf{47.04} & 46.93
+& 79.65 & \textbf{80.73} & \methodrevision{80.52}
+& 46.36 & \textbf{47.04} & \methodrevision{46.90}
 & 76.59 & 79.89 & \textbf{80.54} \\
 Hit@5
 & \textbf{97.65} & \textbf{97.65} & \textbf{97.65}
 & \textbf{98.65} & \textbf{98.65} & \textbf{98.65}
-& 86.35 & \textbf{86.51} & 86.46
-& 54.80 & \textbf{54.87} & 54.86
+& 86.35 & \textbf{86.51} & \methodrevision{86.48}
+& 54.80 & \textbf{54.87} & \methodrevision{54.80}
 & 92.24 & \textbf{92.68} & 91.79 \\
 MRR
 & 94.11 & 94.57 & \textbf{95.75}
 & 90.40 & 91.08 & \textbf{92.22}
-& 70.17 & 71.80 & \textbf{74.14}
-& 41.06 & 41.54 & \textbf{42.57}
+& 70.17 & 71.80 & \methodrevision{\textbf{74.13}}
+& 41.06 & 41.54 & \methodrevision{\textbf{42.56}}
 & 60.79 & 64.04 & \textbf{70.73} \\
 \bottomrule
 \end{tabular}
@@ -110,52 +72,357 @@ MRR
 
 \vspace{2pt}
 \begin{minipage}{0.88\textwidth}
-\footnotesize\textsuperscript{\dag}表示本文依据iKnow-audio的方法描述得到的复现结果。
+\footnotesize\methodrevision{\textsuperscript{\dag} 表示本文对 iKnow-audio 的受控复现。}
 \end{minipage}
 \end{table*}
+
+\begin{table*}[!t]
+\centering
+\caption{\methodrevision{三个组成模块的组合消融结果（\%，Hit@1/MRR）。“+”表示在 iKnow\textsuperscript{\dag} 复现基线上启用相应模块；粗体表示同一数据集、指标或五数据集等权平均中的最佳值。}}
+\label{tab:factorial-ablation}
+\setlength{\tabcolsep}{2.5pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l*{12}{c}}
+\toprule
+\multirow{2}{*}{方法}
+& \multicolumn{2}{c}{ESC-50}
+& \multicolumn{2}{c}{UrbanSound8K}
+& \multicolumn{2}{c}{FSD50K}
+& \multicolumn{2}{c}{AudioSet}
+& \multicolumn{2}{c}{TUT2017}
+& \multicolumn{2}{c}{\methodrevision{五数据集等权平均}} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}\cmidrule(lr){10-11}\cmidrule(lr){12-13}
+& Hit@1 & MRR & Hit@1 & MRR & Hit@1 & MRR & Hit@1 & MRR & Hit@1 & MRR & Hit@1 & MRR \\
+\midrule
+iKnow\textsuperscript{\dag}
+& 91.75 & 94.57 & 84.88 & 91.08 & 59.84 & 71.80 & 29.22 & 41.54 & 44.14 & 64.04 & 61.97 & 72.61 \\
++ AAKV
+& 88.65 & 92.63 & 84.52 & 90.59 & 61.60 & 72.65 & 28.65 & 41.16 & 48.68 & 66.20 & 62.42 & 72.65 \\
++ Hierarchical Fusion
+& 92.85 & 95.15 & 85.02 & 91.18 & 60.83 & 72.49 & 29.64 & 41.88 & 46.86 & 65.86 & 63.04 & 73.31 \\
++ Relation Selection
+& 93.85 & 95.63 & 85.83 & 91.44 & 60.29 & 71.88 & 29.87 & 41.77 & 46.56 & 65.39 & 63.28 & 73.22 \\
++ AAKV + Fusion
+& 92.70 & 95.09 & 85.78 & 91.47 & 62.71 & 73.47 & 29.75 & 41.88 & 51.29 & 67.99 & 64.44 & 73.98 \\
++ AAKV + Relation Selection
+& 92.85 & 94.90 & 86.96 & 91.86 & \methodrevision{\textbf{64.49}} & \methodrevision{74.02} & \methodrevision{31.23} & \methodrevision{42.46} & 53.54 & 68.80 & \methodrevision{65.81} & \methodrevision{74.41} \\
++ Fusion + Relation Selection
+& 93.90 & 95.63 & 85.73 & 91.40 & 60.60 & 71.82 & 30.03 & 41.78 & 47.87 & 65.93 & 63.63 & 73.31 \\
+\textbf{完整方法}
+& \textbf{94.25} & \textbf{95.75}
+& \textbf{87.17} & \textbf{92.22}
+& \methodrevision{64.46} & \methodrevision{\textbf{74.13}}
+& \methodrevision{\textbf{31.29}} & \methodrevision{\textbf{42.56}}
+& \textbf{56.87} & \textbf{70.73}
+& \methodrevision{\textbf{66.81}} & \textbf{75.08} \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}
+
+\subsubsection{Implementation details}\label{sec:implementation-details}
+
+实验采用MS-CLAP 2023版本作为音频--文本基础模型，并使用预训练RotatE模型进行知识图谱尾实体预测。CLAP和RotatE的模型参数在全部实验中保持不变。候选类别标签统一转换为小写形式，并将下划线替换为空格，以减少额外提示工程带来的影响。
+
+为保证内部比较的一致性，本文在 iKnow\textsuperscript{\dag} 受控复现及后续消融实验中统一设置 $K=5$、$M=3$ 和 $\methodrevision{\lambda}=100$。首先根据 CLAP 分数选取排名前 $K$ 的候选类别，再为每个候选类别--关系组合保留排名前 $M$ 的尾实体。本文在受控复现中采用 normalized scaled LogSumExp 聚合知识证据，以减弱\methodrevision{可用证据数量不同所引起的聚合偏移}。该归一化形式属于本文的复现实验协议，并在后续实验分支中保持一致。
+
+本文采用iKnow-audio构建的AKG及其47种关系类型作为统一候选关系池。对于每个候选类别，利用RotatE分别查询各候选关系，并预测相应的尾实体。本文将每种关系视为一个知识专家，根据当前音频下不同关系专家的预测一致性与分类间隔进行排序，最终保留$N_r$种关系参与知识增强。该过程仅使用输入音频、候选类别和外部知识，不访问真实标签。
+
+本文方法的融合权重$\alpha$和关系选择数量$N_r$在DCASE17-T4开发集上通过网格搜索确定：
+\begin{equation}
+\alpha\in\{0.3,0.5,0.7\},\qquad
+N_r\in\{1,3,5,10\}.
+\end{equation}
+参数选择依次以Hit@1、MRR和较小的关系数量作为判断依据，最终采用$\alpha=0.3$和$N_r=5$，并将其固定应用于其余五个数据集。
+
+\methodrevision{AAKV采用Qwen2.5-7B-Instruct将知识三元组离线转换为声音相关文本。生成指令约束头实体、关系和尾实体的表达；自动检查覆盖文本格式、实体词项及关系词项。首次检查失败时尝试一次约束修复，仍不满足规则时使用确定性模板。知识文本在音频推理前生成并缓存，且生成过程不使用评估样本的真实标签；完整协议见附录~\ref{app:aakv-protocol}。}
+
+音频统一重采样至44.1~kHz并处理为7秒。不足7秒的音频通过循环重复补足，超过7秒的音频截取连续7秒片段。所有方法对同一条音频使用完全相同的输入片段。实验采用固定随机种子42，并在配备三张NVIDIA GeForce RTX 4090 D GPU的服务器上运行。软件环境包括Ubuntu 22.04、Python 3.10.19、PyTorch 2.4.0、CUDA 12.1、MS-CLAP 1.3.4、Transformers 4.57.6和PyKEEN 1.11.1。
+
+\subsubsection{Evaluation metrics}\label{sec:evaluation-metrics}
+
+本文采用Hit@$k$和平均倒数排名（mean reciprocal rank，MRR）作为评价指标。Hit@$k$衡量至少一个真实标签出现在前$k$个候选类别中的样本比例，本文报告Hit@1、Hit@3和Hit@5。MRR通过计算真实标签排名倒数的均值，衡量其在完整候选类别序列中的总体位置。对于多标签数据集，所有真实标签均视为正标签，并以其中排名最高的正标签确定该样本的倒数排名。所有指标均以百分比形式报告，且数值越高表示性能越好。
+
+为评估方法改进的统计可靠性，本文基于逐样本预测结果采用成对Bootstrap计算性能差值的95\%置信区间，重复采样10,000次。对于Hit@1，进一步采用双侧精确McNemar检验比较方法之间的逐样本正确性差异，并使用Holm方法校正跨数据集的多重比较。
+
+文中性能差值均基于未舍入的原始指标值计算，并在报告时保留两位小数。
+
+\end{CJK*}
+
+\subsection{Overall results}\label{sec:overall-results}
+\begin{CJK*}{UTF8}{gbsn}
+
+
+
+\methodrevision{表~\ref{tab:main-results}报告了CLAP、iKnow\textsuperscript{\dag}和本文方法在五个零样本音频分类数据集上的结果。本文方法在全部数据集上均取得了最高的Hit@1和MRR。与CLAP相比，Hit@1和MRR分别提高了2.64--16.22和1.50--9.93个百分点；与iKnow\textsuperscript{\dag}相比，两项指标分别提高了2.08--12.73和1.02--6.68个百分点。该性能优势同时出现在单标签和多标签数据集上。}
+
+\methodrevision{相较于iKnow\textsuperscript{\dag}，本文方法在TUT2017上的提升幅度最大，Hit@1由44.14\%提高至56.87\%，MRR由64.04\%提高至70.73\%。在FSD50K上，Hit@1和MRR分别提高4.62和2.33个百分点。其余三个数据集也呈现一致的Hit@1和MRR增益，其中Hit@1提高2.08--2.50个百分点，MRR提高1.02--1.18个百分点。}
+
+\methodrevision{与 iKnow\textsuperscript{\dag} 相比，本文方法在五个数据集上的 Hit@1 和 MRR 均提高，但 Hit@3 和 Hit@5 并未同步增加。最明显的差异出现在 TUT2017：Hit@1 提高 12.73 个百分点，Hit@5 则下降 0.89 个百分点。Hit@1 与 Hit@5 分别考察真实类别是否位于首位和前五位；部分样本的真实类别升至首位，并不意味着其他样本都能保持在前五位。因此，结果支持本文方法改善首位预测与整体排序的结论，同时表明更宽的候选覆盖率并非在所有数据集上提高。}
 
 \end{CJK*}
 
 \subsection{Ablation and component analysis}\label{sec:ablation}
-\subsubsection{Overall ablation}\label{sec:overall-ablation}
 \begin{CJK*}{UTF8}{gbsn}
-
-为区分三个组成模块的独立作用及其组合效应，本文在相同的基础模型、知识图谱、候选类别和评估协议下进行了完整的$2^3$因子消融。表~\ref{tab:factorial-ablation}中，I表示iKnow\textsuperscript{\dag}复现基线，T、F和S分别表示AAKV、分层融合和样本级关系选择；其余方法表示相应模块的组合。表中报告五个测试数据集的宏平均结果，逐数据集结果见附录表【待补充编号】。
-
-\begin{table}[t]
+\methodrevision{本节从三个层面分析本文方法的性能来源：首先比较音频对齐知识语言化（Audio-Aligned Knowledge Verbalization，AAKV）、分层知识融合（Hierarchical Fusion）和样本级关系选择（Sample-level Relation Selector）的单模块及组合配置；随后分别在固定其余推理设置的条件下比较关系选择策略和知识语言化方式。实验采用相同的CLAP模型、知识图谱、候选类别、类别--实体映射及知识检索配置。}
+\end{CJK*}
+\begin{CJK*}{UTF8}{gbsn}
+\begin{table*}[!t]
 \centering
-\caption{三个组成模块的完整因子消融结果（五个测试数据集的宏平均，\%）。粗体表示各列最佳结果。}
-\label{tab:factorial-ablation}
-\setlength{\tabcolsep}{4.2pt}
-\resizebox{\columnwidth}{!}{%
-\begin{tabular}{lcccc}
+\caption{\methodrevision{固定 AAKV 与分层融合配置下，不同关系确定策略的性能（\%，Hit@1/MRR）。FrozenRq 使用数据集级固定关系集合；Random Top-5 为随机种子 42、43 和 44 的平均结果。粗体表示同一数据集、指标或五数据集等权平均中的最佳值。}}
+\label{tab:relation-selection}
+\setlength{\tabcolsep}{2.8pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l*{12}{c}}
 \toprule
-方法 & Hit@1 & Hit@3 & Hit@5 & MRR \\
+\multirow{2}{*}{方法}
+& \multicolumn{2}{c}{ESC-50}
+& \multicolumn{2}{c}{UrbanSound8K}
+& \multicolumn{2}{c}{FSD50K}
+& \multicolumn{2}{c}{AudioSet}
+& \multicolumn{2}{c}{TUT2017}
+& \multicolumn{2}{c}{\methodrevision{五数据集等权平均}} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}\cmidrule(lr){10-11}\cmidrule(lr){12-13}
+& Hit@1 & MRR & Hit@1 & MRR & Hit@1 & MRR & Hit@1 & MRR & Hit@1 & MRR & Hit@1 & MRR \\
 \midrule
-I   & 61.97 & 80.30 & 86.07 & 72.61 \\
-T   & 62.42 & 79.81 & 85.97 & 72.65 \\
-F   & 63.04 & \textbf{80.69} & \textbf{86.15} & 73.31 \\
-S   & 63.28 & 80.17 & 86.05 & 73.22 \\
-TF  & 64.44 & 80.64 & 85.96 & 73.98 \\
-TS  & 65.77 & 79.69 & 85.97 & 74.38 \\
-FS  & 63.63 & 80.07 & 86.05 & 73.31 \\
-TFS & \textbf{66.82} & 80.35 & 85.88 & \textbf{75.08} \\
+FrozenRq
+& 92.70 & 95.09 & 85.78 & 91.47 & \methodrevision{62.71} & \methodrevision{73.47} & \methodrevision{29.75} & \methodrevision{41.88} & 51.29 & 67.99 & \methodrevision{64.44} & \methodrevision{73.98} \\
+Frequency Top-5
+& 92.85 & 95.23 & 85.10 & 91.04 & \methodrevision{62.66} & \methodrevision{73.30} & \methodrevision{30.10} & \methodrevision{42.14} & 50.54 & 67.40 & \methodrevision{64.25} & \methodrevision{73.82} \\
+Random Top-5
+& 92.45 & 94.90 & 86.02 & 91.61 & \methodrevision{63.33} & \methodrevision{73.67} & \methodrevision{29.86} & \methodrevision{41.94} & 52.10 & 68.54 & \methodrevision{64.75} & \methodrevision{74.13} \\
+\textbf{Sample-level Relation Selector}
+& \textbf{94.25} & \textbf{95.75}
+& \textbf{87.17} & \textbf{92.22}
+& \methodrevision{\textbf{64.46}} & \methodrevision{\textbf{74.13}}
+& \methodrevision{\textbf{31.29}} & \methodrevision{\textbf{42.56}}
+& \textbf{56.87} & \textbf{70.73}
+& \methodrevision{\textbf{66.81}} & \textbf{75.08} \\
 \bottomrule
 \end{tabular}
 }
-\end{table}
+\end{table*}
 
-单模块结果呈现出不同的增益模式。相较于I，F和S的宏平均Hit@1分别提高1.07和1.31个百分点，MRR分别提高0.70和0.62个百分点。T单独使用时，宏平均Hit@1仅提高0.45个百分点，MRR提高0.04个百分点；从逐数据集结果看，T在FSD50K和TUT2017上提高Hit@1，而在ESC-50、UrbanSound8K和AudioSet上低于I。因此，AAKV的单独增益并未在不同数据集上保持一致。
+\begin{table*}[!t]
+\centering
+\caption{\methodrevision{不同知识语言化方式的比较（\%，Hit@1/MRR）。所有方法采用相同的关系选择和分数融合配置；粗体表示同一数据集、指标或五数据集等权平均中的最佳值。}}
+\label{tab:knowledge-verbalization}
+\setlength{\tabcolsep}{3.2pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l*{12}{c}}
+\toprule
+\multirow{2}{*}{方法}
+& \multicolumn{2}{c}{ESC-50}
+& \multicolumn{2}{c}{UrbanSound8K}
+& \multicolumn{2}{c}{FSD50K}
+& \multicolumn{2}{c}{AudioSet}
+& \multicolumn{2}{c}{TUT2017}
+& \multicolumn{2}{c}{\methodrevision{五数据集等权平均}} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}\cmidrule(lr){10-11}\cmidrule(lr){12-13}
+& Hit@1 & MRR & Hit@1 & MRR & Hit@1 & MRR & Hit@1 & MRR & Hit@1 & MRR & Hit@1 & MRR \\
+\midrule
+Direct concatenation
+& 93.90 & 95.63 & 85.73 & 91.40 & 60.60 & 71.82 & 30.03 & 41.78 & 47.87 & 65.94 & 63.63 & 73.31 \\
+Raw triple
+& 94.10 & \textbf{95.77} & 86.43 & 91.79 & 59.58 & 71.00 & 29.25 & 41.01 & 47.95 & 64.97 & 63.46 & 72.91 \\
+\textbf{AAKV}
+& \textbf{94.25} & 95.75
+& \textbf{87.17} & \textbf{92.22}
+& \methodrevision{\textbf{64.46}} & \methodrevision{\textbf{74.13}}
+& \methodrevision{\textbf{31.29}} & \methodrevision{\textbf{42.56}}
+& \textbf{56.87} & \textbf{70.73}
+& \methodrevision{\textbf{66.81}} & \textbf{75.08} \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}
+\end{CJK*}
+\subsubsection{Overall ablation}\label{sec:overall-ablation}
+\begin{CJK*}{UTF8}{gbsn}
 
-组合结果进一步显示，模块效果取决于其协同配置。TS在所有双模块组合中取得最高的宏平均Hit@1和MRR，分别为65.77\%和74.38\%；完整的TFS进一步达到66.82\%和75.08\%，相较于I分别提高4.85和2.48个百分点。以双模块结果为参照，在FS中加入T、在TF中加入S以及在TS中加入F后，Hit@1分别提高3.19、2.38和1.05个百分点。与此同时，TFS并未取得最高的Hit@3和Hit@5；这两项指标的最高值均由F获得。该结果与总体实验一致，即完整方法的主要改善集中在首位命中率和整体排序位置，而非前五候选的覆盖率。
+\methodrevision{为分析三个模块的作用，本文以iKnow\textsuperscript{\dag}复现结果为基线，分别启用AAKV、Hierarchical Fusion和Sample-level Relation Selector，并比较两两组合与完整配置。表~\ref{tab:factorial-ablation}报告Hit@1和MRR；“五数据集等权平均”指先分别计算各数据集指标，再对五个结果取算术平均，不按样本量加权。Hit@3和Hit@5的完整结果见附录表~\ref{tab:ablation-topk}。}
+
+
+
+\methodrevision{单模块结果呈现不同趋势。单独启用Hierarchical Fusion或Sample-level Relation Selector后，五个数据集的Hit@1均未低于iKnow\textsuperscript{\dag}，五数据集等权平均Hit@1分别提高1.07和1.31个百分点。单独启用AAKV时，FSD50K和TUT2017的Hit@1提高，其余三个数据集则下降；等权平均Hit@1和MRR仅分别提高0.45和0.04个百分点。因此，AAKV未形成稳定的单模块增益。}
+
+\methodrevision{在三种双模块配置中，AAKV与Sample-level Relation Selector的组合取得最高的五数据集等权平均Hit@1和MRR，分别为65.81\%和74.41\%。以Hierarchical Fusion与Sample-level Relation Selector的组合为参照，加入AAKV后，两项指标由63.63\%和73.31\%分别提高至66.81\%和75.08\%，增益为3.18和1.77个百分点。两组比较的参照配置不同；结果表明，AAKV的作用与其余模块的组合有关。}
+
+\methodrevision{完整配置取得最高的五数据集等权平均Hit@1和MRR，分别为66.81\%和75.08\%，较iKnow\textsuperscript{\dag}提高4.84和2.47个百分点；其MRR在五个测试集上均高于其余消融配置。不过，FSD50K上的AAKV与Sample-level Relation Selector组合达到64.49\%的Hit@1，略高于完整配置的64.46\%；完整配置的MRR则由74.02\%提高至74.13\%。因此，模块组合改善了总体表现，但并非在所有单项指标上都带来增益。}
 
 \end{CJK*}
 \subsubsection{Relation selection analysis}\label{sec:relation-analysis}
+\begin{CJK*}{UTF8}{gbsn}
+
+整体消融结果表明，关系选择能够改善知识增强分类结果。本节进一步考察这种改善是否来自样本级关系适配，而非固定关系集合、静态关系频率或随机关系组合。除关系确定策略外，其余知识表示、融合方式及推理配置均保持一致。
+
+\methodrevision{FrozenRq 沿用 iKnow\textsuperscript{\dag} 受控复现中的数据集级固定关系集合，但与本表其余方法一样使用AAKV文本和分层融合，因此不是表~\ref{tab:main-results}中的iKnow\textsuperscript{\dag}方法。Frequency Top-5 根据离线知识缓存中各关系的类别--尾实体证据数量选择频率最高的五种关系；Random Top-5 对每条音频随机选择五种关系，并报告三个固定随机种子的平均结果；Sample-level Relation Selector 则根据当前音频下关系专家的预测共识与分类间隔选择五种关系。上述策略在推理过程中均不使用测试标签。}
+
+\methodrevision{如表~\ref{tab:relation-selection}所示，Sample-level Relation Selector在五个数据集上均取得最高的Hit@1和MRR。其五数据集等权平均Hit@1和MRR分别为66.81\%和75.08\%，相较FrozenRq分别提高2.37和1.10个百分点，相较Frequency Top-5分别提高2.56和1.26个百分点，相较Random Top-5分别提高2.06和0.95个百分点。在知识文本和融合规则固定的条件下，这一结果支持样本级关系选择相对于所比较的固定、高频和随机策略的优势。}
+
+在 TUT2017 上，Sample-level Relation Selector 的 Hit@1 / MRR 达到 56.87\% / 70.73\%，相比 FrozenRq 的 51.29\% / 67.99\% 分别提高 5.59 和 2.73 个百分点。Frequency Top-5 和 Random Top-5 在不同数据集上的相对表现并不一致，进一步说明静态关系偏好难以稳定替代样本级关系选择。
+
+为进一步验证所提出的关系选择器确实表现出样本依赖行为，本文进一步分析不同测试样本对应的关系选择结果。该选择器并非重复使用单一固定关系集合，而是针对不同输入产生不同的 Top-5 关系组合。本文进一步通过不同关系组合的数量、最常见组合的出现比例以及与数据集级 FrozenRq 配置的平均 Jaccard 重合度对这一行为进行量化，详细结果见附录~\ref{app:selector-behavior}。
+
+\end{CJK*}
 \subsubsection{Knowledge verbalization analysis}\label{sec:verbalization-analysis}
+\begin{CJK*}{UTF8}{gbsn}
+
+\methodrevision{关系选择实验比较了不同知识关系的确定方式。本节进一步比较检索到的关系证据如何表示为CLAP可匹配的文本。三种配置采用相同的关系选择算法与分层融合规则，并分别根据对应的知识文本计算关系专家分数和最终类别排序。Direct concatenation拼接类别名称与尾实体，Raw triple保留“类别--关系--尾实体”字段，AAKV则将三元组语言化为以声音为主语、保留关系方向与尾实体的句子。}
+
+\methodrevision{如表~\ref{tab:knowledge-verbalization}所示，AAKV在五个测试集的Hit@1上均高于两种对照。五数据集等权平均Hit@1为66.81\%，相较Direct concatenation和Raw triple分别提高3.18和3.35个百分点；等权平均MRR为75.08\%，分别提高1.77和2.17个百分点。MRR并非每个数据集都最高：ESC-50上Raw triple与AAKV分别为95.77\%和95.75\%。}
+
+\methodrevision{增益幅度具有数据集差异。以Direct concatenation为参照，AAKV在FSD50K和TUT2017上的Hit@1分别提高3.86和9.00个百分点，在ESC-50上提高0.35个百分点。这些结果表明，在本实验的关系选择与融合配置下，AAKV的知识文本在首位分类上优于所比较的两种表示；对于MRR，该优势不覆盖所有单项数据集。}
+
+\end{CJK*}
+\begin{CJK*}{UTF8}{gbsn}
+\begin{figure*}[!t]
+    \centering
+    \includegraphics[width=\textwidth]{figures/further_analysis/fig_statistical_significance.pdf}
+    \caption{\methodrevision{SAKI相对于iKnow\textsuperscript{\dag}的成对性能差值及95\%置信区间。圆点为观测到的指标差值，误差线为10,000次成对Bootstrap重采样得到的95\%置信区间；虚线表示零差值。}}
+    \label{fig:statistical-significance}
+\end{figure*}
+\end{CJK*}
+
 \subsection{Further analysis}\label{sec:further-analysis}
+\begin{CJK*}{UTF8}{gbsn}
+
+\methodrevision{本节进一步从统计差异、参数选择、计算成本及逐样本预测变化四个方面分析实验结果。统计分析报告性能差值的不确定性与Hit@1配对检验；参数分析说明开发集上的配置选择；成本分析量化在线推理和缓存开销；逐样本分析展示错误纠正与预测退化。}
+
+\end{CJK*}
+
 \subsubsection{Statistical significance}\label{sec:statistics}
 \begin{CJK*}{UTF8}{gbsn}
-成对Bootstrap结果表明，相较于iKnow\textsuperscript{\dag}，本文方法在五个数据集上的Hit@1和MRR增益的95\%置信区间均不包含0，表明观察到的性能增益在当前测试样本上具有统计可靠性。
+
+\methodrevision{本文在同一批测试音频上比较SAKI与iKnow\textsuperscript{\dag}的Hit@1和MRR。为估计指标差值的抽样不确定性，以音频为单位进行10,000次成对Bootstrap重采样：每次有放回地抽取样本，并对两种方法使用相同的样本索引。重算每次的指标差值后，以其第2.5和97.5百分位数构建95\%置信区间。该区间反映测试样本抽样变化，不代表重新训练模型的波动。}
+
+\methodrevision{如图~\ref{fig:statistical-significance}所示，本文方法在五个测试集上的Hit@1和MRR差值均为正，且对应的95\%置信区间均未跨越零。具体而言，Hit@1的提升范围为2.08--12.73个百分点，其中TUT2017的提升最大，较iKnow\textsuperscript{\dag}提高12.73个百分点，其95\%置信区间为[11.49, 13.95]。其余数据集的Hit@1提升分别为ESC-50上的2.50个百分点、UrbanSound8K上的2.29个百分点、FSD50K上的4.62个百分点以及AudioSet上的2.08个百分点。MRR呈现一致趋势，其提升范围为1.02--6.68个百分点。}
+
+
+
+\methodrevision{对于Hit@1，本文另采用双侧精确McNemar检验，比较同一音频上“iKnow\textsuperscript{\dag}错误、SAKI正确”与“iKnow\textsuperscript{\dag}正确、SAKI错误”两类不一致配对的数量。这两类样本亦展示于图~\ref{fig:prediction-transitions}。对五个测试集分别检验后，采用Holm方法校正五个$p$值，以控制多重比较导致的第一类错误风险；校正后的$p$值均小于0.05。McNemar检验仅针对Hit@1正误，MRR差值的抽样不确定性则由上述Bootstrap区间表征。}
+
 \end{CJK*}
+
 \subsubsection{Parameter sensitivity}\label{sec:parameters}
-\subsubsection{Case study}\label{sec:cases}
+\begin{CJK*}{UTF8}{gbsn}
+
+本文进一步在DCASE17-T4开发集上分析了融合权重$\alpha$和样本级关系保留数量$N_r$对分类性能的影响。参数搜索范围设置为
+\begin{equation}
+\alpha\in\{0.3,0.5,0.7\},\qquad
+N_r\in\{1,3,5,10\}.
+\end{equation}
+其余模型结构、知识检索设置和评价流程均保持不变。参数选择首先最大化Hit@1；当Hit@1相同时，进一步选择MRR较高的配置；若两项指标仍然相同，则优先选择关系数量较少的配置。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.96\columnwidth]{figures/further_analysis/fig_parameter_sensitivity.pdf}
+    \caption{DCASE17-T4开发集上的参数敏感性分析。（a）不同融合权重$\alpha$和关系数量$N_r$下的Hit@1；（b）相同配置下的MRR。方框表示最终选择的参数组合$\alpha=0.3$和$N_r=5$。}
+    \label{fig:parameter-sensitivity}
+\end{figure}
+
+\methodrevision{图~\ref{fig:parameter-sensitivity}(a)显示，在每个固定的$\alpha$值下，$N_r=1,3,5,10$的Hit@1相同。当$\alpha=0.3$时，Hit@1为64.44\%；当$\alpha=0.5$或$0.7$时，均为63.01\%。因此，在本开发集和所考察的范围内，改变$N_r$没有改变Hit@1正确样本数，而$\alpha=0.3$取得了较高的Hit@1。}
+
+\methodrevision{图~\ref{fig:parameter-sensitivity}(b)进一步表明，相同Hit@1下的MRR仍随$N_r$变化。当$\alpha=0.3$时，$N_r=1,3,5,10$对应的MRR分别为75.55\%、75.71\%、75.84\%和75.69\%。按照先比较Hit@1、并列时再比较MRR的开发集选择规则，最终选定$\alpha=0.3$和$N_r=5$，并将其固定用于五个测试集。}
+
+\end{CJK*}
+
+\subsubsection{Computational cost analysis}\label{sec:computational-cost}
+\begin{CJK*}{UTF8}{gbsn}
+
+为量化知识增强的在线计算成本，本文在相同硬件和测试样本上比较CLAP、iKnow\textsuperscript{\dag}与SAKI。每个测试集从最终测试记录中固定选取200条样本，预热20条后重复计时5次。在线时间包括音频预处理、CLAP音频编码以及各方法的评分与排序；RotatE尾实体检索、AAKV文本生成和文本特征构建均属于离线预处理，不计入在线时间。表~\ref{tab:computational-cost}给出batch size为1时五个测试集的等权平均结果。
+
+\end{CJK*}
+
+\begin{table}[H]
+\centering
+\begin{CJK*}{UTF8}{gbsn}
+\caption{Batch size为1时的在线推理效率与离线缓存规模。各数值为五个测试集的等权平均；相对开销以CLAP的平均延迟为基准。}
+\label{tab:computational-cost}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lccc}
+\toprule
+指标 & CLAP & iKnow\textsuperscript{\dag} & SAKI \\
+\midrule
+延迟（ms/样本） & 24.37 & 25.16 & 86.52 \\
+相对开销 & 1.00$\times$ & 1.03$\times$ & 3.55$\times$ \\
+吞吐量（样本/秒） & 41.03 & 39.74 & 11.56 \\
+峰值GPU显存（MiB） & 693.60 & 700.30 & 743.22 \\
+离线缓存（MiB） & 0.63 & 6.74 & 50.52 \\
+\bottomrule
+\end{tabular}
+\end{CJK*}
+\end{table}
+
+\begin{CJK*}{UTF8}{gbsn}
+
+如表~\ref{tab:computational-cost}所示，SAKI的平均在线延迟为86.52 ms/样本，是CLAP的3.55倍；iKnow\textsuperscript{\dag}的延迟为25.16 ms/样本，与CLAP的24.37 ms/样本接近。SAKI的平均峰值GPU显存和离线缓存规模也更高，表明前述分类性能增益伴随额外的在线计算与存储成本。
+
+\end{CJK*}
+
+\subsubsection{Prediction transitions and case study}\label{sec:cases}
+\begin{CJK*}{UTF8}{gbsn}
+
+\methodrevision{图~\ref{fig:prediction-transitions}进一步展示逐样本Hit@1预测转移。两组柱形分别表示“iKnow\textsuperscript{\dag}错误、SAKI正确”和“iKnow\textsuperscript{\dag}正确、SAKI错误”的样本数，也正是前述McNemar检验所比较的两类不一致配对。五个测试集上的前者均多于后者，ESC-50、UrbanSound8K、FSD50K、AudioSet和TUT2017分别净增加50、200、473、358和802个Hit@1正确样本。}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\columnwidth]{figures/further_analysis/fig_prediction_transitions.pdf}
+    \caption{\methodrevision{iKnow\textsuperscript{\dag}与SAKI之间的逐样本Hit@1预测转移。蓝色柱表示由错误转为正确的样本数，黄绿色柱表示由正确转为错误的样本数；两组数量构成McNemar检验的不一致配对。}}
+    \label{fig:prediction-transitions}
+\end{figure}
+
+表~\methodrevision{\ref{tab:case-study}}进一步列出了ESC-50上的三类代表性样本，包括错误纠正、真实类别排名改善和正确预测退化。对于错误纠正样本，iKnow\textsuperscript{\dag}将真实类别\textit{wind}排在第5位并预测为\textit{train}，本文方法将\textit{wind}提升至第1位。在排名改善样本中，真实类别\textit{sea waves}由第3位提升至第2位，但最终预测仍为\textit{frog}。对于预测退化样本，iKnow\textsuperscript{\dag}能够正确识别\textit{washing machine}，而本文方法将\textit{engine}排在首位，使真实类别下降至第4位。
+
+\begin{table}[!htbp]
+
+\centering
+
+\caption{ESC-50上的代表性逐样本预测变化。括号内为真实类别排名；每个案例展示一条代表性AAKV证据。}
+
+\label{tab:case-study}
+
+\footnotesize
+
+\setlength{\tabcolsep}{2.4pt}
+
+\begin{tabular}{p{1.05cm}p{1.15cm}p{1.45cm}p{1.45cm}}
+
+\toprule
+
+案例 & 真实类别 & iKnow\textsuperscript{\dag} & 本文方法 \\
+
+\midrule
+
+错误$\rightarrow$正确
+& wind & train (5) & wind (1) \\
+
+\multicolumn{4}{p{7.3cm}}
+{\textit{AAKV evidence: The sound of wind is instance of ocean.}} \\
+
+\addlinespace[2pt]
+
+排名改善
+& sea waves & crickets (3) & frog (2) \\
+
+\multicolumn{4}{p{7.3cm}}
+{\textit{AAKV evidence: The sound of frog is part of a wetland scene.}} \\
+
+\addlinespace[2pt]
+
+正确$\rightarrow$错误
+& washing machine & washing machine (1) & engine (4) \\
+
+\multicolumn{4}{p{7.3cm}}
+{\textit{AAKV evidence: The sound of engine is instance of motorcycle.}} \\
+
+\bottomrule
+
+\end{tabular}
+
+\end{table}
+
+上述案例显示，本文方法通过改变候选类别的相对排序产生性能变化：真实类别既可能由较低排名提升至首位，也可能只获得有限的排名改善，或由首位下降至较低位置。结合图~\methodrevision{\ref{fig:prediction-transitions}}，五个测试集上的正向转移数量均高于负向转移数量。因此，本文方法的总体增益表现为逐样本排序变化所形成的净正向改善，同时仍存在预测退化的个别情况。
+\end{CJK*}
+\FloatBarrier

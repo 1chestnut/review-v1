@@ -1,0 +1,404 @@
+[
+  {
+    "case_type": "wrong_to_correct",
+    "sample_index": 462,
+    "audio_file": "2-109371-C-16.wav",
+    "true_index": 49,
+    "consensus_class_index": 49,
+    "consensus_class": "wind",
+    "selected_relations": [
+      "warns about",
+      "has pitch",
+      "is a type of",
+      "is instance of",
+      "described by"
+    ],
+    "all_evidence": [
+      {
+        "head": "wind",
+        "relation": "warns about",
+        "tail": "parade noise",
+        "aakv_text": "The sound of wind warns about parade noise."
+      },
+      {
+        "head": "wind",
+        "relation": "warns about",
+        "tail": "office",
+        "aakv_text": "The sound of wind warns about office."
+      },
+      {
+        "head": "wind",
+        "relation": "warns about",
+        "tail": "alarm clock",
+        "aakv_text": "The sound of wind warns about alarm clock."
+      },
+      {
+        "head": "wind",
+        "relation": "has pitch",
+        "tail": "ding-dong",
+        "aakv_text": "The sound of wind has the relation has pitch with ding-dong."
+      },
+      {
+        "head": "wind",
+        "relation": "has pitch",
+        "tail": "scurrying",
+        "aakv_text": "The sound of wind has the relation has pitch with scurrying."
+      },
+      {
+        "head": "wind",
+        "relation": "has pitch",
+        "tail": "screech",
+        "aakv_text": "The sound of wind has the relation has pitch with screech."
+      },
+      {
+        "head": "wind",
+        "relation": "is a type of",
+        "tail": "bird song",
+        "aakv_text": "The sound of wind is a type of bird song."
+      },
+      {
+        "head": "wind",
+        "relation": "is a type of",
+        "tail": "high",
+        "aakv_text": "The sound of wind is a type of high."
+      },
+      {
+        "head": "wind",
+        "relation": "is a type of",
+        "tail": "a power tool used for cutting wood or other materials",
+        "aakv_text": "The sound of wind is a type of a power tool used for cutting wood or other materials."
+      },
+      {
+        "head": "wind",
+        "relation": "is instance of",
+        "tail": "ocean",
+        "aakv_text": "The sound of wind is instance of ocean."
+      },
+      {
+        "head": "wind",
+        "relation": "is instance of",
+        "tail": "impending hazard",
+        "aakv_text": "The sound of wind is an instance of impending hazard."
+      },
+      {
+        "head": "wind",
+        "relation": "described by",
+        "tail": "drilling",
+        "aakv_text": "The sound of wind described by drilling."
+      },
+      {
+        "head": "wind",
+        "relation": "described by",
+        "tail": "hammering",
+        "aakv_text": "The sound of wind is described by hammering."
+      },
+      {
+        "head": "wind",
+        "relation": "described by",
+        "tail": "train emergency",
+        "aakv_text": "The sound of wind described by train emergency."
+      }
+    ],
+    "compact_evidence_rule": "first available tail per selected relation",
+    "compact_evidence": [
+      {
+        "head": "wind",
+        "relation": "warns about",
+        "tail": "parade noise",
+        "aakv_text": "The sound of wind warns about parade noise."
+      },
+      {
+        "head": "wind",
+        "relation": "has pitch",
+        "tail": "ding-dong",
+        "aakv_text": "The sound of wind has the relation has pitch with ding-dong."
+      },
+      {
+        "head": "wind",
+        "relation": "is a type of",
+        "tail": "bird song",
+        "aakv_text": "The sound of wind is a type of bird song."
+      },
+      {
+        "head": "wind",
+        "relation": "is instance of",
+        "tail": "ocean",
+        "aakv_text": "The sound of wind is instance of ocean."
+      },
+      {
+        "head": "wind",
+        "relation": "described by",
+        "tail": "drilling",
+        "aakv_text": "The sound of wind described by drilling."
+      }
+    ]
+  },
+  {
+    "case_type": "rank_improved",
+    "sample_index": 195,
+    "audio_file": "1-39901-A-11.wav",
+    "true_index": 38,
+    "consensus_class_index": 25,
+    "consensus_class": "frog",
+    "selected_relations": [
+      "transcribed as",
+      "part of scene",
+      "is sound of",
+      "perceived as",
+      "localized in"
+    ],
+    "all_evidence": [
+      {
+        "head": "frog",
+        "relation": "transcribed as",
+        "tail": "bird",
+        "aakv_text": "The sound of frog transcribed as bird."
+      },
+      {
+        "head": "frog",
+        "relation": "transcribed as",
+        "tail": "waves",
+        "aakv_text": "The sound of frog transcribed as waves."
+      },
+      {
+        "head": "frog",
+        "relation": "transcribed as",
+        "tail": "field",
+        "aakv_text": "The sound of frog transcribed as field."
+      },
+      {
+        "head": "frog",
+        "relation": "part of scene",
+        "tail": "pond",
+        "aakv_text": "The sound of frog part of scene pond."
+      },
+      {
+        "head": "frog",
+        "relation": "part of scene",
+        "tail": "wetland",
+        "aakv_text": "The sound of frog is part of a wetland scene."
+      },
+      {
+        "head": "frog",
+        "relation": "part of scene",
+        "tail": "river",
+        "aakv_text": "The sound of frog part of scene river."
+      },
+      {
+        "head": "frog",
+        "relation": "is sound of",
+        "tail": "pond",
+        "aakv_text": "The sound of frog is pond."
+      },
+      {
+        "head": "frog",
+        "relation": "is sound of",
+        "tail": "chirping",
+        "aakv_text": "The sound of frog chirping."
+      },
+      {
+        "head": "frog",
+        "relation": "is sound of",
+        "tail": "river",
+        "aakv_text": "The sound of frog is river."
+      },
+      {
+        "head": "frog",
+        "relation": "perceived as",
+        "tail": "bird call",
+        "aakv_text": "The sound of frog perceived as bird call."
+      },
+      {
+        "head": "frog",
+        "relation": "perceived as",
+        "tail": "river",
+        "aakv_text": "The sound of frog perceived as river."
+      },
+      {
+        "head": "frog",
+        "relation": "perceived as",
+        "tail": "wood thrush calling",
+        "aakv_text": "The sound of frog perceived as wood thrush calling."
+      },
+      {
+        "head": "frog",
+        "relation": "localized in",
+        "tail": "pond",
+        "aakv_text": "The sound of frog localized in pond."
+      },
+      {
+        "head": "frog",
+        "relation": "localized in",
+        "tail": "forest",
+        "aakv_text": "The sound of frog localized in forest."
+      },
+      {
+        "head": "frog",
+        "relation": "localized in",
+        "tail": "river",
+        "aakv_text": "The sound of frog localized in river."
+      }
+    ],
+    "compact_evidence_rule": "first available tail per selected relation",
+    "compact_evidence": [
+      {
+        "head": "frog",
+        "relation": "transcribed as",
+        "tail": "bird",
+        "aakv_text": "The sound of frog transcribed as bird."
+      },
+      {
+        "head": "frog",
+        "relation": "part of scene",
+        "tail": "pond",
+        "aakv_text": "The sound of frog part of scene pond."
+      },
+      {
+        "head": "frog",
+        "relation": "is sound of",
+        "tail": "pond",
+        "aakv_text": "The sound of frog is pond."
+      },
+      {
+        "head": "frog",
+        "relation": "perceived as",
+        "tail": "bird call",
+        "aakv_text": "The sound of frog perceived as bird call."
+      },
+      {
+        "head": "frog",
+        "relation": "localized in",
+        "tail": "pond",
+        "aakv_text": "The sound of frog localized in pond."
+      }
+    ]
+  },
+  {
+    "case_type": "correct_to_wrong",
+    "sample_index": 1775,
+    "audio_file": "5-207811-B-35.wav",
+    "true_index": 47,
+    "consensus_class_index": 22,
+    "consensus_class": "engine",
+    "selected_relations": [
+      "has loudness",
+      "invites action",
+      "localized in",
+      "is instance of",
+      "used for"
+    ],
+    "all_evidence": [
+      {
+        "head": "engine",
+        "relation": "has loudness",
+        "tail": "opening",
+        "aakv_text": "The sound of engine has the relation has loudness with opening."
+      },
+      {
+        "head": "engine",
+        "relation": "has loudness",
+        "tail": "scratch",
+        "aakv_text": "The sound of engine has the relation has loudness with scratch."
+      },
+      {
+        "head": "engine",
+        "relation": "has loudness",
+        "tail": "urgent",
+        "aakv_text": "The sound of engine has the relation has loudness with urgent."
+      },
+      {
+        "head": "engine",
+        "relation": "invites action",
+        "tail": "drum kit",
+        "aakv_text": "The sound of engine invites action like a drum kit."
+      },
+      {
+        "head": "engine",
+        "relation": "invites action",
+        "tail": "wedding music",
+        "aakv_text": "The sound of engine wedding music invites action."
+      },
+      {
+        "head": "engine",
+        "relation": "invites action",
+        "tail": "howling",
+        "aakv_text": "The sound of engine howling invites action."
+      },
+      {
+        "head": "engine",
+        "relation": "localized in",
+        "tail": "shipyard",
+        "aakv_text": "The sound of engine localized in shipyard."
+      },
+      {
+        "head": "engine",
+        "relation": "localized in",
+        "tail": "oil refinery",
+        "aakv_text": "The sound of engine localized in oil refinery."
+      },
+      {
+        "head": "engine",
+        "relation": "localized in",
+        "tail": "construction site",
+        "aakv_text": "The sound of engine is localized in construction site."
+      },
+      {
+        "head": "engine",
+        "relation": "is instance of",
+        "tail": "motorcycle",
+        "aakv_text": "The sound of engine is instance of motorcycle."
+      },
+      {
+        "head": "engine",
+        "relation": "is instance of",
+        "tail": "car",
+        "aakv_text": "The sound of engine is instance of car."
+      },
+      {
+        "head": "engine",
+        "relation": "used for",
+        "tail": "vehicle",
+        "aakv_text": "The sound of engine used for vehicle."
+      },
+      {
+        "head": "engine",
+        "relation": "used for",
+        "tail": "car",
+        "aakv_text": "The sound of engine used for car."
+      }
+    ],
+    "compact_evidence_rule": "first available tail per selected relation",
+    "compact_evidence": [
+      {
+        "head": "engine",
+        "relation": "has loudness",
+        "tail": "opening",
+        "aakv_text": "The sound of engine has the relation has loudness with opening."
+      },
+      {
+        "head": "engine",
+        "relation": "invites action",
+        "tail": "drum kit",
+        "aakv_text": "The sound of engine invites action like a drum kit."
+      },
+      {
+        "head": "engine",
+        "relation": "localized in",
+        "tail": "shipyard",
+        "aakv_text": "The sound of engine localized in shipyard."
+      },
+      {
+        "head": "engine",
+        "relation": "is instance of",
+        "tail": "motorcycle",
+        "aakv_text": "The sound of engine is instance of motorcycle."
+      },
+      {
+        "head": "engine",
+        "relation": "used for",
+        "tail": "vehicle",
+        "aakv_text": "The sound of engine used for vehicle."
+      }
+    ]
+  }
+]

@@ -6,27 +6,84 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{multirow}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{dblfloatfix}
 \usepackage{hyperref}
+\hypersetup{hidelinks}
 \usepackage{CJKutf8}
+\providecommand{\methodrevision}[1]{#1}
+
+% Keep double-column floats close to their discussion and avoid sparse float pages.
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.90}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.80}
+\renewcommand{\dbltopfraction}{0.95}
+\renewcommand{\dblfloatpagefraction}{0.80}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\dbltextfloatsep}{10pt plus 2pt minus 2pt}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{5}
+\setcounter{dbltopnumber}{2}
+\makeatletter
+\setlength{\@fptop}{0pt}
+\setlength{\@fpsep}{12pt}
+\setlength{\@fpbot}{0pt plus 1fil}
+\makeatother
 
 \journal{Knowledge-Based Systems}
 
 \begin{document}
 \begin{frontmatter}
 
-\title{Working title: Knowledge-enhanced zero-shot audio classification}
+\title{Sample-Adaptive Relational Knowledge Integration for Zero-Shot Audio Classification}
 
-% TODO(author): add approved author names, affiliations, and corresponding email.
-\author[inst1]{Author Name}
-\affiliation[inst1]{organization={Institution to be confirmed},
-  city={City}, country={Country}}
+\author[inst1]{Kexin Zhang\fnref{equalcontrib}}
+\ead{25461355022@stu.wzu.edu.cn}
+
+\author[inst2]{Zhizhong Ma\fnref{equalcontrib}}
+\ead{mazhizhong@wzut.edu.cn}
+
+\author[inst2]{Yitian Lin}
+\ead{yitian.lin@wzut.edu.cn}
+
+\author[inst2]{Bingchen Lin\fnref{orcidlin}}
+\ead{Bingchen.Lin@wzut.edu.cn}
+
+\author[inst3]{Haihan Yang}
+\ead{269964500@stu.cwnu.edu.cn}
+
+\author[inst2]{Zhengqiu Weng\corref{corresponding}}
+\ead{derisweng@wzut.edu.cn}
+
+\author[inst1,inst4]{Hui Huang\corref{corresponding}}
+\ead{huanghui@wzu.edu.cn}
+
+\fntext[equalcontrib]{Kexin Zhang and Zhizhong Ma contributed equally to this work.}
+\fntext[orcidlin]{ORCID: \href{https://orcid.org/0000-0002-7046-7189}{0000-0002-7046-7189}.}
+\cortext[corresponding]{Corresponding authors: Zhengqiu Weng and Hui Huang.}
+
+\affiliation[inst1]{organization={College of Computer Science and Artificial Intelligence, Wenzhou University},
+  city={Wenzhou}, postcode={325035}, country={China}}
+\affiliation[inst2]{organization={School of Data Science and Artificial Intelligence, Wenzhou University of Technology},
+  city={Wenzhou}, postcode={325035}, country={China}}
+\affiliation[inst3]{organization={School of Electronic Information Engineering, China West Normal University},
+  city={Nanchong}, postcode={637009}, country={China}}
+\affiliation[inst4]{organization={Wenzhou Turing Institute for Advanced Study in Artificial Intelligence},
+  city={Wenzhou}, postcode={325035}, country={China}}
 
 \begin{abstract}
-% TODO: write the abstract only after the method and experiments are frozen.
+\begin{CJK*}{UTF8}{gbsn}
+零样本音频分类通过匹配音频与自然语言类别描述，使预训练模型无需针对目标任务重新训练即可识别声音。然而，简短的类别名称难以充分表达声音事件的来源、场景及语义联系，限制了音频--文本匹配所能利用的信息。知识图谱能够补充这些语义联系，但如何选择适合当前音频的知识、准确表达关系语义并协调其对分类决策的影响，仍是知识增强中的关键问题。为此，本文提出样本自适应知识整合框架（Sample-Adaptive Knowledge Integration，SAKI），在保持对比语言--音频预训练模型（CLAP）参数不变的条件下，利用结构化知识改善候选类别排序。该框架通过音频对齐知识语言化模块（Audio-Aligned Knowledge Verbalization，AAKV），利用声音导向指令和实体--关系约束，引导大语言模型将三元组转换为自然语言证据；在此基础上，将不同关系下的知识增强预测构建为关系专家，结合预测共识与分类间隔，无需测试标签即可选择适合当前音频的关系；随后，在类别内部聚合所选知识证据，并与原始CLAP分数进行分层融合。\methodrevision{在五个公开音频数据集上，SAKI相较于本文复现的iKnow-audio，Hit@1提高了2.08--12.73个百分点，MRR提高了1.02--6.68个百分点。}本文将类别关联的结构化知识转化为面向当前音频的判别证据，为缓解类别描述的语义不足、实现样本自适应的知识增强提供了统一框架。
+\end{CJK*}
 \end{abstract}
 
 \begin{keyword}
-Zero-shot audio classification \sep Knowledge graph \sep Audio-language model
+Zero-shot audio classification \sep CLAP \sep Audio-centric knowledge graph \sep Sample-level relation selection \sep Knowledge verbalization \sep Evidence fusion
 \end{keyword}
 
 \end{frontmatter}
@@ -38,8 +95,20 @@ Zero-shot audio classification \sep Knowledge graph \sep Audio-language model
 \input{sections/05_discussion}
 \input{sections/06_conclusion}
 
-% Enable this after approved references have been added to references.bib.
-% \bibliographystyle{elsarticle-num}
-% \bibliography{references}
+\section*{Acknowledgements}
+This work was supported in part by the Wenzhou Basic Scientific Research Projects under Grant 2025G0082.
+
+\section*{Declaration of competing interest}
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+\section*{Data availability}
+The datasets used in this study are publicly available, including ESC-50, UrbanSound8K, DCASE17-T4, FSD50K, AudioSet, and TUT2017. The processed data and implementation details will be made available by the corresponding authors upon reasonable request.
+
+\bibliographystyle{elsarticle-num}
+\bibliography{references}
+
+% KBS/Elsevier appendices follow the reference list.
+\appendix
+\input{sections/07_appendix}
 
 \end{document}

@@ -1,2 +1,37 @@
+\providecommand{\methodrevision}[1]{#1}
 \section{Related work}\label{sec:related-work}
-% TODO: add approved related-work text here.
+\begin{CJK*}{UTF8}{gbsn}
+
+\subsection{Zero-Shot Audio Classification with Audio--Language Models}
+
+零样本音频分类研究关注如何在目标类别缺少训练音频的情况下，利用类别语义完成声音识别。早期方法通常将音频表示与由 Word2Vec、GloVe 或 BERT 等语言模型获得的类别语义嵌入进行匹配，并通过兼容性函数预测训练阶段未出现的类别~\cite{xie2021zero}。随着视觉--语言预训练的发展，CLIP 通过图像编码器和文本编码器建立共享表示空间，为利用自然语言进行零样本识别提供了通用范式~\cite{radford2021learning}。AudioCLIP 将音频模态引入 CLIP，使音频、图像和文本能够在统一空间中进行匹配；Wav2CLIP 则通过从 CLIP 视觉表示中蒸馏音频表示，使音频嵌入与图像和文本嵌入保持对齐，并支持零样本分类与跨模态检索~\cite{guzhov2021audioclip,wu2022wav2clip}。这些研究逐步将零样本音频分类从类别语义匹配扩展为音频、图像和文本之间的跨模态推理。
+
+CLAP 进一步通过大规模音频--文本对比学习直接建立音频与文本之间的语义对应关系，为零样本音频分类提供了音频--语言推理框架~\cite{elizalde2023clap}。后续模型主要从训练数据、预训练目标和模型结构等方面扩展音频--语言表示能力，例如引入大规模音频--文本数据和文本增强策略，将掩码建模与跨模态对齐结合，或面向可变长度音频进行训练~\cite{wu2023clap,niizumi2024m2dclap,mei2026slap}。在上述音频--语言推理框架中，类别文本不仅用于标识候选类别，其具体语义内容也会参与音频--文本相似度计算，并影响最终的类别排序。与此同时，类别之间的结构关系通常没有被显式纳入这一分类过程。
+
+\subsection{Textual Prompting and Sound Semantic Description}
+
+为丰富类别文本中的声音语义，已有研究从声音属性建模和类别描述扩展两个方面改进文本表示。Binary Attribute Embeddings 将音高、持续时间和材质等声音属性编码为类别语义表示~\cite{lin2022binary}；Sound Attribute Vector 进一步结合全局和局部特征学习声音属性，以增强类别语义与局部声学模式之间的联系~\cite{lin2023soundattribute}。随后，语言模型被用于生成更加完整的声音属性知识，类别文本也开始加入具有区分度的声学特征和场景信息~\cite{xu2024soundattribute,ghosh2024reclap}。这类方法将类别文本从简单标签扩展为包含声音属性和场景信息的描述，以改善文本内容与输入音频之间的语义匹配。
+
+另一类研究从任务信息和输入信息出发构造更加适配的提示。TSPE 将类别标签、声音属性和声源信息组合为任务相关的提示集合~\cite{anand2025tspe}；PAT 根据输入音频选择和组合提示，并对音频特征进行相应调整~\cite{seth2025pat}；AudioCards 则利用结构化元数据、声学属性和声音描述生成面向音频内容的文本卡片~\cite{sridhar2026audiocards}。这些研究推动了音频文本从静态类别标签向属性化、任务相关和内容相关的表达形式发展。其中，ReCLAP、TSPE、PAT 和 AudioCards 主要从描述、提示或结构化元数据的构造方式改善文本输入；如何将外部语义信息转换为与当前音频匹配的文本证据，仍缺少统一的表达方式。
+
+% Queue the method overview early so it appears at the top of page 3.
+\providecommand{\methodframeworkfigure}{figures/saki_framework.png}
+\providecommand{\methodframeworkwidth}{0.96\textwidth}
+\begin{figure*}[!t]
+  \centering
+  \includegraphics[width=\methodframeworkwidth]{\methodframeworkfigure}
+  \caption{\methodrevision{Overview of SAKI. Retrieved graph triples are verbalized and encoded offline. At inference, CLAP first ranks all candidate classes; relation experts then produce a Top-1 prediction and top-two score gap for the current audio. The consensus class and expert gaps determine the selected relations. Their cached evidence is aggregated by class and combined with the original CLAP scores for final ranking.}}
+  \label{fig:framework}
+\end{figure*}
+
+\subsection{Structured Knowledge and Evidence-Aware Candidate Ranking}
+
+结构化知识为音频理解提供了类别层级、事件属性和场景关系等显式语义信息。AudioSet 通过层次化本体组织大规模音频事件类别，为音频标签之间的语义关联提供了统一结构~\cite{gemmeke2017audioset}。基于本体的神经网络利用类别层级或本体关系约束声音事件分类，ontology-aware 音频事件分类方法进一步将标签依赖关系纳入分类模型~\cite{jimenez2018ontology,sun2020ontology}。在此基础上，图节点嵌入方法将类别关系表示为节点结构，并研究节点表示对音频分类的影响；事件关系图则将声学事件作为图节点，并利用边特征描述场景中的事件关联~\cite{aironi2022graph,hou2023audio}。这些研究表明，类别层级、标签依赖和事件关系能够为音频分类提供补充语义信息；iKnow-audio 进一步将此类结构化知识用于 CLAP 候选预测。
+
+知识图谱嵌入方法进一步为实体--关系组合提供可计算的合理性评分。RotatE 在复数空间中将关系建模为旋转操作，用于知识图谱嵌入和链接预测~\cite{sun2019rotate}。iKnow-audio 将音频中心知识图谱引入 CLAP 推理过程，利用图谱中的相关实体补充候选类别预测~\cite{olvera-etal-2025-iknow}。在预训练模型适配研究中，CLIP-Adapter 通过残差式特征混合将附加分支与原始 CLIP 表示结合，Tip-Adapter 则利用键值缓存中的外部信息修正 CLIP 的原始预测~\cite{gao2021clipadapter,zhang2022tipadapter}。这些研究从图谱表示、实体检索和外部信息融合等方面展示了结构化知识参与候选预测的可行性。
+
+样本相关的知识选择也已在视觉分类中得到研究。Tang 等人提出 SINet，通过基于注意力的知识选择模块根据图像特征筛选知识图谱中的有效知识，并利用知识选择损失约束知识表示与视觉特征的一致性~\cite{tang2023sinet}。与该类监督图像分类方法不同，本文面向零样本音频分类，利用关系条件预测及其共识与分类间隔，在推理阶段动态确定参与知识增强的关系。
+
+尽管上述研究分别从音频--语言对齐、类别文本表达、结构化知识利用以及样本相关知识选择等角度进行了探索，但其作用对象和推理设置并不相同。特别是在零样本音频分类场景中，如何在不利用目标数据训练样本条件选择器的情况下，根据当前音频动态确定知识关系优先级，并进一步协调关系证据的文本表达方式以及知识分数与原始 CLAP 分数的融合，仍缺少统一的处理机制。本文沿着这一研究脉络，将样本级关系选择、Audio-Aligned Knowledge Verbalization 和分层知识证据融合纳入统一的零样本音频分类流程。
+
+\end{CJK*}
