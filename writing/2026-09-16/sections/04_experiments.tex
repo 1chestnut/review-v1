@@ -222,7 +222,7 @@ Random Top-5
 & Hit@1 & MRR & Hit@1 & MRR & Hit@1 & MRR & Hit@1 & MRR & Hit@1 & MRR & Hit@1 & MRR \\
 \midrule
 Direct concatenation
-& 93.90 & 95.63 & 85.73 & 91.40 & 60.60 & 71.82 & 30.03 & 41.78 & 47.87 & 65.94 & 63.63 & 73.31 \\
+& 93.90 & 95.63 & 85.73 & 91.40 & 60.60 & 71.82 & 30.03 & 41.78 & 47.87 & \methodrevision{65.93} & 63.63 & 73.31 \\
 Raw triple
 & 94.10 & \textbf{95.77} & 86.43 & 91.79 & 59.58 & 71.00 & 29.25 & 41.01 & 47.95 & 64.97 & 63.46 & 72.91 \\
 \textbf{AAKV}
@@ -337,7 +337,7 @@ N_r\in\{1,3,5,10\}.
 \begin{table}[H]
 \centering
 \begin{CJK*}{UTF8}{gbsn}
-\caption{Batch size为1时的在线推理效率与离线缓存规模。各数值为五个测试集的等权平均；相对开销以CLAP的平均延迟为基准。}
+\caption{\methodrevision{Batch size为1时的在线推理效率与离线缓存规模。延迟、峰值GPU显存和离线缓存规模为五个测试集的等权平均；相对开销为平均延迟与CLAP平均延迟之比，吞吐量由平均延迟换算得到。}}
 \label{tab:computational-cost}
 \small
 \setlength{\tabcolsep}{4pt}
@@ -379,7 +379,7 @@ N_r\in\{1,3,5,10\}.
 
 \centering
 
-\caption{ESC-50上的代表性逐样本预测变化。括号内为真实类别排名；每个案例展示一条代表性AAKV证据。}
+\caption{\methodrevision{ESC-50上的代表性逐样本预测变化。括号内为真实类别排名；每例所列AAKV文本来自该样本的证据缓存，不表示该条证据对预测变化的独立贡献。}}
 
 \label{tab:case-study}
 

@@ -1,5 +1,12 @@
 # Writing decisions and changes
 
+## 2026-09-29 — Experimental cross-check corrections
+
+- Updated Appendix C relation-selection behavior for FSD50K and AudioSet from the final corrected per-sample selector records; retained the verified results for the other three datasets.
+- Corrected the TUT2017 Direct concatenation MRR to 65.93 in the knowledge-verbalization table, matching the unrounded source result and factorial table.
+- Clarified how the computational-cost table derives macro-mean latency, relative overhead and throughput, and bounded interpretation of the case-study AAKV texts.
+- Recompiled and visually checked the red-marked `main-1-公式.pdf`; left `main.pdf` unchanged as previously requested.
+
 ## 2026-09-16 — Workspace initialization
 
 - Created a double-column `elsarticle` skeleton from the user-supplied template.
