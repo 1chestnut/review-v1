@@ -248,7 +248,7 @@ Raw triple
 
 \methodrevision{在三种双模块配置中，AAKV与Sample-level Relation Selector的组合取得最高的五数据集等权平均Hit@1和MRR，分别为65.81\%和74.41\%。以Hierarchical Fusion与Sample-level Relation Selector的组合为参照，加入AAKV后，两项指标由63.63\%和73.31\%分别提高至66.81\%和75.08\%，增益为3.18和1.77个百分点。两组比较的参照配置不同；结果表明，AAKV的作用与其余模块的组合有关。}
 
-\methodrevision{完整配置取得最高的五数据集等权平均Hit@1和MRR，分别为66.81\%和75.08\%，较iKnow\textsuperscript{\dag}提高4.84和2.47个百分点；其MRR在五个测试集上均高于其余消融配置。不过，FSD50K上的AAKV与Sample-level Relation Selector组合达到64.49\%的Hit@1，略高于完整配置的64.46\%；完整配置的MRR则由74.02\%提高至74.13\%。因此，模块组合改善了总体表现，但并非在所有单项指标上都带来增益。}
+\methodrevision{完整配置取得最高的五数据集等权平均Hit@1和MRR，分别为66.81\%和75.08\%，较iKnow\textsuperscript{\dag}提高4.84和2.47个百分点；其MRR在五个测试集上均高于其余消融配置。FSD50K上的AAKV与Sample-level Relation Selector组合和完整配置的Hit@1分别为64.49\%和64.46\%，表面差值仅为0.03个百分点，对应3个测试样本。逐样本比较显示，加入Hierarchical Fusion后，215个样本由错误转为正确，218个样本由正确转为错误；该差异的双侧精确McNemar检验结果为$p=0.923$，成对Bootstrap 95\%置信区间为$[-0.44,\,0.37]$个百分点，均不支持两种配置在Hit@1上存在稳定差异。与此同时，完整配置的MRR由74.02\%提高至74.13\%，表明分层融合在该数据集上轻微改善了真实类别的整体排序，但未进一步提高首位命中率。因此，消融结果支持三个模块对总体表现的互补作用，但不意味着每个模块在所有数据集和指标上均产生独立增益。}
 
 \end{CJK*}
 \subsubsection{Relation selection analysis}\label{sec:relation-analysis}

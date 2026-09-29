@@ -1,0 +1,2 @@
+dataset,n,comparison,baseline,method,delta_Hit1_pp,Hit1_CI95_low,Hit1_CI95_high,wrong_to_correct,correct_to_wrong,net_rescued,McNemar_exact_p,delta_MRR_pp,MRR_CI95_low,MRR_CI95_high
+FSD50K,10231,add Hierarchical Fusion to AAKV+Relation Selection,AAKV+Relation Selection,Full method,-0.0293226469,-0.4398397029,0.3714201935,215,218,-3,0.9234447423,0.1111961276,-0.1327274463,0.3526078704

@@ -144,3 +144,5 @@ Future entries should record: date, approved section/claim, changed files, compi
 - 修正结果边界：完整方法取得最高的五数据集等权平均 Hit@1/MRR（66.81/75.08），但 FSD50K 上 AAKV＋Relation Selection 的 Hit@1（64.49）略高于完整方法（64.46）。
 - 更新 Bootstrap 置信区间、McNemar 检验和预测转移计数；FSD50K 与 AudioSet 的净正向转移分别修正为 473 和 358。
 - 重新生成 `main.pdf` 与红字审阅稿 `main-1-公式.pdf`，完成关键结果页面的视觉核验。
+- 进一步核对 FSD50K 的双模块与完整配置：64.49\% 与 64.46\% 仅相差3个样本；配对McNemar检验$p=0.923$，Bootstrap 95\%区间为$[-0.44,0.37]$个百分点。据此将正文解释修正为Hit@1基本持平、完整配置MRR略高，而非双模块具有稳定优势。
+- 完善引言末尾的文章结构说明，明确第2--6节分别承担相关工作、方法、实验、讨论和结论的功能。
