@@ -155,3 +155,10 @@ Future entries should record: date, approved section/claim, changed files, compi
 - 完善引言末尾的文章结构说明，明确第2--6节分别承担相关工作、方法、实验、讨论和结论的功能。
 - 按“任务背景--文本与知识增强进展--三个连续问题--SAKI对应方案”的逻辑重写引言主体，并压缩三项贡献表述。
 - 重排Table 6为栏宽自适应的四列格式，将案例名称统一为单行的“错误纠正、排名改善、预测退化”；删除关系选择正文中关于FrozenRq与主表iKnow†差异的冗长说明。
+# 2026-09-30 — Evidence-verified Related Work and PAT citation
+
+- Replaced the Related Work section with the author-approved, evidence-verified three-part review covering audio--language models, sound semantic description and prompting, and structured knowledge for audio classification.
+- Corrected the description of PAT to reflect task-level prompt weighting and frame-level cross-modal alignment, and clarified the task boundary of AudioCards.
+- Distinguished ontology/graph-based audio modeling from inference-time external knowledge retrieval and positioned SAKI's sample-level relation selection relative to iKnow-audio and SINet.
+- Replaced the incorrect PAT arXiv entry with the NAACL 2025 proceedings record (pp. 12376--12394; DOI: 10.18653/v1/2025.naacl-long.616).
+- Marked the revised Related Work prose in blue and rebuilt `main-2.pdf` successfully.

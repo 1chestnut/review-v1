@@ -106,7 +106,7 @@ DCASE17-T4 & 488 & 419 & Development & Our fixed development manifest contains 4
 \toprule
 Component & Original iKnow-audio & iKnow\textsuperscript{\dag} in this work & Treatment \\
 \midrule
-Relation set & Uses a manually curated informative relation subset $R_q \subset R$ & Uses a reconstructed, dataset-specific fixed relation configuration & The complete original $R_q$ is not publicly specified; the reproduced configuration is explicitly denoted by \textsuperscript{\dag} \\
+Relation set & \nextrevision{Uses a curated subset of informative relations $R_q \subset R$} & Uses a reconstructed, dataset-specific fixed relation configuration & The complete original $R_q$ is not publicly specified; the reproduced configuration is explicitly denoted by \textsuperscript{\dag} \\
 Knowledge graph & Audio-centric Knowledge Graph (AKG) & AKG resource used in our reproduction & Kept fixed across internal comparisons \\
 KGE model & KGE-based tail prediction & RotatE & Kept fixed across internal comparisons \\
 Candidate classes & CLAP top-ranked candidate classes & Top-$K$, $K=5$ & Unified across iKnow\textsuperscript{\dag} and ablation branches \\
@@ -167,3 +167,29 @@ TUT2017 & 6,300 & 4,336 & 1.06 & 0.0636 \\
 \methodrevision{The user message has the exact field layout \texttt{[head] head}, \texttt{[relation] relation}, and \texttt{[tail] tail}, with each field on a separate line. Qwen2.5-7B-Instruct is decoded greedily (\texttt{do\_sample=False}, \texttt{max\_new\_tokens=48}). The rule-based check tests the required prefix, lexical coverage of the head and tail, relation-keyword coverage, a maximum of 30 words, a single line and sentence, and the absence of predefined extra-format or acoustic-property terms. These checks assess observable text constraints; they do not constitute a semantic proof of triple fidelity.}
 
 \methodrevision{If the first output fails, the model receives its preceding output, the failed-check reasons, and the following repair instruction: ``Your preceding sentence failed an automatic fidelity check. Rewrite it as exactly one short English sentence beginning with the exact words `The sound of \texttt{\{head\}}'. Copy the supplied head and tail text exactly and explicitly express the supplied relation in its original direction. Do not add, correct, explain, or infer anything. Output only the sentence.'' If the repaired output still fails, the implementation uses the deterministic fallback ``The sound of \texttt{\{head\}} has the relation \texttt{\{relation\}} with \texttt{\{tail\}}.''}
+
+\section{\nextrevision{Paired Hit@1 Test Results}}\label{app:mcnemar-tests}
+\setcounter{table}{0}
+\renewcommand{\thetable}{E.\arabic{table}}
+
+\nextrevision{Table~\ref{tab:mcnemar-tests} reports the exact two-sided McNemar tests for SAKI versus iKnow\textsuperscript{\dag} on the final evaluation samples. The test uses only discordant Hit@1 outcomes; Holm adjustment is applied across the five datasets.}
+
+\begin{table}[H]
+\centering
+\color{blue}
+\caption{Paired Hit@1 test results. Rescued: iKnow\textsuperscript{\dag} incorrect and SAKI correct; harmed: iKnow\textsuperscript{\dag} correct and SAKI incorrect.}
+\label{tab:mcnemar-tests}
+\fontsize{9}{11}\selectfont
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrr}
+\toprule
+Dataset & $n$ & Rescued & Harmed & $p_{\mathrm{exact}}$ & $p_{\mathrm{Holm}}$ \\
+\midrule
+ESC-50 & 2,000 & 72 & 22 & $2.26\times10^{-7}$ & $2.26\times10^{-7}$ \\
+UrbanSound8K & 8,732 & 382 & 182 & $2.47\times10^{-17}$ & $7.41\times10^{-17}$ \\
+FSD50K & 10,231 & 991 & 518 & $1.63\times10^{-34}$ & $6.51\times10^{-34}$ \\
+AudioSet & 17,233 & 1,131 & 773 & $2.30\times10^{-16}$ & $4.59\times10^{-16}$ \\
+TUT2017 & 6,300 & 1,218 & 416 & $3.52\times10^{-91}$ & $1.76\times10^{-90}$ \\
+\bottomrule
+\end{tabular}
+\end{table}

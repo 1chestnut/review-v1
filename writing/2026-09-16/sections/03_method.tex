@@ -73,7 +73,7 @@ s_{\mathrm{base}}(c_i\mid x^a)=(\mathbf e^a)^\top\mathbf e_i^t.
 
 \subsection{Sample-level relation selection}\label{sec:relation-selector-method}
 
-固定关系集合无法反映不同音频样本对知识关系的差异化需求。本文将每种候选关系对应的知识增强预测构建为一个关系专家，并依据专家间的预测共识与分类间隔确定关系优先级。
+\nextrevision{当同一数据集的所有音频使用相同的关系集合时，关系选择不会随当前输入改变。}本文将每种候选关系对应的知识增强预测构建为一个关系专家，并依据专家间的预测共识与分类间隔确定关系优先级。
 
 \methodrevision{本文将知识证据聚合与类别分数融合分为两步。令$\mathcal U=(u_1,\ldots,u_n)$表示某类别对应的$n$条有效证据相似度，$u_j$为第$j$条证据的音频--文本相似度，$j=1,\ldots,n$。首先，式~\eqref{eq:normlse}将这些证据相似度聚合为一个知识分数。}
 \begin{equation}
