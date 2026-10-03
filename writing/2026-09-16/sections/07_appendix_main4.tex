@@ -54,7 +54,7 @@ ESC-50 & 2,000 & 2,000 & Test & The full dataset is used. All 2,000 files in our
 UrbanSound8K & 8,732 & 8,732 & Test & The full dataset is used. All 8,732 files in our evaluation manifest \greenrevision{pass the audio decoding check}. \\
 FSD50K & 20,462 & 10,231 & Test & We use the official FSD50K evaluation split containing 10,231 clips. The iKnow-audio paper reports 20,462 test items; therefore absolute results across the two protocols are not treated as directly comparable. \\
 AudioSet & 20,371 & 17,233 & Test & Our fixed evaluation manifest contains 17,233 available and readable audio files. The exact manifest will be released for reproducibility. \\
-TUT2017 & 6,300 & 6,300 & Test & Final experiments use the complete development (4,680) and evaluation (1,620) partitions. Earlier 4,680-only results were replaced by the full 6,300-clip rerun. \\
+TUT2017 & 6,300 & 6,300 & Test & We use all 6,300 clips from the development (4,680) and evaluation (1,620) partitions. \\
 DCASE17-T4 & 488 & 419 & Development & Our fixed development manifest contains 419 readable clips and is used only for selecting $\alpha$ and $N_r$. It is excluded from the five final test datasets. \\
 \bottomrule
 \end{tabular}
@@ -69,11 +69,11 @@ DCASE17-T4 & 488 & 419 & Development & Our fixed development manifest contains 4
 \label{tab:iknow-protocol}
 \fontsize{9}{11}\selectfont
 \setlength{\tabcolsep}{4pt}
-\begin{tabular}{p{0.16\textwidth}p{0.27\textwidth}p{0.23\textwidth}p{0.27\textwidth}}
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.27\textwidth}>{\raggedright\arraybackslash}p{0.23\textwidth}>{\raggedright\arraybackslash}p{0.27\textwidth}}
 \toprule
 Component & Original iKnow-audio & iKnow\textsuperscript{\dag} in this work & Treatment \\
 \midrule
-Relation set & \nextrevision{Uses a curated subset of informative relations $R_q \subset R$} & \greenrevision{A fixed relation set reconstructed for each dataset} & \purplerevision{Complete original $R_q$ not disclosed; \textsuperscript{\dag} marks the reimplementation} \\
+Relation set & \nextrevision{Curated informative relations $R_q \subset R$} & \greenrevision{Fixed relations reconstructed for each dataset} & \purplerevision{The complete original $R_q$ is not publicly available} \\
 Knowledge graph & Audio-centric Knowledge Graph (AKG) & AKG resource used in our reimplementation & Kept fixed across internal comparisons \\
 KGE model & \purplerevision{RotatE for tail prediction} & \purplerevision{Pretrained RotatE for tail prediction} & \purplerevision{Same model family; fixed across internal comparisons} \\
 Candidate classes & CLAP top-ranked candidate classes & Top-$K$, $K=5$ & Unified across iKnow\textsuperscript{\dag} and ablation branches \\
@@ -156,7 +156,7 @@ TUT2017 & \texttt{affects}; \texttt{associated with environment}; \texttt{can be
 
 \begin{table}[H]
 \centering
-\caption{\purplerevision{Sample-level relation selection behavior on the five test datasets. Unique Top-5 sets and dominant-set share treat relation combinations as unordered.} \greenrevision{Mean Jaccard measures set overlap with the complete FrozenRq relation set for each dataset, not classification performance.}}
+\caption{\purplerevision{Sample-level relation selection behavior on the five test datasets. Combinations containing the same five relations are counted as one set, regardless of their order. Dominant-set share is the percentage of samples using the most frequent set.} \greenrevision{Mean Jaccard measures set overlap with the complete FrozenRq relation set for each dataset, not classification performance.}}
 \label{tab:selector-behavior}
 \small
 \setlength{\tabcolsep}{6pt}

@@ -414,3 +414,10 @@ Future entries should record: date, approved section/claim, changed files, compi
 - Replaced two forced two-column page starts with standard top double-column floats. Table 1 and Table 2 and their first numbered discussions now share page 7, eliminating the almost-empty intervening page; Table 3 and its discussion share page 8.
 - Reduced the oversized space reservation before computational cost analysis. Retained the Elsevier 5p two-column class, figure sizes, and bibliography font size; slightly tightened bibliography line spacing to avoid an orphan URL page.
 - Recompiled twice and inspected the rendered pages. The PDF decreased from 17 to 15 pages, with no compilation errors, overfull boxes, or unresolved references. Verified all table bodies unchanged and non-layout source content preserved.
+# 2026-10-03 — Final appendix protocol and clearer table notes
+
+- Removed historical TUT2017 rerun wording from Table B.1; retained only the final 6,300-clip protocol and development/evaluation partition counts.
+- Shortened the relation-set row in Table B.2 and left-aligned its paragraph columns. Removed the redundant dagger explanation from that row while preserving the curated-versus-reconstructed distinction.
+- Clarified that Table D.1 counts identical five-relation combinations as the same set regardless of order, and defined dominant-set share without changing its values.
+- Checked the current main-4 appendix source and PDF text for Chinese characters; none were found. Preserved the exact English generation instructions in Appendix A.
+- Compiled twice and visually inspected appendix pages 13–15. The manuscript remains 15 pages with black text, unchanged experimental values, and no overfull boxes or unresolved references.
