@@ -349,6 +349,14 @@ Future entries should record: date, approved section/claim, changed files, compi
 - Removed manuscript wording about unmeasured module-level timing and a future cache-version remeasurement. The measurement-version check remains an internal submission task, not a claim of new results.
 - Rebuilt main-4.pdf (14 pages) and main-5.pdf (13 pages) and inspected the revised pages. Remote sync deferred because the existing script would also upload unrelated working-tree changes.
 
+# 2026-10-03 — Complete authorized main-4 language audit items
+
+- Recovered the original 41 numbered suggestions and recorded individual dispositions. Twelve had already been addressed; this revision addresses 21 further numbered suggestions in red. Six Related Work suggestions and two Appendix A explanatory sentences remain pending author confirmation.
+- Clarified abstract, introduction, methods, comparison references, prediction transitions, timing wording, and conclusion without changing reported results or scoring rules. Updated the terminology policy to avoid naming independently trained predictors.
+- Preserved Related Work and Appendix A verbatim. Protected reported decimal values, all table numbers, displayed equations, citation keys, labels, and experimental table bodies with automated checks.
+- Rebuilt the 16-page main-4.pdf twice and inspected revised pages. No compilation errors, overfull boxes, or unresolved citations/references. The author-supplied framework image and existing analysis figures were not edited.
+- The earlier suggestion to add Appendix prefixes was rejected: current cross-references already supply them. Existing unrelated working-tree edits are preserved.
+
 # 2026-10-03 — Equation 7 and analysis-figure legibility
 
 - Reformatted Eq. (7) as a two-line aligned expression in both language versions; stated its eligibility and original-score fallback immediately in prose without changing the scoring rule. The affected text and equation are green.

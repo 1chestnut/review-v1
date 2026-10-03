@@ -1,0 +1,52 @@
+﻿中文术语,建议英文,性质,出处引用键,PDF页码,原文短证据,核对状态
+零样本音频分类,zero-shot audio classification,literature,xie2021zero,1,"1 Zero-Shot Audio Classification via Semantic Embeddings arXiv:2011.12133v2 [eess.AS] 11 Feb 2021 Huang Xie, Student Membe",attested in cited PDF
+音频–语言模型,audio-language model,literature,olvera-etal-2025-iknow,1,iKnow-audio: Integrating Knowledge Graphs with Audio-Language Models Michel Olvera1 Changhong Wang1 Paraskevas Stamatiadis1 Gaël Richard1 Slim Essid2 * 1 2 L,attested in cited PDF
+音频–文本对比学习,contrastive language-audio pretraining,literature,wu2023clap,1,"LARGE-SCALE CONTRASTIVE LANGUAGE-AUDIO PRETRAINING WITH FEATURE FUSION AND KEYWORD-TO-CAPTION AUGMENTATION Yusong Wu 1∗ , Ke Chen 2∗ , Tiany",attested in cited PDF
+共享表示空间,joint multimodal space,literature,elizalde2023clap,1,contrastive learning to bring audio and text descriptions into a joint multimodal space. We trained CLAP with 128k audio and text pairs and evaluated it on 16 downstream tasks a,attested in cited PDF
+文本提示,prompts,literature,seth2025pat,1,orithm that automatically selects and combines the most relevant prompts from a datastore with a large pool of handcrafted prompts and weighs them according to th,attested in cited PDF
+声音描述,sound descriptions,literature,ghosh2024reclap,4,"d LAION-CLAP show limited gains, indicating they don’t interpret sound descriptions as effectively as ReCLAP. This highlights the importance of caption augmentation training",attested in cited PDF
+提示增强,prompt augmentation,literature,ghosh2024reclap,1,"o improve zero-shot audio classification with ReCLAP, we propose prompt augmentation. In contrast to the traditional method of employing hand-written template prompts, we gen",attested in cited PDF
+音频中心知识图谱,Audio-centric Knowledge Graph,literature,olvera-etal-2025-iknow,1," to provide robust semantic grounding. iKnow-audio builds on the Audio-centric Knowledge Graph (AKG), which encodes ontological relations comprising semantic, causal, and taxonomic con",attested in cited PDF
+知识图谱嵌入,knowledge graph embedding,literature,sun2019rotate,1,"een) the relations. In this paper, we present a new approach for knowledge graph embedding called RotatE, which is able to model and infer various relation patterns including: symm",attested in cited PDF
+尾实体,tail entities,literature,olvera-etal-2025-iknow,3,", where, given a head entity h and relation r, we rank candidate tail entities t ∈ E based on their plausibility. Higher scores indicate greater semantic compatibility,",attested in cited PDF
+关系,relations,literature,olvera-etal-2025-iknow,1,"ces, and they often inherit semantic ambiguities and spurious correlations from noisy pretraining data. While prior work has explored prompt engineering, adapters, ",attested in cited PDF
+三元组,triples,literature,sun2019rotate,5,"0,466 3,134 Table 3: Number of entities, relations, and observed triples in each split for four benchmarks. Lemma 1. RotatE can infer the symmetry/antisymmetry pa",attested in cited PDF
+候选类别,candidate classes,"study-specific; common term, no source claim",,,,"study-specific; common term, no source claim"
+类别重排序,re-ranking,literature,olvera-etal-2025-iknow,4," based on semantically enriched textual context. Aggregation and Re-ranking To consolidate evidence from both the original label and its augmented prompts, we aggreg",attested in cited PDF
+样本级关系选择,sample-level relation selection,author-defined,,,,author-defined
+逐关系类别预测,class predictions computed separately for each relation,author-confirmed scoring operation,,,,shared frozen CLAP; no separately trained predictor
+预测共识,prediction consensus,author-defined; wording pending,,,,author-defined; wording pending
+前两名分数差,top-two score gap,defined score difference,,,,difference between highest and second-highest relation-specific class scores
+音频对齐知识语言化,Audio-Aligned Knowledge Verbalization (AAKV),author-defined,,,,author-defined
+分层融合,Hierarchical Fusion,author-defined module,,,,evidence aggregation within each class followed by fusion with original CLAP score
+知识证据,knowledge evidence,author-defined; wording pending,,,,author-defined; wording pending
+原始 CLAP 分数,base CLAP score,author-defined; wording pending,,,,author-defined; wording pending
+五数据集等权平均,unweighted average across five datasets,study-specific,,,,study-specific
+命中率,Hit@k,metric; retain paper notation,,,,metric; retain paper notation
+平均倒数排名,mean reciprocal rank (MRR),metric; retain paper notation,,,,metric; retain paper notation
+百分点,percentage points,standard statistical term,,,,standard statistical term
+对比语言–音频预训练模型,Contrastive Language-Audio Pretraining (CLAP),literature; check expansion against the chosen CLAP paper,elizalde2023clap,1,"concepts from natural language supervision. We call our approach Contrastive Language-Audio Pretraining (CLAP), which learns to connect language and audio by using two encoders and a contrastiv",attested in cited PDF
+音频编码器,audio encoder,literature,elizalde2023clap,1,strated in Fig 1. The input is audio and text pairs passed to an audio encoder and a text encoder. Both representations are connected in joint multimodal space with lin,attested in cited PDF
+文本编码器,text encoder,literature,elizalde2023clap,1,e input is audio and text pairs passed to an audio encoder and a text encoder. Both representations are connected in joint multimodal space with linear projections. Th,attested in cited PDF
+余弦相似度,cosine similarity,literature,elizalde2023clap,2,labels. Zero-Shot linear classification is achieved by computing cosine similarity between the embeddings. Classification. Our method is inspired by the CLIP model [6]. 2.1,attested in cited PDF
+知识增强提示,knowledge-augmented prompts,literature,olvera-etal-2025-iknow,4,"), ϕT (p)) . (3) This yields a refined similarity score for each knowledge-augmented prompt, enabling reranking of the initial predictions Ck based on semantically enriched textual ",attested in cited PDF
+链接预测,link prediction,literature,sun2019rotate,1,"nd significantly outperform existing state-of-the-art models for link prediction. 1 I NTRODUCTION Knowledge graphs are collections of factual triplets, where each triplet",attested in cited PDF
+贪心解码,greedy decoding,implementation term; verify in local method/code,,,,implementation term; verify in local method/code
+离线知识准备,offline knowledge preparation,study-specific,,,,study-specific
+在线推理,online inference,study-specific,,,,study-specific
+关系池,relation pool,study-specific; wording pending,,,,study-specific; wording pending
+关系选择器,relation selector,author-defined,,,,author-defined
+所选关系,selected relations,study-specific,,,,study-specific
+有效尾实体,valid tail entities,study-specific,,,,study-specific
+跨关系去重,deduplication across relations,study-specific,,,,study-specific
+类别内知识证据聚合,within-class knowledge evidence aggregation,author-defined; wording pending,,,,author-defined; wording pending
+受控复现,controlled reimplementation,study-specific,,,,iKnow† is distinct from original iKnow-audio and FrozenRq
+五个公开测试集,five public test sets,study-specific,,,,study-specific
+成对Bootstrap重采样,paired bootstrap resampling,standard statistical term,,,,standard statistical term
+精确McNemar检验,exact McNemar test,standard statistical term,,,,standard statistical term
+Holm校正,Holm correction,standard statistical term,,,,standard statistical term
+置信区间,confidence interval,standard statistical term,,,,standard statistical term
+在线延迟,online latency,experiment-specific,,,,experiment-specific
+吞吐量,throughput,standard efficiency term,,,,standard efficiency term
+峰值GPU显存,peak GPU memory,standard efficiency term,,,,standard efficiency term
+离线缓存规模,offline cache size,experiment-specific,,,,experiment-specific

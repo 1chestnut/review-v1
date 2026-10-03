@@ -25,8 +25,8 @@ $x^a,\mathcal C,c_i$ & Input audio, candidate class set, and a candidate class \
 $\mathcal G,\mathcal E,\mathcal R$ & Knowledge graph, entity set, and relation set \\
 $K,M,N_r$ & \redrevision{Numbers of shortlisted classes, maximum tail entities per class--relation pair, and selected relations} \\
 $s_{\mathrm{base}},s_r,s_{\mathrm{final}}$ & Original CLAP score, relation-specific class score, and final class score \\
-$\mathcal E_{i,r},\mathcal U_{i,r}$ & Retained tails and evidence scores for a class--relation pair \\
-$\mathcal U_i^*$ & Evidence scores after merging selected relations and removing duplicate tails \\
+$\mathcal E_{i,r},\mathcal U_{i,r}$ & \redrevision{Retained tail entity set and evidence score sequence for a class--relation pair} \\
+$\mathcal U_i^*$ & \redrevision{Merged evidence score sequence after tail deduplication} \\
 $A_{\lambda},\lambda$ & Evidence aggregation operator and its fixed scale \\
 $\mathcal F,\alpha$ & Two-step scoring rule and weight on the original CLAP score \\
 \bottomrule
@@ -56,7 +56,7 @@ A verified class-to-entity mapping assigns class $c_i$ to a graph head entity $h
 
 \subsection{Audio-Aligned Knowledge Verbalization}\label{sec:aakv-method}
 
-\greenrevision{AAKV verbalizes each retrieved graph triple $(h_i,r,t)$ as $q_{irt}$, using the corresponding class name $c_i$ as the supplied head text. The graph entity $h_i$ is used for retrieval; the class name $c_i$ is used in the generated description. }The term \emph{audio-aligned} describes \greenrevision{text about sounds intended for CLAP audio--text matching}; generation is not conditioned on the input audio. The instruction requires the sentence to begin with the words \textit{The sound of} followed by the supplied head text. It also requires the original entity wording, relation meaning and direction, and tail entity to be retained without adding information beyond the triple.
+\greenrevision{AAKV verbalizes each retrieved graph triple $(h_i,r,t)$ as $q_{irt}$, using the corresponding class name $c_i$ as the supplied head text. The graph entity $h_i$ is used for retrieval; the class name $c_i$ is used in the generated description. }The term \emph{audio-aligned} describes \greenrevision{text about sounds intended for CLAP audio--text matching}; generation is not conditioned on the input audio. The instruction requires the sentence to begin with the words \textit{The sound of} followed by the supplied head text. \redrevision{It requires preserving the supplied head and tail wording, together with the relation's meaning and direction. No information beyond the triple may be added.}
 
 We generate the text offline with Qwen2.5-7B-Instruct using greedy decoding. \redrevision{Rule-based checks test the normalized prefix, coverage of head and tail content words, and terms denoting the relation. They also check output length, line and sentence formatting, and predefined prohibited expressions.} If the output fails, we attempt one constrained repair using \greenrevision{the reasons for failure}. A second failure triggers a deterministic template that inserts the supplied head, relation, and tail text. \ref{app:aakv-protocol} specifies the exact instruction, checks, and fallback. This procedure constrains the expression of graph evidence to the information in the input triple.
 
@@ -128,7 +128,7 @@ After relation selection, we process each class in $\mathcal C_K$ separately. In
 \end{equation}
 Each selected relation supplies at most $M$ evidence items per class. Thus, there are at most $MN_r$ items before deduplication, and $\mathcal U_i^*$ contains all retained items after deduplication.
 
-\greenrevision{At final scoring, Eq.~\eqref{eq:unified-fusion} combines the merged evidence sequence with the original CLAP score, rather than with a relation-specific score:}
+\redrevision{At the final scoring stage, Eq.~\eqref{eq:unified-fusion} combines the aggregated knowledge score with the original CLAP score:}
 \[
 s_{\mathrm{final}}(c_i\mid x^a)=\mathcal F(c_i,\mathcal U_i^*(x^a)\mid x^a).
 \]

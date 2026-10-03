@@ -1,0 +1,200 @@
+% !TeX root = ../main-4.tex
+\onecolumn
+\raggedbottom
+\small
+\renewcommand{\theHtable}{appendix.\thesection.\arabic{table}}
+\setlength{\parskip}{0pt}
+\setlength{\intextsep}{5pt plus 1pt minus 1pt}
+\setlength{\textfloatsep}{6pt plus 1pt minus 1pt}
+\begin{multicols}{2}
+\raggedcolumns
+\section{\methodrevision{AAKV generation and validation protocol}}\label{app:aakv-protocol}
+\methodrevision{For each retrieved triple, the generator receives a system instruction and a user message containing the three fields \texttt{[head]}, \texttt{[relation]}, and \texttt{[tail]}. \greenrevision{The \texttt{[head]} field contains the candidate class name $c_i$, corresponding to the graph entity $h_i$ used for retrieval. The placeholder \texttt{\{head\}} is replaced with this class name.} The full system instruction used in the implementation is reproduced below.}
+
+\begin{quote}
+\methodrevision{You are a faithful knowledge-graph verbalizer for an audio-text matching model. Convert exactly one knowledge-graph triple into one short, natural English sentence about sound.}
+
+\methodrevision{Rules:}
+\begin{enumerate}
+\item \methodrevision{Begin the sentence with exactly: ``The sound of \texttt{\{head\}}''. Replace \texttt{\{head\}} with the supplied head text exactly.}
+\item \methodrevision{Use only information explicitly contained in the triple.}
+\item \methodrevision{Preserve the head entity, relation meaning, relation direction, and tail entity.}
+\item \methodrevision{Preserve the original wording of the head and tail. Do not pluralize, abbreviate, replace, or omit either entity.}
+\item \methodrevision{Do not add acoustic properties, causes, locations, purposes, examples, explanations, or external knowledge.}
+\item \methodrevision{Do not correct or reinterpret the factual content, even if it seems unusual.}
+\item \methodrevision{Add only grammatical function words such as articles, prepositions, and forms of ``be''.}
+\item \methodrevision{Silently verify that the sentence expresses exactly the supplied triple.}
+\item \methodrevision{Output only one final sentence, without reasoning, labels, headers, or quotation marks.}
+\end{enumerate}
+\end{quote}
+
+\methodrevision{The user message has the exact field layout \texttt{[head] head}, \texttt{[relation] relation}, and \texttt{[tail] tail}, with each field on a separate line. Qwen2.5-7B-Instruct is decoded greedily (\texttt{do\_sample=False}, \texttt{max\_new\_tokens=48}). The rule-based check tests the required prefix, lexical coverage of the head and tail, \greenrevision{coverage of terms denoting the relation}, a maximum of 30 words, a single line and sentence, and the absence of \greenrevision{prohibited formatting and acoustic property terms}. These checks assess observable text constraints; they do not constitute a semantic proof of triple fidelity.}
+
+\methodrevision{If the first output fails, the model receives its preceding output, \greenrevision{the reasons for failure}, and the following repair instruction: ``Your preceding sentence failed an automatic fidelity check. Rewrite it as exactly one short English sentence beginning with the exact words `The sound of \texttt{\{head\}}'. Copy the supplied head and tail text exactly and explicitly express the supplied relation in its original direction. Do not add, correct, explain, or infer anything. Output only the sentence.'' If the repaired output still fails, the implementation uses the deterministic fallback ``The sound of \texttt{\{head\}} has the relation \texttt{\{relation\}} with \texttt{\{tail\}}.''}
+
+\end{multicols}
+\section{Controlled reimplementation and dataset protocols}\label{app:reproduction}
+
+\setcounter{table}{0}
+\renewcommand{\thetable}{B.\arabic{table}}
+
+\subsection{Dataset protocol reconciliation}
+
+\begin{table}[H]
+\centering
+\caption{\purplerevision{Dataset protocols reported by iKnow-audio and used in this work. The sample counts document protocol differences; absolute performance across the two protocols is not treated as directly comparable.}}
+\label{tab:dataset-reconciliation}
+\fontsize{9}{11}\selectfont
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrlp{0.55\textwidth}}
+\toprule
+Dataset & iKnow-audio & This work & Role & Protocol note \\
+\midrule
+ESC-50 & 2,000 & 2,000 & Test & The full dataset is used. All 2,000 files in our evaluation manifest \greenrevision{pass the audio decoding check}. \\
+UrbanSound8K & 8,732 & 8,732 & Test & The full dataset is used. All 8,732 files in our evaluation manifest \greenrevision{pass the audio decoding check}. \\
+FSD50K & 20,462 & 10,231 & Test & We use the official FSD50K evaluation split containing 10,231 clips. The iKnow-audio paper reports 20,462 test items; therefore absolute results across the two protocols are not treated as directly comparable. \\
+AudioSet & 20,371 & 17,233 & Test & Our fixed evaluation manifest contains 17,233 available and readable audio files. The exact manifest will be released for reproducibility. \\
+TUT2017 & 6,300 & 6,300 & Test & Final experiments use the complete development (4,680) and evaluation (1,620) partitions. Earlier 4,680-only results were replaced by the full 6,300-clip rerun. \\
+DCASE17-T4 & 488 & 419 & Development & Our fixed development manifest contains 419 readable clips and is used only for selecting $\alpha$ and $N_r$. It is excluded from the five final test datasets. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\Needspace{26\baselineskip}
+\subsection{iKnow\textsuperscript{\dag} controlled reimplementation protocol}
+
+\begin{table}[H]
+\centering
+\caption{\purplerevision{Correspondence between the original iKnow-audio method and the iKnow\textsuperscript{\dag} controlled reimplementation protocol in this work.}}
+\label{tab:iknow-protocol}
+\fontsize{9}{11}\selectfont
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{p{0.16\textwidth}p{0.27\textwidth}p{0.23\textwidth}p{0.27\textwidth}}
+\toprule
+Component & Original iKnow-audio & iKnow\textsuperscript{\dag} in this work & Treatment \\
+\midrule
+Relation set & \nextrevision{Uses a curated subset of informative relations $R_q \subset R$} & \greenrevision{A fixed relation set reconstructed for each dataset} & \purplerevision{Complete original $R_q$ not disclosed; \textsuperscript{\dag} marks the reimplementation} \\
+Knowledge graph & Audio-centric Knowledge Graph (AKG) & AKG resource used in our reimplementation & Kept fixed across internal comparisons \\
+KGE model & \purplerevision{RotatE for tail prediction} & \purplerevision{Pretrained RotatE for tail prediction} & \purplerevision{Same model family; fixed across internal comparisons} \\
+Candidate classes & CLAP top-ranked candidate classes & Top-$K$, $K=5$ & Unified across iKnow\textsuperscript{\dag} and ablation branches \\
+Tail retrieval & Top-ranked tail entities & Top-$M$, $M=3$ & Unified across iKnow\textsuperscript{\dag} and ablation branches \\
+Knowledge text & \purplerevision{Class--tail concatenation} & Direct class--tail concatenation & \purplerevision{Same construction in principle; baseline text representation} \\
+Score aggregation & \redrevision{Log-sum-exp over original CLAP and knowledge-augmented prompt scores} & Normalized scaled log-sum-exp, $\methodrevision{\lambda}=100$ & \purplerevision{Controlled modification shared by iKnow\textsuperscript{\dag} and ablations} \\
+Evaluation samples & Original paper protocol & Fixed manifests in Table~\ref{tab:dataset-reconciliation} & All methods in this work use identical manifests and evaluation code \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\Needspace{20\baselineskip}
+\section{Additional ablation results}\label{app:ablation}
+\setcounter{table}{0}
+\renewcommand{\thetable}{C.\arabic{table}}
+
+Table~\ref{tab:ablation-topk} supplements the component ablations with Hit@3 and Hit@5. The configurations and all other settings match Table~\ref{tab:factorial-ablation}.
+
+\begin{table}[H]
+\centering
+\caption{Hit@3 and Hit@5 (\%) for the eight configurations in Table~\ref{tab:factorial-ablation}. Higher is better. \greenrevision{The mean across the five datasets is unweighted.} Fusion and Selector abbreviate Hierarchical Fusion and Sample-level Relation Selector.}
+\label{tab:ablation-topk}
+\setlength{\tabcolsep}{2.5pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l*{12}{c}}
+\toprule
+\multirow{2}{*}{Method}
+& \multicolumn{2}{c}{ESC-50}
+& \multicolumn{2}{c}{UrbanSound8K}
+& \multicolumn{2}{c}{FSD50K}
+& \multicolumn{2}{c}{AudioSet}
+& \multicolumn{2}{c}{TUT2017}
+& \multicolumn{2}{c}{\greenrevision{Mean (5 datasets)}} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}\cmidrule(lr){10-11}\cmidrule(lr){12-13}
+& Hit@3 & Hit@5 & Hit@3 & Hit@5 & Hit@3 & Hit@5 & Hit@3 & Hit@5 & Hit@3 & Hit@5 & Hit@3 & Hit@5 \\
+\midrule
+iKnow\textsuperscript{\dag}
+& 97.05 & 97.65 & 96.77 & 98.65 & 80.73 & 86.51 & 47.04 & 54.87 & 79.89 & 92.68 & 80.30 & 86.07 \\
++ AAKV
+& 95.90 & 97.65 & 96.14 & 98.65 & 80.63 & 86.46 & 46.73 & 54.80 & 79.65 & 92.27 & 79.81 & 85.97 \\
++ Fusion
+& 97.10 & 97.65 & 96.86 & 98.65 & 81.24 & 86.67 & 47.48 & 55.14 & 80.78 & 92.65 & 80.69 & 86.15 \\
++ Selector
+& 97.05 & 97.70 & 96.36 & 98.65 & 79.96 & 86.38 & 46.68 & 55.00 & 80.83 & 92.52 & 80.17 & 86.05 \\
++ AAKV + Fusion
+& 97.00 & 97.65 & 96.56 & 98.65 & 81.21 & 86.58 & 47.10 & 54.93 & 81.30 & 92.00 & 80.64 & 85.96 \\
++ AAKV + Selector
+& 96.30 & 97.65 & 96.09 & 98.65 & \methodrevision{80.09} & \methodrevision{86.40} & \methodrevision{46.61} & 54.90 & 79.56 & 92.25 & \methodrevision{79.73} & 85.97 \\
++ Fusion + Selector
+& 97.05 & 97.65 & 96.60 & 98.65 & 79.68 & 86.38 & 46.34 & 54.94 & 80.70 & 92.63 & 80.07 & 86.05 \\
+SAKI
+& 96.80 & 97.65 & 96.90 & 98.65 & \methodrevision{80.52} & \methodrevision{86.48} & \methodrevision{46.90} & \methodrevision{54.80} & 80.54 & 91.79 & \methodrevision{80.33} & 85.88 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Relations selected by Frequency Top-5 for each dataset. Relations are ranked by the number of class--tail evidence entries in the offline cache.}
+\label{tab:frequency-relations}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lp{0.82\textwidth}}
+\toprule
+Dataset & Frequency Top-5 relations \\
+\midrule
+ESC-50 & \texttt{can be heard in}; \texttt{has duration}; \texttt{localized in}; \texttt{part of scene}; \texttt{associated with environment} \\
+UrbanSound8K & \texttt{affects}; \texttt{associated with environment}; \texttt{associated with event}; \texttt{can be heard in}; \texttt{co-occurs with} \\
+FSD50K & \texttt{associated with environment}; \texttt{can be heard in}; \texttt{localized in}; \texttt{occurs in}; \texttt{part of scene} \\
+AudioSet & \texttt{can be heard in}; \texttt{occurs in}; \texttt{localized in}; \texttt{described by}; \texttt{associated with environment} \\
+TUT2017 & \texttt{affects}; \texttt{associated with environment}; \texttt{can be heard in}; \texttt{co-occurs with}; \texttt{emotionally associated with} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{Sample-level relation selection behavior}\label{app:selector-behavior}
+\setcounter{table}{0}
+\renewcommand{\thetable}{D.\arabic{table}}
+
+\begin{table}[H]
+\centering
+\caption{\purplerevision{Sample-level relation selection behavior on the five test datasets. Unique Top-5 sets and dominant-set share treat relation combinations as unordered.} \greenrevision{Mean Jaccard measures set overlap with the complete FrozenRq relation set for each dataset, not classification performance.}}
+\label{tab:selector-behavior}
+\small
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{lrrrr}
+\toprule
+Dataset & \#Samples & \#Unique Top-5 sets & Dominant-set share (\%) & \redrevision{\shortstack{Mean Jaccard similarity\\with FrozenRq}} \\
+\midrule
+ESC-50 & 2,000 & 1,708 & 1.40 & 0.0405 \\
+UrbanSound8K & 8,732 & 5,461 & 1.53 & 0.0739 \\
+FSD50K & 10,231 & \methodrevision{9,069} & \methodrevision{1.52} & \methodrevision{0.0559} \\
+AudioSet & 17,233 & \methodrevision{15,733} & \methodrevision{1.38} & \methodrevision{0.0581} \\
+TUT2017 & 6,300 & 4,336 & 1.06 & 0.0636 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{\nextrevision{Paired Hit@1 test results}}\label{app:mcnemar-tests}
+\setcounter{table}{0}
+\renewcommand{\thetable}{E.\arabic{table}}
+
+\nextrevision{Table~\ref{tab:mcnemar-tests} reports the exact two-sided McNemar tests for SAKI versus iKnow\textsuperscript{\dag} on the final evaluation samples. The test uses only discordant Hit@1 outcomes; Holm adjustment is applied across the five datasets.}
+
+\begin{table}[H]
+\centering
+\color{black}
+\caption{\purplerevision{Paired Hit@1 transitions and significance tests for SAKI versus iKnow\textsuperscript{\dag}. \redrevision{Incorrect $\to$ correct denotes an incorrect iKnow\textsuperscript{\dag} prediction and a correct SAKI prediction; correct $\to$ incorrect denotes the reverse.} Two-sided exact McNemar $p$ values are adjusted across five datasets using the Holm method.}}
+\label{tab:mcnemar-tests}
+\fontsize{9}{11}\selectfont
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrr}
+\toprule
+Dataset & $n$ & \redrevision{\shortstack{Incorrect\\$\to$ correct}} & \redrevision{\shortstack{Correct\\$\to$ incorrect}} & $p_{\mathrm{exact}}$ & $p_{\mathrm{Holm}}$ \\
+\midrule
+ESC-50 & 2,000 & 72 & 22 & $2.26\times10^{-7}$ & $2.26\times10^{-7}$ \\
+UrbanSound8K & 8,732 & 382 & 182 & $2.47\times10^{-17}$ & $7.41\times10^{-17}$ \\
+FSD50K & 10,231 & 991 & 518 & $1.63\times10^{-34}$ & $6.51\times10^{-34}$ \\
+AudioSet & 17,233 & 1,131 & 773 & $2.30\times10^{-16}$ & $4.59\times10^{-16}$ \\
+TUT2017 & 6,300 & 1,218 & 416 & $3.52\times10^{-91}$ & $1.76\times10^{-90}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
