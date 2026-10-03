@@ -1,5 +1,11 @@
 # Writing decisions and changes
 
+## 2026-10-03 — Approved concise selection-analysis wording
+
+- Deleted the premature Overall Results transition and the repeated FSD50K summary, retaining the quantitative FSD50K analysis.
+- Replaced the selection-rule caveat with the approved combined-strategy conclusion; did not add the deferred voting-only/score-gap-only ablations to Limitations. Reserved them in a non-rendered source comment only.
+- Replaced the possessive selector wording with an explicit description of relation sets for individual samples and limited the diversity-statistics conclusion to variation across audio samples. New/replacement sentences are blue. Preserved the Sample-level Relation Selector module name and all experimental values.
+
 ## 2026-10-03 — Approved reproduction and dataset-mean wording
 
 - Replaced the “uniquely recover” inference-configuration statement with the author-approved distinction between the documented inference procedure and unavailable complete relation subset/classification implementation. Preserved the source citation and controlled-reimplementation status; marked the replacement blue.
