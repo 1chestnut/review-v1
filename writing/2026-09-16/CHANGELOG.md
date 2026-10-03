@@ -1,5 +1,10 @@
 # Writing decisions and changes
 
+## 2026-10-03 — Author-corrected Figure 1 (图片3.png)
+
+- Replaced the framework image in main-4 with 图片3.png, preserving the supplied bitmap and all prose, equations, results, and red revision marks.
+- Kept the prior image for recovery. Recompiled and checked the Figure 1 page.
+
 ## 2026-10-03 — Red-marked main-4 wording and author-supplied framework figure
 
 - Replaced Figure 1 with the author-supplied 图片2.png without altering the bitmap. Its embedded predictor label and “Others votes” remain for author review.
