@@ -259,7 +259,7 @@ Sample-level statistics further characterize the selector's behavior. The five d
 
 
 
-\twocolumn[{
+\begin{figure*}[!t]
 \begin{minipage}{\textwidth}
 \begin{table}[H]
 \centering
@@ -297,12 +297,12 @@ Raw triple
 \vspace{8pt}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.88\textwidth]{figures/further_analysis/fig_statistical_significance.pdf}
+    \includegraphics[width=0.80\textwidth]{figures/further_analysis/fig_statistical_significance.pdf}
     \caption{Paired Hit@1 and MRR differences between SAKI and iKnow\textsuperscript{\dag}, with 95\% confidence intervals. Points denote observed differences; error bars are obtained from 10,000 paired bootstrap resamples of test audio. The vertical dashed line marks zero difference. The horizontal axis is in percentage points.}
     \label{fig:statistical-significance}
 \end{figure}
 \end{minipage}
-}]
+\end{figure*}
 
 \subsubsection{Knowledge verbalization analysis}\label{sec:verbalization-analysis}
 
@@ -334,19 +334,19 @@ In Figure~\ref{fig:statistical-significance}, all observed Hit@1 and MRR differe
 
 \subsubsection{\nextrevision{Prediction transitions and case study}}\label{sec:cases}
 
-\Needspace{30\baselineskip}
-Figure~\ref{fig:prediction-transitions} decomposes the overall Hit@1 gains into error corrections and prediction degradations. \redrevision{Transitions from incorrect iKnow\textsuperscript{\dag} predictions to correct SAKI predictions outnumbered the reverse transitions on all five datasets. The difference yielded a net improvement in top-1 accuracy.} On FSD50K, for example, 991 incorrect predictions became correct, while 518 correct predictions became incorrect. Reranking therefore corrected errors while also changing some originally correct decisions. The gains in the main table summarize the net effect of both changes.
+\redrevision{Transitions from incorrect iKnow\textsuperscript{\dag} predictions to correct SAKI predictions outnumbered the reverse transitions on all five datasets. The difference yielded a net improvement in top-1 accuracy.} On FSD50K, for example, 991 incorrect predictions became correct, while 518 correct predictions became incorrect. Reranking therefore corrected errors while also changing some originally correct decisions. The gains in the main table summarize the net effect of both changes.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.92\columnwidth]{figures/further_analysis/fig_prediction_transitions.pdf}
+    \includegraphics[width=0.84\columnwidth]{figures/further_analysis/fig_prediction_transitions.pdf}
     \caption{Sample-level Hit@1 transitions from iKnow\textsuperscript{\dag} to SAKI. Blue bars count \greenrevision{transitions from incorrect to correct predictions}; yellow-green bars count \greenrevision{transitions from correct to incorrect predictions}. Their difference is the net increase in correct predictions with SAKI.}
     \label{fig:prediction-transitions}
 \end{figure}
 
+Figure~\ref{fig:prediction-transitions} decomposes the overall Hit@1 gains into error corrections and prediction degradations.
+
 We applied two-sided exact McNemar tests to the discordant pairs shown in the figure. All five $p$ values remained below 0.05 after Holm adjustment, with a maximum of approximately $2.26\times10^{-7}$ (Table~\ref{tab:mcnemar-tests}). Together with the transition directions, these results support SAKI's Hit@1 advantage after controlling the familywise error rate across the five tests.
 
-\Needspace{22\baselineskip}
 Table~\ref{tab:case-study} illustrates three types of ranking changes. In the correction case, \textit{wind} moved from fifth to first. In the \greenrevision{case of improved ranking}, \textit{sea waves} rose from third to second, while SAKI predicted \textit{frog} at rank one. In the degradation case, \textit{washing machine} fell from first to fourth, and SAKI instead predicted \textit{engine}.
 
 \begin{table}[H]
@@ -401,19 +401,19 @@ These cases illustrate how Hit@1 and MRR capture different ranking changes. Movi
 
 Prediction degradation also highlights the limits of relation consensus. \redrevision{Class scores for all relations are computed using the same CLAP encoder. Agreement among their top-1 predictions may therefore reflect matching biases shared by the underlying model.} Consensus and larger top-two score gaps provide selection criteria, but do not establish evidence correctness or relevance to the sample. The cached texts in the table identify concrete evidence items for subsequent quality assessment.
 
-\Needspace{42\baselineskip}
+\Needspace{8\baselineskip}
 \subsubsection{Parameter sensitivity}\label{sec:parameters}
 
 We examine the fusion weight $\alpha$ and relation count $N_r$ on the DCASE17-T4 development set. The search range and selection rule are given in Section~\ref{sec:implementation-details}.
 
-Figure~\ref{fig:parameter-sensitivity}(a) shows identical Hit@1 for all four relation counts at each fixed $\alpha$. Hit@1 was 64.44\% at $\alpha=0.3$, compared with 63.01\% at $\alpha=0.5$ or $0.7$. Within this search range, top-1 accuracy varied with the fusion weight but remained unchanged across relation counts.
-
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.96\columnwidth]{figures/further_analysis/fig_parameter_sensitivity.pdf}
+    \includegraphics[width=0.80\columnwidth]{figures/further_analysis/fig_parameter_sensitivity.pdf}
     \caption{Parameter sensitivity on the DCASE17-T4 development set. (a) Hit@1 for different fusion weights $\alpha$ and relation counts $N_r$. (b) MRR for the same configurations. The outlined configuration, $\alpha=0.3$ and $N_r=5$, is selected by maximizing Hit@1 and then MRR.}
     \label{fig:parameter-sensitivity}
 \end{figure}
+
+Figure~\ref{fig:parameter-sensitivity}(a) shows identical Hit@1 for all four relation counts at each fixed $\alpha$. Hit@1 was 64.44\% at $\alpha=0.3$, compared with 63.01\% at $\alpha=0.5$ or $0.7$. Within this search range, top-1 accuracy varied with the fusion weight but remained unchanged across relation counts.
 
 MRR distinguishes configurations with identical Hit@1 (Figure~\ref{fig:parameter-sensitivity}(b)). At $\alpha=0.3$, increasing $N_r$ from one to five raised MRR from 75.55\% to 75.84\%; increasing it to ten reduced MRR to 75.69\%. \redrevision{The benefit of adding relations was therefore nonmonotonic within the tested range.} Following the \greenrevision{predefined rule for choosing parameters on the development set}, we selected $\alpha=0.3$ and $N_r=5$ and fixed them for all five test datasets.
 

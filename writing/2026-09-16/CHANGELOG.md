@@ -357,6 +357,14 @@ Future entries should record: date, approved section/claim, changed files, compi
 - Rebuilt the 16-page main-4.pdf twice and inspected revised pages. No compilation errors, overfull boxes, or unresolved citations/references. The author-supplied framework image and existing analysis figures were not edited.
 - The earlier suggestion to add Appendix prefixes was rejected: current cross-references already supply them. Existing unrelated working-tree edits are preserved.
 
+# 2026-10-03 — Reduce whitespace on main-4 pages 8 and 10
+
+- Retained the Elsevier 5p two-column class, margins, manuscript text, data, and revision colors. Enabled ragged-bottom columns and reduced in-text float separation to avoid stretched internal gaps.
+- Replaced the forced page-start wrapper for Table 4/Figure 2 with a top double-column float, allowing the verbalization introduction to continue on page 8 while Table 4 and its first citation remain on page 9.
+- Removed oversized space reservations in the prediction-transition/case blocks and reduced the reservation before parameter sensitivity. Adjusted display widths without editing figure assets or data.
+- Relocated existing figure-introduction text, without rewriting it, so Figures 3 and 4 and Table 5 have their numbered prose references on page 10; Table 6 and its discussion remain on page 11.
+- Recompiled and inspected pp.8–11. Page 10 now holds the transition plot, case table, and parameter plot with their discussion, rather than leaving a large empty right-column tail. The document remains 16 pages.
+
 # 2026-10-03 — Equation 7 and analysis-figure legibility
 
 - Reformatted Eq. (7) as a two-line aligned expression in both language versions; stated its eligibility and original-score fallback immediately in prose without changing the scoring rule. The affected text and equation are green.
