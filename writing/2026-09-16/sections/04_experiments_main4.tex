@@ -26,7 +26,7 @@ We use \greenrevision{DCASE17-T4~\cite{mesaros2017dcase}} as a development set. 
     \item \textbf{SAKI}: Our method comprises AAKV, the Sample-level Relation Selector, and Hierarchical Fusion, as described in Section~\ref{sec:method}.
 \end{enumerate}
 
-iKnow-audio does not disclose the complete curated relation subset $R_q$ or an inference configuration sufficient to uniquely recover its final classification results~\cite{olvera-etal-2025-iknow}. We therefore construct iKnow\textsuperscript{\dag} from the published method and public AKG/KGE resources and evaluate it under our common protocol. It is a controlled reimplementation rather than an exact replication of the original system. The protocol and dataset differences are \redrevision{documented in \ref{app:reproduction}.} All internal comparisons use identical test manifests and evaluation code.
+\bluerevision{The paper describes the inference procedure, but the complete curated relation subset $R_q$ and classification inference implementation are not publicly available~\cite{olvera-etal-2025-iknow}. We therefore evaluate a controlled reimplementation under our common protocol.} It is a controlled reimplementation rather than an exact replication of the original system. The protocol and dataset differences are \redrevision{documented in \ref{app:reproduction}.} All internal comparisons use identical test manifests and evaluation code.
 
 \subsubsection{Implementation details}\label{sec:implementation-details}
 
@@ -52,6 +52,8 @@ Audio is resampled to 44.1~kHz and processed into seven-second segments. \greenr
 \subsubsection{Evaluation metrics}\label{sec:evaluation-metrics}
 
 We report Hit@$k$ and mean reciprocal rank (MRR). Hit@$k$ is the proportion of samples with at least one ground-truth label among the top $k$ classes; we report Hit@1, Hit@3, and Hit@5. \redrevision{MRR averages the reciprocal rank of the highest-ranked ground-truth label in the complete class ranking.} For multilabel samples, all ground-truth labels are positive, and the highest-ranked positive label determines the reciprocal rank. All metrics are reported as percentages, with higher values indicating better performance.
+
+\bluerevision{For each metric, the mean across the five datasets is the arithmetic mean of the five dataset scores, without weighting by sample count.}
 
 To assess the uncertainty of performance differences, we compute 95\% confidence intervals using 10,000 paired bootstrap resamples of the sample-level predictions. For Hit@1, we also apply two-sided exact McNemar tests to paired correctness outcomes and use Holm adjustment for comparisons across the five datasets.
 
@@ -182,7 +184,7 @@ We use component ablations, relation selection controls, and knowledge verbaliza
 \subsubsection{Overall ablation}\label{sec:overall-ablation}
 
 
-Table~\ref{tab:factorial-ablation} compares individual components, \greenrevision{pairs of components}, and SAKI against iKnow\textsuperscript{\dag}. The \greenrevision{mean across the five datasets} is the arithmetic mean of the dataset metrics, without weighting by sample count. Supplementary Hit@3 and Hit@5 results are provided in Table~\ref{tab:ablation-topk}.
+Table~\ref{tab:factorial-ablation} compares individual components, \greenrevision{pairs of components}, and SAKI against iKnow\textsuperscript{\dag}. Supplementary Hit@3 and Hit@5 results are provided in Table~\ref{tab:ablation-topk}.
 
 \redrevision{Relation selection and Hierarchical Fusion each improved Hit@1 over iKnow\textsuperscript{\dag} on all five datasets when added individually.} Their respective gains in the unweighted mean Hit@1 were 1.31 and 1.07 percentage points. AAKV alone improved Hit@1 on FSD50K and TUT2017 but reduced it on the other three datasets. Its mean MRR gain was only 0.04 percentage points. The effect of rewriting knowledge text therefore varies across datasets and warrants examination alongside the other components.
 

@@ -1,5 +1,11 @@
 # Writing decisions and changes
 
+## 2026-10-03 — Approved reproduction and dataset-mean wording
+
+- Replaced the “uniquely recover” inference-configuration statement with the author-approved distinction between the documented inference procedure and unavailable complete relation subset/classification implementation. Preserved the source citation and controlled-reimplementation status; marked the replacement blue.
+- Defined the arithmetic mean separately for each metric across the five datasets in Sec. 4.1.4, explicitly excluding weighting by sample count. Marked the definition blue and removed its repeated definition from the ablation paragraph.
+- Left the Overall Results transition unchanged pending approval of its relocation. No numerical values, equations, comparison roles, or figure assets changed.
+
 ## 2026-10-03 — Author-supplied Figure 1 version 4
 
 - Replaced Figure 1 in main-4 with the supplied 图片4.png, preserving the original bitmap. This version places the class index below the evidence symbol and the selection marker above it.
