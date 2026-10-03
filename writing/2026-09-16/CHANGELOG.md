@@ -1,5 +1,143 @@
 # Writing decisions and changes
 
+## 2026-10-03 — Red-marked main-4 wording and author-supplied framework figure
+
+- Replaced Figure 1 with the author-supplied 图片2.png without altering the bitmap. Its embedded predictor label and “Others votes” remain for author review.
+- Replaced standalone predictor terminology in active Method and Experiments prose with class scoring and predictions computed separately for each relation; no independently trained models are implied.
+- Distinguished CLAP as the knowledge-free baseline and iKnow† as the knowledge-enhanced baseline; named iKnow† explicitly in the component comparison.
+- Matched AAKV checking language to the lexical/format checks imported by the final 31_corrected_aakv_cache/generate.py. Preserved Appendix A verbatim and Related Work prose unchanged; only the method figure caption was synchronized.
+- Preserved display equations and experimental table bodies. Compiled the 16-page PDF successfully and visually inspected the figure and revised method page. Previous files and exact language changes are saved under tmp/before_red_20261003/.
+
+## 2026-10-02 — Translate integrated experiments, limitations, and conclusion
+
+- Synchronized main-4 sections 4.2–4.5 and Conclusion with the approved main-5 text; removed the independent Discussion input and updated the roadmap.
+- Preserved all nine main-text table/figure environments and all reported numbers. Kept speculation qualified and terminology locked.
+- Compiled the 14-page PDF and inspected the affected pages. Translation/source notes: `translation_prep/integrated_discussion_translation_main4.md`.
+- Final experiment packaging is audited separately; legacy efficiency measurements are not relabeled as corrected-cache measurements.
+
+## 2026-10-02 — Approved funnel introduction in main-4 and main-5
+
+- Added an independent Chinese introduction for main-5 and translated the approved text into the main-4 introduction.
+- Read the CLAP, ReCLAP, PAT, and iKnow-audio PDFs to verify method descriptions and terminology; recorded anchors in translation_prep/introduction_revision_main4_main5.md.
+- Kept three distinct methodological contributions, preserved the reported gains, and removed repeated implementation detail from the framework overview.
+
+## 2026-10-02 — Abstract revision in main-5 and main-4
+
+- Created `main-5.tex` from the current Chinese `main-3.tex` and replaced only its abstract with the author-approved version.
+- Updated the corresponding English abstract in `main-4.tex`, preserving the reported metrics and locked method terms.
+- Compiled both PDFs and checked the abstract pages for visible layout problems.
+
+## 2026-10-02 — Complete main-4 English manuscript
+
+- Added main-4-specific English Experiments, Discussion, Conclusion, and Appendix sources; kept the main-3 Chinese files unchanged.
+- Shortened the abstract's method details, standardized terminology and American English, and checked all active chapters, captions, table labels, and appendix wording.
+- Preserved raw AAKV prompts/cached case evidence, equations, citation keys, and all numeric table entries. Twelve tables passed ordered numeric-token comparison against their source tables.
+- Fixed an overflowing English case table, a duplicated Appendix prefix, and duplicate appendix table hyperlink anchors. Compiled and visually reviewed the 14-page English PDF; final same-page float placement remains a separate layout pass.
+- Recorded section-specific style choices, expression examples, audit results, and remaining source/metadata limitations in `translation_prep/full_translation_review_main4.md`.
+
+## 2026-10-02 — Source-checked English Related Work for main-4
+
+- Translated the approved three-part Related Work into `sections/02_related_work_main4.tex` using the locked terminology and preserving all citation keys and the Figure 1 block.
+- Checked each cited method against its article PDF; the SINet statement was limited to the publisher abstract because its full PDF was unavailable. The source-to-claim record is `translation_prep/related_work_evidence_main4.md`.
+- Distinguished PAT's task-level weighted prompt ensemble, ReCLAP's training-caption and inference-prompt stages, AudioCards' sound-design setting, and iKnow-audio's curated relation retrieval and joint log-sum-exp aggregation.
+- Recompiled `main-4.pdf` with BibTeX and inspected the Related Work and Figure 1 pages. No compilation errors, unresolved citations, or overfull boxes were reported.
+
+## 2026-10-02 — Main-4 Method figure and algorithm alignment
+
+- Replaced Figure 1 in the English `main-4` draft with the author-provided `图片2.png`, using a separate asset and caption so `main-3` remains untouched.
+- Aligned the Method overview with the figure's offline/online flow, reformatted Eq. (11) as a two-row left-aligned array, and clarified the algorithm's outputs and offline boundary.
+- Recompiled `main-4.pdf` twice and checked the figure and algorithm pages visually; no overfull boxes or unresolved references were found.
+
+## 2026-09-30 — Author-approved wording and black-text main-3
+
+- Isolated the introduction as `sections/01_introduction_main3.tex` so the approved wording affects `main-3` only; added the existing iKnow-audio citation at the first sentence of the revised gap paragraph.
+- Removed Table 1's repeated dagger footnote because its caption already defines the symbol. Replaced the ESC-50 verbalization discussion with the approved, comparator-specific interpretation; performance numbers were unchanged.
+- Rendered all prior purple review text in black by making `\purplerevision` a pass-through macro. Recompiled `main-3.pdf` twice; citations resolved and the output is 13 pages.
+- Visual check: Appendix B.2 still reaches into the page-12 number. The author deferred formatting changes, so no pagination or table layout was adjusted in this pass.
+
+## 2026-09-30 — Purple-marked, evidence-checked manuscript revisions
+
+- Updated only the `main-3` review version: its experiment and appendix sources, plus an isolated copy of the Related Work source for the Figure 1 caption. Existing shared sources and `main-2` were not changed in this pass.
+- Added bounded interpretations for the ESC-50 verbalization result, paired Bootstrap intervals, and McNemar transitions. Revised captions for Figures 1–4, Tables 1–5, and the appendix tables where the review identified a verifiable ambiguity. Added the efficiency cache-size definition from the final experiment notes; Table 6 caption and all result values remain unchanged.
+- Corrected Appendix B.2 to identify RotatE and class–tail concatenation as present in the original iKnow-audio method, identified the controlled aggregation change, and removed the unsupported `Evidence Top-P` comparison row. All new/replaced text is purple.
+- Recompiled `main-3.pdf` successfully. Per the author's instruction, no layout adjustment was made; Appendix B.2 still overlaps the page-13 number and needs a later formatting pass.
+
+## 2026-09-30 — KBS two-column layout pass
+
+Layout-only pass on `main-3.tex`; manuscript wording, results, and table contents were left unchanged.
+
+- Kept the official Elsevier `elsarticle` `final,5p,times,twocolumn` class and checked its sample placement convention (`table[t]`, `figure[t]`). Main-text tables remain top floats; the statistical comparison figure now uses top placement so Figures 2–4 appear in numerical order.
+- Protected the `Overall ablation` heading from being stranded at the foot of p6. Verified the main result tables appear on p6–p8 with their discussion pages; Table 6 remains at the top of p10, directly after its efficiency-analysis discussion begins on p9.
+- Set the bibliography to the template's compact `\small` size with zero extra inter-entry skip; all 23 references now fit on p11, removing a mostly empty reference-only page without changing the entries.
+- Kept the appendices after the reference list and preserved the existing compact appendix layout for the wide protocol tables. Appendix table sequence remains B.1–B.2, C.1–C.2, D.1, and E.1.
+- Recompiled and visually inspected the final PDF (14 pages); no prose or result values were edited in this pass.
+
+## 2026-09-30 — Wide tables: same page as the paragraph that cites them
+
+Author feedback on the previous attempt: the sentence “表 1 报告了…” was still on a
+different page from Table 1, and the dag footnote I had added to Tables 2–4 was not
+requested. Both are fixed here. **Layout only; wording, numbers and captions unchanged**
+(prose diff against the pre-edit file: 0 differing CJK units).
+
+- **Removed the dag-footnote lines I had added to Tables 2–4.** Table 1 keeps the
+  original inline footnote it always had; nothing else changed.
+- Root cause of the page split: a double-column wide table cannot be typeset where a
+  deeper two-column stack already occupies the page, so declaring it after the citing
+  paragraph always defers it to the *next* page — the citing sentence stayed behind.
+- Fix: put each of the four wide tables at the **top of the very page that carries its
+  citing subsection** (`\clearpage` + `\twocolumn[ ... ]`, table source placed before
+  that subsection's paragraphs). Because the argument of `\twocolumn` forms the page's
+  top block, the table and the text that discusses it now share one page:
+  Table 1 on p7 with §4.2, Table 2 on p8 with §4.3.1, Table 3 on p10 with §4.3.2.
+- Reverted the four tables from `table*[tbp]` back to the original
+  `\twocolumn[...]` + `\fixedtablecaption` form: converting them to `table*` with
+  `\caption` also made `\caption` unusable inside `\twocolumn` ("Argument of
+  \@topnewpage has an extra }"), and an inline `minipage` version silently squeezed the
+  table into a single column (279.99 pt overfull hbox).
+- Table 6 restored to `[!t]` and Figure 4 to `[!t]`, which removed a text/float
+  collision and the 69.67 pt overfull vbox that an inline `[H]` table caused.
+- Trade-off: honouring "figure/table on the page that mentions it" needs the four
+  table pages to start at their owning subsection, so the build is 19 pages instead of
+  17 (four table pages carry a table plus the discussion that cites it).
+- Verified with three pdfLaTeX passes plus BibTeX: no undefined citations/references,
+  no overfull boxes, no blank pages. Rendered page checks in `_qa_pages/main3_final2/`.
+
+## 2026-09-30 — Float placement: every table/figure now follows its first in-text citation
+
+Layout-only edit of `main-3`; no manuscript wording, numbers or captions were changed
+(font and prose diff between the previous and new section file is empty).
+
+- Diagnosed `main-3.pdf` by rendering every page and auditing float positions against
+  their in-text citations (`scripts/render_pages.py`, `scripts/check_float_order.py`).
+  Before the edit, Table 1 sat above its own first mention on page 7 and Tables 2–5
+  appeared on a page *before* the paragraph that cited them; Method Figure 1 was
+  correctly on the same page as its first mention.
+- Replaced the four manual wide-table blocks (`\clearpage` + `\twocolumn[...]` +
+  `\fixedtablecaption`, which forced each wide table onto a fresh page regardless of
+  where the text cited it) with real double-column floats `\begin{table*}[tbp]` using
+  the standard `\caption`. `\fixedtablecaption` is kept defined but is no longer used
+  by the experiments section.
+- Moved each `table*` / `figure*` / `figure` source block so that it is declared
+  *after* the paragraph that first cites it. Declaring a wide float after its citation
+  is what makes LaTeX defer it to the top of the following page instead of floating it
+  above the sentence that mentions it.
+- Moved the four `\subsubsection` bodies so the wide table sits between the paragraph
+  containing the first citation and the remaining discussion, keeping the citing text
+  and its table on the same page or one page apart.
+- Added a uniform `\textsuperscript{\dag}` footnote line to Tables 2–4 (Table 1 already
+  had one inline); previously their dag footnote dropped to the page foot, away from
+  the table.
+- Added `\needspace{4\baselineskip}` before the ablation/relation/verbalization/cost
+  subsubsections and loaded `needspace`, which removed a stranded subsubsection
+  heading; the previous build had an underfull vbox on the figure page.
+- Table 5 (`[H]` → `[!htbp]`) and Figure 4 (`[!t]` → `[!b]`) were re-anchored so that
+  their first mention precedes them in reading order.
+- Result: 17/17 floats verified to appear after their first in-text mention, 15 pages
+  (was 17), no blank pages, and no remaining underfull/overfull vbox in the log.
+- Verified with three pdfLaTeX passes plus BibTeX; logged float audit in
+  `tmp/audit_before.txt` / `tmp/audit_after3.txt` and rendered checks in
+  `_qa_pages/main3_before/` vs `_qa_pages/main3_v6/`.
+
 ## 2026-09-29 — Experimental cross-check corrections
 
 - Updated Appendix C relation-selection behavior for FSD50K and AudioSet from the final corrected per-sample selector records; retained the verified results for the other three datasets.
@@ -162,3 +300,53 @@ Future entries should record: date, approved section/claim, changed files, compi
 - Distinguished ontology/graph-based audio modeling from inference-time external knowledge retrieval and positioned SAKI's sample-level relation selection relative to iKnow-audio and SINet.
 - Replaced the incorrect PAT arXiv entry with the NAACL 2025 proceedings record (pp. 12376--12394; DOI: 10.18653/v1/2025.naacl-long.616).
 - Marked the revised Related Work prose in blue and rebuilt `main-2.pdf` successfully.
+
+# 2026-09-30 — Black-text layout edition (`main-3`)
+
+- Created an independent `main-3.tex` edition from `main-2`, with all revision markup rendered in black and manuscript wording unchanged.
+- Created layout-only copies of the experiments and appendix sources so the approved `main-2` source and PDF remain reproducible.
+- Repositioned Tables 1 and 2 at the top of page 6, kept Tables 3 and 4 with their component-analysis discussion, and retained Figures 2--4 on the corresponding further-analysis pages.
+- Reflowed the appendices into a continuous one-column layout: Appendix A tables, reproduction tables, selector statistics, AAKV protocol, and paired-test table now follow their textual order without the former sparse float-only appendix page.
+- Added fixed double-column float-page spacing and verified the final 15-page PDF visually; compilation reports no overfull boxes, oversized floats, or undefined references/citations.
+
+# 2026-10-02 — English translation starts (`main-4`)
+
+- Created `main-4.tex` and `sections/01_introduction_main4.tex` without changing the Chinese `main-3` edition.
+- Translated the approved abstract and Introduction into academic English, preserving citation keys, evaluation figures, and the controlled-reimplementation boundary.
+- Applied the locked terminology for SAKI, AAKV, relation-specific predictors, top-1 voting, top-two score gap, and Hierarchical Fusion; explicitly stated that AAKV generation is not conditioned on the test audio.
+- Kept the remaining sections linked to the main-3 sources for sequential translation. Built `main-4.pdf` with pdfLaTeX and BibTeX; no undefined citations or references were reported.
+
+# 2026-10-02 — Method translated for main-4
+
+- Added an English Method source at `sections/03_method_main4.tex` and linked it from `main-4.tex`; the approved Chinese `sections/03_method.tex` remains untouched.
+- Preserved the existing equations, parameters, citation keys, cross-references, and online algorithm while applying the locked English terminology.
+- Made the offline/online boundary, AAKV validation, relation voting and tie-breaking, and two-step evidence aggregation/score fusion explicit without adding new experimental claims.
+- Rebuilt the 13-page `main-4.pdf` and checked the Method pages visually; no compilation errors, overfull boxes, or undefined references were reported.
+# 2026-10-02 — main-5 Chinese results: blue-marked interpretation revision
+
+- Added independent `sections/04_experiments_main5.tex`; rewrote 4.2–4.4 around findings, representative comparisons, and bounded interpretations using the supplied KBS examples. New prose is blue.
+- Preserved Experimental setup and all nine experiment figure/table environments byte-for-byte (after newline normalization). Corrected the case-study wording and distinction between random and static relation selection.
+- Removed the repeated parameter-grid equation from Results, referring to Implementation details instead; parameter values remain unchanged.
+- Recompiled main-5.pdf (13 pages) and visually checked pp.6–9. No overfull boxes or undefined citations/references; existing font/bookmark/template warnings remain.
+- Logged the unresolved efficiency-cache-version provenance in `drafts_zh/04_results_main5_blue_20261002.md`; no timing or storage numbers were remeasured or altered.
+- Kept main-3/main-4 and shared experiment sources unchanged. Remote sync deferred because the existing sync script includes unrelated working-tree edits.
+# 2026-10-02 — main-5 red evidence additions
+
+- Added six red-marked evidence interpretations to combination ablation, relation selection, knowledge verbalization, prediction transitions/cases, and cost analysis; preserved the remaining blue revision.
+- Checked new numbers against the current tables and extracted figure labels. All nine experiment figure/table environments are unchanged. No new experiments or statistical tests were performed.
+- Replaced the repeated case-study call for a separate evidence ablation with a direct explanation of Hit@1 versus reciprocal rank.
+- Rebuilt the 13-page main-5.pdf and inspected red/blue rendering. No overfull boxes or undefined references/citations. Existing efficiency-cache provenance caveat remains in the revision notes.
+- Local-only revision; automatic remote sync deferred because its script uploads unrelated dirty working-tree files.
+
+# 2026-10-03 — Cost analysis wording synchronized in main-4 and main-5
+
+- Replaced the repeated cost discussion with one green sentence in each language, limited to the online operations and the measured latency; left Table 6 and all experimental values unchanged.
+- Removed manuscript wording about unmeasured module-level timing and a future cache-version remeasurement. The measurement-version check remains an internal submission task, not a claim of new results.
+- Rebuilt main-4.pdf (14 pages) and main-5.pdf (13 pages) and inspected the revised pages. Remote sync deferred because the existing script would also upload unrelated working-tree changes.
+
+# 2026-10-03 — Equation 7 and analysis-figure legibility
+
+- Reformatted Eq. (7) as a two-line aligned expression in both language versions; stated its eligibility and original-score fallback immediately in prose without changing the scoring rule. The affected text and equation are green.
+- Increased final-size labels in the paired-difference and prediction-transition figures; retained the parameter-sensitivity figure's already legible type size. Re-exported the three vector and raster formats from the existing Python source without changing plotted values.
+- Rebuilt and visually inspected main-4.pdf (14 pages) and main-5.pdf (13 pages). No overfull boxes, LaTeX errors, or unresolved citations/references were found.
+- Reviewed Section 4.1 without changing its scientific content. Dataset source citations, redundant test-label statements, and the exact seven-second crop rule remain editorial checks. The existing remote sync script would include unrelated dirty files, so this revision has not been pushed remotely.

@@ -1,0 +1,136 @@
+% Elsevier elsarticle manuscript skeleton; content is added only after author approval.
+% Source template: Desktop/论文修改/写作/elsarticle/elsarticle-template-num.tex
+\documentclass[final,5p,times,twocolumn]{elsarticle}
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{needspace}
+\usepackage{afterpage}
+\usepackage{dblfloatfix}
+\usepackage{multicol}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\usepackage{CJKutf8}
+\usepackage{xcolor}
+\newcommand{\purplerevision}[1]{#1}
+\newcommand{\methodrevision}[1]{#1}
+\newcommand{\nextrevision}[1]{#1}
+\newcommand{\greenrevision}[1]{#1}
+\newcommand{\redrevision}[1]{\textcolor{red}{#1}}
+\newcommand{\fixedtablecaption}[1]{%
+  \refstepcounter{table}%
+  \par\smallskip\small Table~\thetable: #1\par\smallskip%
+}
+\newcommand{\fixedfigurecaption}[1]{%
+  \refstepcounter{figure}%
+  \par\smallskip\small Figure~\thefigure: #1\par\smallskip%
+}
+\newcommand{\methodframeworkfigure}{figures/method_overview_main4_revision_20261003.png}
+\newcommand{\methodframeworkwidth}{0.88\textwidth}
+
+% Keep double-column floats close to their discussion and avoid sparse float pages.
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.90}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.80}
+\renewcommand{\dbltopfraction}{0.95}
+\renewcommand{\dblfloatpagefraction}{0.80}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\dbltextfloatsep}{10pt plus 2pt minus 2pt}
+\setcounter{topnumber}{1}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{5}
+\setcounter{dbltopnumber}{1}
+\makeatletter
+\setlength{\@fptop}{0pt}
+\setlength{\@fpsep}{12pt}
+\setlength{\@fpbot}{0pt plus 1fil}
+\setlength{\@dblfptop}{0pt}
+\setlength{\@dblfpsep}{12pt}
+\setlength{\@dblfpbot}{0pt plus 1fil}
+\makeatother
+
+\journal{Knowledge-Based Systems}
+
+\begin{document}
+\begin{frontmatter}
+
+\title{Sample-Adaptive Relational Knowledge Integration for Zero-Shot Audio Classification}
+
+\author[inst1]{Kexin Zhang\fnref{equalcontrib}}
+\ead{25461355022@stu.wzu.edu.cn}
+
+\author[inst2]{Zhizhong Ma\fnref{equalcontrib}}
+\ead{mazhizhong@wzut.edu.cn}
+
+\author[inst2]{Yitian Lin}
+\ead{yitian.lin@wzut.edu.cn}
+
+\author[inst2]{Bingchen Lin\fnref{orcidlin}}
+\ead{Bingchen.Lin@wzut.edu.cn}
+
+\author[inst3]{Haihan Yang}
+\ead{269964500@stu.cwnu.edu.cn}
+
+\author[inst2]{Zhengqiu Weng\corref{corresponding}}
+\ead{derisweng@wzut.edu.cn}
+
+\author[inst1,inst4]{Hui Huang\corref{corresponding}}
+\ead{huanghui@wzu.edu.cn}
+
+\fntext[equalcontrib]{Kexin Zhang and Zhizhong Ma contributed equally to this work.}
+\fntext[orcidlin]{ORCID: \href{https://orcid.org/0000-0002-7046-7189}{0000-0002-7046-7189}.}
+\cortext[corresponding]{Corresponding authors: Zhengqiu Weng and Hui Huang.}
+
+\affiliation[inst1]{organization={College of Computer Science and Artificial Intelligence, Wenzhou University},
+  city={Wenzhou}, postcode={325035}, country={China}}
+\affiliation[inst2]{organization={School of Data Science and Artificial Intelligence, Wenzhou University of Technology},
+  city={Wenzhou}, postcode={325035}, country={China}}
+\affiliation[inst3]{organization={School of Electronic Information Engineering, China West Normal University},
+  city={Nanchong}, postcode={637009}, country={China}}
+\affiliation[inst4]{organization={Wenzhou Turing Institute for Advanced Study in Artificial Intelligence},
+  city={Wenzhou}, postcode={325035}, country={China}}
+
+\begin{abstract}
+Zero-shot audio classification reduces the need for labeled audio in a target task by matching audio with natural-language class descriptions. Knowledge graphs can add semantics absent from short class names, but knowledge related to a class may not help distinguish it in the current audio. Moreover, prompts that concatenate class names with retrieved tail entities omit the relations connecting them, leaving part of the graph's meaning unexpressed. We propose Sample-Adaptive Knowledge Integration (SAKI), which uses structured knowledge for zero-shot audio classification without updating the parameters of Contrastive Language--Audio Pretraining (CLAP)~\cite{elizalde2023clap}. Audio-Aligned Knowledge Verbalization (AAKV) converts graph triples into \greenrevision{descriptions of sounds} that preserve entity and relation semantics. SAKI then selects relations using class predictions obtained separately from each relation's evidence. Hierarchical Fusion aggregates the selected evidence within each class and combines it with the original CLAP score to rerank candidate classes. On five public audio datasets, SAKI improves Hit@1 by 2.08--12.73 percentage points and mean reciprocal rank (MRR) by 1.02--6.68 percentage points over our controlled reimplementation of iKnow-audio. These results indicate that selecting relations for individual audio samples, preserving their meaning in text, and combining their evidence with the original CLAP prediction can improve the use of structured knowledge in zero-shot audio classification.
+\end{abstract}
+
+\begin{keyword}
+Zero-shot audio classification \sep CLAP \sep Audio-centric knowledge graph \sep Sample-level relation selection \sep Knowledge verbalization \sep Evidence fusion
+\end{keyword}
+
+\end{frontmatter}
+
+\input{sections/01_introduction_main4}
+\input{sections/02_related_work_main4}
+\input{sections/03_method_main4}
+\input{sections/04_experiments_main4}
+\input{sections/06_conclusion_main4}
+
+\section*{Acknowledgments}
+This work was supported in part by the Wenzhou Basic Scientific Research Projects under Grant 2025G0082.
+
+\section*{Declaration of competing interest}
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+\section*{Data availability}
+The datasets used in this study are publicly available, including ESC-50, UrbanSound8K, DCASE17-T4, FSD50K, AudioSet, and TUT2017. The processed data and implementation details will be made available by the corresponding authors upon reasonable request.
+
+\begingroup
+\small
+\setlength{\bibsep}{0pt}
+\bibliographystyle{elsarticle-num}
+\bibliography{references_main4}
+\endgroup
+
+% KBS/Elsevier appendices follow the reference list.
+\appendix
+\input{sections/07_appendix_main4}
+
+\end{document}

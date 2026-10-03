@@ -1,0 +1,167 @@
+% !TeX root = ../main-4.tex
+\section{Method}\label{sec:method}
+
+SAKI performs zero-shot audio classification without training on the target datasets. \redrevision{Figure~\ref{fig:framework} shows the offline knowledge preparation and online inference stages.} Offline, we map classes to graph entities, \redrevision{retrieve tail entities with RotatE}, verbalize the triples with Audio-Aligned Knowledge Verbalization (AAKV), and cache the graph evidence and CLAP text embeddings. Online, CLAP scores all classes and identifies the top-$K$ candidates for knowledge enhancement. \redrevision{For each relation, we combine scores from its cached evidence with the original CLAP scores. The resulting class ranking yields a top-1 prediction and a top-two score gap. These calculations use the same frozen CLAP model and require no separate training.} The Sample-level Relation Selector uses top-1 voting and the score gaps to rank relations for the current audio. Hierarchical Fusion then deduplicates and aggregates the selected graph evidence by class before combining it with the original CLAP score.
+
+\subsection{Problem formulation}\label{sec:problem-formulation}
+
+Given audio input $x^a$ and $N$ candidate classes $\mathcal C=\{c_1,c_2,\ldots,c_N\}$, the method assigns a final class score to every candidate and predicts
+\begin{equation}
+\hat y=\arg\max_{c_i\in\mathcal C}s_{\mathrm{final}}(c_i\mid x^a),
+\label{eq:prediction}
+\end{equation}
+where $\hat y$ is the predicted class and $s_{\mathrm{final}}(c_i\mid x^a)$ \redrevision{is the final score assigned to class $c_i$.} We use the pretrained CLAP audio encoder $f_a(\cdot)$ and text encoder $f_t(\cdot)$. The Audio-centric Knowledge Graph is $\mathcal G=(\mathcal E,\mathcal R,\mathcal T)$, where $\mathcal E$, $\mathcal R$, and $\mathcal T$ denote the entity, relation, and triple sets. The principal notation is summarized below.
+
+\par\smallskip\noindent\begin{minipage}{\columnwidth}
+\centering
+\textbf{Principal notation}\par\smallskip
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}p{0.37\columnwidth}p{0.55\columnwidth}@{}}
+\toprule
+Symbol & Meaning \\
+\midrule
+$x^a,\mathcal C,c_i$ & Input audio, candidate class set, and a candidate class \\
+$\mathcal G,\mathcal E,\mathcal R$ & Knowledge graph, entity set, and relation set \\
+$K,M,N_r$ & \redrevision{Numbers of shortlisted classes, maximum tail entities per class--relation pair, and selected relations} \\
+$s_{\mathrm{base}},s_r,s_{\mathrm{final}}$ & Original CLAP score, relation-specific class score, and final class score \\
+$\mathcal E_{i,r},\mathcal U_{i,r}$ & Retained tails and evidence scores for a class--relation pair \\
+$\mathcal U_i^*$ & Evidence scores after merging selected relations and removing duplicate tails \\
+$A_{\lambda},\lambda$ & Evidence aggregation operator and its fixed scale \\
+$\mathcal F,\alpha$ & Two-step scoring rule and weight on the original CLAP score \\
+\bottomrule
+\end{tabular}
+\end{minipage}\par\smallskip
+
+\subsection{CLAP initial retrieval and graph evidence construction}\label{sec:initial-retrieval}
+
+For input audio $x^a$ and class text $c_i$, we $L_2$-normalize the CLAP audio and text representations and denote them by $\mathbf e^a$ and $\mathbf e_i^t$. Their audio--text similarity gives the original CLAP score~\cite{elizalde2023clap}:
+\begin{equation}
+s_{\mathrm{base}}(c_i\mid x^a)=(\mathbf e^a)^\top\mathbf e_i^t.
+\label{eq:base-score}
+\end{equation}
+We rank all classes by $s_{\mathrm{base}}$ and select the $K$ classes eligible for graph augmentation:
+\begin{equation}
+\mathcal C_K(x^a)=\operatorname{TopK}_{c_i\in\mathcal C}s_{\mathrm{base}}(c_i\mid x^a).
+\label{eq:topk}
+\end{equation}
+Classes outside $\mathcal C_K$ retain their original CLAP scores and remain in the final ranking.
+
+A verified class-to-entity mapping assigns class $c_i$ to a graph head entity $h_i\in\mathcal E$. Classes without a mapping receive no graph evidence. Following the knowledge retrieval setup of iKnow-audio, we score candidate triples with a pretrained RotatE knowledge graph embedding (KGE) model~\cite{olvera-etal-2025-iknow,sun2019rotate}. For $h_i\in\mathcal E$, $r\in\mathcal R$, and $t\in\mathcal E$, the score $\phi_{\mathrm{KG}}(h_i,r,t)$ \redrevision{measures the plausibility of triple $(h_i,r,t)$ under the embedding model.} RotatE uses $\phi_{\mathrm{KG}}(h_i,r,t)=-\|\mathbf h_i\circ\mathbf r-\mathbf t\|_2$, where bold symbols denote embeddings and $\circ$ denotes elementwise multiplication. \greenrevision{Entity and relation embeddings are complex-valued, with unit-modulus relation components.} A higher score indicates a more plausible triple under the embedding model. We retain the $M$ highest-scoring tail entities:
+\begin{equation}
+\widetilde{\mathcal E}_{i,r}^{M}=\operatorname{TopM}_{t\in\mathcal E}\phi_{\mathrm{KG}}(h_i,r,t).
+\label{eq:tail-retrieval}
+\end{equation}
+\greenrevision{We remove tails whose normalized names match any class in $\mathcal C$ and deduplicate the remaining tails using lowercase strings with leading and trailing whitespace removed. The retained set is $\mathcal E_{i,r}$, with $|\mathcal E_{i,r}|\leq M$; removed tails are not replaced. For an unmapped class or an empty filtered result, $\mathcal E_{i,r}=\varnothing$.} Retrieval is performed offline for every mapped class and each of the 47 candidate relations. Online inference reads the cached evidence only for classes in $\mathcal C_K$.
+
+\subsection{Audio-Aligned Knowledge Verbalization}\label{sec:aakv-method}
+
+\greenrevision{AAKV verbalizes each retrieved graph triple $(h_i,r,t)$ as $q_{irt}$, using the corresponding class name $c_i$ as the supplied head text. The graph entity $h_i$ is used for retrieval; the class name $c_i$ is used in the generated description. }The term \emph{audio-aligned} describes \greenrevision{text about sounds intended for CLAP audio--text matching}; generation is not conditioned on the input audio. The instruction requires the sentence to begin with the words \textit{The sound of} followed by the supplied head text. It also requires the original entity wording, relation meaning and direction, and tail entity to be retained without adding information beyond the triple.
+
+We generate the text offline with Qwen2.5-7B-Instruct using greedy decoding. \redrevision{Rule-based checks test the normalized prefix, coverage of head and tail content words, and terms denoting the relation. They also check output length, line and sentence formatting, and predefined prohibited expressions.} If the output fails, we attempt one constrained repair using \greenrevision{the reasons for failure}. A second failure triggers a deterministic template that inserts the supplied head, relation, and tail text. \ref{app:aakv-protocol} specifies the exact instruction, checks, and fallback. This procedure constrains the expression of graph evidence to the information in the input triple.
+
+We encode each accepted text with the same CLAP text encoder and $L_2$-normalize its embedding:
+\begin{equation}
+\mathbf z_{irt}=\frac{f_t(q_{irt})}{\|f_t(q_{irt})\|_2},\qquad u_{irt}(x^a)=(\mathbf e^a)^\top\mathbf z_{irt}.
+\label{eq:evidence-score}
+\end{equation}
+Here $\mathbf z_{irt}$ is the cached text embedding, and $u_{irt}(x^a)$ is its audio--text similarity for the current sample. All $\mathbf z_{irt}$ are computed before online inference.
+
+\subsection{Sample-level relation selection}\label{sec:relation-selector-method}
+
+\redrevision{For each relation $r$, we compute class scores using only the cached evidence associated with that relation and the original CLAP scores.} We first aggregate the evidence scores within one class. \greenrevision{For $\mathcal U=(u_1,\ldots,u_n)$, where $u_j$ is the audio--text similarity of evidence item $j$ ($j=1,\ldots,n$), we use the normalized scaled log-sum-exp operator~\cite{asadi2017softmax}:}
+\begin{equation}
+A_{\lambda}(\mathcal U)=\frac{1}{\lambda}\log\left(\frac{1}{n}\sum_{j=1}^{n}\exp(\lambda u_j)\right),\qquad n>0.
+\label{eq:normlse}
+\end{equation}
+\greenrevision{The factor $1/n$ removes the additive count term of unnormalized log-sum-exp. The fixed scale $\lambda>0$ controls the emphasis on higher-scoring items: $A_{\lambda}$ lies between their arithmetic mean and maximum and approaches the maximum as $\lambda$ increases. This operator aggregates graph evidence only.}
+
+\Needspace{5\baselineskip}
+\greenrevision{For a shortlisted class with nonempty evidence, we combine its knowledge score with the original CLAP score as follows:}
+\begin{equation}
+\greenrevision{\begin{aligned}
+\mathcal F(c_i,\mathcal U\mid x^a)
+&=\alpha s_{\mathrm{base}}(c_i\mid x^a)\\
+&\quad +(1-\alpha)A_{\lambda}(\mathcal U).
+\end{aligned}}
+\label{eq:unified-fusion}
+\end{equation}
+\greenrevision{Here $\alpha\in[0,1]$ weights the original CLAP score. For $c_i\notin\mathcal C_K$ or $\mathcal U=\varnothing$, we define $\mathcal F(c_i,\mathcal U\mid x^a)=s_{\mathrm{base}}(c_i\mid x^a)$.}
+
+\redrevision{For class $c_i$ and relation $r$, we collect the evidence scores} $\mathcal U_{i,r}(x^a)=[u_{irt}(x^a)\mid t\in\mathcal E_{i,r}]$. Applying Eq.~\eqref{eq:unified-fusion} to this single-relation sequence yields its relation-specific class score:
+\[
+s_r(c_i\mid x^a)=\mathcal F(c_i,\mathcal U_{i,r}(x^a)\mid x^a).
+\]
+\redrevision{For each relation, we rank all candidate classes by $s_r$. The resulting top-1 prediction $\hat y_r$ and top-two score gap $\Delta_r$ are}
+\begin{equation}
+\hat y_r=\arg\max_{c_i\in\mathcal C}s_r(c_i\mid x^a),\qquad \Delta_r=s_r^{(1)}-s_r^{(2)},
+\label{eq:expert-margin}
+\end{equation}
+where $s_r^{(1)}$ and $s_r^{(2)}$ \redrevision{are the highest and second-highest values of $s_r$.} \greenrevision{Ties in the top-1 prediction are resolved by the lower index in the fixed candidate class list.} If relation $r$ provides no usable evidence for any class in $\mathcal C_K$, \redrevision{$s_r$ equals the original CLAP score for every class, and the resulting top-1 prediction still participates in voting.}
+
+For the current audio, we count the top-1 votes received by each class:
+\begin{equation}
+V(c)=\sum_{r\in\mathcal R}\mathbb I(\hat y_r=c),
+\label{eq:voting}
+\end{equation}
+where $\mathbb I(\cdot)$ equals one when the condition holds and zero otherwise. The consensus class has the most votes. \redrevision{For tied classes, we first choose the larger sum of score gaps from relations whose top-1 predictions support that class. Any remaining tie is resolved by the lower index in the fixed candidate class list:}
+\begin{equation}
+c^{\mathrm{con}}=\arg\max_{c\in\mathcal C}^{\mathrm{lex}}\left(V(c),\sum_{r:\hat y_r=c}\Delta_r,-\operatorname{idx}(c)\right).
+\label{eq:consensus}
+\end{equation}
+Here $\arg\max^{\mathrm{lex}}$ compares tuple components from left to right. We then rank relations using
+\begin{equation}
+\begin{array}{@{}l@{\;=\;}l@{}}
+\pi_r & \left(\mathbb I(\hat y_r=c^{\mathrm{con}}),\,\Delta_r,\,-\operatorname{idx}(r)\right),\\[2pt]
+\mathcal R^*(x^a) & \operatorname{Top}_{N_r}^{\mathrm{lex}}(\mathcal R;\pi).
+\end{array}
+\label{eq:relation-selection}
+\end{equation}
+Relations supporting the consensus class come first. Within the supporting and nonsupporting groups, relations are ordered by decreasing $\Delta_r$. Remaining ties follow the fixed lexicographic order of relation names, encoded by $\operatorname{idx}(r)$. The first $N_r$ relations form the ordered selection $\mathcal R^*(x^a)$; nonsupporting relations fill any remaining positions. \greenrevision{The selected relations are shared by all classes in $\mathcal C_K$.} We select $N_r$ from $\{1,3,5,10\}$ on the development set, fix it at $5$, and use the same value on every test dataset.
+
+\subsection{Hierarchical Fusion}\label{sec:fusion-method}
+
+After relation selection, we process each class in $\mathcal C_K$ separately. In the priority order of Eq.~\eqref{eq:relation-selection}, we collect evidence from the selected relations. Duplicate tails across these relations are identified using the normalized tail-entity string. When a tail appears under several relations, we retain the AAKV text associated with the highest-priority relation. Let $\mathcal P_i(x^a)=[(r,t,q_{irt})]$ be the retained evidence sequence. Its audio--text similarity scores are
+\begin{equation}
+\mathcal U_i^*(x^a)=\left[u_{irt}(x^a)\mid(r,t,q_{irt})\in\mathcal P_i(x^a)\right].
+\label{eq:selected-evidence}
+\end{equation}
+Each selected relation supplies at most $M$ evidence items per class. Thus, there are at most $MN_r$ items before deduplication, and $\mathcal U_i^*$ contains all retained items after deduplication.
+
+\greenrevision{At final scoring, Eq.~\eqref{eq:unified-fusion} combines the merged evidence sequence with the original CLAP score, rather than with a relation-specific score:}
+\[
+s_{\mathrm{final}}(c_i\mid x^a)=\mathcal F(c_i,\mathcal U_i^*(x^a)\mid x^a).
+\]
+Classes outside $\mathcal C_K$, without an entity mapping, or without usable evidence retain $s_{\mathrm{base}}$. We then rank every class by $s_{\mathrm{final}}$ and predict with Eq.~\eqref{eq:prediction}. Algorithm~\ref{alg:relation-selection} summarizes online inference. Its first loop scores each relation using cached evidence; after relation selection, the second loop merges the selected evidence and computes final class scores. RotatE retrieval and AAKV are offline and are not repeated in this algorithm.
+
+\begin{algorithm}[H]
+\caption{Online inference with sample-level relation selection and Hierarchical Fusion}
+\label{alg:relation-selection}
+\fontsize{7}{10}\selectfont
+\begin{algorithmic}[1]
+\Require Audio $x^a$; classes $\mathcal C$; relations $\mathcal R$; cached evidence $\{\mathcal E_{i,r},\mathbf z_{irt}\}$; $K,N_r,\alpha,\lambda$
+\Ensure Final class scores, class ranking, and prediction $\hat y$
+\State Encode $x^a$ as $\mathbf e^a$, and compute $s_{\mathrm{base}}(c_i\mid x^a)$ by Eq.~\eqref{eq:base-score}
+\State Select $\mathcal C_K$ by Eq.~\eqref{eq:topk}
+\For{$r\in\mathcal R$}
+  \For{$c_i\in\mathcal C_K$}
+    \State Construct $\mathcal U_{i,r}(x^a)\gets[u_{irt}(x^a)\mid t\in\mathcal E_{i,r}]$ by Eq.~\eqref{eq:evidence-score}
+    \State Compute $s_r(c_i\mid x^a)\gets\mathcal F(c_i,\mathcal U_{i,r}(x^a)\mid x^a)$
+  \EndFor
+  \State Keep $s_r(c_i\mid x^a)\gets s_{\mathrm{base}}(c_i\mid x^a)$ for $c_i\notin\mathcal C_K$
+  \State Obtain $(\hat y_r,\Delta_r)$ by Eq.~\eqref{eq:expert-margin}
+\EndFor
+\State Compute $V(c)$ and determine $c^{\mathrm{con}}$ by Eqs.~\eqref{eq:voting}--\eqref{eq:consensus}
+\State Rank $\mathcal R$ by $\pi_r$ and retain $\mathcal R^*(x^a)$ using Eq.~\eqref{eq:relation-selection}
+\For{$c_i\in\mathcal C_K$}
+  \State Merge selected evidence in \greenrevision{order of relation priority} and remove duplicate tails
+  \State Construct $\mathcal U_i^*(x^a)$ by Eq.~\eqref{eq:selected-evidence}
+  \State Compute $s_{\mathrm{final}}(c_i\mid x^a)$ by Eq.~\eqref{eq:unified-fusion}
+\EndFor
+\State Keep $s_{\mathrm{final}}(c_i\mid x^a)\gets s_{\mathrm{base}}(c_i\mid x^a)$ for $c_i\notin\mathcal C_K$
+\State Rank $\mathcal C$ by $s_{\mathrm{final}}$ and set $\hat y\gets\arg\max_{c_i\in\mathcal C}s_{\mathrm{final}}(c_i\mid x^a)$
+\State \textbf{return} final class scores, ranking, and $\hat y$
+\end{algorithmic}
+\end{algorithm}
+
+All experiments use $K=5$, $M=3$, and $\lambda=100$. The \greenrevision{values $\alpha=0.3$ and $N_r=5$ chosen on the development set} remain fixed across test datasets. The candidate pool contains 47 relations. CLAP and RotatE parameters are unchanged throughout, with no gradient updates on the target audio data.
