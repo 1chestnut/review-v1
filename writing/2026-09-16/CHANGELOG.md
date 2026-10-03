@@ -1,5 +1,11 @@
 # Writing decisions and changes
 
+## 2026-10-03 — Author-supplied Figure 1 version 4
+
+- Replaced Figure 1 in main-4 with the supplied 图片4.png, preserving the original bitmap. This version places the class index below the evidence symbol and the selection marker above it.
+- Rechecked iKnow-audio Sec. 3.3, Sec. 5, Appendix A.4, and the official repository. The paper describes the inference procedure, while the public repository lists AKG and KGE-training resources rather than a full classification evaluation pipeline. Proposed removing “uniquely recover” and specifying the missing reproduction details; prose changes await author approval.
+- Proposed defining the unweighted arithmetic mean across datasets once in Sec. 4.1.4, with short table notes and no repeated definition in the ablation paragraph. No metric values or prose changed in this update.
+
 ## 2026-10-03 — Align relation-selection equation
 
 - Replaced the left-aligned array in Eq. (11) with aligned equations, removing excess space before the first equals sign and aligning both equals signs. Marked this formatting revision blue; mathematical content is unchanged.
