@@ -408,3 +408,9 @@ Future entries should record: date, approved section/claim, changed files, compi
 - Increased final-size labels in the paired-difference and prediction-transition figures; retained the parameter-sensitivity figure's already legible type size. Re-exported the three vector and raster formats from the existing Python source without changing plotted values.
 - Rebuilt and visually inspected main-4.pdf (14 pages) and main-5.pdf (13 pages). No overfull boxes, LaTeX errors, or unresolved citations/references were found.
 - Reviewed Section 4.1 without changing its scientific content. Dataset source citations, redundant test-label statements, and the exact seven-second crop rule remain editorial checks. The existing remote sync script would include unrelated dirty files, so this revision has not been pushed remotely.
+# 2026-10-03 — Black text and compact main-4 layout
+
+- Disabled red and blue revision coloring; all PDF text now renders black. Preserved the colors in the author-supplied figure artwork.
+- Replaced two forced two-column page starts with standard top double-column floats. Table 1 and Table 2 and their first numbered discussions now share page 7, eliminating the almost-empty intervening page; Table 3 and its discussion share page 8.
+- Reduced the oversized space reservation before computational cost analysis. Retained the Elsevier 5p two-column class, figure sizes, and bibliography font size; slightly tightened bibliography line spacing to avoid an orphan URL page.
+- Recompiled twice and inspected the rendered pages. The PDF decreased from 17 to 15 pages, with no compilation errors, overfull boxes, or unresolved references. Verified all table bodies unchanged and non-layout source content preserved.

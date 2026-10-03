@@ -49,19 +49,7 @@ Audio is resampled to 44.1~kHz and processed into seven-second segments. \greenr
 
 
 
-\subsubsection{Evaluation metrics}\label{sec:evaluation-metrics}
-
-We report Hit@$k$ and mean reciprocal rank (MRR). Hit@$k$ is the proportion of samples with at least one ground-truth label among the top $k$ classes; we report Hit@1, Hit@3, and Hit@5. \redrevision{MRR averages the reciprocal rank of the highest-ranked ground-truth label in the complete class ranking.} For multilabel samples, all ground-truth labels are positive, and the highest-ranked positive label determines the reciprocal rank. All metrics are reported as percentages, with higher values indicating better performance.
-
-\bluerevision{For each metric, the mean across the five datasets is the arithmetic mean of the five dataset scores, without weighting by sample count.}
-
-To assess the uncertainty of performance differences, we compute 95\% confidence intervals using 10,000 paired bootstrap resamples of the sample-level predictions. For Hit@1, we also apply two-sided exact McNemar tests to paired correctness outcomes and use Holm adjustment for comparisons across the five datasets.
-
-All reported performance differences are computed from unrounded metric values and rounded to two decimal places for presentation.
-
-
-
-\twocolumn[{
+\begin{figure*}[!t]
 \begin{minipage}{\textwidth}
 \begin{table}[H]
 \centering
@@ -159,7 +147,20 @@ iKnow\textsuperscript{\dag}
 
 \end{table}
 \end{minipage}
-}]
+\end{figure*}
+
+\subsubsection{Evaluation metrics}\label{sec:evaluation-metrics}
+
+We report Hit@$k$ and mean reciprocal rank (MRR). Hit@$k$ is the proportion of samples with at least one ground-truth label among the top $k$ classes; we report Hit@1, Hit@3, and Hit@5. \redrevision{MRR averages the reciprocal rank of the highest-ranked ground-truth label in the complete class ranking.} For multilabel samples, all ground-truth labels are positive, and the highest-ranked positive label determines the reciprocal rank. All metrics are reported as percentages, with higher values indicating better performance.
+
+\bluerevision{For each metric, the mean across the five datasets is the arithmetic mean of the five dataset scores, without weighting by sample count.}
+
+To assess the uncertainty of performance differences, we compute 95\% confidence intervals using 10,000 paired bootstrap resamples of the sample-level predictions. For Hit@1, we also apply two-sided exact McNemar tests to paired correctness outcomes and use Holm adjustment for comparisons across the five datasets.
+
+All reported performance differences are computed from unrounded metric values and rounded to two decimal places for presentation.
+
+
+
 
 \subsection{Overall results}\label{sec:overall-results}
 
@@ -188,7 +189,7 @@ Table~\ref{tab:factorial-ablation} compares individual components, \greenrevisio
 
 \redrevision{Relation selection and Hierarchical Fusion each improved Hit@1 over iKnow\textsuperscript{\dag} on all five datasets when added individually.} Their respective gains in the unweighted mean Hit@1 were 1.31 and 1.07 percentage points. AAKV alone improved Hit@1 on FSD50K and TUT2017 but reduced it on the other three datasets. Its mean MRR gain was only 0.04 percentage points. The effect of rewriting knowledge text therefore varies across datasets and warrants examination alongside the other components.
 
-\twocolumn[{
+\begin{figure*}[!t]
 \begin{minipage}{\textwidth}
 \begin{table}[H]
 \centering
@@ -227,7 +228,7 @@ Random Top-5
 
 \end{table}
 \end{minipage}
-}]
+\end{figure*}
 
 Removing one component from SAKI isolates its contribution when the other two remain enabled. Without AAKV, the unweighted mean Hit@1 and MRR were 63.63\% and 73.31\%; without relation selection, they were 64.44\% and 73.98\%. Removing Hierarchical Fusion yielded 65.81\% and 74.41\%, compared with SAKI's 66.81\% and 75.08\%. \greenrevision{Among the three component pairs, AAKV with relation selection achieved the highest mean Hit@1 and MRR. Adding Hierarchical Fusion increased both means further.} These comparisons support the contribution of each component within the combined configuration. Together with the \greenrevision{results for individual components}, they show that AAKV's gains depend particularly on its use with the other components.
 
@@ -421,7 +422,7 @@ Figure~\ref{fig:parameter-sensitivity}(a) shows identical Hit@1 for all four rel
 MRR distinguishes configurations with identical Hit@1 (Figure~\ref{fig:parameter-sensitivity}(b)). At $\alpha=0.3$, increasing $N_r$ from one to five raised MRR from 75.55\% to 75.84\%; increasing it to ten reduced MRR to 75.69\%. \redrevision{The benefit of adding relations was therefore nonmonotonic within the tested range.} Following the \greenrevision{predefined rule for choosing parameters on the development set}, we selected $\alpha=0.3$ and $N_r=5$ and fixed them for all five test datasets.
 
 
-\Needspace{30\baselineskip}
+\Needspace{8\baselineskip}
 \subsubsection{Computational cost analysis}\label{sec:computational-cost}
 \begin{table}[!t]
 \centering
