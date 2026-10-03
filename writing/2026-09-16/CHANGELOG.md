@@ -1,5 +1,12 @@
 # Writing decisions and changes
 
+## 2026-10-03 — Approved verbalization and statistical prose cleanup
+
+- Removed the AAKV-internal-contribution future-study sentence without adding it to Limitations.
+- Condensed dataset-specific verbalization gains into two blue sentences, retaining all reported values and removing the repeated all-dataset conclusion and ESC-50 summary.
+- Replaced the confidence-interval qualification with one blue sentence specifying test-sample resampling under fixed models/inference settings.
+- Removed the unsupported future quality-assessment purpose assigned to cached case texts; retained their existing table-caption description. No data, equations, citations, or table bodies changed.
+
 ## 2026-10-03 — Approved concise selection-analysis wording
 
 - Deleted the premature Overall Results transition and the repeated FSD50K summary, retaining the quantitative FSD50K analysis.
