@@ -365,6 +365,13 @@ Future entries should record: date, approved section/claim, changed files, compi
 - Relocated existing figure-introduction text, without rewriting it, so Figures 3 and 4 and Table 5 have their numbered prose references on page 10; Table 6 and its discussion remain on page 11.
 - Recompiled and inspected pp.8–11. Page 10 now holds the transition plot, case table, and parameter plot with their discussion, rather than leaving a large empty right-column tail. The document remains 16 pages.
 
+# 2026-10-03 — Source-checked blue Related Work and opening revisions
+
+- Unified the abstract/introduction wording around dependence on labeled audio; clarified the cross-modal pretraining transition and replaced the unsupported additive connector in the class-description bridge.
+- Checked TSPE Sections III.B/C, PAT Sections 4.2/4.3 and Algorithm 1, and AudioCards Abstract/Sections 2–4 against local original PDFs. Preserved TSPE's manual filtering and averaging, PAT's task-level prompt weighting and parameter-free attention, and AudioCards' model-training context.
+- Split AudioCards into an adjacent-domain paragraph instead of placing it under zero-shot prompting. Added no new references, experimental values, or method claims. Only these approved changes are blue; previous red revisions remain.
+- Evidence anchors and short excerpts are recorded in `translation_prep/relatedwork_blue_evidence_20261003.md`.
+
 # 2026-10-03 — Equation 7 and analysis-figure legibility
 
 - Reformatted Eq. (7) as a two-line aligned expression in both language versions; stated its eligibility and original-score fallback immediately in prose without changing the scoring rule. The affected text and equation are green.
