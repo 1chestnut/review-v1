@@ -421,3 +421,6 @@ Future entries should record: date, approved section/claim, changed files, compi
 - Clarified that Table D.1 counts identical five-relation combinations as the same set regardless of order, and defined dominant-set share without changing its values.
 - Checked the current main-4 appendix source and PDF text for Chinese characters; none were found. Preserved the exact English generation instructions in Appendix A.
 - Compiled twice and visually inspected appendix pages 13–15. The manuscript remains 15 pages with black text, unchanged experimental values, and no overfull boxes or unresolved references.
+# 2026-10-03 — Clearer relation-combination count heading
+
+- Changed Table D.1's heading from “#Unique Top-5 sets” to “#Distinct Top-5 sets” at the author's request. Statistical definitions and values are unchanged.
