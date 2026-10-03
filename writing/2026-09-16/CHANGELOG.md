@@ -1,5 +1,10 @@
 # Writing decisions and changes
 
+## 2026-10-03 — Align relation-selection equation
+
+- Replaced the left-aligned array in Eq. (11) with aligned equations, removing excess space before the first equals sign and aligning both equals signs. Marked this formatting revision blue; mathematical content is unchanged.
+- Verified that the final score is associated with each class, with the original CLAP score retained under the stated fallback conditions. The framework notation should use a class-index subscript and selection superscript, `\mathcal U_i^*`; the author-supplied bitmap was not altered.
+
 ## 2026-10-03 — Author-corrected Figure 1 (图片3.png)
 
 - Replaced the framework image in main-4 with 图片3.png, preserving the supplied bitmap and all prose, equations, results, and red revision marks.

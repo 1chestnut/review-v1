@@ -111,10 +111,10 @@ c^{\mathrm{con}}=\arg\max_{c\in\mathcal C}^{\mathrm{lex}}\left(V(c),\sum_{r:\hat
 \end{equation}
 Here $\arg\max^{\mathrm{lex}}$ compares tuple components from left to right. We then rank relations using
 \begin{equation}
-\begin{array}{@{}l@{\;=\;}l@{}}
-\pi_r & \left(\mathbb I(\hat y_r=c^{\mathrm{con}}),\,\Delta_r,\,-\operatorname{idx}(r)\right),\\[2pt]
-\mathcal R^*(x^a) & \operatorname{Top}_{N_r}^{\mathrm{lex}}(\mathcal R;\pi).
-\end{array}
+\bluerevision{\begin{aligned}
+\pi_r &= \left(\mathbb I(\hat y_r=c^{\mathrm{con}}),\,\Delta_r,\,-\operatorname{idx}(r)\right),\\[2pt]
+\mathcal R^*(x^a) &= \operatorname{Top}_{N_r}^{\mathrm{lex}}(\mathcal R;\pi).
+\end{aligned}}
 \label{eq:relation-selection}
 \end{equation}
 Relations supporting the consensus class come first. Within the supporting and nonsupporting groups, relations are ordered by decreasing $\Delta_r$. Remaining ties follow the fixed lexicographic order of relation names, encoded by $\operatorname{idx}(r)$. The first $N_r$ relations form the ordered selection $\mathcal R^*(x^a)$; nonsupporting relations fill any remaining positions. \greenrevision{The selected relations are shared by all classes in $\mathcal C_K$.} We select $N_r$ from $\{1,3,5,10\}$ on the development set, fix it at $5$, and use the same value on every test dataset.
