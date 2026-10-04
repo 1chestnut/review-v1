@@ -427,3 +427,9 @@ Future entries should record: date, approved section/claim, changed files, compi
 # 2026-10-04 — Replace framework figure with author-supplied Picture 5
 
 - Replaced the main-4 framework image with the author's Picture 5. Retained its existing display width, placement, caption, and manuscript text.
+# 2026-10-04 — Direct teacher-suggested English revisions in red
+
+- Applied the teacher's central-idea wording at six locations: abstract problem statement, introduction challenge opening, contribution lead-in, introduction result summary, method opening, and conclusion. The first three follow the supplied English directly; the result summary follows the teacher's suggested “consistent gains” wording.
+- Adjusted the method and conclusion suggestions to avoid guaranteeing that selected evidence always helps or claiming a global maximum benefit. Removed repeated numerical gain ranges from the introduction and conclusion; retained them in the abstract and main results.
+- Added a dedicated red teacher-revision command. Historical revisions remain black. Related Work is unchanged; the conditional hallucination/trade-off statements and the unverified dog/park example remain pending evidence checks.
+- Preserved citation keys, equation blocks, algorithms, tables, and experimental data. Compiled twice and inspected the four affected pages. The PDF remains 15 pages, with no overfull boxes, unresolved references, or compilation errors.
