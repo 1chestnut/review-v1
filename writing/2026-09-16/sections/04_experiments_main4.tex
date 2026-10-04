@@ -164,9 +164,9 @@ All reported performance differences are computed from unrounded metric values a
 
 \subsection{Overall results}\label{sec:overall-results}
 
-Table~\ref{tab:main-results} shows that SAKI achieved the highest Hit@1 and MRR among the three methods on all five test datasets. Relative to iKnow\textsuperscript{\dag}, Hit@1 increased by 2.08--12.73 percentage points and MRR by 1.02--6.68 percentage points. iKnow\textsuperscript{\dag} also improved both metrics over CLAP. Under this protocol, graph augmentation and SAKI's approach to organizing knowledge each provided classification gains.
+Table~\ref{tab:main-results} shows that SAKI achieved the highest Hit@1 and MRR among the three methods on all five test datasets. Relative to iKnow\textsuperscript{\dag}, Hit@1 increased by 2.08--12.73 percentage points and MRR by 1.02--6.68 percentage points. iKnow\textsuperscript{\dag} also improved both metrics over CLAP. \teacherrevision{Graph augmentation and SAKI's approach to organizing knowledge each provided classification gains.}
 
-These findings are consistent with iKnow-audio's use of graph knowledge to improve CLAP predictions~\cite{olvera-etal-2025-iknow}. \redrevision{Under the common evaluation protocol, the results for iKnow\textsuperscript{\dag} support the value of class-related knowledge. SAKI achieves further gains over iKnow\textsuperscript{\dag}.} The additional improvement indicates that how knowledge enters classification also matters. Both methods use the same CLAP model and graph resources. Their performance difference therefore reflects the combined effects of knowledge selection, verbalization, and fusion under the evaluated inference configurations.
+These findings are consistent with iKnow-audio's use of graph knowledge to improve CLAP predictions~\cite{olvera-etal-2025-iknow}. \teacherrevision{The gains of iKnow\textsuperscript{\dag} over CLAP show that class-related knowledge improved classification, while SAKI achieved further gains by changing how that knowledge was used. The two knowledge-enhanced methods share the CLAP model and graph resources but differ in knowledge selection, verbalization, and score fusion.}
 
 The gains primarily concern top-1 classification and ground-truth label ranking. On TUT2017, Hit@1 increased from 44.14\% to 56.87\%, and MRR increased from 64.04\% to 70.73\%. Hit@5, however, decreased from 92.68\% to 91.79\%. \greenrevision{Thus, more TUT2017 samples had the correct class at rank one, although slightly fewer had it among the top five.}
 
@@ -181,13 +181,6 @@ We use component ablations, relation selection controls, and knowledge verbaliza
 
 
 
-
-\subsubsection{Overall ablation}\label{sec:overall-ablation}
-
-
-Table~\ref{tab:factorial-ablation} compares individual components, \greenrevision{pairs of components}, and SAKI against iKnow\textsuperscript{\dag}. Supplementary Hit@3 and Hit@5 results are provided in Table~\ref{tab:ablation-topk}.
-
-\redrevision{Relation selection and Hierarchical Fusion each improved Hit@1 over iKnow\textsuperscript{\dag} on all five datasets when added individually.} Their respective gains in the unweighted mean Hit@1 were 1.31 and 1.07 percentage points. AAKV alone improved Hit@1 on FSD50K and TUT2017 but reduced it on the other three datasets. Its mean MRR gain was only 0.04 percentage points. The effect of rewriting knowledge text therefore varies across datasets and warrants examination alongside the other components.
 
 \begin{figure*}[!t]
 \begin{minipage}{\textwidth}
@@ -230,7 +223,15 @@ Random Top-5
 \end{minipage}
 \end{figure*}
 
-Removing one component from SAKI isolates its contribution when the other two remain enabled. Without AAKV, the unweighted mean Hit@1 and MRR were 63.63\% and 73.31\%; without relation selection, they were 64.44\% and 73.98\%. Removing Hierarchical Fusion yielded 65.81\% and 74.41\%, compared with SAKI's 66.81\% and 75.08\%. \greenrevision{Among the three component pairs, AAKV with relation selection achieved the highest mean Hit@1 and MRR. Adding Hierarchical Fusion increased both means further.} These comparisons support the contribution of each component within the combined configuration. Together with the \greenrevision{results for individual components}, they show that AAKV's gains depend particularly on its use with the other components.
+\subsubsection{Overall ablation}\label{sec:overall-ablation}
+
+
+Table~\ref{tab:factorial-ablation} compares individual components, \greenrevision{pairs of components}, and SAKI against iKnow\textsuperscript{\dag}. Supplementary Hit@3 and Hit@5 results are provided in Table~\ref{tab:ablation-topk}.
+
+\redrevision{Relation selection and Hierarchical Fusion each improved Hit@1 over iKnow\textsuperscript{\dag} on all five datasets when added individually.} Their respective gains in the unweighted mean Hit@1 were 1.31 and 1.07 percentage points. AAKV alone improved Hit@1 on FSD50K and TUT2017 but reduced it on the other three datasets. Its mean MRR gain was only 0.04 percentage points. The effect of rewriting knowledge text therefore varies across datasets and warrants examination alongside the other components.
+
+
+Removing one component from SAKI isolates its contribution when the other two remain enabled. Without AAKV, the unweighted mean Hit@1 and MRR were 63.63\% and 73.31\%; without relation selection, they were 64.44\% and 73.98\%. Removing Hierarchical Fusion yielded 65.81\% and 74.41\%, compared with SAKI's 66.81\% and 75.08\%. \greenrevision{Among the three component pairs, AAKV with relation selection achieved the highest mean Hit@1 and MRR. Adding Hierarchical Fusion increased both means further.} \teacherrevision{Removing any one component reduced both mean metrics. Together with the results for individual components, these ablations show that AAKV's gains depend particularly on its use with the other components.}
 
 FSD50K provides an exception to this overall trend. Adding Hierarchical Fusion to AAKV with relation selection changed Hit@1 from 64.49\% to 64.46\%, while MRR increased from 74.02\% to 74.13\%. \redrevision{Adding Hierarchical Fusion slightly increased MRR, while Hit@1 remained nearly unchanged.} Combined gains should therefore be assessed using both the unweighted means and individual dataset metrics.
 
@@ -250,13 +251,13 @@ The component ablations examined the contribution of relation selection. Here, w
 
 \greenrevision{FrozenRq uses the fixed relation set reconstructed for each dataset in our iKnow\textsuperscript{\dag} reimplementation. All audio samples in a dataset use that same set.} Frequency Top-5 selects five relations by their counts of class--tail evidence entries in the offline cache. Random Top-5 selects five relations for each audio sample and reports the mean over three fixed seeds. The Sample-level Relation Selector selects five relations using the top-1 voting consensus and \redrevision{top-two score gaps computed separately for each relation for the current audio.}
 
-As shown in Table~\ref{tab:relation-selection}, sample-level relation selection outperformed all three controls in Hit@1 and MRR on every test dataset. Its unweighted mean Hit@1 and MRR were 66.81\% and 75.08\%, exceeding FrozenRq by 2.37 and 1.10 percentage points. The corresponding gains on TUT2017 were 5.59 and 2.73 percentage points. With knowledge texts and fusion rules fixed, this comparison supports selecting relations according to the current audio.
+As shown in Table~\ref{tab:relation-selection}, sample-level relation selection outperformed all three controls in Hit@1 and MRR on every test dataset. Its unweighted mean Hit@1 and MRR were 66.81\% and 75.08\%, exceeding FrozenRq by 2.37 and 1.10 percentage points. The corresponding gains on TUT2017 were 5.59 and 2.73 percentage points.
 
 Frequency Top-5 retained the same number of relations as sample-level selection but achieved lower Hit@1 and MRR on all five datasets. \redrevision{Random Top-5 also varied relation sets across samples. Its mean Hit@1 and MRR were 2.06 and 0.95 percentage points lower than those of SAKI.} \greenrevision{At a fixed relation count, selection based on the current audio performed better than selection by cached evidence counts or random assignment.}
 
-\greenrevision{iKnow-audio retrieves class-related tail entities through a curated subset of informative relations~\cite{olvera-etal-2025-iknow}.} SAKI additionally ranks relations using the predictions obtained from their evidence for the current audio. Graph scores and audio predictions serve different purposes: the former measure triple plausibility, whereas the latter reflect the class ranking obtained using each relation's evidence. Top-1 voting prioritizes relations supporting the consensus class; top-two score gaps then distinguish relations within each group. \greenrevision{Both criteria are computed from predictions for the current audio.} \bluerevision{Table~\ref{tab:relation-selection} supports the effectiveness of the combined relation selection strategy.}
+\greenrevision{iKnow-audio retrieves class-related tail entities through a curated subset of informative relations~\cite{olvera-etal-2025-iknow}.} SAKI additionally ranks relations using the predictions obtained from their evidence for the current audio. Graph scores and audio predictions serve different purposes: the former measure triple plausibility, whereas the latter reflect the class ranking obtained using each relation's evidence. Top-1 voting prioritizes relations supporting the consensus class; top-two score gaps then distinguish relations within each group. \greenrevision{Both criteria are computed from predictions for the current audio.}
 
-\bluerevision{We also examine the relation sets selected for individual audio samples.} The five datasets produced between 1,708 and 15,733 distinct top-5 relation sets, \redrevision{with the most frequent set accounting for 1.06\%--1.53\% of samples.} \bluerevision{These statistics show that the selected relation sets vary across audio samples.} The controlled comparison in Table~\ref{tab:relation-selection} supports the classification benefit of sample-level relation selection. \redrevision{\ref{app:selector-behavior} reports dataset-specific statistics and mean Jaccard overlap with FrozenRq.}
+\bluerevision{We also examine the relation sets selected for individual audio samples.} The five datasets produced between 1,708 and 15,733 distinct top-5 relation sets, \redrevision{with the most frequent set accounting for 1.06\%--1.53\% of samples.} \teacherrevision{These statistics show variation in the selected relation sets, while Table~\ref{tab:relation-selection} shows higher Hit@1 and MRR than the fixed, frequent, and random controls.} \redrevision{\ref{app:selector-behavior} reports dataset-specific statistics and mean Jaccard overlap with FrozenRq.}
 % Author-deferred experiment: voting-only and score-gap-only controls may be added after their results are available. Not included in Limitations.
 
 
@@ -311,11 +312,12 @@ Raw triple
 \subsubsection{Knowledge verbalization analysis}\label{sec:verbalization-analysis}
 
 
-We compare three knowledge text representations under the same relation selection algorithm and Hierarchical Fusion rules. Direct concatenation joins class names and tail entities; Raw triple retains the class, relation, and tail fields. AAKV organizes triples into sound descriptions that preserve entity and relation semantics. Each configuration computes relation-specific class scores from its own texts, allowing representation choices to be compared within the same inference procedure.
+We compare three knowledge text representations under the same relation selection algorithm and Hierarchical Fusion rules. Direct concatenation joins class names and tail entities; Raw triple retains the class, relation, and tail fields. AAKV organizes triples into sound descriptions that preserve entity and relation semantics. \teacherrevision{Each representation supplies the texts used to compute its relation-specific class scores.}
 
-Table~\ref{tab:knowledge-verbalization} shows that AAKV achieved higher Hit@1 than both controls on all five datasets. Its unweighted mean Hit@1 and MRR reached 66.81\% and 75.08\%, exceeding Direct concatenation by 3.18 and 1.77 percentage points. Raw triple yielded mean Hit@1 and MRR of 63.46\% and 72.91\%, slightly below Direct concatenation's 63.63\% and 73.31\%. Simply adding relation fields thus provided limited benefit in this experiment, suggesting that their textual organization also matters.
+\Needspace{4\baselineskip}
+Table~\ref{tab:knowledge-verbalization} shows that AAKV achieved higher Hit@1 than both controls on all five datasets. Its unweighted mean Hit@1 and MRR reached 66.81\% and 75.08\%, exceeding Direct concatenation by 3.18 and 1.77 percentage points. Raw triple yielded mean Hit@1 and MRR of 63.46\% and 72.91\%, slightly below Direct concatenation's 63.63\% and 73.31\%. \teacherrevision{Adding relation fields alone did not improve either mean metric over Direct concatenation, indicating that their textual organization also matters.}
 
-ReCLAP expands class semantics through acoustic descriptions and prompts covering diverse scenes, and reports improved zero-shot classification with prompt augmentation~\cite{ghosh2024reclap}. Our verbalization comparison likewise supports the importance of text representation, although AAKV specifically expresses existing triple relations as constrained sound descriptions. Natural-language sentences explicitly connect the class, relation, and tail entity, providing CLAP's text encoder with a coherent semantic expression. This may help explain AAKV's gains over \greenrevision{text consisting of separate triple fields}.
+ReCLAP expands class semantics through acoustic descriptions and prompts covering diverse scenes, and reports improved zero-shot classification with prompt augmentation~\cite{ghosh2024reclap}. \teacherrevision{Our comparison likewise shows differences in classification performance across text representations. AAKV expresses existing triple relations as constrained sound descriptions.} Natural-language sentences explicitly connect the class, relation, and tail entity, providing CLAP's text encoder with a coherent semantic expression. This may help explain AAKV's gains over \greenrevision{text consisting of separate triple fields}.
 
 \bluerevision{Relative to Direct concatenation, AAKV increased Hit@1 by 3.86 percentage points on FSD50K and 9.00 on TUT2017, compared with 0.35 on ESC-50. On ESC-50, its MRR was comparable to Raw triple (95.75\% versus 95.77\%).}
 
@@ -331,7 +333,7 @@ We examine uncertainty in performance differences, sample-level prediction trans
 
 \redrevision{We assess uncertainty in the Hit@1 and MRR gains of SAKI over iKnow\textsuperscript{\dag} using paired bootstrap confidence intervals.} Following the paired bootstrap procedure in Section~\ref{sec:evaluation-metrics}, we use the same resampled audio indices for both methods. The 2.5th and 97.5th percentiles of the difference distribution define the 95\% confidence interval.
 
-In Figure~\ref{fig:statistical-significance}, all observed Hit@1 and MRR differences are positive, and their 95\% confidence intervals lie entirely above zero. TUT2017 shows the largest Hit@1 gain, at 12.73 percentage points, with a confidence interval of [11.49, 13.95] percentage points. The intervals on the other datasets also exclude zero, supporting the observed gains under resampling of the current test audio.
+\teacherrevision{In Figure~\ref{fig:statistical-significance}, all observed Hit@1 and MRR differences are positive, and their 95\% confidence intervals lie entirely above zero.} TUT2017 shows the largest Hit@1 gain, at 12.73 percentage points, with a confidence interval of [11.49, 13.95] percentage points.
 
 \bluerevision{These intervals reflect uncertainty from resampling test samples, with the models and inference settings held fixed.}
 
@@ -349,7 +351,7 @@ In Figure~\ref{fig:statistical-significance}, all observed Hit@1 and MRR differe
 
 Figure~\ref{fig:prediction-transitions} decomposes the overall Hit@1 gains into error corrections and prediction degradations.
 
-We applied two-sided exact McNemar tests to the discordant pairs shown in the figure. All five $p$ values remained below 0.05 after Holm adjustment, with a maximum of approximately $2.26\times10^{-7}$ (Table~\ref{tab:mcnemar-tests}). Together with the transition directions, these results support SAKI's Hit@1 advantage after controlling the familywise error rate across the five tests.
+We applied two-sided exact McNemar tests to the discordant pairs shown in the figure. All five $p$ values remained below 0.05 after Holm adjustment, with a maximum of approximately $2.26\times10^{-7}$ (Table~\ref{tab:mcnemar-tests}). \teacherrevision{SAKI's Hit@1 improvement was statistically significant after controlling the familywise error rate across the five tests.}
 
 Table~\ref{tab:case-study} illustrates three types of ranking changes. In the correction case, \textit{wind} moved from fifth to first. In the \greenrevision{case of improved ranking}, \textit{sea waves} rose from third to second, while SAKI predicted \textit{frog} at rank one. In the degradation case, \textit{washing machine} fell from first to fourth, and SAKI instead predicted \textit{engine}.
 
@@ -357,7 +359,7 @@ Table~\ref{tab:case-study} illustrates three types of ranking changes. In the co
 
 \centering
 
-\caption{Three representative prediction changes on ESC-50. Parentheses give the ground-truth class rank. \redrevision{The cached evidence texts are reproduced verbatim and provide examples of evidence read for candidate classes during inference.} They do not establish the independent contribution of an individual evidence item to the prediction change.}
+\caption{Three representative prediction changes on ESC-50. Parentheses give the ground-truth class rank. \teacherrevision{The cached evidence texts are reproduced verbatim as examples of evidence read for candidate classes during inference.}}
 
 \label{tab:case-study}
 
@@ -403,7 +405,7 @@ Degradation
 
 These cases illustrate how Hit@1 and MRR capture different ranking changes. Moving \textit{wind} to first improves both metrics. For \textit{sea waves}, reciprocal rank increases from $1/3$ to $1/2$, while Hit@1 remains zero. Moving \textit{washing machine} away from first reduces both metrics. Reporting Hit@1 and MRR together thus distinguishes error correction, rank improvement below first place, and prediction degradation.
 
-Prediction degradation also highlights the limits of relation consensus. \redrevision{Class scores for all relations are computed using the same CLAP encoder. Agreement among their top-1 predictions may therefore reflect matching biases shared by the underlying model.} Consensus and larger top-two score gaps provide selection criteria, but do not establish evidence correctness or relevance to the sample.
+\teacherrevision{The degradation case shows that a selected relation set can also lead to an incorrect top-1 prediction.}
 
 \Needspace{8\baselineskip}
 \subsubsection{Parameter sensitivity}\label{sec:parameters}
@@ -422,7 +424,7 @@ Figure~\ref{fig:parameter-sensitivity}(a) shows identical Hit@1 for all four rel
 MRR distinguishes configurations with identical Hit@1 (Figure~\ref{fig:parameter-sensitivity}(b)). At $\alpha=0.3$, increasing $N_r$ from one to five raised MRR from 75.55\% to 75.84\%; increasing it to ten reduced MRR to 75.69\%. \redrevision{The benefit of adding relations was therefore nonmonotonic within the tested range.} Following the \greenrevision{predefined rule for choosing parameters on the development set}, we selected $\alpha=0.3$ and $N_r=5$ and fixed them for all five test datasets.
 
 
-\Needspace{8\baselineskip}
+\Needspace{18\baselineskip}
 \subsubsection{Computational cost analysis}\label{sec:computational-cost}
 \begin{table}[!t]
 \centering
@@ -447,11 +449,11 @@ We compare the three methods on identical hardware and test samples. \redrevisio
 
 
 
-Table~\ref{tab:computational-cost} shows that iKnow\textsuperscript{\dag}'s latency of 25.16~ms/sample was close to CLAP's 24.37~ms/sample. SAKI required 86.52~ms/sample, corresponding to 3.55 times CLAP's latency and a throughput of 11.56 samples/s. Peak GPU memory usage was 743.22~MiB for SAKI and 693.60~MiB for CLAP; offline caches were 50.52 and 0.63~MiB, respectively. \redrevision{Relative to CLAP, SAKI showed a smaller proportional increase in peak GPU memory usage than in latency, while its cache size increased substantially.} In these measurements, deployment costs mainly involved longer online processing and greater storage for precomputed evidence. \greenrevision{SAKI also performs relation-specific scoring, relation ranking, and evidence fusion online, consistent with its higher measured latency.}
+Table~\ref{tab:computational-cost} shows that iKnow\textsuperscript{\dag}'s latency of 25.16~ms/sample was close to CLAP's 24.37~ms/sample. SAKI required 86.52~ms/sample, corresponding to 3.55 times CLAP's latency and a throughput of 11.56 samples/s. Peak GPU memory usage was 743.22~MiB for SAKI and 693.60~MiB for CLAP; offline caches were 50.52 and 0.63~MiB, respectively. \redrevision{Relative to CLAP, SAKI showed a smaller proportional increase in peak GPU memory usage than in latency, while its cache size increased substantially.} \teacherrevision{The main cost increases were longer online processing and greater storage for precomputed evidence.} \greenrevision{SAKI also performs relation-specific scoring, relation ranking, and evidence fusion online, consistent with its higher measured latency.}
 
 \subsection{Limitations}\label{sec:limitations}
 
-SAKI's applicability depends on both knowledge quality and the underlying model. AAKV constrains how triples are expressed, while retrieval errors and associations irrelevant to the current audio can still enter the classification evidence. The current evaluation uses fixed MS-CLAP 2023 and RotatE models and 47 candidate relations. The observed gains apply to these resources and the five test datasets; transfer to other audio--language models and knowledge graphs requires further evaluation.
+SAKI's applicability depends on both knowledge quality and the underlying model. AAKV constrains how triples are expressed, while retrieval errors and associations irrelevant to the current audio can still enter the classification evidence. \teacherrevision{All relations use the same CLAP encoder, so agreement among their predictions may reflect shared matching biases. Consensus and score gaps do not guarantee evidence correctness or relevance. The case study reports ranking changes rather than isolating the contribution of individual evidence items.} The current evaluation uses fixed MS-CLAP 2023 and RotatE models and 47 candidate relations. The observed gains apply to these resources and the five test datasets; transfer to other audio--language models and knowledge graphs requires further evaluation.
 
 Online relation evaluation also increases inference time and cache requirements, limiting the flexibility of the current implementation in low-latency settings. Future work can assess evidence reliability to reduce unsuitable knowledge and use lightweight relation preselection to reduce the number of evaluated relations. These directions seek a more favorable balance between classification performance and inference cost.
 

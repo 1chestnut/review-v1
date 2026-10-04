@@ -433,3 +433,10 @@ Future entries should record: date, approved section/claim, changed files, compi
 - Adjusted the method and conclusion suggestions to avoid guaranteeing that selected evidence always helps or claiming a global maximum benefit. Removed repeated numerical gain ranges from the introduction and conclusion; retained them in the abstract and main results.
 - Added a dedicated red teacher-revision command. Historical revisions remain black. Related Work is unchanged; the conditional hallucination/trade-off statements and the unverified dog/park example remain pending evidence checks.
 - Preserved citation keys, equation blocks, algorithms, tables, and experimental data. Compiled twice and inspected the four affected pages. The PDF remains 15 pages, with no overfull boxes, unresolved references, or compilation errors.
+# 2026-10-04 — Sentence-specific defensive-language audit
+
+- Addressed the teacher's Section 4.2 comments in red: removed repeated protocol/configuration hedges and named the observed iKnow†–CLAP and SAKI–iKnow† comparisons directly.
+- Audited support variants and scope phrases throughout the included manuscript. Replaced observation-level “support” statements, deleted repeated effectiveness summaries, and retained operational voting terminology, cited capabilities, statistical definitions, and tentative mechanism explanations.
+- Kept control conditions once at each ablation/comparison opening. Moved individual-evidence attribution and consensus/shared-model limitations to 4.5, without adding experiments or claiming isolated mechanism evidence.
+- Recorded sentence-level decisions in translation_prep/teacher_defensive_language_audit_20261004.md. Related Work remains unchanged.
+- Retained original values, equations, and citation keys. Adjusted Table 3 registration and small space reservations to maintain same-page numbered table discussion after shortening the text.
