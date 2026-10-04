@@ -312,14 +312,12 @@ Raw triple
 \subsubsection{Knowledge verbalization analysis}\label{sec:verbalization-analysis}
 
 
-We compare three knowledge text representations under the same relation selection algorithm and Hierarchical Fusion rules. Direct concatenation joins class names and tail entities; Raw triple retains the class, relation, and tail fields. AAKV organizes triples into sound descriptions that preserve entity and relation semantics. \teacherrevision{Each representation supplies the texts used to compute its relation-specific class scores.}
+\teacherrevision{We compare three knowledge text representations using the same relation selection algorithm and Hierarchical Fusion rules. Direct concatenation joins class names and tail entities, whereas Raw triple presents the class, relation, and tail entity as separate fields. AAKV converts triples into constrained sound descriptions that preserve entity and relation semantics. Each representation supplies the texts used to compute its relation-specific class scores.}
 
 \Needspace{4\baselineskip}
-Table~\ref{tab:knowledge-verbalization} shows that AAKV achieved higher Hit@1 than both controls on all five datasets. Its unweighted mean Hit@1 and MRR reached 66.81\% and 75.08\%, exceeding Direct concatenation by 3.18 and 1.77 percentage points. Raw triple yielded mean Hit@1 and MRR of 63.46\% and 72.91\%, slightly below Direct concatenation's 63.63\% and 73.31\%. \teacherrevision{Adding relation fields alone did not improve either mean metric over Direct concatenation, indicating that their textual organization also matters.}
+\teacherrevision{Table~\ref{tab:knowledge-verbalization} shows that AAKV achieved higher Hit@1 than both alternatives on all five datasets. Its mean Hit@1 and MRR were 66.81\% and 75.08\%, exceeding Direct concatenation by 3.18 and 1.77 percentage points, respectively. Raw triple achieved slightly lower mean Hit@1 and MRR than Direct concatenation. Thus, adding relation fields alone did not improve average performance, whereas expressing triples through AAKV improved both mean metrics.}
 
-ReCLAP expands class semantics through acoustic descriptions and prompts covering diverse scenes, and reports improved zero-shot classification with prompt augmentation~\cite{ghosh2024reclap}. \teacherrevision{Our comparison likewise shows differences in classification performance across text representations. AAKV expresses existing triple relations as constrained sound descriptions.} Natural-language sentences explicitly connect the class, relation, and tail entity, providing CLAP's text encoder with a coherent semantic expression. This may help explain AAKV's gains over \greenrevision{text consisting of separate triple fields}.
-
-\bluerevision{Relative to Direct concatenation, AAKV increased Hit@1 by 3.86 percentage points on FSD50K and 9.00 on TUT2017, compared with 0.35 on ESC-50. On ESC-50, its MRR was comparable to Raw triple (95.75\% versus 95.77\%).}
+\teacherrevision{The gains varied across datasets. Relative to Direct concatenation, AAKV increased Hit@1 by 3.86 percentage points on FSD50K and 9.00 points on TUT2017, compared with 0.35 points on ESC-50. On ESC-50, AAKV and Raw triple achieved nearly identical MRR values of 95.75\% and 95.77\%, respectively. AAKV therefore improved top-1 classification across all five datasets, while its MRR advantage over Raw triple was concentrated in the other four datasets.}
 
 
 

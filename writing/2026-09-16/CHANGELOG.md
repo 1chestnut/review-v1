@@ -440,3 +440,8 @@ Future entries should record: date, approved section/claim, changed files, compi
 - Kept control conditions once at each ablation/comparison opening. Moved individual-evidence attribution and consensus/shared-model limitations to 4.5, without adding experiments or claiming isolated mechanism evidence.
 - Recorded sentence-level decisions in translation_prep/teacher_defensive_language_audit_20261004.md. Related Work remains unchanged.
 - Retained original values, equations, and citation keys. Adjusted Table 3 registration and small space reservations to maintain same-page numbered table discussion after shortening the text.
+
+# 2026-10-04 — Author-approved knowledge verbalization analysis
+
+- Replaced Section 4.3.3 with the approved three-paragraph comparison: representation definitions, mean performance, and dataset-specific differences. Marked the revised prose in red.
+- Removed the repeated ReCLAP discussion and the untested attribution of AAKV gains to sentence coherence. Kept Related Work and all table values unchanged.
