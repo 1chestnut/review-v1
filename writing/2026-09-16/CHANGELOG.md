@@ -424,3 +424,6 @@ Future entries should record: date, approved section/claim, changed files, compi
 # 2026-10-03 — Clearer relation-combination count heading
 
 - Changed Table D.1's heading from “#Unique Top-5 sets” to “#Distinct Top-5 sets” at the author's request. Statistical definitions and values are unchanged.
+# 2026-10-04 — Replace framework figure with author-supplied Picture 5
+
+- Replaced the main-4 framework image with the author's Picture 5. Retained its existing display width, placement, caption, and manuscript text.
